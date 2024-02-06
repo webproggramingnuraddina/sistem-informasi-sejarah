@@ -22,6 +22,13 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'manfaat')->textInput(['maxlength' => true]) ?>
 
+    <?= $form->field($model, 'bidang')->dropDownList([
+        '1' => 'Bidang Pendidikan',
+        '2' => 'Bidang Penelitian',
+        '3' => 'Bidang PKM',
+    ], ['prompt' => 'Pilih Bidang']) ?>
+
+
     <div class="form-group">
         <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>
     </div>

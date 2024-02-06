@@ -2,27 +2,25 @@
 
 namespace frontend\controllers;
 
+use frontend\models\ResendVerificationEmailForm;
+use frontend\models\VerifyEmailForm;
 use Yii;
+use yii\base\InvalidArgumentException;
+use yii\web\BadRequestHttpException;
 use yii\web\Controller;
-use backend\models\Dosen;
-use backend\models\Jurnal;
 use yii\filters\VerbFilter;
-use backend\models\Download;
-use common\models\LoginForm;
 use yii\filters\AccessControl;
+use common\models\LoginForm;
+use frontend\models\PasswordResetRequestForm;
+use frontend\models\ResetPasswordForm;
 use frontend\models\SignupForm;
 use frontend\models\ContactForm;
-use frontend\models\VerifyEmailForm;
-use yii\web\BadRequestHttpException;
-use frontend\models\ResetPasswordForm;
-use yii\base\InvalidArgumentException;
-use frontend\models\PasswordResetRequestForm;
-use frontend\models\ResendVerificationEmailForm;
+use backend\models\Kerjasama;
 
 /**
  * Site controller
  */
-class SiteController extends Controller
+class ProfilController extends Controller
 {
     /**
      * {@inheritdoc}
@@ -149,78 +147,6 @@ class SiteController extends Controller
         return $this->render('about');
     }
 
-    public function actionDownload()
-    {
-        $modelDownload = Download::find()->all();
-        return $this->render('download', [
-            'modelDownload' => $modelDownload
-        ]);
-    }
-    public function actionDosen()
-    {
-        $modelDosen = Dosen::find()->all();
-        return $this->render('dosen', [
-            'modelDosen' => $modelDosen
-        ]);
-    }
-    public function actionDosenPraktisi()
-    {
-        $modelDosenPraktisi = Dosen::find()->all();
-        return $this->render('dosen-praktisi', [
-            'modelDosenPraktisi' => $modelDosenPraktisi
-        ]);
-    }
-    public function actionTendik()
-    {
-        $modelTendik = Dosen::find()->all();
-        return $this->render('dosen-praktisi', [
-            'modelTendik' => $modelTendik
-        ]);
-    }
-
-    public function actionJurnal()
-    {
-        $modelJurnal = Jurnal::find()->all();
-        return $this->render('jurnal', [
-            'modelJurnal' => $modelJurnal,
-        ]);
-    }
-
-    public function actionKurikulum()
-    {
-        return $this->render('kurikulum');
-    }
-
-    public function actionKalender()
-    {
-        return $this->render('kalender');
-    }
-
-    public function actionMutu()
-    {
-        return $this->render('mutu');
-    }
-
-    public function actionCpl()
-    {
-        return $this->render('cpl');
-    }
-
-    public function actionLulusan()
-    {
-        return $this->render('lulusan');
-    }
-
-    public function actionMaba()
-    {
-        return $this->render('maba');
-    }
-
-    public function actionSkripsi()
-    {
-        return $this->render('skripsi');
-    }
-
     /**
      * Signs user up.
      *
@@ -330,5 +256,25 @@ class SiteController extends Controller
         return $this->render('resendVerificationEmail', [
             'model' => $model
         ]);
+    }
+
+    public function actionSejarah()
+    {
+        return $this->render('sejarah');
+    }
+
+    public function actionVisi()
+    {
+        return $this->render('visi');
+    }
+    
+    public function actionMisi()
+    {
+        return $this->render('misi');
+    }
+    
+    public function actionTujuan()
+    {
+        return $this->render('tujuan');
     }
 }
