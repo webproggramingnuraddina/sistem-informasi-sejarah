@@ -2,9 +2,11 @@
 
 namespace backend\controllers;
 
+use Yii;
 use backend\models\Berita;
 use backend\models\BeritaSearch;
 use yii\web\Controller;
+use yii\web\UploadedFile;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
@@ -24,7 +26,7 @@ class BeritaController extends Controller
                 'verbs' => [
                     'class' => VerbFilter::className(),
                     'actions' => [
-                        'delete' => ['POST'],
+                        //'delete' => ['POST'],
                     ],
                 ],
             ]
@@ -40,9 +42,11 @@ class BeritaController extends Controller
     {
         $searchModel = new BeritaSearch();
         $dataProvider = $searchModel->search($this->request->queryParams);
+        $berita = Berita::find()->all();
 
         return $this->render('index', [
             'searchModel' => $searchModel,
+            'berita' => $berita,
             'dataProvider' => $dataProvider,
         ]);
     }
@@ -68,6 +72,7 @@ class BeritaController extends Controller
     public function actionCreate()
     {
         $model = new Berita();
+        $model->imageFile = UploadedFile::getInstance($model, 'image');
 
         if ($this->request->isPost) {
             if ($model->load($this->request->post()) && $model->save()) {
@@ -92,6 +97,7 @@ class BeritaController extends Controller
     public function actionUpdate($id_berita)
     {
         $model = $this->findModel($id_berita);
+        $model->imageFile = UploadedFile::getInstance($model, 'image');
 
         if ($this->request->isPost && $model->load($this->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id_berita' => $model->id_berita]);

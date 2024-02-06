@@ -24,7 +24,7 @@ class KerjasamaController extends Controller
                 'verbs' => [
                     'class' => VerbFilter::className(),
                     'actions' => [
-                        'delete' => ['POST'],
+                        //'delete' => ['POST'],
                     ],
                 ],
             ]
@@ -40,9 +40,11 @@ class KerjasamaController extends Controller
     {
         $searchModel = new KerjasamaSearch();
         $dataProvider = $searchModel->search($this->request->queryParams);
+        $kerjasama = Kerjasama::find()->all();
 
         return $this->render('index', [
             'searchModel' => $searchModel,
+            'kerjasama' => $kerjasama,
             'dataProvider' => $dataProvider,
         ]);
     }

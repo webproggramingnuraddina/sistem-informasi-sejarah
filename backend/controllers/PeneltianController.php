@@ -24,7 +24,7 @@ class PeneltianController extends Controller
                 'verbs' => [
                     'class' => VerbFilter::className(),
                     'actions' => [
-                        'delete' => ['POST'],
+                        //'delete' => ['POST'],
                     ],
                 ],
             ]
@@ -40,9 +40,11 @@ class PeneltianController extends Controller
     {
         $searchModel = new PeneltianSearch();
         $dataProvider = $searchModel->search($this->request->queryParams);
+        $penelitian = Peneltian::find()->all();
 
         return $this->render('index', [
             'searchModel' => $searchModel,
+            'penelitian' => $penelitian,
             'dataProvider' => $dataProvider,
         ]);
     }

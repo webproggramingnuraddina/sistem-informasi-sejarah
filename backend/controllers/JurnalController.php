@@ -24,7 +24,7 @@ class JurnalController extends Controller
                 'verbs' => [
                     'class' => VerbFilter::className(),
                     'actions' => [
-                        'delete' => ['POST'],
+                        //'delete' => ['POST'],
                     ],
                 ],
             ]
@@ -40,9 +40,11 @@ class JurnalController extends Controller
     {
         $searchModel = new JurnalSearch();
         $dataProvider = $searchModel->search($this->request->queryParams);
+        $jurnal = Jurnal::find()->all();
 
         return $this->render('index', [
             'searchModel' => $searchModel,
+            'jurnal' => $jurnal,
             'dataProvider' => $dataProvider,
         ]);
     }

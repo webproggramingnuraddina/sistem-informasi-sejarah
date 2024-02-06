@@ -2,9 +2,11 @@
 
 namespace backend\controllers;
 
+use Yii;
 use backend\models\Dosen;
 use backend\models\DosenSearch;
 use yii\web\Controller;
+use yii\web\UploadedFile;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
@@ -24,7 +26,7 @@ class DosenController extends Controller
                 'verbs' => [
                     'class' => VerbFilter::className(),
                     'actions' => [
-                        'delete' => ['POST'],
+                        //'delete' => ['POST'],
                     ],
                 ],
             ]
@@ -40,9 +42,11 @@ class DosenController extends Controller
     {
         $searchModel = new DosenSearch();
         $dataProvider = $searchModel->search($this->request->queryParams);
+        $dosen = Dosen::find()->all();
 
         return $this->render('index', [
             'searchModel' => $searchModel,
+            'dosen' => $dosen,
             'dataProvider' => $dataProvider,
         ]);
     }
@@ -68,6 +72,7 @@ class DosenController extends Controller
     public function actionCreate()
     {
         $model = new Dosen();
+        $model->imageFile = UploadedFile::getInstance($model, 'image');
 
         if ($this->request->isPost) {
             if ($model->load($this->request->post()) && $model->save()) {

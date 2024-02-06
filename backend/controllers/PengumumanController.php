@@ -2,9 +2,11 @@
 
 namespace backend\controllers;
 
+use Yii;
 use backend\models\Pengumuman;
 use backend\models\PengumumanSearch;
 use yii\web\Controller;
+use yii\web\UploadedFile;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
@@ -24,7 +26,7 @@ class PengumumanController extends Controller
                 'verbs' => [
                     'class' => VerbFilter::className(),
                     'actions' => [
-                        'delete' => ['POST'],
+                        //'delete' => ['POST'],
                     ],
                 ],
             ]
@@ -40,9 +42,11 @@ class PengumumanController extends Controller
     {
         $searchModel = new PengumumanSearch();
         $dataProvider = $searchModel->search($this->request->queryParams);
+        $pengumuman = Pengumuman::find()->all();
 
         return $this->render('index', [
             'searchModel' => $searchModel,
+            'pengumuman' => $pengumuman,
             'dataProvider' => $dataProvider,
         ]);
     }
@@ -68,6 +72,7 @@ class PengumumanController extends Controller
     public function actionCreate()
     {
         $model = new Pengumuman();
+        $model->imageFile = UploadedFile::getInstance($model, 'image');
 
         if ($this->request->isPost) {
             if ($model->load($this->request->post()) && $model->save()) {

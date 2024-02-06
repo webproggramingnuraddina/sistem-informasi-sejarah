@@ -24,7 +24,7 @@ class PkmController extends Controller
                 'verbs' => [
                     'class' => VerbFilter::className(),
                     'actions' => [
-                        'delete' => ['POST'],
+                        //'delete' => ['POST'],
                     ],
                 ],
             ]
@@ -40,9 +40,11 @@ class PkmController extends Controller
     {
         $searchModel = new PkmSearch();
         $dataProvider = $searchModel->search($this->request->queryParams);
+        $pkm = Pkm::find()->all();
 
         return $this->render('index', [
             'searchModel' => $searchModel,
+            'pkm' => $pkm,
             'dataProvider' => $dataProvider,
         ]);
     }

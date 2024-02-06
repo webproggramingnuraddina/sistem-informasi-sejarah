@@ -16,7 +16,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'isi_berita')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'image')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'image', [])->fileInput() ?>
 
     <?= $form->field($model, 'created_at')->textInput() ?>
 

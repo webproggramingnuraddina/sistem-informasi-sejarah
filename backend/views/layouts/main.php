@@ -3,13 +3,13 @@
 /** @var \yii\web\View $this */
 /** @var string $content */
 
-use yii\helpers\Url;
-use yii\bootstrap5\Nav;
-use yii\bootstrap5\Html;
-use common\widgets\Alert;
-use yii\bootstrap5\NavBar;
 use backend\assets\AppAsset;
+use common\widgets\Alert;
 use yii\bootstrap5\Breadcrumbs;
+use yii\bootstrap5\Html;
+use yii\bootstrap5\Nav;
+use yii\bootstrap5\NavBar;
+use yii\helpers\Url;
 
 AppAsset::register($this);
 ?>
@@ -20,32 +20,32 @@ AppAsset::register($this);
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>AdminLTE 2 | Dashboard</title>
+  <title>Admin Sejarah</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.5 -->
-  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="<?= Yii::$app->getHomeUrl(); ?>bootstrap/css/bootstrap.min.css">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   <!-- Ionicons -->
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
   <!-- Theme style -->
-  <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
+  <link rel="stylesheet" href="<?= Yii::$app->getHomeUrl(); ?>dist/css/AdminLTE.min.css">
   <!-- AdminLTE Skins. Choose a skin from the css/skins
          folder instead of downloading all of them to reduce the load. -->
-  <link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
+  <link rel="stylesheet" href="<?= Yii::$app->getHomeUrl(); ?>dist/css/skins/_all-skins.min.css">
   <!-- iCheck -->
-  <link rel="stylesheet" href="plugins/iCheck/flat/blue.css">
+  <link rel="stylesheet" href="<?= Yii::$app->getHomeUrl(); ?>plugins/iCheck/flat/blue.css">
   <!-- Morris chart -->
-  <link rel="stylesheet" href="plugins/morris/morris.css">
+  <link rel="stylesheet" href="<?= Yii::$app->getHomeUrl(); ?>plugins/morris/morris.css">
   <!-- jvectormap -->
-  <link rel="stylesheet" href="plugins/jvectormap/jquery-jvectormap-1.2.2.css">
+  <link rel="stylesheet" href="<?= Yii::$app->getHomeUrl(); ?>plugins/jvectormap/jquery-jvectormap-1.2.2.css">
   <!-- Date Picker -->
-  <link rel="stylesheet" href="plugins/datepicker/datepicker3.css">
+  <link rel="stylesheet" href="<?= Yii::$app->getHomeUrl(); ?>plugins/datepicker/datepicker3.css">
   <!-- Daterange picker -->
-  <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker-bs3.css">
+  <link rel="stylesheet" href="<?= Yii::$app->getHomeUrl(); ?>plugins/daterangepicker/daterangepicker-bs3.css">
   <!-- bootstrap wysihtml5 - text editor -->
-  <link rel="stylesheet" href="plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
+  <link rel="stylesheet" href="<?= Yii::$app->getHomeUrl(); ?>plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -60,11 +60,11 @@ AppAsset::register($this);
 
     <header class="main-header">
       <!-- Logo -->
-      <a href="index2.html" class="logo">
+      <a href="" class="logo">
         <!-- mini logo for sidebar mini 50x50 pixels -->
-        <span class="logo-mini"><b>A</b>LT</span>
+        <span class="logo-mini"><b>A</b>S</span>
         <!-- logo for regular state and mobile devices -->
-        <span class="logo-lg"><b>Admin</b>LTE</span>
+        <span class="logo-lg"><b>Admin Sejarah</b></span>
       </a>
       <!-- Header Navbar: style can be found in header.less -->
       <nav class="navbar navbar-static-top" role="navigation">
@@ -74,26 +74,22 @@ AppAsset::register($this);
         </a>
         <div class="navbar-custom-menu">
           <ul class="nav navbar-nav">
-
             <!-- User Account: style can be found in dropdown.less -->
             <li class="dropdown user user-menu">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                 <img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
-                <span class="hidden-xs">Alexander Pierce</span>
+                <span class="hidden-xs">Admin</span>
               </a>
               <ul class="dropdown-menu">
                 <!-- User image -->
                 <li class="user-header">
                   <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
                   <p>
-                    Alexander Pierce
-                    <!-- <small>Member since Nov. 2012</small> -->
+                    Admin
                   </p>
                 </li>
-
                 <!-- Menu Footer-->
                 <li class="user-footer">
-
                   <div class="pull-right">
                     <a href="#" class="btn btn-default btn-flat">Sign out</a>
                   </div>
@@ -118,125 +114,85 @@ AppAsset::register($this);
             <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
           </div>
           <div class="pull-left info">
-            <p>Alexander Pierce</p>
+            <p>Admin</p>
             <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
           </div>
         </div>
-        <!-- search form -->
-        <form action="#" method="get" class="sidebar-form">
-          <div class="input-group">
-            <input type="text" name="q" class="form-control" placeholder="Search...">
-            <span class="input-group-btn">
-              <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i></button>
-            </span>
-          </div>
-        </form>
-        <!-- /.search form -->
         <!-- sidebar menu: : style can be found in sidebar.less -->
         <ul class="sidebar-menu">
           <li class="header">MAIN NAVIGATION</li>
           <li class="active treeview">
-            <a href="#">
-              <i class="fa fa-dashboard"></i> <span>Dashboard</span> <i class="fa fa-angle-left pull-right"></i>
+            <a href="<?= Url::toRoute(['/']) ?>">
+              <i class="fa fa-dashboard"></i> <span>Dashboard</span>
             </a>
           </li>
-
           <li class="treeview">
-            <a href="#">
+          <li <?= Yii::$app->controller->id == 'berita' ? 'class=active' : '' ?>>
+            <a class="menu-link" href="<?= Url::toRoute(['/berita']) ?>">
+              <i class="fa fa-newspaper-o"></i>
+              <span>Berita</span>
+            </a>
+          </li>
+          <li <?= Yii::$app->controller->id == 'pengumuman' ? 'class=active' : '' ?>>
+            <a class="menu-link" href="<?= Url::toRoute(['/pengumuman']) ?>">
+              <i class="fa fa-bullhorn"></i>
+              <span>Pengumuman</span>
+            </a>
+          </li>
+          <li <?= Yii::$app->controller->id == 'dosen' ? 'class=active' : '' ?>>
+            <a href="<?= Url::toRoute(['/dosen']) ?>">
+              <i class="fa fa-th"></i> <span>Staff</span>
+            </a>
+          </li>
+          <li class="treeview">
+          <li <?= Yii::$app->controller->id == 'prestasi' ? 'class=active' : '' ?>>
+            <a href="<?= Url::toRoute(['/prestasi']) ?>">
+              <i class="fa fa-graduation-cap"></i>
+              <span>Prestasi</span>
+            </a>
+          </li>
+          <li <?= Yii::$app->controller->id == 'peneltian' ? 'class=active' : '' ?>>
+            <a href="<?= Url::toRoute(['/peneltian']) ?>">
               <i class="fa fa-pie-chart"></i>
-              <span>Charts</span>
-              <i class="fa fa-angle-left pull-right"></i>
+              <span>Penelitian</span>
             </a>
-            <ul class="treeview-menu">
-              <li><a href="pages/charts/chartjs.html"><i class="fa fa-circle-o"></i> ChartJS</a></li>
-              <li><a href="pages/charts/morris.html"><i class="fa fa-circle-o"></i> Morris</a></li>
-              <li><a href="pages/charts/flot.html"><i class="fa fa-circle-o"></i> Flot</a></li>
-              <li><a href="pages/charts/inline.html"><i class="fa fa-circle-o"></i> Inline charts</a></li>
-            </ul>
           </li>
-          <li <?= Yii::$app->controller->id == 'download' ? 'class=active' : '' ?>>
-            <a class="menu-link" href="<?= Url::toRoute(['/download']) ?>">
+          <li class="treeview">
+          <li <?= Yii::$app->controller->id == 'fasilitasl' ? 'class=active' : '' ?>>
+            <a href="<?= Url::toRoute(['/fasilitasl']) ?>">
               <i class="fa fa-laptop"></i>
-              <span>Download</span>
+              <span>Fasilitas</span>
             </a>
           </li>
           <li class="treeview">
-            <a href="#">
-              <i class="fa fa-pie-chart"></i>
-              <span>Staff</span>
-              <i class="fa fa-angle-left pull-right"></i>
+          <li <?= Yii::$app->controller->id == 'jurnal' ? 'class=active' : '' ?>>
+            <a href="<?= Url::toRoute(['/jurnal']) ?>">
+              <i class="fa fa-edit"></i> <span>Jurnal</span>
             </a>
-            <ul class="treeview-menu">
-              <li> <a class="menu-link" href="<?= Url::toRoute(['/dosen']) ?>">
-                  <i class="fa fa-laptop"></i>
-                  <span>Dosen</span>
-                </a></li>
-              <li> <a class="menu-link" href="<?= Url::toRoute(['/dosen']) ?>">
-                  <i class="fa fa-laptop"></i>
-                  <span>Dosen Praktisi</span>
-                </a></li>
-              <li> <a class="menu-link" href="<?= Url::toRoute(['/dosen']) ?>">
-                  <i class="fa fa-laptop"></i>
-                  <span>Tenaga Pendidik</span>
-                </a></li>
-
-            </ul>
           </li>
           <li class="treeview">
-            <a href="#">
-              <i class="fa fa-laptop"></i>
-              <span>UI Elements</span>
-              <i class="fa fa-angle-left pull-right"></i>
+          <li <?= Yii::$app->controller->id == 'kerjasama' ? 'class=active' : '' ?>>
+            <a href="<?= Url::toRoute(['/kerjasama']) ?>">
+              <i class="fa fa-table"></i> <span>Kerjasama</span>
             </a>
-            <ul class="treeview-menu">
-              <li><a href="pages/UI/general.html"><i class="fa fa-circle-o"></i> General</a></li>
-              <li><a href="pages/UI/icons.html"><i class="fa fa-circle-o"></i> Icons</a></li>
-              <li><a href="pages/UI/buttons.html"><i class="fa fa-circle-o"></i> Buttons</a></li>
-              <li><a href="pages/UI/sliders.html"><i class="fa fa-circle-o"></i> Sliders</a></li>
-              <li><a href="pages/UI/timeline.html"><i class="fa fa-circle-o"></i> Timeline</a></li>
-              <li><a href="pages/UI/modals.html"><i class="fa fa-circle-o"></i> Modals</a></li>
-            </ul>
           </li>
           <li class="treeview">
-            <a href="#">
-              <i class="fa fa-edit"></i> <span>Forms</span>
-              <i class="fa fa-angle-left pull-right"></i>
+          <li <?= Yii::$app->controller->id == 'kriteria' ? 'class=active' : '' ?>>
+            <a class="menu-link" href="<?= Url::toRoute(['/kriteria']) ?>">
+              <i class="fa fa-files-o"></i>
+              <span>Kriteria</span>
             </a>
-            <ul class="treeview-menu">
-              <li><a href="pages/forms/general.html"><i class="fa fa-circle-o"></i> General Elements</a></li>
-              <li><a href="pages/forms/advanced.html"><i class="fa fa-circle-o"></i> Advanced Elements</a></li>
-              <li><a href="pages/forms/editors.html"><i class="fa fa-circle-o"></i> Editors</a></li>
-            </ul>
           </li>
-          <li class="treeview">
-            <a href="#">
-              <i class="fa fa-table"></i> <span>Tables</span>
-              <i class="fa fa-angle-left pull-right"></i>
+          <li <?= Yii::$app->controller->id == 'pkm' ? 'class=active' : '' ?>>
+            <a class="menu-link" href="<?= Url::toRoute(['/pkm']) ?>">
+              <i class="fa fa-university"></i>
+              <span>PKM</span>
             </a>
-            <ul class="treeview-menu">
-              <li><a href="pages/tables/simple.html"><i class="fa fa-circle-o"></i> Simple tables</a></li>
-              <li><a href="pages/tables/data.html"><i class="fa fa-circle-o"></i> Data tables</a></li>
-            </ul>
           </li>
-
-          <li class="treeview">
-            <a href="#">
-              <i class="fa fa-folder"></i> <span>Examples</span>
-              <i class="fa fa-angle-left pull-right"></i>
-            </a>
-            <ul class="treeview-menu">
-              <li><a href="pages/examples/invoice.html"><i class="fa fa-circle-o"></i> Invoice</a></li>
-              <li><a href="pages/examples/profile.html"><i class="fa fa-circle-o"></i> Profile</a></li>
-              <li><a href="pages/examples/login.html"><i class="fa fa-circle-o"></i> Login</a></li>
-              <li><a href="pages/examples/register.html"><i class="fa fa-circle-o"></i> Register</a></li>
-              <li><a href="pages/examples/lockscreen.html"><i class="fa fa-circle-o"></i> Lockscreen</a></li>
-              <li><a href="pages/examples/404.html"><i class="fa fa-circle-o"></i> 404 Error</a></li>
-              <li><a href="pages/examples/500.html"><i class="fa fa-circle-o"></i> 500 Error</a></li>
-              <li><a href="pages/examples/blank.html"><i class="fa fa-circle-o"></i> Blank Page</a></li>
-            </ul>
-          </li>
-
-        </ul>
+          <!-- <li <?= Yii::$app->controller->id == 'download' ? 'class=active' : '' ?>>
+            <a href="<?= Url::toRoute(['/download']) ?>">
+              <i class="fa fa-newspaper-o"></i> <span>download</span>
+          </li> -->
       </section>
       <!-- /.sidebar -->
     </aside>
@@ -244,27 +200,18 @@ AppAsset::register($this);
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
       <!-- Content Header (Page header) -->
-      <section class="content-header">
-        <h1>
-          Dashboard
-          <small>Control panel</small>
-        </h1>
-        <ol class="breadcrumb">
-          <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-          <li class="active">Dashboard</li>
-        </ol>
-      </section>
 
-      <div class="content">
+
+      <!-- Main content -->
+      <section class="content">
         <?= $content ?>
-      </div>
-
+      </section><!-- /.content -->
     </div><!-- /.content-wrapper -->
     <footer class="main-footer">
       <div class="pull-right hidden-xs">
         <b>Version</b> 2.3.0
       </div>
-      <strong>Copyright &copy; 2024 <a href="http://almsaeedstudio.com">Departemen Sejarah</a>.</strong> All rights reserved.
+      <strong>Copyright &copy; 2024 <a href="http://almsaeedstudio.com">Almsaeed Studio</a>.</strong> All rights reserved.
     </footer>
 
     <!-- Control Sidebar -->
@@ -279,154 +226,14 @@ AppAsset::register($this);
         <!-- Home tab content -->
         <div class="tab-pane" id="control-sidebar-home-tab">
           <h3 class="control-sidebar-heading">Recent Activity</h3>
-          <ul class="control-sidebar-menu">
-            <li>
-              <a href="javascript::;">
-                <i class="menu-icon fa fa-birthday-cake bg-red"></i>
-                <div class="menu-info">
-                  <h4 class="control-sidebar-subheading">Langdon's Birthday</h4>
-                  <p>Will be 23 on April 24th</p>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a href="javascript::;">
-                <i class="menu-icon fa fa-user bg-yellow"></i>
-                <div class="menu-info">
-                  <h4 class="control-sidebar-subheading">Frodo Updated His Profile</h4>
-                  <p>New phone +1(800)555-1234</p>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a href="javascript::;">
-                <i class="menu-icon fa fa-envelope-o bg-light-blue"></i>
-                <div class="menu-info">
-                  <h4 class="control-sidebar-subheading">Nora Joined Mailing List</h4>
-                  <p>nora@example.com</p>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a href="javascript::;">
-                <i class="menu-icon fa fa-file-code-o bg-green"></i>
-                <div class="menu-info">
-                  <h4 class="control-sidebar-subheading">Cron Job 254 Executed</h4>
-                  <p>Execution time 5 seconds</p>
-                </div>
-              </a>
-            </li>
-          </ul><!-- /.control-sidebar-menu -->
 
-          <h3 class="control-sidebar-heading">Tasks Progress</h3>
-          <ul class="control-sidebar-menu">
-            <li>
-              <a href="javascript::;">
-                <h4 class="control-sidebar-subheading">
-                  Custom Template Design
-                  <span class="label label-danger pull-right">70%</span>
-                </h4>
-                <div class="progress progress-xxs">
-                  <div class="progress-bar progress-bar-danger" style="width: 70%"></div>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a href="javascript::;">
-                <h4 class="control-sidebar-subheading">
-                  Update Resume
-                  <span class="label label-success pull-right">95%</span>
-                </h4>
-                <div class="progress progress-xxs">
-                  <div class="progress-bar progress-bar-success" style="width: 95%"></div>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a href="javascript::;">
-                <h4 class="control-sidebar-subheading">
-                  Laravel Integration
-                  <span class="label label-warning pull-right">50%</span>
-                </h4>
-                <div class="progress progress-xxs">
-                  <div class="progress-bar progress-bar-warning" style="width: 50%"></div>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a href="javascript::;">
-                <h4 class="control-sidebar-subheading">
-                  Back End Framework
-                  <span class="label label-primary pull-right">68%</span>
-                </h4>
-                <div class="progress progress-xxs">
-                  <div class="progress-bar progress-bar-primary" style="width: 68%"></div>
-                </div>
-              </a>
-            </li>
-          </ul><!-- /.control-sidebar-menu -->
+
 
         </div><!-- /.tab-pane -->
         <!-- Stats tab content -->
         <div class="tab-pane" id="control-sidebar-stats-tab">Stats Tab Content</div><!-- /.tab-pane -->
         <!-- Settings tab content -->
-        <div class="tab-pane" id="control-sidebar-settings-tab">
-          <form method="post">
-            <h3 class="control-sidebar-heading">General Settings</h3>
-            <div class="form-group">
-              <label class="control-sidebar-subheading">
-                Report panel usage
-                <input type="checkbox" class="pull-right" checked>
-              </label>
-              <p>
-                Some information about this general settings option
-              </p>
-            </div><!-- /.form-group -->
 
-            <div class="form-group">
-              <label class="control-sidebar-subheading">
-                Allow mail redirect
-                <input type="checkbox" class="pull-right" checked>
-              </label>
-              <p>
-                Other sets of options are available
-              </p>
-            </div><!-- /.form-group -->
-
-            <div class="form-group">
-              <label class="control-sidebar-subheading">
-                Expose author name in posts
-                <input type="checkbox" class="pull-right" checked>
-              </label>
-              <p>
-                Allow the user to show his name in blog posts
-              </p>
-            </div><!-- /.form-group -->
-
-            <h3 class="control-sidebar-heading">Chat Settings</h3>
-
-            <div class="form-group">
-              <label class="control-sidebar-subheading">
-                Show me as online
-                <input type="checkbox" class="pull-right" checked>
-              </label>
-            </div><!-- /.form-group -->
-
-            <div class="form-group">
-              <label class="control-sidebar-subheading">
-                Turn off notifications
-                <input type="checkbox" class="pull-right">
-              </label>
-            </div><!-- /.form-group -->
-
-            <div class="form-group">
-              <label class="control-sidebar-subheading">
-                Delete chat history
-                <a href="javascript::;" class="text-red pull-right"><i class="fa fa-trash-o"></i></a>
-              </label>
-            </div><!-- /.form-group -->
-          </form>
-        </div><!-- /.tab-pane -->
       </div>
     </aside><!-- /.control-sidebar -->
     <!-- Add the sidebar's background. This div must be placed
@@ -435,7 +242,7 @@ AppAsset::register($this);
   </div><!-- ./wrapper -->
 
   <!-- jQuery 2.1.4 -->
-  <script src="plugins/jQuery/jQuery-2.1.4.min.js"></script>
+  <script src="<?= Yii::$app->getHomeUrl(); ?>plugins/jQuery/jQuery-2.1.4.min.js"></script>
   <!-- jQuery UI 1.11.4 -->
   <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
   <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
@@ -443,36 +250,37 @@ AppAsset::register($this);
     $.widget.bridge('uibutton', $.ui.button);
   </script>
   <!-- Bootstrap 3.3.5 -->
-  <script src="bootstrap/js/bootstrap.min.js"></script>
+  <script src="<?= Yii::$app->getHomeUrl(); ?>bootstrap/js/bootstrap.min.js"></script>
   <!-- Morris.js charts -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
-  <script src="plugins/morris/morris.min.js"></script>
+  <script src="<?= Yii::$app->getHomeUrl(); ?>plugins/morris/morris.min.js"></script>
   <!-- Sparkline -->
-  <script src="plugins/sparkline/jquery.sparkline.min.js"></script>
+  <script src="<?= Yii::$app->getHomeUrl(); ?>plugins/sparkline/jquery.sparkline.min.js"></script>
   <!-- jvectormap -->
-  <script src="plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
-  <script src="plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+  <script src="<?= Yii::$app->getHomeUrl(); ?>plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
+  <script src="<?= Yii::$app->getHomeUrl(); ?>plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
   <!-- jQuery Knob Chart -->
-  <script src="plugins/knob/jquery.knob.js"></script>
+  <script src="<?= Yii::$app->getHomeUrl(); ?>plugins/knob/jquery.knob.js"></script>
   <!-- daterangepicker -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.2/moment.min.js"></script>
-  <script src="plugins/daterangepicker/daterangepicker.js"></script>
+  <script src="<?= Yii::$app->getHomeUrl(); ?>plugins/daterangepicker/daterangepicker.js"></script>
   <!-- datepicker -->
-  <script src="plugins/datepicker/bootstrap-datepicker.js"></script>
+  <script src="<?= Yii::$app->getHomeUrl(); ?>plugins/datepicker/bootstrap-datepicker.js"></script>
   <!-- Bootstrap WYSIHTML5 -->
-  <script src="plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>
+  <script src="<?= Yii::$app->getHomeUrl(); ?>plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>
   <!-- Slimscroll -->
-  <script src="plugins/slimScroll/jquery.slimscroll.min.js"></script>
+  <script src="<?= Yii::$app->getHomeUrl(); ?>plugins/slimScroll/jquery.slimscroll.min.js"></script>
   <!-- FastClick -->
-  <script src="plugins/fastclick/fastclick.min.js"></script>
+  <script src="<?= Yii::$app->getHomeUrl(); ?>plugins/fastclick/fastclick.min.js"></script>
   <!-- AdminLTE App -->
-  <script src="dist/js/app.min.js"></script>
+  <script src="<?= Yii::$app->getHomeUrl(); ?>dist/js/app.min.js"></script>
   <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-  <script src="dist/js/pages/dashboard.js"></script>
+  <script src="<?= Yii::$app->getHomeUrl(); ?>dist/js/pages/dashboard.js"></script>
   <!-- AdminLTE for demo purposes -->
-  <script src="dist/js/demo.js"></script>
+  <script src="<?= Yii::$app->getHomeUrl(); ?>dist/js/demo.js"></script>
 </body>
 
 </html>
+
 
 <?php $this->endPage();

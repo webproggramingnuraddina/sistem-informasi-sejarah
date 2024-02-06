@@ -28,7 +28,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'mata_kuliah')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'image')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'image', [])->fileInput() ?>
 
     <?= $form->field($model, 'detail')->textInput(['maxlength' => true]) ?>
 

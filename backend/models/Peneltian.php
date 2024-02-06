@@ -31,6 +31,7 @@ class Peneltian extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
+            [['judul_penelitian', 'nama_ketua'], 'required'],
             [['judul_penelitian', 'anggota', 'ang_mhs', 'link_penelitian'], 'string', 'max' => 2555],
             [['nama_ketua', 'kepakaran_ketua'], 'string', 'max' => 255],
         ];

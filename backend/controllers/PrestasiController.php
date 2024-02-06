@@ -24,7 +24,7 @@ class PrestasiController extends Controller
                 'verbs' => [
                     'class' => VerbFilter::className(),
                     'actions' => [
-                        'delete' => ['POST'],
+                        //'delete' => ['POST'],
                     ],
                 ],
             ]
@@ -40,9 +40,11 @@ class PrestasiController extends Controller
     {
         $searchModel = new PrestasiSearch();
         $dataProvider = $searchModel->search($this->request->queryParams);
+        $prestasi = Prestasi::find()->all();
 
         return $this->render('index', [
             'searchModel' => $searchModel,
+            'prestasi' => $prestasi,
             'dataProvider' => $dataProvider,
         ]);
     }

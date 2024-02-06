@@ -2,9 +2,11 @@
 
 namespace backend\controllers;
 
+use Yii;
 use backend\models\Fasilitas;
 use backend\models\FasilitasSearch;
 use yii\web\Controller;
+use yii\web\UploadedFile;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
@@ -24,7 +26,7 @@ class FasilitaslController extends Controller
                 'verbs' => [
                     'class' => VerbFilter::className(),
                     'actions' => [
-                        'delete' => ['POST'],
+                        //'delete' => ['POST'],
                     ],
                 ],
             ]
@@ -40,9 +42,11 @@ class FasilitaslController extends Controller
     {
         $searchModel = new FasilitasSearch();
         $dataProvider = $searchModel->search($this->request->queryParams);
+        $fasilitas = Fasilitas::find()->all();
 
         return $this->render('index', [
             'searchModel' => $searchModel,
+            'fasilitas' => $fasilitas,
             'dataProvider' => $dataProvider,
         ]);
     }
@@ -68,6 +72,7 @@ class FasilitaslController extends Controller
     public function actionCreate()
     {
         $model = new Fasilitas();
+        $model->imageFile = UploadedFile::getInstance($model, 'image');
 
         if ($this->request->isPost) {
             if ($model->load($this->request->post()) && $model->save()) {

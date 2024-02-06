@@ -127,7 +127,7 @@ AppAsset::register($this);
 									<div class="header-nav-main header-nav-main-text-capitalize header-nav-main-effect-2 header-nav-main-sub-effect-1">
 										<nav class="collapse">
 											<ul class="nav nav-pills" id="mainNav">
-												<li><a href="site/index" class="nav-link active">Home</a></li>
+												<li><a href="index" class="nav-link active">Home</a></li>
 												<li class="dropdown">
 													<a href="#" class="nav-link dropdown-toggle">Profil</a>
 													<ul class="dropdown-menu">
