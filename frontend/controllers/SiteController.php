@@ -2,20 +2,21 @@
 
 namespace frontend\controllers;
 
-use frontend\models\ResendVerificationEmailForm;
-use frontend\models\VerifyEmailForm;
 use Yii;
-use yii\base\InvalidArgumentException;
-use yii\web\BadRequestHttpException;
 use yii\web\Controller;
+use backend\models\Dosen;
+use backend\models\Jurnal;
 use yii\filters\VerbFilter;
-use yii\filters\AccessControl;
 use common\models\LoginForm;
-use frontend\models\PasswordResetRequestForm;
-use frontend\models\ResetPasswordForm;
+use yii\filters\AccessControl;
 use frontend\models\SignupForm;
 use frontend\models\ContactForm;
-use backend\models\Jurnal;
+use frontend\models\VerifyEmailForm;
+use yii\web\BadRequestHttpException;
+use frontend\models\ResetPasswordForm;
+use yii\base\InvalidArgumentException;
+use frontend\models\PasswordResetRequestForm;
+use frontend\models\ResendVerificationEmailForm;
 
 /**
  * Site controller
@@ -145,6 +146,28 @@ class SiteController extends Controller
     public function actionAbout()
     {
         return $this->render('about');
+    }
+
+    public function actionDownload()
+    {
+        $modelDownload = Download::find()->all();
+        return $this->render('download', [
+            'modelDownload' => $modelDownload
+        ]);
+    }
+    public function actionDosen()
+    {
+        $modelDosen = Dosen::find()->all();
+        return $this->render('dosen', [
+            'modelDosen' => $modelDosen
+        ]);
+    }
+    public function actionDosenPraktisi()
+    {
+        $modelDosenPraktisi = Dosen::find()->all();
+        return $this->render('dosen-praktisi', [
+            'modelDosenPraktisi' => $modelDosenPraktisi
+        ]);
     }
 
     public function actionJurnal()
