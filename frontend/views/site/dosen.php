@@ -1,22 +1,7 @@
 <?php
 
 use yii\helpers\Html; ?>
-<style>
-    .section-height-3 {
-        height: 500px;
-        /* Sesuaikan tinggi sesuai kebutuhan */
-        margin-top: -80px;
-        /* Sesuaikan nilai ini agar bagian tersebut sejajar dengan header */
-        padding-top: 80px;
-        /* Sesuaikan nilai ini agar konten di dalam bagian tersebut tetap terlihat dengan baik */
-    }
 
-    /* Jika menggunakan Bootstrap, Anda mungkin ingin menyesuaikan kelas margin dan padding pada container */
-    .container {
-        margin-top: 0;
-        padding-top: 0;
-    }
-</style>
 <section class="section section-with-shape-divider section-height-3 overlay overlay-show border-0 m-0" data-plugin-parallax data-plugin-options="{'speed': 1.5, 'parallaxHeight': '120%', 'fadeIn': true}" data-image-src="<?= Yii::$app->getHomeUrl(); ?>img/logos/gedungfis.jpg">
     <div class="container pt-3 pb-5 mb-5">
         <div class="row mb-3">

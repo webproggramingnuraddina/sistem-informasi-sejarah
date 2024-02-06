@@ -140,12 +140,12 @@ AppAsset::register($this);
 													</ul>
 												</li>
 												<li class="dropdown">
-													<a href="demo-auto-services-services.html" class="nav-link dropdown-toggle">Staff</a>
+													<a href="#" class="nav-link dropdown-toggle">Staff </a>
 													<ul class="dropdown-menu">
-														<li><a href="demo-auto-services-services-detail.html" class="dropdown-item">Struktur Organisasi</a></li>
-														<li><a href="demo-auto-services-services-detail.html" class="dropdown-item">Dosen</a></li>
-														<li><a href="demo-auto-services-services-detail.html" class="dropdown-item">Dosen Praktisi</a></li>
-														<li><a href="demo-auto-services-services-detail.html" class="dropdown-item">Tendik</a></li>
+														<li><a href="<?= Url::toRoute(['/site/download']) ?>" class="dropdown-item">Struktur Organisasi</a></li>
+														<li><a href="<?= Url::toRoute(['/site/dosen']) ?>" class="dropdown-item">Dosen</a></li>
+														<li><a href="<?= Url::toRoute(['/site/dosen-praktisi']) ?>" class="dropdown-item">Dosen Praktisi</a></li>
+														<li><a href="<?= Url::toRoute(['/site/tendik']) ?>" class="dropdown-item">Tendik</a></li>
 													</ul>
 												</li>
 												<li class="dropdown">
@@ -179,16 +179,9 @@ AppAsset::register($this);
 														<li><a href="demo-auto-services-services-detail.html" class="dropdown-item">Kerjasama</a></li>
 													</ul>
 												</li>
-												<li class="dropdown">
-													<a href="demo-auto-services-services.html" class="nav-link dropdown-toggle">Download</a>
-													<ul class="dropdown-menu">
-														<li><a href="demo-auto-services-services-detail.html" class="dropdown-item">Nasmik Labor</a></li>
-														<li><a href="demo-auto-services-services-detail.html" class="dropdown-item">SOP Ruang Baca</a></li>
-														<li><a href="demo-auto-services-services-detail.html" class="dropdown-item">SOP MBKM</a></li>
-														<li><a href="demo-auto-services-services-detail.html" class="dropdown-item">Panduan KKL</a></li>
-														<li><a href="demo-auto-services-services-detail.html" class="dropdown-item">Panduan Skripsi</a></li>
-														<li><a href="demo-auto-services-services-detail.html" class="dropdown-item">Pengumuman</a></li>
-													</ul>
+												<li>
+													<a href="<?= Url::toRoute(['/site/download']) ?>" class="nav-link dropdown-toggle">Download </a>
+
 												</li>
 												<li class="dropdown">
 													<a href="<?= Url::toRoute(['/site/jurnal']) ?>" class="nav-link">Jurnal</a>
