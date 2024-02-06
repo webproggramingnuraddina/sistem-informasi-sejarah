@@ -7,6 +7,7 @@ use yii\web\Controller;
 use backend\models\Dosen;
 use backend\models\Jurnal;
 use yii\filters\VerbFilter;
+use backend\models\Download;
 use common\models\LoginForm;
 use yii\filters\AccessControl;
 use frontend\models\SignupForm;
