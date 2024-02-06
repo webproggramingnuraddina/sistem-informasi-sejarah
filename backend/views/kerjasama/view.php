@@ -24,6 +24,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 'method' => 'post',
             ],
         ]) ?>
+        <?= Html::a('Back', ['/kerjasama'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?= DetailView::widget([
@@ -35,6 +36,18 @@ $this->params['breadcrumbs'][] = $this->title;
             'mulai_kerjasama',
             'akhir_kerjasama',
             'manfaat',
+            [
+                'attribute' => 'bidang',
+                'value' => function ($model) {
+                    if ($model->bidang === '1') {
+                        return 'Bidang Pendidikan';
+                    } elseif ($model->bidang === '2') {
+                        return 'Bidang Penelitian';
+                    } elseif ($model->bidang === '3') {
+                        return 'Bidang PKM';
+                    }
+                },
+            ],
         ],
     ]) ?>
 

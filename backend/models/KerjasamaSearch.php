@@ -18,7 +18,7 @@ class KerjasamaSearch extends Kerjasama
     {
         return [
             [['id_kerjasama', 'mulai_kerjasama', 'akhir_kerjasama'], 'integer'],
-            [['nm_instansi', 'nomor', 'manfaat'], 'safe'],
+            [['nm_instansi', 'nomor', 'manfaat', 'bidang'], 'safe'],
         ];
     }
 
@@ -65,7 +65,8 @@ class KerjasamaSearch extends Kerjasama
 
         $query->andFilterWhere(['like', 'nm_instansi', $this->nm_instansi])
             ->andFilterWhere(['like', 'nomor', $this->nomor])
-            ->andFilterWhere(['like', 'manfaat', $this->manfaat]);
+            ->andFilterWhere(['like', 'manfaat', $this->manfaat])
+            ->andFilterWhere(['like', 'bidang', $this->bidang]);
 
         return $dataProvider;
     }
