@@ -131,12 +131,12 @@ AppAsset::register($this);
 											<ul class="nav nav-pills" id="mainNav">
 												<li><a href="<?= Url::toRoute(['/site/index']) ?>" class="nav-link active">Home</a></li>
 												<li class="dropdown">
-													<a href="demo-auto-services-services.html" class="nav-link dropdown-toggle">Profil</a>
+													<a href="" class="nav-link dropdown-toggle">Profil</a>
 													<ul class="dropdown-menu">
-														<li><a href="demo-auto-services-services-detail.html" class="dropdown-item">Sejarah</a></li>
-														<li><a href="demo-auto-services-services-detail.html" class="dropdown-item">Visi</a></li>
-														<li><a href="demo-auto-services-services-detail.html" class="dropdown-item">Misi</a></li>
-														<li><a href="demo-auto-services-services-detail.html" class="dropdown-item">Tujuan</a></li>
+														<li><a href="<?= Url::toRoute(['profil/sejarah']) ?>" class="dropdown-item">Sejarah</a></li>
+														<li><a href="<?= Url::toRoute(['profil/visi']) ?>" class="dropdown-item">Visi</a></li>
+														<li><a href="<?= Url::toRoute(['profil/misi']) ?>" class="dropdown-item">Misi</a></li>
+														<li><a href="<?= Url::toRoute(['profil/tujuan']) ?>" class="dropdown-item">Tujuan</a></li>
 													</ul>
 												</li>
 												<li class="dropdown">
@@ -161,22 +161,22 @@ AppAsset::register($this);
 													</ul>
 												</li>
 												<li class="dropdown">
-													<a href="demo-auto-services-services.html" class="nav-link dropdown-toggle">Mahasiswa & Alumni</a>
+													<a href="" class="nav-link dropdown-toggle">Mahasiswa & Alumni</a>
 													<ul class="dropdown-menu">
-														<li><a href="demo-auto-services-services-detail.html" class="dropdown-item">Struktur Organisasi</a></li>
-														<li><a href="demo-auto-services-services-detail.html" class="dropdown-item">Prestasi</a></li>
-														<li><a href="demo-auto-services-services-detail.html" class="dropdown-item">Beasiswa</a></li>
-														<li><a href="demo-auto-services-services-detail.html" class="dropdown-item">Fasilitas</a></li>
-														<li><a href="demo-auto-services-services-detail.html" class="dropdown-item">Alumni</a></li>
+														<li><a href="<?= Url::toRoute(['mahasiswa/mhsorganisasi']) ?>" class="dropdown-item">Struktur Organisasi</a></li>
+														<li><a href="<?= Url::toRoute(['mahasiswa/prestasi']) ?>" class="dropdown-item">Prestasi</a></li>
+														<li><a href="<?= Url::toRoute(['mahasiswa/beasiswa']) ?>" class="dropdown-item">Beasiswa</a></li>
+														<li><a href="<?= Url::toRoute(['mahasiswa/fasilitas']) ?>" class="dropdown-item">Fasilitas</a></li>
+														<li><a href="<?= Url::toRoute(['mahasiswa/alumni']) ?>" class="dropdown-item">Alumni</a></li>
 													</ul>
 												</li>
 												<li class="dropdown">
-													<a href="demo-auto-services-services.html" class="nav-link dropdown-toggle">Penelitian & Pengabdian</a>
+													<a href="" class="nav-link dropdown-toggle">Penelitian & Pengabdian</a>
 													<ul class="dropdown-menu">
-														<li><a href="demo-auto-services-services-detail.html" class="dropdown-item">Kelompok Riset</a></li>
-														<li><a href="demo-auto-services-services-detail.html" class="dropdown-item">Publikasi Riset</a></li>
-														<li><a href="demo-auto-services-services-detail.html" class="dropdown-item">Publikasi Pengabdian</a></li>
-														<li><a href="demo-auto-services-services-detail.html" class="dropdown-item">Kerjasama</a></li>
+														<li><a href="<?= Url::toRoute(['penelitian/kelompokriset']) ?>" class="dropdown-item">Kelompok Riset</a></li>
+														<li><a href="<?= Url::toRoute(['penelitian/publikasiriset']) ?>" class="dropdown-item">Publikasi Riset</a></li>
+														<li><a href="<?= Url::toRoute(['penelitian/publikasipengabdian']) ?>" class="dropdown-item">Publikasi Pengabdian</a></li>
+														<li><a href="<?= Url::toRoute(['penelitian/kerjasama']) ?>" class="dropdown-item">Kerjasama</a></li>
 													</ul>
 												</li>
 												<li>
