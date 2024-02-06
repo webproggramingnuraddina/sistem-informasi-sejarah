@@ -87,6 +87,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                     <th>Kriteria</th>
                                     <th>Tempat / Tanggal Lahir</th>
                                     <th>Image</th>
+                                    <th>Action</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -116,5 +117,6 @@ $this->params['breadcrumbs'][] = $this->title;
                 </div><!-- /.box -->
             </div><!-- /.col -->
         </div><!-- /.row -->
-        <!-- </section>/.content -->
+    </section>
+    <!-- </section>/.content -->
 </div>

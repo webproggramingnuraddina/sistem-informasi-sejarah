@@ -190,13 +190,7 @@ AppAsset::register($this);
 													</ul>
 												</li>
 
-												<li class="dropdown">
 
-												<li><?= Html::a('Bahasa Indonesia', ['site/change-language', 'lang' => 'id']) ?></li>
-												<li><?= Html::a('English', ['site/change-language', 'lang' => 'en']) ?></li>
-
-												</li>
-												<!-- <li><a href="demo-industry-factory.html" class="nav-link">Berita</a></li> -->
 											</ul>
 										</nav>
 									</div>

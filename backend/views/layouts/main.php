@@ -31,6 +31,10 @@ AppAsset::register($this);
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="<?= Yii::$app->getHomeUrl(); ?>dist/css/AdminLTE.min.css">
+  <!-- jQuery -->
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
+
+
   <!-- AdminLTE Skins. Choose a skin from the css/skins
          folder instead of downloading all of them to reduce the load. -->
   <link rel="stylesheet" href="<?= Yii::$app->getHomeUrl(); ?>dist/css/skins/_all-skins.min.css">
@@ -244,8 +248,13 @@ AppAsset::register($this);
   <!-- jQuery 2.1.4 -->
   <script src="<?= Yii::$app->getHomeUrl(); ?>plugins/jQuery/jQuery-2.1.4.min.js"></script>
   <!-- jQuery UI 1.11.4 -->
-  <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
-  <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+  <!-- <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+    Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- DataTables -->
+  <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+
   <script>
     $.widget.bridge('uibutton', $.ui.button);
   </script>
@@ -260,6 +269,12 @@ AppAsset::register($this);
   <script src="<?= Yii::$app->getHomeUrl(); ?>plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
   <script src="<?= Yii::$app->getHomeUrl(); ?>plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
   <!-- jQuery Knob Chart -->
+  <script src="<?= Yii::$app->getHomeUrl(); ?>plugins/datatables/jquery.dataTables.min.js"></script>
+
+  <script src="<?= Yii::$app->getHomeUrl(); ?>plugins/datatables/dataTables.bootstrap.min.js"></script>
+  <script src="<?= Yii::$app->getHomeUrl(); ?>plugins/datatables/dataTables.bootstrap.js"></script>
+  <!-- SlimScroll -->
+
   <script src="<?= Yii::$app->getHomeUrl(); ?>plugins/knob/jquery.knob.js"></script>
   <!-- daterangepicker -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.2/moment.min.js"></script>
@@ -278,6 +293,23 @@ AppAsset::register($this);
   <script src="<?= Yii::$app->getHomeUrl(); ?>dist/js/pages/dashboard.js"></script>
   <!-- AdminLTE for demo purposes -->
   <script src="<?= Yii::$app->getHomeUrl(); ?>dist/js/demo.js"></script>
+
+  <script>
+    $(function() {
+      $("#example1").DataTable({
+        "paging": true,
+        "lengthChange": true,
+        "searching": true,
+        "ordering": true, // Aktifkan pengurutan
+        "info": true,
+        "autoWidth": true
+      });
+    });
+  </script>
+  <!-- Pastikan jQuery sudah dimuat sebelum Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
 </body>
 
 </html>
