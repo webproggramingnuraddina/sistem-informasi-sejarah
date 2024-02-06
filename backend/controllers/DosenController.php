@@ -97,6 +97,7 @@ class DosenController extends Controller
     public function actionUpdate($id_dosen)
     {
         $model = $this->findModel($id_dosen);
+        $model->imageFile = UploadedFile::getInstance($model, 'image');
 
         if ($this->request->isPost && $model->load($this->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id_dosen' => $model->id_dosen]);
