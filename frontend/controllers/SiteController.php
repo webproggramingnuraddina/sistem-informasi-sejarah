@@ -170,6 +170,13 @@ class SiteController extends Controller
             'modelDosenPraktisi' => $modelDosenPraktisi
         ]);
     }
+    public function actionTendik()
+    {
+        $modelTendik = Dosen::find()->all();
+        return $this->render('dosen-praktisi', [
+            'modelTendik' => $modelTendik
+        ]);
+    }
 
     public function actionJurnal()
     {
