@@ -5,7 +5,6 @@
 $this->title = 'My Yii Application';
 ?>
 <div role="main" class="main">
-    <br><br><br><br><br><br>
     <section class="section section-with-shape-divider overflow-hidden border-0 m-0" style="background-image: url(img/demos/industry-factory/backgrounds/background-1.jpg); background-repeat: no-repeat; background-size: cover; background-position: center 70px;">
         <div class="shape-divider shape-divider-bottom" style="height: 120px;">
             <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 2000 120" preserveAspectRatio="xMinYMin">
