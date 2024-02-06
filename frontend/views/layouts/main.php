@@ -23,7 +23,7 @@ AppAsset::register($this);
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-	<title>Demo Industry & Factory | Porto - Responsive HTML5 Template</title>
+	<title>Departemen Sejarah</title>
 
 	<meta name="keywords" content="HTML5 Template" />
 	<meta name="description" content="Porto - Responsive HTML5 Template">
@@ -117,8 +117,8 @@ AppAsset::register($this);
 							<div class="header-row">
 								<div class="header-logo">
 									<a href="demo-industry-factory.html">
-										<img src="<?= Yii::$app->getHomeUrl(); ?>img/demos/industry-factory/Universitas-Negeri-Padang-Logo.png" class="img-fluid" width="70" height="70" alt="" />
-										<span> Departemen Sejarah </span>
+										<img src="<?= Yii::$app->getHomeUrl(); ?>img/demos/industry-factory/backgrounds/Departemen Sejarah Logo.png" class="img-fluid" width="70" height="70" alt="" />
+										
 									</a>
 								</div>
 							</div>
