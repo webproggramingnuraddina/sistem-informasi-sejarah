@@ -38,7 +38,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     <div class="col-lg-6 order-2 order-lg-1 appear-animation" data-appear-animation="fadeInLeftShorter" data-appear-animation-delay="200">
                         <!-- <h2 class="text-color-primary font-weight-medium positive-ls-3 text-4 mb-0">OUR VALUES</h2> -->
                         <h3 class="font-weight-bold text-transform-none text-9 line-height-2 mb-3">Our Vission</h3>
-                        <p class="custom-font-secondary custom-font-size-1 line-height-7 pb-2 mb-4 text-justify">Menjadi prodi yang unggul di kawasan Asia Tenggara dalam menyelenggarakan pendidikan sejarah yang menghasilkan tenaga pendidik yang berkarakter, mampu berinovasi, dan terampil dalam mengembangkan pembelajaran yang sesuai dengan perkembangan IPTEK.</p>
+                        <p class="pt-3 pb-2 mb-2 appear-animation" data-appear-animation="fadeInUpShorter">Menjadi prodi yang unggul di kawasan Asia Tenggara dalam menyelenggarakan pendidikan sejarah yang menghasilkan tenaga pendidik yang berkarakter, mampu berinovasi, dan terampil dalam mengembangkan pembelajaran yang sesuai dengan perkembangan IPTEK.</p>
                         
                     </div>
                     <div class="col-lg-6 order-1 order-lg-2 ps-lg-5 mb-4 mb-lg-0">

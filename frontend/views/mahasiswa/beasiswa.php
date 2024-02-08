@@ -42,41 +42,42 @@ $this->params['breadcrumbs'][] = $this->title;
                     <div class="col-lg-6 appear-animation" data-appear-animation="fadeInRightShorter" data-appear-animation-delay="500">
                         <h2 class="text-color-primary font-weight-medium positive-ls-3 text-4 mb-0">Beasiswa</h2>
                         <!-- <h3 class="font-weight-bold text-transform-none text-9 line-height-2 mb-3">Other Industries</h3> -->
-                        <p class="custom-font-secondary custom-font-size-1 line-height-7 pb-2 mb-4 text-justify">Prodi Pendidikan Sejarah senantiasa membantu mahasiswa untuk mendapatkan berbagai beasiswa yang dapat digunakan mahasiswa  untuk membantu proses pendidikannya, terutama yang mengalami kesulitan biaya. Berbagai bentuk dan jalur beasiswa yang bisa didapatkan oleh mahasiswa sebagian berasal dari Universitas Negeri Padang (UNP) sendiri, dan sebagaian lain dari donator luar. Beasiswa tersebut antara lain dalam bentuk beasiswa prestasi, dan bantuan pendidikan.</p>
+                        <p class="pt-3 pb-2 mb-2 appear-animation" data-appear-animation="fadeInUpShorter">Prodi Pendidikan Sejarah senantiasa membantu mahasiswa untuk mendapatkan berbagai beasiswa yang dapat digunakan mahasiswa  untuk membantu proses pendidikannya, terutama yang mengalami kesulitan biaya. Berbagai bentuk dan jalur beasiswa yang bisa didapatkan oleh mahasiswa sebagian berasal dari Universitas Negeri Padang (UNP) sendiri, dan sebagaian lain dari donator luar. Beasiswa tersebut antara lain dalam bentuk beasiswa prestasi, dan bantuan pendidikan.</p>
+                        <p class="pt-3 pb-2 mb-2 appear-animation" data-appear-animation="fadeInUpShorter">Bentuk beasiswa prestasi antara lain adalah beasiwa PPA (Peningkatan Prestasi Akademik). Beasiswa ini diperuntukkan bagi mahasiswa yang memiliki prestasi, baik di segi akademik maupun non akademik. Untuk mendapatkan beasiswa ini, mahasiswa harus aktif berkegiatan di berbagai UKM yang ada di UNP.  Sementara itu jenis beasiswa bantuan berasal dari Kementerian Riset Teknologi dan Perguruan Tinggi (Kemristekdikti), serta Kementerian Pendidikan dan Kebudayaan (Kemdikbud).</p>
                     </div>
                 </div>
             </div>
         </section>
         
-        <p class="custom-font-secondary custom-font-size-1 line-height-7 pb-2 mb-4 text-justify">Bentuk beasiswa prestasi antara lain adalah beasiwa PPA (Peningkatan Prestasi Akademik). Beasiswa ini diperuntukkan bagi mahasiswa yang memiliki prestasi, baik di segi akademik maupun non akademik. Untuk mendapatkan beasiswa ini, mahasiswa harus aktif berkegiatan di berbagai UKM yang ada di UNP.  Sementara itu jenis beasiswa bantuan berasal dari Kementerian Riset Teknologi dan Perguruan Tinggi (Kemristekdikti), serta Kementerian Pendidikan dan Kebudayaan (Kemdikbud).</p>
-        <p class="custom-font-secondary custom-font-size-1 line-height-7 pb-2 mb-4 text-justify">Selain itu, beberapa perusahaan dan organisasi swasta pun sering memberikan beasiswa bantuan dalam tiap programnya. Beasiswa yang diberikan oleh perusahaan dan instansi swasta diataranya:</p>
+        
+        <p class="pt-3 pb-2 mb-2 appear-animation" data-appear-animation="fadeInUpShorter">Selain itu, beberapa perusahaan dan organisasi swasta pun sering memberikan beasiswa bantuan dalam tiap programnya. Beasiswa yang diberikan oleh perusahaan dan instansi swasta diataranya:</p>
                         
         <div class="row">
             <div class="col-md-6">
                 <ul class="list list-icons list-icons-style-2 list-icons-lg custom-list-icons-icon-size pb-1 mb-3" style="word-break: break-all;">
-                    <li class="font-weight-semibold text-color-dark"><i class="fas fa-check text-color-dark border-color-grey-1 top-7 pr-2"></i> BBM (Bantuan Belajar Mahasiswa)</li>
-                    <li class="font-weight-semibold text-color-dark"><i class="fas fa-check text-color-dark border-color-grey-1 top-7 pr-2"></i> BBPPA (Bantuan Belajar Peningkatan Prestasi Akademik)</li>
-                    <li class="font-weight-semibold text-color-dark"><i class="fas fa-check text-color-dark border-color-grey-1 top-7 pr-2"></i> BUMN (Badan Usaha Milik Negara)</li>
-                    <li class="font-weight-semibold text-color-dark"><i class="fas fa-check text-color-dark border-color-grey-1 top-7 pr-2"></i> BRI (Bank Rakyat Indonesia)</li>
-                    <li class="font-weight-semibold text-color-dark"><i class="fas fa-check text-color-dark border-color-grey-1 top-7 pr-2"></i> Lippo Bank</li>
-                    <li class="font-weight-semibold text-color-dark"><i class="fas fa-check text-color-dark border-color-grey-1 top-7 pr-2"></i> Bank Nagari</li>
-                    <li class="font-weight-semibold text-color-dark"><i class="fas fa-check text-color-dark border-color-grey-1 top-7 pr-2"></i> Bidikmisi (Untuk calon mahasiswa)</li>
+                    <li class="text-color-dark"><i class="fas fa-check text-color-dark border-color-grey-1 top-7 pr-2"></i> BBM (Bantuan Belajar Mahasiswa)</li>
+                    <li class="text-color-dark"><i class="fas fa-check text-color-dark border-color-grey-1 top-7 pr-2"></i> BBPPA (Bantuan Belajar Peningkatan Prestasi Akademik)</li>
+                    <li class="text-color-dark"><i class="fas fa-check text-color-dark border-color-grey-1 top-7 pr-2"></i> BUMN (Badan Usaha Milik Negara)</li>
+                    <li class="text-color-dark"><i class="fas fa-check text-color-dark border-color-grey-1 top-7 pr-2"></i> BRI (Bank Rakyat Indonesia)</li>
+                    <li class="text-color-dark"><i class="fas fa-check text-color-dark border-color-grey-1 top-7 pr-2"></i> Lippo Bank</li>
+                    <li class="text-color-dark"><i class="fas fa-check text-color-dark border-color-grey-1 top-7 pr-2"></i> Bank Nagari</li>
+                    <li class="text-color-dark"><i class="fas fa-check text-color-dark border-color-grey-1 top-7 pr-2"></i> Bidikmisi (Untuk calon mahasiswa)</li>
                 </ul>
             </div>
             <div class="col-md-6">
                 <ul class="list list-icons list-icons-style-2 list-icons-lg custom-list-icons-icon-size pb-1 mb-3" style="word-break: break-all;">
-                    <li class="font-weight-semibold text-color-dark"><i class="fas fa-check text-color-dark border-color-grey-1 top-7"></i> BAZ (Badan Amil Zakat)</li>
-                    <li class="font-weight-semibold text-color-dark"><i class="fas fa-check text-color-dark border-color-grey-1 top-7"></i> PT. Semen Padang</li>
-                    <li class="font-weight-semibold text-color-dark"><i class="fas fa-check text-color-dark border-color-grey-1 top-7"></i> Toyota Astra</li>
-                    <li class="font-weight-semibold text-color-dark"><i class="fas fa-check text-color-dark border-color-grey-1 top-7"></i> BI (Bank Indonesia)</li>
-                    <li class="font-weight-semibold text-color-dark"><i class="fas fa-check text-color-dark border-color-grey-1 top-7"></i> VDMS (Van Deventer-Maas Stichting)</li>
-                    <li class="font-weight-semibold text-color-dark"><i class="fas fa-check text-color-dark border-color-grey-1 top-7"></i> Supersemar</li>
+                    <li class="text-color-dark"><i class="fas fa-check text-color-dark border-color-grey-1 top-7"></i> BAZ (Badan Amil Zakat)</li>
+                    <li class="text-color-dark"><i class="fas fa-check text-color-dark border-color-grey-1 top-7"></i> PT. Semen Padang</li>
+                    <li class="text-color-dark"><i class="fas fa-check text-color-dark border-color-grey-1 top-7"></i> Toyota Astra</li>
+                    <li class="text-color-dark"><i class="fas fa-check text-color-dark border-color-grey-1 top-7"></i> BI (Bank Indonesia)</li>
+                    <li class="text-color-dark"><i class="fas fa-check text-color-dark border-color-grey-1 top-7"></i> VDMS (Van Deventer-Maas Stichting)</li>
+                    <li class="text-color-dark"><i class="fas fa-check text-color-dark border-color-grey-1 top-7"></i> Supersemar</li>
                 </ul>
             </div>
         </div>
 
 
-        <p class="custom-font-secondary custom-font-size-1 line-height-7 pb-2 mb-4 text-justify">Modal utama untuk bisa mendapatkan beasiswa adalah nilai akademik yang baik dan  prestasi di organisasi mahasiswa atau UKM (Unit Kegiatan Mahasiswa). Kategori baik di akademik itu dilihat dari nilai IPK (Indeks Prestasi komulatif) yang diperoleh semasa berkuliah. Pemberi beasiswa biasanya lebih memprioritaskan mahasiswa yang membutuhkan bantuan ekonomi agar dapat menyelesaikan studi. Semua informasi lengkap dan proses seleksi beasiswa dapat diakses mahasiswa di situs <a href="http://www.sib.unp.ac.id">www.sib.unp.ac.id</a>
+        <p class="pt-3 pb-2 mb-2 appear-animation" data-appear-animation="fadeInUpShorter">Modal utama untuk bisa mendapatkan beasiswa adalah nilai akademik yang baik dan  prestasi di organisasi mahasiswa atau UKM (Unit Kegiatan Mahasiswa). Kategori baik di akademik itu dilihat dari nilai IPK (Indeks Prestasi komulatif) yang diperoleh semasa berkuliah. Pemberi beasiswa biasanya lebih memprioritaskan mahasiswa yang membutuhkan bantuan ekonomi agar dapat menyelesaikan studi. Semua informasi lengkap dan proses seleksi beasiswa dapat diakses mahasiswa di situs <a href="http://www.sib.unp.ac.id">www.sib.unp.ac.id</a>
         Website ini diperuntukkan bagi mahasiswa yang sudah terdaftar di UNP, sehingga untuk mengaksesnya  perlu ID dan password yang otomatis didapatkan ketika sudah diterima sebagai mahasiswa UNP.</p>
 
     </div>

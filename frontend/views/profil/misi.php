@@ -37,12 +37,13 @@ $this->params['breadcrumbs'][] = $this->title;
                 <div class="row align-items-center justify-content-center">
                     <div class="col-lg-6 order-2 order-lg-1 appear-animation" data-appear-animation="fadeInLeftShorter" data-appear-animation-delay="200">
                         <!-- <h2 class="text-color-primary font-weight-medium positive-ls-3 text-4 mb-0">OUR VALUES</h2> -->
-                        <h3 class="font-weight-bold text-transform-none text-9 line-height-2 mb-3">Our Mission</h3>
+                        <h3 class="font-weight-bold text-transform-none text-9 line-height-2 mb-3">Misi Departemen Sejarah</h3>
                         
                         <ul class="list list-icons list-icons-style-2 list-icons-lg custom-list-icons-icon-size pb-1 mb-3">
-                            <li class="font-weight text-color-dark custom-font-secondary custom-font-size-1 line-height-7 pb-2 mb-4 text-justify"><i class="fas fa-check text-color-dark border-color-grey-1 top-7"></i> Menyelenggarakan pendidikan guna menghasilkan guru sejarah yang profesional, unggul, dan mampu mengembangkan pembelajaran sejarah abad 21.</li>
-                            <li class="font-weight text-color-dark custom-font-secondary custom-font-size-1 line-height-7 pb-2 mb-4 text-justify"><i class="fas fa-check text-color-dark border-color-grey-1 top-7"></i> Menyelenggarakan penelitian yang inovatif dan berkontribusi secara global dalam bidang pendidikan sejarah dan ilmu sejarah.</li>
-                            <li class="font-weight text-color-dark custom-font-secondary custom-font-size-1 line-height-7 pb-2 mb-4 text-justify"><i class="fas fa-check text-color-dark border-color-grey-1 top-7"></i> Menyelenggarakan pengabdian kepada masyarakat sebagai sarana berkontribusi terhadap peningkatan pendidikan karakter berbasis nilai-nilai sejarah dalam rangka membangun masyarakat yang berdaya saing.</li>
+                        <p class="pt-3 pb-2 mb-2 appear-animation" data-appear-animation="fadeInUpShorter">
+                            <li class="pt-3 pb-2 mb-2 appear-animation" data-appear-animation="fadeInUpShorter"><i class="fas fa-check text-color-dark border-color-grey-1 top-7"></i> Menyelenggarakan pendidikan guna menghasilkan guru sejarah yang profesional, unggul, dan mampu mengembangkan pembelajaran sejarah abad 21.</li>
+                            <li class="pt-3 pb-2 mb-2 appear-animation" data-appear-animation="fadeInUpShorter"><i class="fas fa-check text-color-dark border-color-grey-1 top-7"></i> Menyelenggarakan penelitian yang inovatif dan berkontribusi secara global dalam bidang pendidikan sejarah dan ilmu sejarah.</li>
+                            <li class="pt-3 pb-2 mb-2 appear-animation" data-appear-animation="fadeInUpShorter"><i class="fas fa-check text-color-dark border-color-grey-1 top-7"></i> Menyelenggarakan pengabdian kepada masyarakat sebagai sarana berkontribusi terhadap peningkatan pendidikan karakter berbasis nilai-nilai sejarah dalam rangka membangun masyarakat yang berdaya saing.</li>
                         </ul>
                     
                     </div>
