@@ -90,7 +90,11 @@ $this->params['breadcrumbs'][] = $this->title;
 
 
                                         <td><?= $a->tittle ?></td>
-                                        <td><?= $a->isi_berita ?></td>
+                                        <?php
+                                        // Mengambil hanya 25 karakter pertama dari deskripsi
+                                        $shortDescription = mb_substr($a->tittle, 0, 400, 'UTF-8');
+                                        ?>
+                                        <td><?= $shortDescription; ?>...</td>
                                         <td><?= Html::img($a->getImageUrl(), ['style' => 'width: 150px']) ?></td>
                                         <td><?= date('d M Y H:i:s', date($a->created_at)) ?></td>
                                         <td><?= $a->createdBy->username ?></td>

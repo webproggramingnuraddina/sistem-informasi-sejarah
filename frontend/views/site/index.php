@@ -85,12 +85,9 @@ $this->title = 'My Yii Application';
             <div class="row justify-content-center mb-5">
                 <div class="col-lg-9 col-xl-8 text-center">
                     <div class="overflow-hidden">
-                        <h2 class="text-color-primary font-weight-medium positive-ls-3 text-4 mb-0 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="200">WHAT WE DO</h2>
+                        <h2 class="text-color-primary font-weight-medium positive-ls-3 text-8 mb-0 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="200"><u>Berita</u></h2>
                     </div>
-                    <div class="overflow-hidden mb-3">
-                        <h3 class="font-weight-bold text-transform-none text-9 line-height-2 mb-0 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="400">A Selection Of Industries We Serve</h3>
-                    </div>
-                    <p class="custom-font-secondary custom-font-size-1 line-height-7 mb-0 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed imperdiet libero id nisi euismod, sed porta est consectetur.</p>
+
                 </div>
             </div>
 
