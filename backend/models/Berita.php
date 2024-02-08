@@ -4,6 +4,8 @@ namespace backend\models;
 
 use yii\helpers\FileHelper;
 use Yii;
+use yii\behaviors\BlameableBehavior;
+use yii\behaviors\TimestampBehavior;
 
 /**
  * This is the model class for table "berita".
@@ -28,6 +30,14 @@ class Berita extends \yii\db\ActiveRecord
         return 'berita';
     }
 
+    public function behaviors()
+    {
+        return [
+            TimestampBehavior::class,
+            BlameableBehavior::class
+        ];
+    }
+
     /**
      * {@inheritdoc}
      */
@@ -37,9 +47,7 @@ class Berita extends \yii\db\ActiveRecord
             [['tittle', 'isi_berita'], 'required'],
             [['created_at', 'created_by'], 'integer'],
             [['tittle'], 'string', 'max' => 255],
-            [['isi_berita', 'image'], 'string', 'max' => 2555],
-            [['created_by'], 'exist', 'skipOnError' => true, 'targetClass' => User::class, 'targetAttribute' => ['created_by' => 'id']],
-            ['imageFile', 'image', 'extensions' => ['png', 'jpg', 'jpeg', 'webp'], 'maxSize' => 5 * 1024 * 1024],
+            [['isi_berita', 'image'], 'string', 'max' => 2555], ['imageFile', 'image', 'extensions' => ['png', 'jpg', 'jpeg', 'webp'], 'maxSize' => 5 * 1024 * 1024],
         ];
     }
 
@@ -103,7 +111,7 @@ class Berita extends \yii\db\ActiveRecord
     {
         return [
             'id_berita' => 'Id Berita',
-            'tittle' => 'Tittle',
+            'tittle' => 'Judul',
             'isi_berita' => 'Isi Berita',
             'image' => 'Image',
             'created_at' => 'Created At',

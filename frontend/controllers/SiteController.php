@@ -6,6 +6,7 @@ use Yii;
 use yii\web\Controller;
 use backend\models\Dosen;
 use backend\models\Jurnal;
+use backend\models\Berita;
 use yii\filters\VerbFilter;
 use backend\models\Download;
 use common\models\LoginForm;
@@ -78,7 +79,10 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        return $this->render('index');
+        $modelBerita = Berita::find()->all();
+        return $this->render('index', [
+            'modelBerita' => $modelBerita,
+        ]);
     }
 
     /**

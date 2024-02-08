@@ -81,6 +81,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                     <th>Image</th>
                                     <th>Created_at</th>
                                     <th>Created_by</th>
+                                    <th>Action</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -91,8 +92,9 @@ $this->params['breadcrumbs'][] = $this->title;
                                         <td><?= $a->tittle ?></td>
                                         <td><?= $a->isi_berita ?></td>
                                         <td><?= Html::img($a->getImageUrl(), ['style' => 'width: 150px']) ?></td>
-                                        <td><?= $a->created_at ?></td>
-                                        <td><?= $a->created_by ?></td>
+                                        <td><?= date('d M Y H:i:s', date($a->created_at)) ?></td>
+                                        <td><?= $a->createdBy->username ?></td>
+
                                         <td><?= Html::a('&nbsp; View&nbsp;', ['view', 'id_berita' => $a->id_berita], ['class' => 'btn btn-primary']) ?>
 
                                             <?= Html::a('Delete', ['delete', 'id_berita' => $a->id_berita], [
