@@ -13,10 +13,23 @@ use yii\helpers\Url;
 
 AppAsset::register($this);
 ?>
-<?php $this->beginPage() ?>
+<?php $this->beginPage()?> 
 <!DOCTYPE html>
 <html>
+	<style>
+		.header.nav-bar {
+		background-color: red;
+		}
 
+		.header.nav-bar a {
+			color: white !important;
+		}
+
+		.header.nav-bar .dropdown-menu a {
+			color: black !important;
+		}
+	</style>
+	
 <head>
 
 	<!-- Basic -->
@@ -82,11 +95,9 @@ AppAsset::register($this);
 								<div class="header-row">
 									<ul class="list list-unstyled list-inline mb-0">
 										<li class="list-inline-item text-color-dark me-4 mb-0">
-											Sales: <a href="tel:+1234567890" class="text-color-dark text-color-hover-primary text-decoration-none"><strong>123-456-789</strong></a>
+											Contact: <a href="tel:+6281363439428" class="text-color-dark text-color-hover-primary text-decoration-none"><strong>081363439428</strong></a>
 										</li>
-										<li class="list-inline-item text-color-dark d-none d-sm-inline-block mb-0">
-											Services: <a href="tel:+1234567890" class="text-color-dark text-color-hover-primary text-decoration-none"><strong>123-456-789</strong></a>
-										</li>
+										
 									</ul>
 								</div>
 							</div>
@@ -94,8 +105,8 @@ AppAsset::register($this);
 								<div class="header-row">
 									<ul class="header-social-icons social-icons social-icons-clean d-none d-md-block">
 										<li class="social-icons-facebook"><a href="http://www.facebook.com/" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
-										<li class="social-icons-twitter"><a href="http://www.twitter.com/" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a></li>
-										<li class="social-icons-instagram"><a href="http://www.instagram.com/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a></li>
+										<li class="social-icons-email"><a href="mailto:sejarah@fis.unp.ac.id" target="_blank" title="Email"><i class="far fa-envelope"></i></a></li>
+										<li class="social-icons-instagram"><a href="https://www.instagram.com/dep_sejarahunp?igsh=MXZzN2Z2M2ZsOHM0dg==" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a></li>
 									</ul>
 									<a href="#" class="btn custom-svg-btn-style-1 custom-svg-btn-style-1-solid custom-svg-btn-style-1-small text-color-light ms-4">
 										<svg class="custom-svg-btn-background" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 210 70" preserveAspectRatio="none">
@@ -111,107 +122,115 @@ AppAsset::register($this);
 						</div>
 					</div>
 				</div>
-				<div class="header-container container">
-					<div class="header-row">
-						<div class="header-column">
-							<div class="header-row">
-								<div class="header-logo">
-									<a href="demo-industry-factory.html">
-										<img src="<?= Yii::$app->getHomeUrl(); ?>img/demos/industry-factory/backgrounds/Departemen Sejarah Logo.png" class="img-fluid" width="70" height="70" alt="" />
-										
-									</a>
+				<div class="header nav-bar bg-primary">
+					<div class="header-container container">
+						<div class="header-row">
+							<div class="header-column">
+								<div class="header-row">
+									<div class="header-logo">
+										<a href="demo-industry-factory.html">
+											<img src="<?= Yii::$app->getHomeUrl(); ?>img/demos/industry-factory/backgrounds/Departemen Sejarah Logo.png" class="img-fluid" width="70" height="70" alt="" />
+											
+										</a>
+									</div>
 								</div>
 							</div>
-						</div>
-						<div class="header-column justify-content-end">
-							<div class="header-row">
-								<div class="header-nav header-nav-links">
-									<div class="header-nav-main header-nav-main-text-capitalize header-nav-main-effect-2 header-nav-main-sub-effect-1">
-										<nav class="collapse">
-											<ul class="nav nav-pills" id="mainNav">
-												<li><a href="<?= Url::toRoute(['/site/index']) ?>" class="nav-link active">Home</a></li>
-												<li class="dropdown">
-													<a href="" class="nav-link dropdown-toggle">Profil</a>
-													<ul class="dropdown-menu">
-														<li><a href="<?= Url::toRoute(['profil/sejarah']) ?>" class="dropdown-item">Sejarah</a></li>
-														<li><a href="<?= Url::toRoute(['profil/visi']) ?>" class="dropdown-item">Visi</a></li>
-														<li><a href="<?= Url::toRoute(['profil/misi']) ?>" class="dropdown-item">Misi</a></li>
-														<li><a href="<?= Url::toRoute(['profil/tujuan']) ?>" class="dropdown-item">Tujuan</a></li>
-													</ul>
-												</li>
-												<li class="dropdown">
-													<a href="#" class="nav-link dropdown-toggle">Staff </a>
-													<ul class="dropdown-menu">
-														<li><a href="<?= Url::toRoute(['/site/download']) ?>" class="dropdown-item">Struktur Organisasi</a></li>
-														<li><a href="<?= Url::toRoute(['/site/dosen']) ?>" class="dropdown-item">Dosen</a></li>
-														<li><a href="<?= Url::toRoute(['/site/dosen-praktisi']) ?>" class="dropdown-item">Dosen Praktisi</a></li>
-														<li><a href="<?= Url::toRoute(['/site/tendik']) ?>" class="dropdown-item">Tendik</a></li>
-													</ul>
-												</li>
-												<li class="dropdown">
-													<a href="demo-auto-services-services.html" class="nav-link dropdown-toggle">Akademik</a>
-													<ul class="dropdown-menu">
-														<li><a href="<?= Url::toRoute(['/site/maba']) ?>" class="dropdown-item">Penerimaan Mahasiswa Baru</a></li>
-														<li><a href="<?= Url::toRoute(['/site/kurikulum']) ?>" class="dropdown-item">Kurikulum</a></li>
-														<li><a href="<?= Url::toRoute(['/site/lulusan']) ?>" class="dropdown-item">Profil Lulusan</a></li>
-														<li><a href="<?= Url::toRoute(['/site/cpl']) ?>" class="dropdown-item">CPL</a></li>
-														<li><a href="<?= Url::toRoute(['/site/skripsi']) ?>" class="dropdown-item">Skripsi</a></li>
-														<li><a href="<?= Url::toRoute(['/site/kalender']) ?>" class="dropdown-item">Kalender Akademik</a></li>
-														<li><a href="<?= Url::toRoute(['/site/mutu']) ?>" class="dropdown-item">Jaminan Mutu</a></li>
-													</ul>
-												</li>
-												<li class="dropdown">
-													<a href="" class="nav-link dropdown-toggle">Mahasiswa & Alumni</a>
-													<ul class="dropdown-menu">
-														<li><a href="<?= Url::toRoute(['mahasiswa/mhsorganisasi']) ?>" class="dropdown-item">Struktur Organisasi</a></li>
-														<li><a href="<?= Url::toRoute(['mahasiswa/prestasi']) ?>" class="dropdown-item">Prestasi</a></li>
-														<li><a href="<?= Url::toRoute(['mahasiswa/beasiswa']) ?>" class="dropdown-item">Beasiswa</a></li>
-														<li><a href="<?= Url::toRoute(['mahasiswa/fasilitas']) ?>" class="dropdown-item">Fasilitas</a></li>
-														<li><a href="<?= Url::toRoute(['mahasiswa/alumni']) ?>" class="dropdown-item">Alumni</a></li>
-													</ul>
-												</li>
-												<li class="dropdown">
-													<a href="" class="nav-link dropdown-toggle">Penelitian & Pengabdian</a>
-													<ul class="dropdown-menu">
-														<li><a href="<?= Url::toRoute(['penelitian/kelompokriset']) ?>" class="dropdown-item">Kelompok Riset</a></li>
-														<li><a href="<?= Url::toRoute(['penelitian/publikasiriset']) ?>" class="dropdown-item">Publikasi Riset</a></li>
-														<li><a href="<?= Url::toRoute(['penelitian/publikasipengabdian']) ?>" class="dropdown-item">Publikasi Pengabdian</a></li>
-														<li><a href="<?= Url::toRoute(['penelitian/kerjasama']) ?>" class="dropdown-item">Kerjasama</a></li>
-													</ul>
-												</li>
-												<li>
-													<a href="<?= Url::toRoute(['/site/download']) ?>" class="nav-link dropdown-toggle">Download </a>
+							
+							<div class="header-column justify-content-end" >
+								<div class="header-row">
+									<div class="header-nav header-nav-links">
+										<div class="header-nav-main header-nav-main-text-capitalize header-nav-main-effect-2 header-nav-main-sub-effect-1">
+											<nav class="collapse">
+												<ul class="nav nav-pills" id="mainNav">
+													<li><a href="<?= Url::toRoute(['/site/index']) ?>" class="nav-link active">Home</a></li>
+													<li class="dropdown">
+														<a href="" class="nav-link dropdown-toggle">Profil</a>
+														<ul class="dropdown-menu">
+															<li><a href="<?= Url::toRoute(['profil/sejarah']) ?>" class="dropdown-item">Sejarah</a></li>
+															<li><a href="<?= Url::toRoute(['profil/visi']) ?>" class="dropdown-item">Visi</a></li>
+															<li><a href="<?= Url::toRoute(['profil/misi']) ?>" class="dropdown-item">Misi</a></li>
+															<li><a href="<?= Url::toRoute(['profil/tujuan']) ?>" class="dropdown-item">Tujuan</a></li>
+														</ul>
+													</li>
+													<li class="dropdown">
+														<a href="#" class="nav-link dropdown-toggle">Staff </a>
+														<ul class="dropdown-menu">
+															<li><a href="<?= Url::toRoute(['/site/download']) ?>" class="dropdown-item">Struktur Organisasi</a></li>
+															<li><a href="<?= Url::toRoute(['/site/dosen']) ?>" class="dropdown-item">Dosen</a></li>
+															<li><a href="<?= Url::toRoute(['/site/dosen-praktisi']) ?>" class="dropdown-item">Dosen Praktisi</a></li>
+															<li><a href="<?= Url::toRoute(['/site/tendik']) ?>" class="dropdown-item">Tendik</a></li>
+														</ul>
+													</li>
+													<li class="dropdown">
+														<a href="demo-auto-services-services.html" class="nav-link dropdown-toggle">Akademik</a>
+														<ul class="dropdown-menu">
+															<li><a href="<?= Url::toRoute(['/site/maba']) ?>" class="dropdown-item">Penerimaan Mahasiswa Baru</a></li>
+															<li><a href="<?= Url::toRoute(['/site/kurikulum']) ?>" class="dropdown-item">Kurikulum</a></li>
+															<li><a href="<?= Url::toRoute(['/site/lulusan']) ?>" class="dropdown-item">Profil Lulusan</a></li>
+															<li><a href="<?= Url::toRoute(['/site/cpl']) ?>" class="dropdown-item">CPL</a></li>
+															<li><a href="<?= Url::toRoute(['/site/skripsi']) ?>" class="dropdown-item">Skripsi</a></li>
+															<li><a href="<?= Url::toRoute(['/site/kalender']) ?>" class="dropdown-item">Kalender Akademik</a></li>
+															<li><a href="<?= Url::toRoute(['/site/mutu']) ?>" class="dropdown-item">Jaminan Mutu</a></li>
+														</ul>
+													</li>
+													<li class="dropdown">
+														<a href="" class="nav-link dropdown-toggle">Mahasiswa & Alumni</a>
+														<ul class="dropdown-menu">
+															<li><a href="<?= Url::toRoute(['mahasiswa/mhsorganisasi']) ?>" class="dropdown-item">Struktur Organisasi</a></li>
+															<li><a href="<?= Url::toRoute(['mahasiswa/prestasi']) ?>" class="dropdown-item">Prestasi</a></li>
+															<li><a href="<?= Url::toRoute(['mahasiswa/beasiswa']) ?>" class="dropdown-item">Beasiswa</a></li>
+															<li><a href="<?= Url::toRoute(['mahasiswa/fasilitas']) ?>" class="dropdown-item">Fasilitas</a></li>
+															<li><a href="<?= Url::toRoute(['mahasiswa/alumni']) ?>" class="dropdown-item">Alumni</a></li>
+														</ul>
+													</li>
+													<li class="dropdown">
+														<a href="" class="nav-link dropdown-toggle">Penelitian & Pengabdian</a>
+														<ul class="dropdown-menu">
+															<li><a href="<?= Url::toRoute(['penelitian/kelompokriset']) ?>" class="dropdown-item">Kelompok Riset</a></li>
+															<li><a href="<?= Url::toRoute(['penelitian/publikasiriset']) ?>" class="dropdown-item">Publikasi Riset</a></li>
+															<li><a href="<?= Url::toRoute(['penelitian/publikasipengabdian']) ?>" class="dropdown-item">Publikasi Pengabdian</a></li>
+															<li><a href="<?= Url::toRoute(['penelitian/kerjasama']) ?>" class="dropdown-item">Kerjasama</a></li>
+														</ul>
+													</li>
+													
+													<!-- <li><a href="demo-industry-factory.html" class="nav-link">Berita</a></li> -->
+													<li class="dropdown">
+														<a href="<?= Url::toRoute(['/site/jurnal']) ?>" class="nav-link">Jurnal</a>
 
-												</li>
-												<li class="dropdown">
-													<a href="<?= Url::toRoute(['/site/jurnal']) ?>" class="nav-link">Jurnal</a>
-
-												</li>
-												<!-- <li><a href="demo-industry-factory.html" class="nav-link">Berita</a></li> -->
-											</ul>
-										</nav>
-									</div>
-								</div>
-								<div class="header-nav-features">
-									<div class="header-nav-feature header-nav-features-search d-inline-flex">
-										<a href="#" class="header-nav-features-toggle text-decoration-none" data-focus="headerSearch">
-											<i class="icons icon-magnifier header-nav-top-icon font-weight-bold text-4 top-2 text-color-hover-primary"></i>
-										</a>
-										<div class="header-nav-features-dropdown header-nav-features-dropdown-mobile-fixed" id="headerTopSearchDropdown">
-											<form role="search" action="page-search-results.html" method="get">
-												<div class="simple-search input-group">
-													<input class="form-control text-1" id="headerSearch" name="q" type="search" value="" placeholder="Search...">
-													<button class="btn" type="submit">
-														<i class="icons icon-magnifier header-nav-top-icon font-weight-bold text-color-dark text-4 text-color-hover-primary top-2"></i>
-													</button>
-												</div>
-											</form>
+													</li>
+													<li class="dropdown">
+														<a href="" data-gt-lang="id" class="gt-current-wrapper notranslate">Indonesian</a>
+														<ul class="dropdown-menu">
+														<li class="menu-item menu-item-gtranslate-child"><a href=" " data-gt-lang="en" class="notranslate">English</a></li>
+															<li class="menu-item menu-item-gtranslate-child"><a href=" " data-gt-lang="id" class="gt-current-lang notranslate">Indonesian</a></li>
+														</ul>
+													</li>
+													
+												</ul>
+											</nav>
 										</div>
 									</div>
+									<!-- <div class="header-nav-features">
+										<div class="header-nav-feature header-nav-features-search d-inline-flex">
+											<a href="#" class="header-nav-features-toggle text-decoration-none" data-focus="headerSearch">
+												<i class="icons icon-magnifier header-nav-top-icon font-weight-bold text-4 top-2 text-color-hover-primary"></i>
+											</a>
+											<div class="header-nav-features-dropdown header-nav-features-dropdown-mobile-fixed" id="headerTopSearchDropdown">
+												<form role="search" action="page-search-results.html" method="get">
+													<div class="simple-search input-group">
+														<input class="form-control text-1" id="headerSearch" name="q" type="search" value="" placeholder="Search...">
+														<button class="btn" type="submit">
+															<i class="icons icon-magnifier header-nav-top-icon font-weight-bold text-color-dark text-4 text-color-hover-primary top-2"></i>
+														</button>
+													</div>
+												</form>
+											</div>
+										</div>
+									</div> -->
+									<button class="btn header-btn-collapse-nav" data-bs-toggle="collapse" data-bs-target=".header-nav-main nav">
+										<i class="fas fa-bars"></i>
+									</button>
 								</div>
-								<button class="btn header-btn-collapse-nav" data-bs-toggle="collapse" data-bs-target=".header-nav-main nav">
-									<i class="fas fa-bars"></i>
-								</button>
 							</div>
 						</div>
 					</div>
@@ -296,8 +315,8 @@ AppAsset::register($this);
 						<p>Advanced Template LTD.</p>
 						<ul class="social-icons social-icons-medium">
 							<li class="social-icons-facebook"><a href="http://www.facebook.com/" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
-							<li class="social-icons-twitter mx-2"><a href="http://www.twitter.com/" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a></li>
-							<li class="social-icons-instagram"><a href="http://www.instagram.com/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a></li>
+							<li class="social-icons-email"><a href="mailto:sejarah@fis.unp.ac.id" target="_blank" title="Email"><i class="far fa-envelope"></i></a></li>
+							<li class="social-icons-instagram"><a href="https://www.instagram.com/dep_sejarahunp?igsh=MXZzN2Z2M2ZsOHM0dg==" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a></li>
 						</ul>
 					</div>
 					<div class="col-lg-4 offset-lg-1 mb-5 mb-lg-0">
