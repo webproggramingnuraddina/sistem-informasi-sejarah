@@ -11,6 +11,7 @@ return [
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'controllerNamespace' => 'frontend\controllers',
+    'language' => 'id', // Set Default Language to Indonesian
     'components' => [
         'request' => [
             'csrfParam' => '_csrf-frontend',
@@ -44,6 +45,18 @@ return [
             ],
         ],
         */
+        'i18n' => [
+            'translations' => [
+                'app*' => [
+                    'class' => 'yii\i18n\PhpMessageSource',
+                    'basePath' => '@app/messages',
+                    'sourceLanguage' => 'en', // Source language is English
+                    'fileMap' => [
+                        'app' => 'app.php',
+                    ],
+                ],
+            ],
+        ],
     ],
     'params' => $params,
 ];
