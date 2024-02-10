@@ -129,7 +129,7 @@ AppAsset::register($this);
 								<div class="header-row">
 									<div class="header-logo">
 										<a href="demo-industry-factory.html">
-											<img src="<?= Yii::$app->getHomeUrl(); ?>img/demos/industry-factory/backgrounds/Departemen Sejarah Logo.png" class="img-fluid" alt="" />
+											<img src="<?= Yii::$app->getHomeUrl(); ?>img/demos/industry-factory/backgrounds/Logo_Departemen.png" class="img-fluid" alt="" />
 
 										</a>
 									</div>
