@@ -7,6 +7,7 @@ use yii\web\Controller;
 use backend\models\Dosen;
 use backend\models\Jurnal;
 use backend\models\Berita;
+use backend\models\Kadep;
 use yii\filters\VerbFilter;
 use backend\models\Download;
 use common\models\LoginForm;
@@ -80,8 +81,10 @@ class SiteController extends Controller
     public function actionIndex()
     {
         $modelBerita = Berita::find()->all();
+        $modelKadep = Kadep::find()->all();
         return $this->render('index', [
             'modelBerita' => $modelBerita,
+            'modelKadep' => $modelKadep,
         ]);
     }
 

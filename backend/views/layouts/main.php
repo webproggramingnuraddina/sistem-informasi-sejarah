@@ -148,6 +148,11 @@ AppAsset::register($this);
               <i class="fa fa-th"></i> <span>Staff</span>
             </a>
           </li>
+          <li <?= Yii::$app->controller->id == 'kadep' ? 'class=active' : '' ?>>
+            <a href="<?= Url::toRoute(['/kadep']) ?>">
+              <i class="fa fa-user"></i> <span>Kadep</span>
+            </a>
+          </li>
           <li class="treeview">
           <li <?= Yii::$app->controller->id == 'prestasi' ? 'class=active' : '' ?>>
             <a href="<?= Url::toRoute(['/prestasi']) ?>">

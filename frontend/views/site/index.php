@@ -6,6 +6,7 @@ use yii\helpers\Url;
 
 $this->title = 'My Yii Application';
 ?>
+
 <div role="main" class="main">
 
     <section class="section section-with-shape-divider overflow-hidden border-0 m-0" style="background-image: url(img/demos/industry-factory/backgrounds/background-1.jpg); background-repeat: no-repeat; background-size: cover; background-position: center 70px;">
@@ -75,81 +76,101 @@ $this->title = 'My Yii Application';
         </div>
     </div>
 
-    <section class="section section-with-shape-divider border-0 z-index-2 pb-0 m-0">
-        <div class="shape-divider shape-divider-reverse-xy" style="height: 120px;">
-            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 2000 120" preserveAspectRatio="xMinYMin">
-                <polygon fill="#FFF" points="-11,2 693,112 2019,6 2019,135 -11,135 " />
-            </svg>
-        </div>
-        <div class="container pt-3 mt-5">
-            <div class="row justify-content-center mb-5">
-                <div class="col-lg-9 col-xl-8 text-center">
-                    <div class="overflow-hidden">
-                        <h2 class="text-color-primary font-weight-medium positive-ls-3 text-8 mb-0 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="200"><u>Berita</u></h2>
+    <section class="section custom-section-shape-background border-0 m-0">
+        <div class="custom-shape-divider z-index-1" style="height: 129px;"></div>
+        <div class="container position-relative z-index-3">
+            <div class="row align-items-center justify-content-center">
+                <div class="row">
+                    <div class="col-md-6"></div>
+                    <div class="col-md-6">
+                        <h3 class="font-weight-bold text-transform-none text-12 line-height-2 mb-3">Departemen Sejarah</h3> <br>
+
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-6 pe-lg-5 mb-4 mb-lg-0">
+                        <div class="row">
+                            <?php foreach ($modelKadep as $key => $val) : ?>
+                                <?php if ($val->id == 2) { ?>
+                                    <div class="col-sm-6 mb-4 mb-md-0" style="padding-bottom: 20px;">
+                                        <a href="#ourHistoryLightbox">
+                                            <span class="thumb-info custom-thumb-info-style-1 thumb-info-no-borders thumb-info-no-borders-rounded">
+
+                                                <img src="<?= $val->getImageUrl() ?>" alt="" class="img-fluid" style="max-width: 250px; max-height: 320px;">
+
+                                            </span>
+                                        </a>
+
+                                        <p class="d-block positive-ls-3 text-2 pt-3 mb-0 line-height-4"><?= $val->nama ?></p>
+                                        <p class="d-block positive-ls-3 text-1 mb-0 opacity-7"><?= $val->jabatan ?></p>
+                                    </div>
+                                <?php } ?>
+                            <?php endforeach; ?>
+
+                            <?php foreach ($modelKadep as $key => $val) : ?>
+                                <?php if ($val->id == 1) { ?>
+                                    <div class="col-sm-6">
+                                        <a href="#ourHistoryLightbox">
+                                            <span class="thumb-info custom-thumb-info-style-1 thumb-info-no-borders thumb-info-no-borders-rounded">
+
+                                                <img src="<?= $val->getImageUrl() ?>" alt="" class="img-fluid" style="max-width: 250px; max-height: 400px;">
+
+
+                                            </span>
+                                        </a>
+
+                                        <p class="d-block positive-ls-3 text-2 pt-3 mb-0 line-height-4"><?= $val->nama ?></p>
+                                        <p class="d-block positive-ls-3 text-1 mb-0 opacity-7"><?= $val->jabatan ?></p>
+                                    </div>
+                                <?php } ?>
+                            <?php endforeach; ?>
+                        </div>
                     </div>
 
+                    <?php foreach ($modelKadep as $key => $val) : ?>
+                        <?php if ($val->id == 1) { ?>
+                            <div class="col-lg-6 appear-animation" data-appear-animation="fadeInRightShorter" data-appear-animation-delay="500">
+                                <p class="font-weight-semibold text-color-dark"><?= $val->deskripsi ?></p>
+
+                                <a href="demo-industry-factory-services-detail.html" class="custom-read-more btn btn-link d-inline-flex align-items-center font-weight-semibold text-decoration-none ps-0">
+                                    READ MORE
+                                    <svg class="ms-2" version="1.1" viewBox="0 0 15.698 8.706" width="17" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <polygon stroke="#FFF" stroke-width="0.1" fill="#FFF" points="11.354,0 10.646,0.706 13.786,3.853 0,3.853 0,4.853 13.786,4.853 10.646,8 11.354,8.706 15.698,4.353 " />
+                                    </svg>
+                                </a>
+                            </div>
+                        <?php } ?>
+                    <?php endforeach; ?>
                 </div>
+
+
             </div>
+        </div>
+    </section>
 
-            <div class="container">
-                <div class="row pb-1">
-                    <div class="col-lg-12 mb-4 pb-2">
-                        <div class="owl-carousel owl-carousel-light owl-carousel-light-init-fadeIn owl-theme manual dots-inside dots-horizontal-center show-dots-hover nav-inside nav-inside-plus nav-dark nav-md nav-font-size-md show-nav-hover mb-0" data-plugin-options="{'autoplayTimeout': 5000, 'animateOut': 'fadeOut', 'animateIn': 'fadeIn'}" data-dynamic-height="['700px','700px','700px','700px','700px']" style="height: 500px;">
-                            <div class="owl-stage-outer">
-                                <div class="owl-stage">
-                                    <?php
+    <!-- <section class="section section-with-shape-divider border-0 z-index-2 pb-0 m-0"> -->
+    <!-- <div class="shape-divider shape-divider-reverse-xy" style="height: 120px;">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 2000 120" preserveAspectRatio="xMinYMin">
+            <polygon fill="#FFF" points="-11,2 693,112 2019,6 2019,135 -11,135 " />
+        </svg>
+    </div> -->
+    <div class="container pt-3 mt-5">
+        <div class="row justify-content-center mb-5">
+            <div class="col-lg-9 col-xl-8 text-center">
+                <div class="overflow-hidden">
+                    <h2 class="text-color-primary font-weight-medium positive-ls-3 text-8 mb-0 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="200"><u>Berita</u></h2>
+                </div>
 
+            </div>
+        </div>
 
-                                    // Mengambil 12 berita terbaru
-                                    $latestBerita = array_slice($modelBerita, 0, 12);
-
-                                    foreach ($latestBerita as $key => $val) :
-                                    ?>
-
-                                        <div class="owl-item position-relative overlay overlay-show overlay-op-3">
-                                            <a href="<?= Url::toRoute(['detail/detail', 'id_berita' => $val->id_berita]) ?>" class="text-decoration-none">
-                                                <div class="background-image-wrapper position-absolute top-0 left-0 right-0 bottom-0" style="background-image: url('<?php echo $val->getImageUrl() ?>'); background-size: cover; background-position: center; "></div>
-
-
-                                                <div class="container position-relative z-index-3 h-100">
-                                                    <div class="row justify-content-center align-items-end h-100">
-                                                        <div class="col pb-2 mb-4 appear-animation" data-appear-animation="fadeInDownShorter">
-                                                            <span class="badge badge-dark bg-color-primary badge-sm text-uppercase mb-2">
-                                                                <?= date('d F Y', date($val->created_at)) ?>
-                                                            </span>
-
-                                                            <h3 class="text-light text-9 font-weight-bold mb-2">
-                                                                <?php
-                                                                // Mengambil hanya 25 karakter pertama dari deskripsi
-                                                                $shortDescription = mb_substr($val->tittle, 0, 50, 'UTF-8');
-                                                                ?>
-                                                                <p class="card-text mb-1 text-light mb-0"><?= $shortDescription; ?>...</p>
-                                                            </h3>
-                                                            <p class="text-light opacity-6 text-4">
-
-                                                                <?php
-                                                                // Mengambil hanya 25 karakter pertama dari deskripsi
-                                                                $shortDescription = mb_substr($val->isi_berita, 0, 130, 'UTF-8');
-                                                                ?>
-                                                            <p class="card-text mb-2 text-light opacity-7"><?= $shortDescription; ?>...</p>
-
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-
-                                    <?php endforeach; ?>
-
-
-                                </div>
-                            </div>
-                            <div class="owl-nav">
-                                <button type="button" role="presentation" class="owl-prev"></button>
-                                <button type="button" role="presentation" class="owl-next"></button>
-                            </div>
-                            <div class="owl-dots mb-2">
+        <div class="container">
+            <div class="row pb-1">
+                <div class="col-lg-12 mb-4 pb-2">
+                    <div class="owl-carousel owl-carousel-light owl-carousel-light-init-fadeIn owl-theme manual dots-inside dots-horizontal-center show-dots-hover nav-inside nav-inside-plus nav-dark nav-md nav-font-size-md show-nav-hover mb-0" data-plugin-options="{'autoplayTimeout': 5000, 'animateOut': 'fadeOut', 'animateIn': 'fadeIn'}" data-dynamic-height="['700px','700px','700px','700px','700px']" style="height: 500px;">
+                        <div class="owl-stage-outer">
+                            <div class="owl-stage">
                                 <?php
 
 
@@ -158,69 +179,122 @@ $this->title = 'My Yii Application';
 
                                 foreach ($latestBerita as $key => $val) :
                                 ?>
-                                    <button role="button" class="owl-dot <?= ($key === 0) ? 'active' : ''; ?>"><span></span></button>
+
+                                    <div class="owl-item position-relative overlay overlay-show overlay-op-3">
+                                        <a href="<?= Url::toRoute(['detail/detail', 'id_berita' => $val->id_berita]) ?>" class="text-decoration-none">
+                                            <div class="background-image-wrapper position-absolute top-0 left-0 right-0 bottom-0" style="background-image: url('<?php echo $val->getImageUrl() ?>'); background-size: cover; background-position: center; "></div>
+
+
+                                            <div class="container position-relative z-index-3 h-100">
+                                                <div class="row justify-content-center align-items-end h-100">
+                                                    <div class="col pb-2 mb-4 appear-animation" data-appear-animation="fadeInDownShorter">
+                                                        <span class="badge badge-dark bg-color-primary badge-sm text-uppercase mb-2">
+                                                            <?= date('d F Y', date($val->created_at)) ?>
+                                                        </span>
+
+                                                        <h3 class="text-light text-9 font-weight-bold mb-2">
+                                                            <?php
+                                                            // Mengambil hanya 25 karakter pertama dari deskripsi
+                                                            $shortDescription = mb_substr($val->tittle, 0, 50, 'UTF-8');
+                                                            ?>
+                                                            <p class="card-text mb-1 text-light mb-0"><?= $shortDescription; ?>...</p>
+                                                        </h3>
+                                                        <p class="text-light opacity-6 text-4">
+
+                                                            <?php
+                                                            // Mengambil hanya 25 karakter pertama dari deskripsi
+                                                            $shortDescription = mb_substr($val->isi_berita, 0, 130, 'UTF-8');
+                                                            ?>
+                                                        <p class="card-text mb-2 text-light opacity-7"><?= $shortDescription; ?>...</p>
+
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+
                                 <?php endforeach; ?>
+
+
                             </div>
+                        </div>
+                        <div class="owl-nav">
+                            <button type="button" role="presentation" class="owl-prev"></button>
+                            <button type="button" role="presentation" class="owl-next"></button>
+                        </div>
+                        <div class="owl-dots mb-2">
+                            <?php
+
+
+                            // Mengambil 12 berita terbaru
+                            $latestBerita = array_slice($modelBerita, 0, 12);
+
+                            foreach ($latestBerita as $key => $val) :
+                            ?>
+                                <button role="button" class="owl-dot <?= ($key === 0) ? 'active' : ''; ?>"><span></span></button>
+                            <?php endforeach; ?>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
 
-            <div class="container">
-                <div class="row">
-                    <?php
+        <div class="container">
+            <div class="row">
+                <?php
 
 
-                    // Mengambil 12 berita terbaru
-                    $latestBerita = array_slice($modelBerita, 0, 12);
+                // Mengambil 12 berita terbaru
+                $latestBerita = array_slice($modelBerita, 0, 12);
 
-                    foreach ($latestBerita as $val) :
-                    ?>
-                        <div class="col-lg-6">
-                            <article class="thumb-info thumb-info-no-zoom bg-transparent border-radius-0 pb-4 mb-2">
-                                <div class="row align-items-center pb-1">
-                                    <div class="col-sm-6">
-                                        <a href="<?= Url::toRoute(['detail/detail', 'id_berita' => $val->id_berita]) ?>">
-                                            <img src="<?php echo $val->getImageUrl() ?>" width="600" height="200">
+                foreach ($latestBerita as $val) :
+                ?>
+                    <div class="col-lg-6">
+                        <article class="thumb-info thumb-info-no-zoom bg-transparent border-radius-0 pb-4 mb-2">
+                            <div class="row align-items-center pb-1">
+                                <div class="col-sm-6">
+                                    <a href="<?= Url::toRoute(['detail/detail', 'id_berita' => $val->id_berita]) ?>">
+                                        <img src="<?php echo $val->getImageUrl() ?>" width="600" height="200">
 
-                                        </a>
-                                    </div>
-                                    <div class="col-sm-6 ps-sm-1">
-                                        <div class="thumb-info-caption-text">
-                                            <div class="thumb-info-type text-light text-uppercase d-inline-block bg-color-dark px-2 m-0 mb-1 float-none">
-                                                <a href="<?= Url::toRoute(['detail/detail', 'id_berita' => $val->id_berita]) ?>" class="text-decoration-none text-color-light">
-                                                    <?= date('d F Y', date($val->created_at)) ?>
-                                                </a>
-                                            </div>
-                                            <h2 class="d-block line-height-2 text-4 text-dark font-weight-bold mt-1 mb-0">
-                                                <a href="<?= Url::toRoute(['detail/detail', 'id_berita' => $val->id_berita]) ?>">
-                                                    <?php
-                                                    // Mengambil hanya 25 karakter pertama dari deskripsi
-                                                    $shortDescription = mb_substr($val->tittle, 0, 50, 'UTF-8');
-                                                    ?>
-                                                    <p class="text-decoration-none text-color-dark text-color-hover-primary mb-0"><?= $shortDescription; ?>...</p>
-                                                </a>
-                                            </h2>
+                                    </a>
+                                </div>
+                                <div class="col-sm-6 ps-sm-1">
+                                    <div class="thumb-info-caption-text">
+                                        <div class="thumb-info-type text-light text-uppercase d-inline-block bg-color-dark px-2 m-0 mb-1 float-none">
+                                            <a href="<?= Url::toRoute(['detail/detail', 'id_berita' => $val->id_berita]) ?>" class="text-decoration-none text-color-light">
+                                                <?= date('d F Y', date($val->created_at)) ?>
+                                            </a>
+                                        </div>
+                                        <h2 class="d-block line-height-2 text-4 text-dark font-weight-bold mt-1 mb-0">
+                                            <a href="<?= Url::toRoute(['detail/detail', 'id_berita' => $val->id_berita]) ?>">
+                                                <?php
+                                                // Mengambil hanya 25 karakter pertama dari deskripsi
+                                                $shortDescription = mb_substr($val->tittle, 0, 50, 'UTF-8');
+                                                ?>
+                                                <p class="text-decoration-none text-color-dark text-color-hover-primary mb-0"><?= $shortDescription; ?>...</p>
+                                            </a>
+                                        </h2>
 
-                                            <div class="thumb-info-show-more-content" href="<?= Url::toRoute(['detail/detail', 'id_berita' => $val->id_berita]) ?>">
-                                                <p class="mb-0 text-1 line-height-9 mb-1 mt-2 text-light opacity-5">
-                                                    <?php
-                                                    // Mengambil hanya 25 karakter pertama dari deskripsi
-                                                    $shortDescription = mb_substr($val->isi_berita, 0, 80, 'UTF-8');
-                                                    ?>
-                                                <p class="card-text mb-2"><?= $shortDescription; ?>...</p>
-                                                </p>
-                                            </div>
+                                        <div class="thumb-info-show-more-content" href="<?= Url::toRoute(['detail/detail', 'id_berita' => $val->id_berita]) ?>">
+                                            <p class="mb-0 text-1 line-height-9 mb-1 mt-2 text-light opacity-5">
+                                                <?php
+                                                // Mengambil hanya 25 karakter pertama dari deskripsi
+                                                $shortDescription = mb_substr($val->isi_berita, 0, 80, 'UTF-8');
+                                                ?>
+                                            <p class="card-text mb-2"><?= $shortDescription; ?>...</p>
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
-                            </article>
-                        </div>
-                    <?php endforeach; ?>
-                </div>
+                            </div>
+                        </article>
+                    </div>
+                <?php endforeach; ?>
             </div>
         </div>
-    </section>
+    </div>
+    <!-- </section> -->
 
     <section class="section custom-section-shape-background border-0 m-0">
         <div class="custom-shape-divider z-index-1" style="height: 129px;"></div>

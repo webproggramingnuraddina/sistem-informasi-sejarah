@@ -118,7 +118,7 @@ AppAsset::register($this);
 								<div class="header-logo">
 									<a href="demo-industry-factory.html">
 										<img src="<?= Yii::$app->getHomeUrl(); ?>img/demos/industry-factory/backgrounds/Departemen Sejarah Logo.png" class="img-fluid" width="70" height="70" alt="" />
-										
+
 									</a>
 								</div>
 							</div>
@@ -152,12 +152,13 @@ AppAsset::register($this);
 													<a href="demo-auto-services-services.html" class="nav-link dropdown-toggle">Akademik</a>
 													<ul class="dropdown-menu">
 														<li><a href="<?= Url::toRoute(['/site/maba']) ?>" class="dropdown-item">Penerimaan Mahasiswa Baru</a></li>
-														<li><a href="<?= Url::toRoute(['/site/kurikulum']) ?>" class="dropdown-item">Kurikulum</a></li>
-														<li><a href="<?= Url::toRoute(['/site/lulusan']) ?>" class="dropdown-item">Profil Lulusan</a></li>
-														<li><a href="<?= Url::toRoute(['/site/cpl']) ?>" class="dropdown-item">CPL</a></li>
-														<li><a href="<?= Url::toRoute(['/site/skripsi']) ?>" class="dropdown-item">Skripsi</a></li>
 														<li><a href="<?= Url::toRoute(['/site/kalender']) ?>" class="dropdown-item">Kalender Akademik</a></li>
+														<li><a href="<?= Url::toRoute(['/site/kurikulum']) ?>" class="dropdown-item">Kurikulum</a></li>
 														<li><a href="<?= Url::toRoute(['/site/mutu']) ?>" class="dropdown-item">Jaminan Mutu</a></li>
+														<li><a href="<?= Url::toRoute(['/site/skripsi']) ?>" class="dropdown-item">Skripsi</a></li>
+														<li><a href="<?= Url::toRoute(['/site/cpl']) ?>" class="dropdown-item">CPL</a></li>
+														<li><a href="<?= Url::toRoute(['/site/lulusan']) ?>" class="dropdown-item">Profil Lulusan</a></li>
+
 													</ul>
 												</li>
 												<li class="dropdown">
