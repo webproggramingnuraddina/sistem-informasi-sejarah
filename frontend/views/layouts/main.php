@@ -122,95 +122,96 @@ AppAsset::register($this);
 						</div>
 					</div>
 				</div>
-				<div class="header-container container">
-					<div class="header-row">
-						<div class="header-column">
-							<div class="header-row">
-								<div class="header-logo">
-									<a href="demo-industry-factory.html">
-										<img src="<?= Yii::$app->getHomeUrl(); ?>img/demos/industry-factory/backgrounds/Departemen Sejarah Logo.png" class="img-fluid" width="70" height="70" alt="" />
+				<div class="header nav-bar bg-primary">
+					<div class="header-container container">
+						<div class="header-row">
+							<div class="header-column">
+								<div class="header-row">
+									<div class="header-logo">
+										<a href="demo-industry-factory.html">
+											<img src="<?= Yii::$app->getHomeUrl(); ?>img/demos/industry-factory/backgrounds/Departemen Sejarah Logo.png" class="img-fluid" alt="" />
 
-									</a>
-								</div>
-							</div>
-						</div>
-						<div class="header-column justify-content-end">
-							<div class="header-row">
-								<div class="header-nav header-nav-links">
-									<div class="header-nav-main header-nav-main-text-capitalize header-nav-main-effect-2 header-nav-main-sub-effect-1">
-										<nav class="collapse">
-											<ul class="nav nav-pills" id="mainNav">
-												<li><a href="<?= Url::toRoute(['/site/index']) ?>" class="nav-link active">Home</a></li>
-												<li class="dropdown">
-													<a href="" class="nav-link dropdown-toggle">Profil</a>
-													<ul class="dropdown-menu">
-														<li><a href="<?= Url::toRoute(['profil/sejarah']) ?>" class="dropdown-item">Sejarah</a></li>
-														<li><a href="<?= Url::toRoute(['profil/visi']) ?>" class="dropdown-item">Visi</a></li>
-														<li><a href="<?= Url::toRoute(['profil/misi']) ?>" class="dropdown-item">Misi</a></li>
-														<li><a href="<?= Url::toRoute(['profil/tujuan']) ?>" class="dropdown-item">Tujuan</a></li>
-													</ul>
-												</li>
-												<li class="dropdown">
-													<a href="#" class="nav-link dropdown-toggle">Staff </a>
-													<ul class="dropdown-menu">
-														<li><a href="<?= Url::toRoute(['/site/download']) ?>" class="dropdown-item">Struktur Organisasi</a></li>
-														<li><a href="<?= Url::toRoute(['/site/dosen']) ?>" class="dropdown-item">Dosen</a></li>
-														<li><a href="<?= Url::toRoute(['/site/dosen-praktisi']) ?>" class="dropdown-item">Dosen Praktisi</a></li>
-														<li><a href="<?= Url::toRoute(['/site/tendik']) ?>" class="dropdown-item">Tendik</a></li>
-													</ul>
-												</li>
-												<li class="dropdown">
-													<a href="demo-auto-services-services.html" class="nav-link dropdown-toggle">Akademik</a>
-													<ul class="dropdown-menu">
-														<li><a href="<?= Url::toRoute(['/site/maba']) ?>" class="dropdown-item">Penerimaan Mahasiswa Baru</a></li>
-														<li><a href="<?= Url::toRoute(['/site/kurikulum']) ?>" class="dropdown-item">Kurikulum</a></li>
-														<li><a href="<?= Url::toRoute(['/site/lulusan']) ?>" class="dropdown-item">Profil Lulusan</a></li>
-														<li><a href="<?= Url::toRoute(['/site/cpl']) ?>" class="dropdown-item">CPL</a></li>
-														<li><a href="<?= Url::toRoute(['/site/skripsi']) ?>" class="dropdown-item">Skripsi</a></li>
-														<li><a href="<?= Url::toRoute(['/site/kalender']) ?>" class="dropdown-item">Kalender Akademik</a></li>
-														<li><a href="<?= Url::toRoute(['/site/mutu']) ?>" class="dropdown-item">Jaminan Mutu</a></li>
-													</ul>
-												</li>
-												<li class="dropdown">
-													<a href="" class="nav-link dropdown-toggle">Mahasiswa & Alumni</a>
-													<ul class="dropdown-menu">
-														<li><a href="<?= Url::toRoute(['mahasiswa/mhsorganisasi']) ?>" class="dropdown-item">Struktur Organisasi</a></li>
-														<li><a href="<?= Url::toRoute(['mahasiswa/prestasi']) ?>" class="dropdown-item">Prestasi</a></li>
-														<li><a href="<?= Url::toRoute(['mahasiswa/beasiswa']) ?>" class="dropdown-item">Beasiswa</a></li>
-														<li><a href="<?= Url::toRoute(['mahasiswa/fasilitas']) ?>" class="dropdown-item">Fasilitas</a></li>
-														<li><a href="<?= Url::toRoute(['mahasiswa/alumni']) ?>" class="dropdown-item">Alumni</a></li>
-													</ul>
-												</li>
-												<li class="dropdown">
-													<a href="" class="nav-link dropdown-toggle">Penelitian & Pengabdian</a>
-													<ul class="dropdown-menu">
-														<li><a href="<?= Url::toRoute(['penelitian/kelompokriset']) ?>" class="dropdown-item">Kelompok Riset</a></li>
-														<li><a href="<?= Url::toRoute(['penelitian/publikasiriset']) ?>" class="dropdown-item">Publikasi Riset</a></li>
-														<li><a href="<?= Url::toRoute(['penelitian/publikasipengabdian']) ?>" class="dropdown-item">Publikasi Pengabdian</a></li>
-														<li><a href="<?= Url::toRoute(['penelitian/kerjasama']) ?>" class="dropdown-item">Kerjasama</a></li>
-													</ul>
-												</li>
-												<li>
-													<a href="<?= Url::toRoute(['/site/download']) ?>" class="nav-link dropdown-toggle">Download </a>
-
-												</li>
-												<li class="dropdown">
-													<a href="<?= Url::toRoute(['/site/jurnal']) ?>" class="nav-link">Jurnal</a>
-
-												</li>
-												<li class="dropdown">
-													<a href="" data-gt-lang="id" class="gt-current-wrapper notranslate">Indonesian</a>
-													<ul class="dropdown-menu">
-														<li class="menu-item menu-item-gtranslate-child"><a href=" " data-gt-lang="en" class="notranslate">English</a></li>
-														<li class="menu-item menu-item-gtranslate-child"><a href=" " data-gt-lang="id" class="gt-current-lang notranslate">Indonesian</a></li>
-													</ul>
-												</li>
-
-											</ul>
-										</nav>
+										</a>
 									</div>
 								</div>
-								<!-- <div class="header-nav-features">
+							</div>
+							<div class="header-column justify-content-end">
+								<div class="header-row">
+									<div class="header-nav header-nav-links">
+										<div class="header-nav-main header-nav-main-text-capitalize header-nav-main-effect-2 header-nav-main-sub-effect-1">
+											<nav class="collapse">
+												<ul class="nav nav-pills" id="mainNav">
+													<li><a href="<?= Url::toRoute(['/site/index']) ?>" class="nav-link active">Home</a></li>
+													<li class="dropdown">
+														<a href="" class="nav-link dropdown-toggle">Profil</a>
+														<ul class="dropdown-menu">
+															<li><a href="<?= Url::toRoute(['profil/sejarah']) ?>" class="dropdown-item">Sejarah</a></li>
+															<li><a href="<?= Url::toRoute(['profil/visi']) ?>" class="dropdown-item">Visi</a></li>
+															<li><a href="<?= Url::toRoute(['profil/misi']) ?>" class="dropdown-item">Misi</a></li>
+															<li><a href="<?= Url::toRoute(['profil/tujuan']) ?>" class="dropdown-item">Tujuan</a></li>
+														</ul>
+													</li>
+													<li class="dropdown">
+														<a href="#" class="nav-link dropdown-toggle">Staff </a>
+														<ul class="dropdown-menu">
+															<li><a href="<?= Url::toRoute(['/site/download']) ?>" class="dropdown-item">Struktur Organisasi</a></li>
+															<li><a href="<?= Url::toRoute(['/site/dosen']) ?>" class="dropdown-item">Dosen</a></li>
+															<li><a href="<?= Url::toRoute(['/site/dosen-praktisi']) ?>" class="dropdown-item">Dosen Praktisi</a></li>
+															<li><a href="<?= Url::toRoute(['/site/tendik']) ?>" class="dropdown-item">Tendik</a></li>
+														</ul>
+													</li>
+													<li class="dropdown">
+														<a href="demo-auto-services-services.html" class="nav-link dropdown-toggle">Akademik</a>
+														<ul class="dropdown-menu">
+															<li><a href="<?= Url::toRoute(['/site/maba']) ?>" class="dropdown-item">Penerimaan Mahasiswa Baru</a></li>
+															<li><a href="<?= Url::toRoute(['/site/kurikulum']) ?>" class="dropdown-item">Kurikulum</a></li>
+															<li><a href="<?= Url::toRoute(['/site/lulusan']) ?>" class="dropdown-item">Profil Lulusan</a></li>
+															<li><a href="<?= Url::toRoute(['/site/cpl']) ?>" class="dropdown-item">CPL</a></li>
+															<li><a href="<?= Url::toRoute(['/site/skripsi']) ?>" class="dropdown-item">Skripsi</a></li>
+															<li><a href="<?= Url::toRoute(['/site/kalender']) ?>" class="dropdown-item">Kalender Akademik</a></li>
+															<li><a href="<?= Url::toRoute(['/site/mutu']) ?>" class="dropdown-item">Jaminan Mutu</a></li>
+														</ul>
+													</li>
+													<li class="dropdown">
+														<a href="" class="nav-link dropdown-toggle">Mahasiswa & Alumni</a>
+														<ul class="dropdown-menu">
+															<li><a href="<?= Url::toRoute(['mahasiswa/mhsorganisasi']) ?>" class="dropdown-item">Struktur Organisasi</a></li>
+															<li><a href="<?= Url::toRoute(['mahasiswa/prestasi']) ?>" class="dropdown-item">Prestasi</a></li>
+															<li><a href="<?= Url::toRoute(['mahasiswa/beasiswa']) ?>" class="dropdown-item">Beasiswa</a></li>
+															<li><a href="<?= Url::toRoute(['mahasiswa/fasilitas']) ?>" class="dropdown-item">Fasilitas</a></li>
+															<li><a href="<?= Url::toRoute(['mahasiswa/alumni']) ?>" class="dropdown-item">Alumni</a></li>
+														</ul>
+													</li>
+													<li class="dropdown">
+														<a href="" class="nav-link dropdown-toggle">Penelitian & Pengabdian</a>
+														<ul class="dropdown-menu">
+															<li><a href="<?= Url::toRoute(['penelitian/kelompokriset']) ?>" class="dropdown-item">Kelompok Riset</a></li>
+															<li><a href="<?= Url::toRoute(['penelitian/publikasiriset']) ?>" class="dropdown-item">Publikasi Riset</a></li>
+															<li><a href="<?= Url::toRoute(['penelitian/publikasipengabdian']) ?>" class="dropdown-item">Publikasi Pengabdian</a></li>
+															<li><a href="<?= Url::toRoute(['penelitian/kerjasama']) ?>" class="dropdown-item">Kerjasama</a></li>
+														</ul>
+													</li>
+													<li>
+														<a href="<?= Url::toRoute(['/site/download']) ?>" class="nav-link dropdown-toggle">Download </a>
+
+													</li>
+													<li class="dropdown">
+														<a href="<?= Url::toRoute(['/site/jurnal']) ?>" class="nav-link">Jurnal</a>
+
+													</li>
+													<li class="dropdown">
+														<a href="" data-gt-lang="id" class="gt-current-wrapper notranslate">Indonesian</a>
+														<ul class="dropdown-menu">
+															<li class="menu-item menu-item-gtranslate-child"><a href=" " data-gt-lang="en" class="notranslate">English</a></li>
+															<li class="menu-item menu-item-gtranslate-child"><a href=" " data-gt-lang="id" class="gt-current-lang notranslate">Indonesian</a></li>
+														</ul>
+													</li>
+
+												</ul>
+											</nav>
+										</div>
+									</div>
+									<!-- <div class="header-nav-features">
 										<div class="header-nav-feature header-nav-features-search d-inline-flex">
 											<a href="#" class="header-nav-features-toggle text-decoration-none" data-focus="headerSearch">
 												<i class="icons icon-magnifier header-nav-top-icon font-weight-bold text-4 top-2 text-color-hover-primary"></i>
@@ -227,9 +228,10 @@ AppAsset::register($this);
 											</div>
 										</div>
 									</div> -->
-								<button class="btn header-btn-collapse-nav" data-bs-toggle="collapse" data-bs-target=".header-nav-main nav">
-									<i class="fas fa-bars"></i>
-								</button>
+									<button class="btn header-btn-collapse-nav" data-bs-toggle="collapse" data-bs-target=".header-nav-main nav">
+										<i class="fas fa-bars"></i>
+									</button>
+								</div>
 							</div>
 						</div>
 					</div>
