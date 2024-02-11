@@ -143,6 +143,11 @@ AppAsset::register($this);
               <span>Pengumuman</span>
             </a>
           </li>
+          <li <?= Yii::$app->controller->id == 'strukturorganisasi' ? 'class=active' : '' ?>>
+            <a href="<?= Url::toRoute(['/strukturorganisasi']) ?>">
+              <i class="fa fa-th"></i> <span>Struktur Organisasi</span>
+            </a>
+          </li>
           <li <?= Yii::$app->controller->id == 'dosen' ? 'class=active' : '' ?>>
             <a href="<?= Url::toRoute(['/dosen']) ?>">
               <i class="fa fa-th"></i> <span>Staff</span>

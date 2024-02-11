@@ -142,7 +142,7 @@ AppAsset::register($this);
 												<li class="dropdown">
 													<a href="#" class="nav-link dropdown-toggle">Staff </a>
 													<ul class="dropdown-menu">
-														<li><a href="<?= Url::toRoute(['/site/download']) ?>" class="dropdown-item">Struktur Organisasi</a></li>
+														<li><a href="<?= Url::toRoute(['/site/struktur']) ?>" class="dropdown-item">Struktur Organisasi</a></li>
 														<li><a href="<?= Url::toRoute(['/site/dosen']) ?>" class="dropdown-item">Dosen</a></li>
 														<li><a href="<?= Url::toRoute(['/site/dosen-praktisi']) ?>" class="dropdown-item">Dosen Praktisi</a></li>
 														<li><a href="<?= Url::toRoute(['/site/tendik']) ?>" class="dropdown-item">Tendik</a></li>

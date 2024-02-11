@@ -14,7 +14,9 @@ use Yii;
  * @property int|null $kriteria
  * @property string|null $tmp_tgl_lahir
  * @property string|null $email
- * @property string|null $riwayat_pen
+ * @property string|null $pendidikan_sarjana
+ * @property string|null $pendidikan_magister
+ * @property string|null $pendidikan_doktoral
  * @property string|null $kepakaran
  * @property string|null $mata_kuliah
  * @property string|null $image
@@ -42,7 +44,7 @@ class Dosen extends \yii\db\ActiveRecord
         return [
             [['nip', 'nama'], 'required'],
             [['nip', 'kriteria'], 'integer'],
-            [['nama', 'email', 'riwayat_pen', 'kepakaran', 'detail', 'publikasi'], 'string', 'max' => 255],
+            [['nama', 'email', 'pendidikan_sarjana', 'pendidikan_magister', 'pendidikan_doktoral', 'kepakaran', 'detail', 'publikasi'], 'string', 'max' => 255],
             [['tmp_tgl_lahir'], 'string', 'max' => 200],
             [['mata_kuliah', 'image'], 'string', 'max' => 2555],
             [['kriteria'], 'exist', 'skipOnError' => true, 'targetClass' => Kriteria::class, 'targetAttribute' => ['kriteria' => 'id_kriteria']],

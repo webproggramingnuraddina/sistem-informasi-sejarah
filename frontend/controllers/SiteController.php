@@ -8,6 +8,7 @@ use backend\models\Dosen;
 use backend\models\Jurnal;
 use yii\filters\VerbFilter;
 use backend\models\Download;
+use backend\models\Strukturorganisasi;
 use common\models\LoginForm;
 use yii\filters\AccessControl;
 use frontend\models\SignupForm;
@@ -173,7 +174,7 @@ class SiteController extends Controller
     public function actionTendik()
     {
         $modelTendik = Dosen::find()->all();
-        return $this->render('dosen-praktisi', [
+        return $this->render('tendik', [
             'modelTendik' => $modelTendik
         ]);
     }
@@ -214,6 +215,34 @@ class SiteController extends Controller
     public function actionMaba()
     {
         return $this->render('maba');
+    }
+    public function actionDetaildosen($id)
+    {
+        // Cari dosen berdasarkan ID
+        $dosen = Dosen::findOne($id);
+
+        if ($dosen === null) {
+            throw new \yii\web\NotFoundHttpException('Dosen tidak ditemukan.');
+        }
+
+        // Tampilkan halaman detail dosen
+        return $this->render('detaildosen', [
+            'dosen' => $dosen,
+        ]);
+    }
+    public function actionStruktur()
+    {
+        // Cari dosen berdasarkan ID
+        $struktur = Strukturorganisasi::find()->all();
+
+        if ($struktur === null) {
+            throw new \yii\web\NotFoundHttpException('Dosen tidak ditemukan.');
+        }
+
+        // Tampilkan halaman detail struktur
+        return $this->render('struktur', [
+            'struktur' => $struktur,
+        ]);
     }
 
     public function actionSkripsi()

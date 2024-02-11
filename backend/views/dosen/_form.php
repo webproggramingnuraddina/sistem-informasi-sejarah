@@ -22,7 +22,9 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'email')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'riwayat_pen')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'pendidikan_sarjana')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'pendidikan_magister')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'pendidikan_doktoral')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'kepakaran')->textInput(['maxlength' => true]) ?>
 

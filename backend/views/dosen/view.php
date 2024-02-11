@@ -38,7 +38,11 @@ $this->params['breadcrumbs'][] = $this->title;
             'riwayat_pen',
             'kepakaran',
             'mata_kuliah',
-            'image',
+            [
+                'attribute' => 'image',
+                'format' => ['html'],
+                'value' => fn () => Html::img($model->getImageUrl(), ['style' => 'width:100px']),
+            ],
             'detail',
             'publikasi',
         ],
