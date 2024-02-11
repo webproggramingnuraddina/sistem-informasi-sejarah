@@ -185,6 +185,16 @@ AppAsset::register($this);
               <i class="fa fa-edit"></i> <span>Jurnal</span>
             </a>
           </li>
+          <li <?= Yii::$app->controller->id == 'layananmutu' ? 'class=active' : '' ?>>
+            <a href="<?= Url::toRoute(['/layananmutu']) ?>">
+              <i class="fa fa-edit"></i> <span>Layanan Mutu</span>
+            </a>
+          </li>
+          <li <?= Yii::$app->controller->id == 'tindaklanjutmutu' ? 'class=active' : '' ?>>
+            <a href="<?= Url::toRoute(['/tindaklanjutmutu']) ?>">
+              <i class="fa fa-edit"></i> <span>Tindak Lanjut Mutu</span>
+            </a>
+          </li>
           <li class="treeview">
           <li <?= Yii::$app->controller->id == 'kerjasama' ? 'class=active' : '' ?>>
             <a href="<?= Url::toRoute(['/kerjasama']) ?>">

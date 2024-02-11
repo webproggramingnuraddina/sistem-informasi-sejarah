@@ -30,8 +30,8 @@ class Kadep extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['deskripsi'], 'string'],
-            [['nama', 'jabatan', 'image'], 'string', 'max' => 255],
+            [['deskripsi', 'deskripsi_eng'], 'string'],
+            [['nama', 'jabatan', 'jabatan_eng', 'image'], 'string', 'max' => 255],
             ['imageFile', 'image', 'extensions' => ['png', 'jpg', 'jpeg', 'webp'], 'maxSize' => 5 * 1024 * 1024],
         ];
     }
@@ -45,8 +45,10 @@ class Kadep extends \yii\db\ActiveRecord
             'id' => 'ID',
             'nama' => 'Nama',
             'jabatan' => 'Jabatan',
+            'jabatan_eng' => 'Jabatan_eng',
             'image' => 'Image',
             'deskripsi' => 'Deskripsi',
+            'deskripsi_eng' => 'Deskripsi_eng',
         ];
     }
 

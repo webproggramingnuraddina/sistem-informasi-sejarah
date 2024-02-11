@@ -4,27 +4,19 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
 /** @var yii\web\View $this */
-/** @var backend\models\Berita $model */
+/** @var backend\models\Layananmutu $model */
 /** @var yii\widgets\ActiveForm $form */
 ?>
 
-<div class="berita-form">
+<div class="layananmutu-form">
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'tittle')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'nama_layanan')->textarea(['rows' => 6]) ?>
 
-    <?= $form->field($model, 'tittle_eng')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'nama_layanan_eng')->textarea(['rows' => 6]) ?>
 
-    <?= $form->field($model, 'isi_berita')->textarea(['rows' => 6]) ?>
-
-    <?= $form->field($model, 'isi_berita_eng')->textarea(['rows' => 6]) ?>
-
-    <?= $form->field($model, 'image', [])->fileInput() ?>
-
-    <!-- <?= $form->field($model, 'created_at')->textInput() ?>
-
-    <?= $form->field($model, 'created_by')->textInput() ?> -->
+    <?= $form->field($model, 'link')->textInput(['maxlength' => true]) ?>
 
     <div class="form-group">
         <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>

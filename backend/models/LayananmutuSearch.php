@@ -4,12 +4,12 @@ namespace backend\models;
 
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use backend\models\Kadep;
+use backend\models\Layananmutu;
 
 /**
- * KadepSearch represents the model behind the search form of `backend\models\Kadep`.
+ * LayananmutuSearch represents the model behind the search form of `backend\models\Layananmutu`.
  */
-class KadepSearch extends Kadep
+class LayananmutuSearch extends Layananmutu
 {
     /**
      * {@inheritdoc}
@@ -18,7 +18,7 @@ class KadepSearch extends Kadep
     {
         return [
             [['id'], 'integer'],
-            [['nama', 'jabatan', 'jabatan_eng', 'deskripsi', 'deskripsi_eng'], 'safe'],
+            [['nama_layanan', 'nama_layanan_eng', 'link'], 'safe'],
         ];
     }
 
@@ -40,7 +40,7 @@ class KadepSearch extends Kadep
      */
     public function search($params)
     {
-        $query = Kadep::find();
+        $query = Layananmutu::find();
 
         // add conditions that should always apply here
 
@@ -61,11 +61,9 @@ class KadepSearch extends Kadep
             'id' => $this->id,
         ]);
 
-        $query->andFilterWhere(['like', 'nama', $this->nama])
-            ->andFilterWhere(['like', 'jabatan', $this->jabatan])
-            ->andFilterWhere(['like', 'jabatan_eng', $this->jabatan_eng])
-            ->andFilterWhere(['like', 'deskripsi', $this->deskripsi])
-            ->andFilterWhere(['like', 'deskripsi_eng', $this->deskripsi_eng]);
+        $query->andFilterWhere(['like', 'nama_layanan', $this->nama_layanan])
+            ->andFilterWhere(['like', 'nama_layanan_eng', $this->nama_layanan_eng])
+            ->andFilterWhere(['like', 'link', $this->link]);
 
         return $dataProvider;
     }

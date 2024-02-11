@@ -1,24 +1,24 @@
 <?php
 
-use backend\models\Maba;
+use backend\models\Tindaklanjutmutu;
 use yii\helpers\Html;
 use yii\helpers\Url;
 use yii\grid\ActionColumn;
 use yii\grid\GridView;
 
 /** @var yii\web\View $this */
-/** @var backend\models\MabaSearch $searchModel */
+/** @var backend\models\TindaklanjutmutuSearch $searchModel */
 /** @var yii\data\ActiveDataProvider $dataProvider */
 
-$this->title = 'Mabas';
+$this->title = 'Tindaklanjutmutus';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="maba-index">
+<div class="tindaklanjutmutu-index">
 
-    <h1><?= Html::encode($this->title) ?></h1>
+    <!-- <h1><?= Html::encode($this->title) ?></h1> -->
 
     <!-- <p>
-        <?= Html::a('Create Maba', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Create Tindaklanjutmutu', ['create'], ['class' => 'btn btn-success']) ?>
     </p> -->
 
     <?php // echo $this->render('_search', ['model' => $searchModel]); 
@@ -31,11 +31,14 @@ $this->params['breadcrumbs'][] = $this->title;
                     ['class' => 'yii\grid\SerialColumn'],
 
                     'id',
-                    'foto',
-                    'deskripsi:ntext',
+                    'strategi:ntext',
+                    'strategi_eng:ntext',
+                    'upaya:ntext',
+                    'upaya_eng:ntext',
+                    //'pelaksanaan_waktu:ntext',
                     [
                         'class' => ActionColumn::className(),
-                        'urlCreator' => function ($action, Maba $model, $key, $index, $column) {
+                        'urlCreator' => function ($action, Tindaklanjutmutu $model, $key, $index, $column) {
                             return Url::toRoute([$action, 'id' => $model->id]);
                         }
                     ],
@@ -45,7 +48,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <section class="content-header">
 
         <h1>
-            Penerimaan Mahasiswa Baru
+            Tindak Lanjut Mutu
         </h1>
 
         <ol class="breadcrumb">
@@ -54,7 +57,7 @@ $this->params['breadcrumbs'][] = $this->title;
         </ol>
         <br>
         <p>
-            <?= Html::a('Create Penerimaan Maba', ['create'], ['class' => 'btn btn-success']) ?>
+            <?= Html::a('Create Tindak Lanjut', ['create'], ['class' => 'btn btn-success']) ?>
         </p>
     </section>
 
@@ -72,22 +75,24 @@ $this->params['breadcrumbs'][] = $this->title;
                                 <tr>
                                     <!-- <th>No</th> -->
                                     <th>Id</th>
-                                    <th>Image</th>
-                                    <th>Deskripsi</th>
-                                    <th>Deskripsi_eng</th>
+                                    <th>Strategi</th>
+                                    <th>Strategi Eng</th>
+                                    <th>Upaya</th>
+                                    <th>Upaya_eng</th>
+                                    <th>Pelaksanan & Waktu</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php foreach ($maba as $a) { ?>
+                                <?php foreach ($tindaklanjut as $a) { ?>
                                     <tr>
 
-
                                         <td><?= $a->id ?></td>
-
-                                        <td><?= Html::img($a->getImageUrl(), ['style' => 'width: 150px']) ?></td>
-                                        <td><?= $a->deskripsi ?></td>
-                                        <td><?= $a->deskripsi_eng ?></td>
+                                        <td><?= $a->strategi ?></td>
+                                        <td><?= $a->strategi_eng ?></td>
+                                        <td><?= $a->upaya ?></td>
+                                        <td><?= $a->upaya_eng ?></td>
+                                        <td><?= $a->pelaksanaan_waktu ?></td>
 
                                         <td><?= Html::a('&nbsp; View&nbsp;', ['view', 'id' => $a->id], ['class' => 'btn btn-primary']) ?>
                                             <?= Html::a('Delete', ['delete', 'id' => $a->id], [
@@ -108,4 +113,5 @@ $this->params['breadcrumbs'][] = $this->title;
             </div><!-- /.col -->
         </div><!-- /.row -->
     </section>
+
 </div>

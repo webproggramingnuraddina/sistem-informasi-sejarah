@@ -205,7 +205,7 @@ $this->title = 'My Yii Application';
                                                             // Mengambil hanya 25 karakter pertama dari deskripsi
                                                             $shortDescription = mb_substr($val->isi_berita, 0, 130, 'UTF-8');
                                                             ?>
-                                                        <p class="card-text mb-2 text-light opacity-7"><?= $shortDescription; ?>...</p>
+                                                        <p class="card-text mb-2 text-light opacity-4"><?= $shortDescription; ?>...</p>
 
                                                         </p>
                                                     </div>

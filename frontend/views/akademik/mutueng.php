@@ -6,6 +6,8 @@ use yii\helpers\Html;
 
 $this->title = 'About';
 $this->params['breadcrumbs'][] = $this->title;
+$no = 1;
+$nomor = 1;
 ?>
 <div class="site-about">
     <section class="section section-with-shape-divider section-height-3 overlay overlay-show border-0 m-0" data-plugin-parallax data-plugin-options="{'speed': 1.5, 'parallaxHeight': '120%', 'fadeIn': true}" data-image-src="<?= Yii::$app->getHomeUrl(); ?>img/logos/gedungfis.jpg">
@@ -124,6 +126,49 @@ $this->params['breadcrumbs'][] = $this->title;
         <p class="appear-animation text-justify" data-appear-animation="fadeInUpShorter">c. <b>Quality Assurance Services</b></p>
         <p class="appear-animation text-justify" data-appear-animation="fadeInUpShorter">The History Education Study Program utilizes various quality assurance systems used in implementation, recording, and documentation of quality assurance results captured in the following table:</p>
         <p class="appear-animation text-justify" data-appear-animation="fadeInUpShorter">Table. Quality Assurance Services</p>
+
+        <div class="col-lg-10">
+            <div class="card-body pt-0">
+                <!--begin::Table-->
+                <table class="table align-middle table-row-dashed fs-6 gy-5" id="kt_customers_table">
+                    <!--begin::Table head-->
+                    <thead>
+                        <!--begin::Table row-->
+                        <tr class="text-start text-gray-400 fw-bolder fs-7 text-uppercase gs-0">
+
+                            <th class="">No</th>
+                            <!-- <th class="">Id Order</th> -->
+                            <th class="">Service Name</th>
+                            <th class="">Address and Screenshots</th>
+
+
+                            <!-- <th class="">Actions</th> -->
+                        </tr>
+                        <!--end::Table row-->
+                    </thead>
+                    <tbody>
+                        <?php foreach ($modelLayananmutu as $a) {
+
+                        ?>
+                            <tr>
+                                <td><?= $no++ ?></td>
+                                <td><?= $a->nama_layanan_eng ?></td>
+                                <td>
+                                    <a href="<?= $a->link ?>"><?= $a->link ?></a>
+                                </td>
+
+                            </tr>
+                        <?php } ?>
+                    </tbody>
+                    <!--end::Table body-->
+                </table>
+                <!--end::Table-->
+            </div>
+
+
+
+        </div>
+
         <p class="appear-animation text-justify" data-appear-animation="fadeInUpShorter">d. <b>External Benchmarking</b></p>
         <p class="appear-animation text-justify" data-appear-animation="fadeInUpShorter">External benchmarking is an activity carried out by the History Education Study Program to improve quality related to education, research and publication, and community service aspects. External benchmarking efforts are made by inviting experts from within or outside the country. Some of them are: 1). Rob Hammink, Journalist at De Telegraaf Netherlands, Novelist, Actor in the Movie "Bumi Manusia." Speaking about the role of history in delving into film actors. 2). Prof. Dr. Erwiza Erman, MA on History in Theory and Practice. 3). Prof. Dr. Drs. Ersis Warmansyah Abbas, BA, M. Pd on History Education in Welcoming Society. 4). Dr. Ismi Rajiani, M.M on History Education in Welcoming Society. 5). Prof. Dr. Nana Supriatna, M. Ed on History Education in Welcoming Society. 6). David Pickus, Ph.D on Comparing History Teaching Models in Europe and America. 7). Prof. Dr. H. Said Hamid Hasan, M.A on history education curriculum. 8). Prof. Dr. Jumadi, M. Si on the MBKM curriculum. 9). Arda Sani, S. Pd on Journalism Training. 10). Annisa Junaidi, SS on English Corner Training. 11). Hadiyatullah ML on Building a Business at a Young Age. 12). Gian Kurniadi on Building a Business at a Young Age. 13). Prof. Dr. Aminudin Kasdi, MS on the Perspective of Heroes' Meaning in the Modern Era. 14). Marfuah Panji Astuti on Tracing the Trail of Islamic Civilization's Glory in Indonesia. 15). Dedi Arsa, M. Hum on Academic Writing Training. 16). Dr. Helen Sabera Adib, M.Pd. I on Tricks to Quickly Get a Job.</p>
         <p class="appear-animation text-justify" data-appear-animation="fadeInUpShorter">3. <b>Evaluation</b></p>
@@ -131,5 +176,46 @@ $this->params['breadcrumbs'][] = $this->title;
         <p class="appear-animation text-justify" data-appear-animation="fadeInUpShorter">4. <b>Follow-Up</b></p>
         <p class="appear-animation text-justify" data-appear-animation="fadeInUpShorter">Follow-up actions taken to improve the quality of quality assurance implementation in the Study Program.</p>
 
+        <div class="col-lg-10">
+            <div class=" card-body pt-0">
+                <!--begin::Table-->
+                <table class="table align-middle table-row-dashed fs-6 gy-5" id="kt_customers_table">
+                    <!--begin::Table head-->
+                    <thead>
+                        <!--begin::Table row-->
+                        <tr class="text-start text-gray-400 fw-bolder fs-7 text-uppercase gs-0">
+
+                            <th class="">No</th>
+                            <!-- <th class="">Id Order</th> -->
+                            <th class="">Strategy</th>
+                            <th class="">Follow-up Efforts</th>
+                            <th class="">Executor and Implementation Time</th>
+
+
+                            <!-- <th class="">Actions</th> -->
+                        </tr>
+                        <!--end::Table row-->
+                    </thead>
+                    <tbody>
+                        <?php foreach ($modelTindaklanjutmutu as $a) {
+
+                        ?>
+                            <tr>
+                                <td><?= $nomor++ ?></td>
+                                <td><?= $a->strategi_eng ?></td>
+                                <td><?= $a->upaya_eng ?></td>
+                                <td><?= $a->pelaksanaan_waktu ?></td>
+
+                            </tr>
+                        <?php } ?>
+                    </tbody>
+                    <!--end::Table body-->
+                </table>
+                <!--end::Table-->
+            </div>
+
+
+
+        </div>
     </div>
 </div>

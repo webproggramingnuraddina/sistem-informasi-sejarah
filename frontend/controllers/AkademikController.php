@@ -16,6 +16,8 @@ use frontend\models\ResetPasswordForm;
 use frontend\models\SignupForm;
 use frontend\models\ContactForm;
 use backend\models\Maba;
+use backend\models\Layananmutu;
+use backend\models\Tindaklanjutmutu;
 
 /**
  * Site controller
@@ -278,11 +280,21 @@ class AkademikController extends Controller
 
     public function actionMutu()
     {
-        return $this->render('mutu');
+        $modelLayananmutu = Layananmutu::find()->all();
+        $modelTindaklanjutmutu = Tindaklanjutmutu::find()->all();
+        return $this->render('mutu', [
+            'modelLayananmutu' => $modelLayananmutu,
+            'modelTindaklanjutmutu' => $modelTindaklanjutmutu,
+        ]);
     }
     public function actionMutueng()
     {
-        return $this->render('mutueng');
+        $modelLayananmutu = Layananmutu::find()->all();
+        $modelTindaklanjutmutu = Tindaklanjutmutu::find()->all();
+        return $this->render('mutueng', [
+            'modelLayananmutu' => $modelLayananmutu,
+            'modelTindaklanjutmutu' => $modelTindaklanjutmutu,
+        ]);
     }
 
     public function actionCpl()

@@ -4,12 +4,12 @@ namespace backend\models;
 
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use backend\models\Kadep;
+use backend\models\Tindaklanjutmutu;
 
 /**
- * KadepSearch represents the model behind the search form of `backend\models\Kadep`.
+ * TindaklanjutmutuSearch represents the model behind the search form of `backend\models\Tindaklanjutmutu`.
  */
-class KadepSearch extends Kadep
+class TindaklanjutmutuSearch extends Tindaklanjutmutu
 {
     /**
      * {@inheritdoc}
@@ -18,7 +18,7 @@ class KadepSearch extends Kadep
     {
         return [
             [['id'], 'integer'],
-            [['nama', 'jabatan', 'jabatan_eng', 'deskripsi', 'deskripsi_eng'], 'safe'],
+            [['strategi', 'strategi_eng', 'upaya', 'upaya_eng', 'pelaksanaan_waktu'], 'safe'],
         ];
     }
 
@@ -40,7 +40,7 @@ class KadepSearch extends Kadep
      */
     public function search($params)
     {
-        $query = Kadep::find();
+        $query = Tindaklanjutmutu::find();
 
         // add conditions that should always apply here
 
@@ -61,11 +61,11 @@ class KadepSearch extends Kadep
             'id' => $this->id,
         ]);
 
-        $query->andFilterWhere(['like', 'nama', $this->nama])
-            ->andFilterWhere(['like', 'jabatan', $this->jabatan])
-            ->andFilterWhere(['like', 'jabatan_eng', $this->jabatan_eng])
-            ->andFilterWhere(['like', 'deskripsi', $this->deskripsi])
-            ->andFilterWhere(['like', 'deskripsi_eng', $this->deskripsi_eng]);
+        $query->andFilterWhere(['like', 'strategi', $this->strategi])
+            ->andFilterWhere(['like', 'strategi_eng', $this->strategi_eng])
+            ->andFilterWhere(['like', 'upaya', $this->upaya])
+            ->andFilterWhere(['like', 'upaya_eng', $this->upaya_eng])
+            ->andFilterWhere(['like', 'pelaksanaan_waktu', $this->pelaksanaan_waktu]);
 
         return $dataProvider;
     }

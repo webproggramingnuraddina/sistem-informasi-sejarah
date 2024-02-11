@@ -31,7 +31,9 @@ $this->params['breadcrumbs'][] = $this->title;
         'attributes' => [
             'id_berita',
             'tittle',
+            'tittle_eng',
             'isi_berita',
+            'isi_berita_eng',
             [
                 'attribute' => 'foto',
                 'format' => ['html'],

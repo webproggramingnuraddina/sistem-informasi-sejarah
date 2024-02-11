@@ -88,6 +88,16 @@ class SiteController extends Controller
         ]);
     }
 
+    public function actionIndexeng()
+    {
+        $modelBerita = Berita::find()->all();
+        $modelKadep = Kadep::find()->all();
+        return $this->render('indexeng', [
+            'modelBerita' => $modelBerita,
+            'modelKadep' => $modelKadep,
+        ]);
+    }
+
     /**
      * Logs in a user.
      *
