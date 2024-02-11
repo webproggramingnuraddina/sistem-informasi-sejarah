@@ -163,13 +163,13 @@ AppAsset::register($this);
 													<li class="dropdown">
 														<a href="demo-auto-services-services.html" class="nav-link dropdown-toggle">Akademik</a>
 														<ul class="dropdown-menu">
-															<li><a href="<?= Url::toRoute(['/site/maba']) ?>" class="dropdown-item">Penerimaan Mahasiswa Baru</a></li>
-															<li><a href="<?= Url::toRoute(['/site/kurikulum']) ?>" class="dropdown-item">Kurikulum</a></li>
-															<li><a href="<?= Url::toRoute(['/site/lulusan']) ?>" class="dropdown-item">Profil Lulusan</a></li>
-															<li><a href="<?= Url::toRoute(['/site/cpl']) ?>" class="dropdown-item">CPL</a></li>
-															<li><a href="<?= Url::toRoute(['/site/skripsi']) ?>" class="dropdown-item">Skripsi</a></li>
-															<li><a href="<?= Url::toRoute(['/site/kalender']) ?>" class="dropdown-item">Kalender Akademik</a></li>
-															<li><a href="<?= Url::toRoute(['/site/mutu']) ?>" class="dropdown-item">Jaminan Mutu</a></li>
+															<li><a href="<?= Url::toRoute(['akademik/maba']) ?>" class="dropdown-item">Penerimaan Mahasiswa Baru</a></li>
+															<li><a href="<?= Url::toRoute(['akademik/kurikulum']) ?>" class="dropdown-item">Kurikulum</a></li>
+															<li><a href="<?= Url::toRoute(['akademik/kalender']) ?>" class="dropdown-item">Kalender Akademik</a></li>
+															<li><a href="<?= Url::toRoute(['akademik/mutu']) ?>" class="dropdown-item">Jaminan Mutu</a></li>
+															<li><a href="<?= Url::toRoute(['akademik/skripsi']) ?>" class="dropdown-item">Skripsi</a></li>
+															<li><a href="<?= Url::toRoute(['akademik/cpl']) ?>" class="dropdown-item">CPL</a></li>
+															<li><a href="<?= Url::toRoute(['akademik/lulusan']) ?>" class="dropdown-item">Profil Lulusan</a></li>
 														</ul>
 													</li>
 													<li class="dropdown">
@@ -237,10 +237,10 @@ AppAsset::register($this);
 					</div>
 				</div>
 			</div>
-	</div>
-	</header>
 
-	<!-- <header id="header" class="header-transparent header-effect-shrink" data-plugin-options="{'stickyEnabled': true, 'stickyEffect': 'shrink', 'stickyEnableOnBoxed': true, 'stickyEnableOnMobile': false, 'stickyChangeLogo': true, 'stickyStartAt': 30, 'stickyHeaderContainerHeight': 70}">
+		</header>
+
+		<!-- <header id="header" class="header-transparent header-effect-shrink" data-plugin-options="{'stickyEnabled': true, 'stickyEffect': 'shrink', 'stickyEnableOnBoxed': true, 'stickyEnableOnMobile': false, 'stickyChangeLogo': true, 'stickyStartAt': 30, 'stickyHeaderContainerHeight': 70}">
 			<div class="header-body border-top-0 box-shadow-none">
 				<div class="header-container container">
 					<div class="header-row">
@@ -297,77 +297,77 @@ AppAsset::register($this);
 			</div>
 		</header> -->
 
-	<div class="content">
-		<?= $content ?>
-	</div>
+		<div class="content">
+			<?= $content ?>
+		</div>
 
-	<footer id="footer" class="section section-with-shape-divider border-0 custom-bg-lighten-grey-1 pt-5 pb-0 m-0">
-		<div class="shape-divider shape-divider-reverse-x" style="height: 120px;">
-			<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 2000 120" preserveAspectRatio="xMinYMin">
-				<polygon fill="#FFF" points="-11,2 693,112 2019,6 2019,135 -11,135 " />
-			</svg>
-		</div>
-		<div class="container pt-lg-5 mt-5">
-			<div class="row">
-				<div class="col-lg-3 mb-5 mb-lg-0">
-					<a href="demo-industry-factory.html">
-						<img src="<?= Yii::$app->getHomeUrl(); ?>img/demos/industry-factory/logo-light.png" class="img-fluid mt-5 mb-4" alt="Demo Industry & Factory" />
-					</a>
-					<p class="mb-0"><strong class="text-color-light">Porto Industrial, Factory, Manufacturing</strong></p>
-					<p>Advanced Template LTD.</p>
-					<ul class="social-icons social-icons-medium">
-						<li class="social-icons-facebook"><a href="http://www.facebook.com/" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
-						<li class="social-icons-email"><a href="mailto:sejarah@fis.unp.ac.id" target="_blank" title="Email"><i class="far fa-envelope"></i></a></li>
-						<li class="social-icons-instagram"><a href="https://www.instagram.com/dep_sejarahunp?igsh=MXZzN2Z2M2ZsOHM0dg==" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a></li>
-					</ul>
-				</div>
-				<div class="col-lg-4 offset-lg-1 mb-5 mb-lg-0">
-					<h4 class="text-color-light font-weght-bold positive-ls-2 custom-font-size-2">USEFUL LINKS</h4>
-					<div class="row">
-						<div class="col-md-6">
-							<ul class="list list-unstyled mb-0">
-								<li class="mb-0"><a href="#">Contact Us</a></li>
-								<li class="mb-0"><a href="#">Our Services</a></li>
-								<li class="mb-0"><a href="#">Payment Methods</a></li>
-								<li class="mb-0"><a href="#">Services Guide</a></li>
-								<li class="mb-0"><a href="#">FAQs</a></li>
-								<li class="mb-0"><a href="#">Service Support</a></li>
-								<li class="mb-0"><a href="#">Privacy</a></li>
-								<li class="mb-0"><a href="#">About Porto</a></li>
-								<li class="mb-0"><a href="#">Our Guarantees</a></li>
-								<li class="mb-0"><a href="#">Terms And Conditions</a></li>
-							</ul>
-						</div>
-						<div class="col-md-6">
-							<ul class="list list-unstyled mb-0">
-								<li class="mb-0"><a href="#">Privacy Policy</a></li>
-								<li class="mb-0"><a href="#">Return Policy</a></li>
-								<li class="mb-0"><a href="#">Intellectual Property Claims</a></li>
-								<li class="mb-0"><a href="#">Sitemap</a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 offset-lg-1 mb-5 mb-lg-0">
-					<h4 class="text-color-light font-weght-bold positive-ls-2 custom-font-size-2">OPENING HOURS</h4>
-					<ul class="list list-unstyled list-inline custom-list-style-1 mb-0">
-						<li><a href="#">Mon - Fri: 8:30 am to 5:00 pm</a></li>
-						<li><a href="#">Saturday: 9:30 am to 1:00 pm</a></li>
-						<li><a href="#">Sunday: Closed</a></li>
-					</ul>
-				</div>
+		<footer id="footer" class="section section-with-shape-divider border-0 custom-bg-lighten-grey-1 pt-5 pb-0 m-0">
+			<div class="shape-divider shape-divider-reverse-x" style="height: 120px;">
+				<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 2000 120" preserveAspectRatio="xMinYMin">
+					<polygon fill="#FFF" points="-11,2 693,112 2019,6 2019,135 -11,135 " />
+				</svg>
 			</div>
-		</div>
-		<div class="footer-copyright custom-bg-lighten-grey-1 mt-5 pb-5">
-			<div class="container custom-footer-top-light-border pt-4">
+			<div class="container pt-lg-5 mt-5">
 				<div class="row">
-					<div class="col">
-						<p class="text-center text-3 mb-0">Departemen Sejarah © 2024. All Rights Reserved.</p>
+					<div class="col-lg-3 mb-5 mb-lg-0">
+						<a href="demo-industry-factory.html">
+							<img src="<?= Yii::$app->getHomeUrl(); ?>img/demos/industry-factory/logo-light.png" class="img-fluid mt-5 mb-4" alt="Demo Industry & Factory" />
+						</a>
+						<p class="mb-0"><strong class="text-color-light">Porto Industrial, Factory, Manufacturing</strong></p>
+						<p>Advanced Template LTD.</p>
+						<ul class="social-icons social-icons-medium">
+							<li class="social-icons-facebook"><a href="http://www.facebook.com/" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+							<li class="social-icons-email"><a href="mailto:sejarah@fis.unp.ac.id" target="_blank" title="Email"><i class="far fa-envelope"></i></a></li>
+							<li class="social-icons-instagram"><a href="https://www.instagram.com/dep_sejarahunp?igsh=MXZzN2Z2M2ZsOHM0dg==" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a></li>
+						</ul>
+					</div>
+					<div class="col-lg-4 offset-lg-1 mb-5 mb-lg-0">
+						<h4 class="text-color-light font-weght-bold positive-ls-2 custom-font-size-2">USEFUL LINKS</h4>
+						<div class="row">
+							<div class="col-md-6">
+								<ul class="list list-unstyled mb-0">
+									<li class="mb-0"><a href="#">Contact Us</a></li>
+									<li class="mb-0"><a href="#">Our Services</a></li>
+									<li class="mb-0"><a href="#">Payment Methods</a></li>
+									<li class="mb-0"><a href="#">Services Guide</a></li>
+									<li class="mb-0"><a href="#">FAQs</a></li>
+									<li class="mb-0"><a href="#">Service Support</a></li>
+									<li class="mb-0"><a href="#">Privacy</a></li>
+									<li class="mb-0"><a href="#">About Porto</a></li>
+									<li class="mb-0"><a href="#">Our Guarantees</a></li>
+									<li class="mb-0"><a href="#">Terms And Conditions</a></li>
+								</ul>
+							</div>
+							<div class="col-md-6">
+								<ul class="list list-unstyled mb-0">
+									<li class="mb-0"><a href="#">Privacy Policy</a></li>
+									<li class="mb-0"><a href="#">Return Policy</a></li>
+									<li class="mb-0"><a href="#">Intellectual Property Claims</a></li>
+									<li class="mb-0"><a href="#">Sitemap</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3 offset-lg-1 mb-5 mb-lg-0">
+						<h4 class="text-color-light font-weght-bold positive-ls-2 custom-font-size-2">OPENING HOURS</h4>
+						<ul class="list list-unstyled list-inline custom-list-style-1 mb-0">
+							<li><a href="#">Mon - Fri: 8:30 am to 5:00 pm</a></li>
+							<li><a href="#">Saturday: 9:30 am to 1:00 pm</a></li>
+							<li><a href="#">Sunday: Closed</a></li>
+						</ul>
 					</div>
 				</div>
 			</div>
-		</div>
-	</footer>
+			<div class="footer-copyright custom-bg-lighten-grey-1 mt-5 pb-5">
+				<div class="container custom-footer-top-light-border pt-4">
+					<div class="row">
+						<div class="col">
+							<p class="text-center text-3 mb-0">Departemen Sejarah © 2024. All Rights Reserved.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
 
 	</div>
 

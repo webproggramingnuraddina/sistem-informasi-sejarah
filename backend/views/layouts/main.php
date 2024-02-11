@@ -153,6 +153,12 @@ AppAsset::register($this);
               <i class="fa fa-user"></i> <span>Kadep</span>
             </a>
           </li>
+          <li <?= Yii::$app->controller->id == 'maba' ? 'class=active' : '' ?>>
+            <a class="menu-link" href="<?= Url::toRoute(['/maba']) ?>">
+              <i class="fa fa-bullhorn"></i>
+              <span>Penerimaan Maba</span>
+            </a>
+          </li>
           <li class="treeview">
           <li <?= Yii::$app->controller->id == 'prestasi' ? 'class=active' : '' ?>>
             <a href="<?= Url::toRoute(['/prestasi']) ?>">

@@ -6,15 +6,13 @@ use Yii;
 use yii\helpers\FileHelper;
 
 /**
- * This is the model class for table "jurnal".
+ * This is the model class for table "maba".
  *
- * @property int $id_jurnal
- * @property string|null $judul_jurnal
+ * @property int $id
  * @property string|null $foto
  * @property string|null $deskripsi
- * @property string|null $jurnal_link
  */
-class Jurnal extends \yii\db\ActiveRecord
+class Maba extends \yii\db\ActiveRecord
 {
     public $imageFile;
     /**
@@ -22,7 +20,7 @@ class Jurnal extends \yii\db\ActiveRecord
      */
     public static function tableName()
     {
-        return 'jurnal';
+        return 'maba';
     }
 
     /**
@@ -31,9 +29,10 @@ class Jurnal extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['foto'], 'string', 'max' => 2550],
+            [['deskripsi', 'deskripsi_eng'], 'string'],
+            [['image'], 'string', 'max' => 255],
             ['imageFile', 'image', 'extensions' => ['png', 'jpg', 'jpeg', 'webp'], 'maxSize' => 5 * 1024 * 1024],
-            [['judul_jurnal', 'deskripsi', 'deskripsi_eng', 'jurnal_link'], 'string', 'max' => 2555],
+
         ];
     }
 
@@ -43,26 +42,24 @@ class Jurnal extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id_jurnal' => 'Id Jurnal',
-            'judul_jurnal' => 'Judul Jurnal',
-            'foto' => 'Foto',
+            'id' => 'ID',
+            'image' => 'Image',
             'deskripsi' => 'Deskripsi',
             'deskripsi_eng' => 'Deskripsi_eng',
-            'jurnal_link' => 'Jurnal Link',
         ];
     }
 
     public function save($runValidation = true, $attributeNames = null)
     {
         if ($this->imageFile) {
-            $this->foto = '/jurnal/' . Yii::$app->security->generateRandomString() . '/' . $this->imageFile->name;
+            $this->image = '/dosen/' . Yii::$app->security->generateRandomString() . '/' . $this->imageFile->name;
         }
 
         $transaction = Yii::$app->db->beginTransaction();
         $ok = parent::save($runValidation, $attributeNames);
 
         if ($ok && $this->imageFile) {
-            $fullPath = Yii::getAlias('@frontend/web/storage' . $this->foto);
+            $fullPath = Yii::getAlias('@frontend/web/storage' . $this->image);
             $dir = dirname($fullPath);
             if (!FileHelper::createDirectory($dir) | !$this->imageFile->saveAs($fullPath)) {
                 $transaction->rollBack();
@@ -79,7 +76,7 @@ class Jurnal extends \yii\db\ActiveRecord
 
     public function getImageUrl()
     {
-        return self::formatImageUrl($this->foto);
+        return self::formatImageUrl($this->image);
     }
 
     public static function formatImageUrl($imagePath)

@@ -4,12 +4,12 @@ namespace backend\models;
 
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use backend\models\Jurnal;
+use backend\models\Maba;
 
 /**
- * JurnalSearch represents the model behind the search form of `backend\models\Jurnal`.
+ * MabaSearch represents the model behind the search form of `backend\models\Maba`.
  */
-class JurnalSearch extends Jurnal
+class MabaSearch extends Maba
 {
     /**
      * {@inheritdoc}
@@ -17,8 +17,8 @@ class JurnalSearch extends Jurnal
     public function rules()
     {
         return [
-            [['id_jurnal'], 'integer'],
-            [['foto', 'judul_jurnal', 'deskripsi', 'deskripsi_eng', 'jurnal_link'], 'safe'],
+            [['id'], 'integer'],
+            [['image', 'deskripsi', 'deskripsi_eng'], 'safe'],
         ];
     }
 
@@ -40,7 +40,7 @@ class JurnalSearch extends Jurnal
      */
     public function search($params)
     {
-        $query = Jurnal::find();
+        $query = Maba::find();
 
         // add conditions that should always apply here
 
@@ -58,14 +58,12 @@ class JurnalSearch extends Jurnal
 
         // grid filtering conditions
         $query->andFilterWhere([
-            'id_jurnal' => $this->id_jurnal,
-            'foto' => $this->foto,
+            'id' => $this->id,
         ]);
 
-        $query->andFilterWhere(['like', 'judul_jurnal', $this->judul_jurnal])
+        $query->andFilterWhere(['like', 'image', $this->image])
             ->andFilterWhere(['like', 'deskripsi', $this->deskripsi])
-            ->andFilterWhere(['like', 'deskripsi_eng', $this->deskripsi_eng])
-            ->andFilterWhere(['like', 'jurnal_link', $this->jurnal_link]);
+            ->andFilterWhere(['like', 'deskripsi_eng', $this->deskripsi_eng]);
 
         return $dataProvider;
     }

@@ -175,7 +175,7 @@ $this->title = 'My Yii Application';
 
 
                                 // Mengambil 12 berita terbaru
-                                $latestBerita = array_slice($modelBerita, 0, 12);
+                                $latestBerita = array_slice($modelBerita, 0, 8);
 
                                 foreach ($latestBerita as $key => $val) :
                                 ?>
@@ -228,7 +228,7 @@ $this->title = 'My Yii Application';
 
 
                             // Mengambil 12 berita terbaru
-                            $latestBerita = array_slice($modelBerita, 0, 12);
+                            $latestBerita = array_slice($modelBerita, 0, 8);
 
                             foreach ($latestBerita as $key => $val) :
                             ?>
@@ -246,7 +246,7 @@ $this->title = 'My Yii Application';
 
 
                 // Mengambil 12 berita terbaru
-                $latestBerita = array_slice($modelBerita, 0, 12);
+                $latestBerita = array_slice($modelBerita, 0, 8);
 
                 foreach ($latestBerita as $val) :
                 ?>

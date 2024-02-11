@@ -1,60 +1,51 @@
 <?php
 
-use backend\models\Jurnal;
+use backend\models\Maba;
 use yii\helpers\Html;
 use yii\helpers\Url;
 use yii\grid\ActionColumn;
 use yii\grid\GridView;
 
 /** @var yii\web\View $this */
-/** @var backend\models\JurnalSearch $searchModel */
+/** @var backend\models\MabaSearch $searchModel */
 /** @var yii\data\ActiveDataProvider $dataProvider */
 
-$this->title = 'Jurnals';
+$this->title = 'Mabas';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="jurnal-index">
+<div class="maba-index">
 
-    <!-- <h1><?= Html::encode($this->title) ?></h1>
+    <h1><?= Html::encode($this->title) ?></h1>
 
-    <p>
-        <?= Html::a('Create Jurnal', ['create'], ['class' => 'btn btn-success']) ?>
-    </p>
+    <!-- <p>
+        <?= Html::a('Create Maba', ['create'], ['class' => 'btn btn-success']) ?>
+    </p> -->
 
     <?php // echo $this->render('_search', ['model' => $searchModel]); 
     ?>
 
-    <?= GridView::widget([
-        'dataProvider' => $dataProvider,
-        'filterModel' => $searchModel,
-        'columns' => [
-            ['class' => 'yii\grid\SerialColumn'],
+    <!-- <?= GridView::widget([
+                'dataProvider' => $dataProvider,
+                'filterModel' => $searchModel,
+                'columns' => [
+                    ['class' => 'yii\grid\SerialColumn'],
 
-            'id_jurnal',
-            'judul_jurnal',
-            [
-                'attribute' => 'foto',
-                'content' => function ($model) {
-                    /** @var \backend\models\Produk  $model*/
-                    return Html::img($model->getImageUrl(), ['style' => 'width: 80px']);
-                }
-            ],
-            'deskripsi',
-            'jurnal_link',
-            [
-                'class' => ActionColumn::className(),
-                'urlCreator' => function ($action, Jurnal $model, $key, $index, $column) {
-                    return Url::toRoute([$action, 'id_jurnal' => $model->id_jurnal]);
-                }
-            ],
-        ],
-    ]); ?> -->
+                    'id',
+                    'foto',
+                    'deskripsi:ntext',
+                    [
+                        'class' => ActionColumn::className(),
+                        'urlCreator' => function ($action, Maba $model, $key, $index, $column) {
+                            return Url::toRoute([$action, 'id' => $model->id]);
+                        }
+                    ],
+                ],
+            ]); ?> -->
 
-    <!-- Content Header (Page header) -->
     <section class="content-header">
 
         <h1>
-            Jurnal
+            Kadep
         </h1>
 
         <ol class="breadcrumb">
@@ -63,7 +54,7 @@ $this->params['breadcrumbs'][] = $this->title;
         </ol>
         <br>
         <p>
-            <?= Html::a('Create Jurnal', ['create'], ['class' => 'btn btn-success']) ?>
+            <?= Html::a('Create Penerimaan Maba', ['create'], ['class' => 'btn btn-success']) ?>
         </p>
     </section>
 
@@ -80,33 +71,33 @@ $this->params['breadcrumbs'][] = $this->title;
                             <thead>
                                 <tr>
                                     <!-- <th>No</th> -->
-                                    <th>Judul</th>
-                                    <th>Foto</th>
+                                    <th>Id</th>
+                                    <th>Image</th>
                                     <th>Deskripsi</th>
-                                    <th>Deskripsi Eng</th>
-                                    <th>Jurnal Link</th>
+                                    <th>Deskripsi_eng</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php foreach ($jurnal as $a) { ?>
+                                <?php foreach ($maba as $a) { ?>
                                     <tr>
 
 
-                                        <td><?= $a->judul_jurnal ?></td>
+                                        <td><?= $a->id ?></td>
+
                                         <td><?= Html::img($a->getImageUrl(), ['style' => 'width: 150px']) ?></td>
                                         <td><?= $a->deskripsi ?></td>
                                         <td><?= $a->deskripsi_eng ?></td>
-                                        <td><?= $a->jurnal_link ?></td>
-                                        <td><?= Html::a('&nbsp; View&nbsp;', ['view', 'id_jurnal' => $a->id_jurnal], ['class' => 'btn btn-primary']) ?>
 
-                                            <?= Html::a('Delete', ['delete', 'id_jurnal' => $a->id_jurnal], [
+                                        <td><?= Html::a('&nbsp; View&nbsp;', ['view', 'id' => $a->id], ['class' => 'btn btn-primary']) ?>
+                                            <?= Html::a('Delete', ['delete', 'id' => $a->id], [
                                                 'class' => 'btn btn-danger',
                                                 'data' => [
                                                     'confirm' => 'Are you sure you want to delete this item?',
                                                     'method' => '',
                                                 ],
-                                            ]) ?></td>
+                                            ]) ?>
+                                        </td>
                                     </tr>
                                 <?php } ?>
                             </tbody>
@@ -116,6 +107,5 @@ $this->params['breadcrumbs'][] = $this->title;
                 </div><!-- /.box -->
             </div><!-- /.col -->
         </div><!-- /.row -->
-        <!-- </section>/.content -->
-
+    </section>
 </div>
