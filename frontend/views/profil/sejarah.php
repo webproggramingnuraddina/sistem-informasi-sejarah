@@ -41,9 +41,10 @@ $this->params['breadcrumbs'][] = $this->title;
                     <div class="col-lg-6 appear-animation" data-appear-animation="fadeInRightShorter" data-appear-animation-delay="500">
                         <h2 class="text-color-primary font-weight-medium positive-ls-3 text-4 mb-0">Sejarah</h2>
                         <!-- <h3 class="font-weight-bold text-transform-none text-9 line-height-2 mb-3">Company Overview</h3> -->
-                        <p class="custom-font-secondary custom-font-size-1 line-height-7 pb-2 mb-4 text-justify">
+                        <!-- <p class="custom-font-secondary custom-font-size-1 line-height-7 pb-2 mb-4"> -->
+                        <p class="pt-3 pb-2 mb-2 appear-animation" data-appear-animation="fadeInUpShorter">
                         Prodi Pendidikan Sejarah sudah ada sejak Universitas Negeri Padang didirikan. Universitas Negeri Padang, pada awalnya bernama Perguruan Tinggi Pendidikan Guru (PTPG) di Batusangkar (1954 - 1956), memiliki enam jurusan, salah satunya adalah Jurusan Sejarah. Perkembangan berikutnya, PTPG berubah menjadi Fakultas Keguruan Ilmu Pendidikan (FKIP) di bawah Universitas Andalas Bukittinggi (1956 - 1958). Kemudian bernama FIKIP Unand Padang (1958 - 1964), dan tahun 1964 - 1965 bernama IKIP Jakarta cabang Padang. Selanjutnya periode 1965 - 1999 bernama IKIP Padang, dan sejak 1999 sampai saat ini berubah status menjadi Universitas Negeri Padang (UNP). Setiap kali terjadi perubahan sebagaimana diuraikan di atas, Prodi Pendidikan Sejarah merupakan salah satu program studi yang tetap eksis sebagai sebuah lembaga.</p>
-                        <!-- <p class="mb-0">Prodi Pendidikan Sejarah sudah ada sejak Universitas Negeri Padang didirikan. Universitas Negeri Padang, pada awalnya bernama Perguruan Tinggi Pendidikan Guru (PTPG) di Batusangkar (1954 - 1956), memiliki enam jurusan, salah satunya adalah Jurusan Sejarah. Perkembangan berikutnya, PTPG berubah menjadi Fakultas Keguruan Ilmu Pendidikan (FKIP) di bawah Universitas Andalas Bukittinggi (1956 - 1958). Kemudian bernama FIKIP Unand Padang (1958 - 1964), dan tahun 1964 - 1965 bernama IKIP Jakarta cabang Padang. Selanjutnya periode 1965 - 1999 bernama IKIP Padang, dan sejak 1999 sampai saat ini berubah status menjadi Universitas Negeri Padang (UNP). Setiap kali terjadi perubahan sebagaimana diuraikan di atas, Prodi Pendidikan Sejarah merupakan salah satu program studi yang tetap eksis sebagai sebuah lembaga.</p> -->
+                        
                     </div>
                 </div>
             </div>

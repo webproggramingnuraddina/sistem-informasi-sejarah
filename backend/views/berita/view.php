@@ -32,9 +32,13 @@ $this->params['breadcrumbs'][] = $this->title;
             'id_berita',
             'tittle',
             'isi_berita',
-            'image',
-            'created_at',
-            'created_by',
+            [
+                'attribute' => 'foto',
+                'format' => ['html'],
+                'value' => fn () => Html::img($model->getImageUrl(), ['style' => 'width:150px']),
+            ],
+            'created_at:datetime',
+            'createdBy.username',
         ],
     ]) ?>
 

@@ -6,6 +6,8 @@ use Yii;
 use yii\web\Controller;
 use backend\models\Dosen;
 use backend\models\Jurnal;
+use backend\models\Berita;
+use backend\models\Kadep;
 use yii\filters\VerbFilter;
 use backend\models\Download;
 use backend\models\Strukturorganisasi;
@@ -79,7 +81,12 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        return $this->render('index');
+        $modelBerita = Berita::find()->all();
+        $modelKadep = Kadep::find()->all();
+        return $this->render('index', [
+            'modelBerita' => $modelBerita,
+            'modelKadep' => $modelKadep,
+        ]);
     }
 
     /**
