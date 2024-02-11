@@ -40,7 +40,7 @@
                                         </div>
                                         <div class="col-md-4">
                                             <div class="card-body p-3 z-index-1 text-center">
-                                                <a href="demo-medical-2-our-doctors-detail.html" class="d-block text-center bg-color-grey">
+                                                <a href="<?php echo $dosen->getImageUrl() ?>" class="d-block text-center bg-color-grey">
                                                     <img alt="Doctor" class="img-fluid rounded" src="<?php echo $dosen->getImageUrl() ?>">
                                                 </a>
                                                 <br>
