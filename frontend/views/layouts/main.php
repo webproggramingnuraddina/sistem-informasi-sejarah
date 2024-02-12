@@ -202,8 +202,8 @@ AppAsset::register($this);
 													<li class="dropdown">
 														<a href="" data-gt-lang="id" class="gt-current-wrapper notranslate">Indonesian</a>
 														<ul class="dropdown-menu">
-															<li class="menu-item menu-item-gtranslate-child"><a href=" " data-gt-lang="en" class="notranslate">English</a></li>
-															<li class="menu-item menu-item-gtranslate-child"><a href=" " data-gt-lang="id" class="gt-current-lang notranslate">Indonesian</a></li>
+															<a href="<?= Yii::$app->urlManager->createUrl(['/site/change-language', 'language' => 'id']) ?>">Bahasa Indonesia</a>
+															<a href="<?= Yii::$app->urlManager->createUrl(['/site/change-language', 'language' => 'en']) ?>">English</a>
 														</ul>
 													</li>
 

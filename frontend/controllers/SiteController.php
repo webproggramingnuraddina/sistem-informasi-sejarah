@@ -21,6 +21,7 @@ use frontend\models\ResetPasswordForm;
 use yii\base\InvalidArgumentException;
 use frontend\models\PasswordResetRequestForm;
 use frontend\models\ResendVerificationEmailForm;
+use yii\web\Cookie;
 
 /**
  * Site controller
@@ -72,6 +73,28 @@ class SiteController extends Controller
                 'fixedVerifyCode' => YII_ENV_TEST ? 'testme' : null,
             ],
         ];
+    }
+    // Contoh aksi pada kontroler
+
+
+    public function actionChangeLanguage($language)
+    {
+        // Validasi bahasa yang didukung
+        $supportedLanguages = ['id', 'en'];
+        if (!in_array($language, $supportedLanguages)) {
+            throw new \InvalidArgumentException('Invalid language.');
+        }
+
+        // Simpan preferensi bahasa dalam cookie
+        $cookie = new Cookie([
+            'name' => 'language',
+            'value' => $language,
+            'expire' => time() + 86400 * 365, // Cookie berlaku selama 1 tahun
+        ]);
+        Yii::$app->getResponse()->getCookies()->add($cookie);
+
+        // Redirect pengguna ke halaman sebelumnya atau halaman lain
+        return $this->redirect(Yii::$app->request->referrer ?: Yii::$app->homeUrl);
     }
 
     /**

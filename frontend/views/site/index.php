@@ -5,7 +5,12 @@ use yii\helpers\Url;
 /** @var yii\web\View $this */
 
 $this->title = 'My Yii Application';
+
+use frontend\components\Translator;
+
 ?>
+
+
 
 <div role="main" class="main">
 
@@ -28,14 +33,15 @@ $this->title = 'My Yii Application';
                     <div class="position-relative bg-color-grey p-5">
                         <div class="spacer my-5 py-2 d-none d-sm-block"></div>
                         <div class="overflow-hidden pt-sm-5 mt-sm-5">
-                            <h1 class="font-weight-semibold text-10 mb-0 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="300">The Future of Steel</h1>
+                            <h1 class="font-weight-semibold text-10 mb-0 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="300"><?= Yii::t('app', 'Selamat datang') ?></h1>
+
                         </div>
                         <div class="overflow-hidden mb-3">
                             <h2 class="font-weight-semibold text-10 line-height-2 mb-0 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="500">
                                 <strong class="font-weight-extra-bold custom-font-size-2">Solutions Are Here</strong>
                             </h2>
                         </div>
-                        <p class="custom-font-size-1 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="700">Metals industry with by high technology innovation</p>
+                        <p class="custom-font-size-1 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="700"><?= Translator::translate('Universitas Negeri Padang') ?></p>
                         <a href="#" class="btn custom-svg-btn-style-1 text-color-hover-primary mb-sm-5 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="900">
                             <svg class="custom-svg-btn-background" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 210 70" preserveAspectRatio="none">
                                 <polygon fill="none" stroke="#D4D4D4" stroke-width="2" stroke-miterlimit="10" points="7,5 185,5 205,34 186,63 7,63 " />
@@ -131,7 +137,8 @@ $this->title = 'My Yii Application';
                     <?php foreach ($modelKadep as $key => $val) : ?>
                         <?php if ($val->id == 1) { ?>
                             <div class="col-lg-6 appear-animation" data-appear-animation="fadeInRightShorter" data-appear-animation-delay="500">
-                                <p class="font-weight-semibold text-color-dark"><?= $val->deskripsi ?></p>
+                                <p class="font-weight-semibold text-color-dark"><?= Translator::translate($val->deskripsi) ?></p>
+
 
                                 <a href="demo-industry-factory-services-detail.html" class="custom-read-more btn btn-link d-inline-flex align-items-center font-weight-semibold text-decoration-none ps-0">
                                     READ MORE
