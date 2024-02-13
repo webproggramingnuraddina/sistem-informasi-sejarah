@@ -11,8 +11,11 @@ return [
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'controllerNamespace' => 'frontend\controllers',
-    'language' => 'en', // Set Default Language to Indonesian
-    'sourceLanguage' => 'id',
+    // 'language' => 'en',
+    // 'language' => Yii::$app->session->get('language') === 'en' ? 'en' : 'id-ID', // Set Default Language to Indonesian
+    // 'language' => Yii::$app->session->get('language', 'id'), // Set Default Language to Indonesian if not set in session
+
+    // 'sourceLanguage' => 'id',
     'components' => [
         'request' => [
             'csrfParam' => '_csrf-frontend',
@@ -38,27 +41,24 @@ return [
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
-        /*
-        'urlManager' => [
-            'enablePrettyUrl' => true,
-            'showScriptName' => false,
-            'rules' => [
-            ],
-        ],
-        */
-        'i18n' => [
+        'i18n' => [ // Memindahkan konfigurasi i18n ke dalam komponen utama
             'translations' => [
                 'app*' => [
                     'class' => 'yii\i18n\PhpMessageSource',
                     'basePath' => '@frontend/messages',
-                    'sourceLanguage' => 'en', // Source language is English
-                    'fileMap' => [
-                        'app' => 'app.php',
-                        'frontend*' => 'frontend.php',
-                    ],
+                    // 'sourceLanguage' => 'id', // Bahasa sumber adalah bahasa Inggris
                 ],
             ],
         ],
+
+        'urlManager' => [
+            'enablePrettyUrl' => true,
+            'showScriptName' => false,
+            'rules' => [
+                'site/set-language/<lang:\w+>' => 'site/set-language',
+            ],
+        ],
+
     ],
     'params' => $params,
 ];

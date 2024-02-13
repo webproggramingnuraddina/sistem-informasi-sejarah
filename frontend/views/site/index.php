@@ -8,6 +8,8 @@ $this->title = 'My Yii Application';
 
 use frontend\components\Translator;
 
+
+
 ?>
 
 
@@ -34,6 +36,7 @@ use frontend\components\Translator;
                         <div class="spacer my-5 py-2 d-none d-sm-block"></div>
                         <div class="overflow-hidden pt-sm-5 mt-sm-5">
                             <h1 class="font-weight-semibold text-10 mb-0 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="300"><?= Yii::t('app', 'Selamat datang') ?></h1>
+
 
                         </div>
                         <div class="overflow-hidden mb-3">
@@ -137,9 +140,7 @@ use frontend\components\Translator;
                     <?php foreach ($modelKadep as $key => $val) : ?>
                         <?php if ($val->id == 1) { ?>
                             <div class="col-lg-6 appear-animation" data-appear-animation="fadeInRightShorter" data-appear-animation-delay="500">
-                                <p class="font-weight-semibold text-color-dark"><?= Translator::translate($val->deskripsi) ?></p>
-
-
+                                <p class="font-weight-semibold text-color-dark"><?= Yii::t('app', $val->deskripsi) ?></p>
                                 <a href="demo-industry-factory-services-detail.html" class="custom-read-more btn btn-link d-inline-flex align-items-center font-weight-semibold text-decoration-none ps-0">
                                     READ MORE
                                     <svg class="ms-2" version="1.1" viewBox="0 0 15.698 8.706" width="17" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">

@@ -257,30 +257,31 @@ class MahasiswaController extends Controller
             'model' => $model
         ]);
     }
- 
+
     public function actionBeasiswa()
     {
         return $this->render('beasiswa');
     }
- 
+
     public function actionAlumni()
     {
         return $this->render('alumni');
     }
- 
+
     public function actionFasilitas()
     {
+        $lang = Yii::$app->session->get('language', 'id');
+        Yii::$app->language = $lang;
         return $this->render('fasilitas');
     }
- 
+
     public function actionPrestasi()
     {
         return $this->render('prestasi');
     }
- 
+
     public function actionMhsorganisasi()
     {
         return $this->render('mhsorganisasi');
     }
-    
 }

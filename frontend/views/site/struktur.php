@@ -9,9 +9,9 @@ use yii\helpers\Html; ?>
             <div class="col">
                 <ul class="breadcrumb d-block text-center custom-font-secondary text-6 font-weight-medium positive-ls-3">
                     <li><a href="index" class="text-decoration-none opacity-hover-8">Home</a></li>
-                    <li class="active text-color-primary">Struktur Organisasi</li>
+                    <li class="active text-color-primary"><?= Yii::t('app', 'Struktur Organisasi') ?></li>
                 </ul>
-                <h1 class="d-block text-color-light font-weight-bold text-center text-12 positive-ls-1 line-height-2 mb-0">Struktur Organisasi</h1>
+                <h1 class="d-block text-color-light font-weight-bold text-center text-12 positive-ls-1 line-height-2 mb-0"><?= Yii::t('app', 'Struktur Organisasi') ?></h1>
             </div>
         </div>
     </div>

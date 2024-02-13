@@ -4,6 +4,7 @@
 
 use yii\helpers\Html;
 use yii\helpers\Url;
+use frontend\components\Translator;
 
 $this->title = 'Misi';
 $this->params['breadcrumbs'][] = $this->title;
@@ -15,9 +16,9 @@ $this->params['breadcrumbs'][] = $this->title;
                 <div class="col">
                     <ul class="breadcrumb d-block text-center custom-font-secondary text-6 font-weight-medium positive-ls-3">
                         <li><a href="index" class="text-decoration-none opacity-hover-8">Home</a></li>
-                        <li class="active text-color-primary">Misi</li>
+                        <li class="active text-color-primary"><?= Yii::t('app', 'Misi') ?></li>
                     </ul>
-                    <h1 class="d-block text-color-light font-weight-bold text-center text-12 positive-ls-1 line-height-2 mb-0">Misi</h1>
+                    <h1 class="d-block text-color-light font-weight-bold text-center text-12 positive-ls-1 line-height-2 mb-0"><?= Yii::t('app', 'Misi') ?></h1>
                 </div>
             </div>
         </div>
@@ -37,21 +38,21 @@ $this->params['breadcrumbs'][] = $this->title;
                 <div class="row align-items-center justify-content-center">
                     <div class="col-lg-6 order-2 order-lg-1 appear-animation" data-appear-animation="fadeInLeftShorter" data-appear-animation-delay="200">
                         <!-- <h2 class="text-color-primary font-weight-medium positive-ls-3 text-4 mb-0">OUR VALUES</h2> -->
-                        <h3 class="font-weight-bold text-transform-none text-9 line-height-2 mb-3">Misi Departemen Sejarah</h3>
-                        
+                        <h3 class="font-weight-bold text-transform-none text-9 line-height-2 mb-3"><?= Yii::t('app', 'Misi') ?> <?= Yii::t('app', 'Departemen Sejarah') ?></h3>
+
                         <ul class="list list-icons list-icons-style-2 list-icons-lg custom-list-icons-icon-size pb-1 mb-3">
-                        <p class="pt-3 pb-2 mb-2 appear-animation" data-appear-animation="fadeInUpShorter">
-                            <li class="pt-3 pb-2 mb-2 appear-animation" data-appear-animation="fadeInUpShorter"><i class="fas fa-check text-color-dark border-color-grey-1 top-7"></i> Menyelenggarakan pendidikan guna menghasilkan guru sejarah yang profesional, unggul, dan mampu mengembangkan pembelajaran sejarah abad 21.</li>
-                            <li class="pt-3 pb-2 mb-2 appear-animation" data-appear-animation="fadeInUpShorter"><i class="fas fa-check text-color-dark border-color-grey-1 top-7"></i> Menyelenggarakan penelitian yang inovatif dan berkontribusi secara global dalam bidang pendidikan sejarah dan ilmu sejarah.</li>
-                            <li class="pt-3 pb-2 mb-2 appear-animation" data-appear-animation="fadeInUpShorter"><i class="fas fa-check text-color-dark border-color-grey-1 top-7"></i> Menyelenggarakan pengabdian kepada masyarakat sebagai sarana berkontribusi terhadap peningkatan pendidikan karakter berbasis nilai-nilai sejarah dalam rangka membangun masyarakat yang berdaya saing.</li>
+                            <p class="pt-3 pb-2 mb-2 appear-animation" data-appear-animation="fadeInUpShorter">
+                                <li class="pt-3 pb-2 mb-2 appear-animation" data-appear-animation="fadeInUpShorter"><i class="fas fa-check text-color-dark border-color-grey-1 top-7"></i> <?= Yii::t('app', 'Menyelenggarakan pendidikan guna menghasilkan guru sejarah yang profesional, unggul, dan mampu mengembangkan pembelajaran sejarah abad 21.') ?></li>
+                                <li class="pt-3 pb-2 mb-2 appear-animation" data-appear-animation="fadeInUpShorter"><i class="fas fa-check text-color-dark border-color-grey-1 top-7"></i> <?= Yii::t('app', 'Menyelenggarakan penelitian yang inovatif dan berkontribusi secara global dalam bidang pendidikan sejarah dan ilmu sejarah.') ?></li>
+                                <li class="pt-3 pb-2 mb-2 appear-animation" data-appear-animation="fadeInUpShorter"><i class="fas fa-check text-color-dark border-color-grey-1 top-7"></i><?= Yii::t('app', 'Menyelenggarakan pengabdian kepada masyarakat sebagai sarana berkontribusi terhadap peningkatan pendidikan karakter berbasis nilai-nilai sejarah dalam rangka membangun masyarakat yang berdaya saing.') ?></li>
                         </ul>
-                    
+
                     </div>
                     <div class="col-lg-6 order-1 order-lg-2 ps-lg-5 mb-4 mb-lg-0">
                         <img src="<?= Yii::$app->getHomeUrl(); ?>img/demos/industry-factory/Misi.jpg" class="img-fluid box-shadow-3 appear-animation" data-appear-animation="fadeInLeftShorter" data-appear-animation-delay="500" alt="" />
                     </div>
                 </div>
             </div>
-		</section>
+        </section>
     </div>
 </div>

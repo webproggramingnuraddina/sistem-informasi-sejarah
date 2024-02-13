@@ -11,7 +11,17 @@ use yii\bootstrap5\Nav;
 use yii\bootstrap5\NavBar;
 use yii\helpers\Url;
 
+$lang = Yii::$app->session->get('language', 'id');
+Yii::$app->language = $lang;
 AppAsset::register($this);
+$languages = [
+	'en' => 'English',
+	'id' => 'Indonesian',
+	// Tambahkan bahasa lain di sini sesuai kebutuhan
+];
+
+// print_r(Yii::$app->language);
+// die();
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
@@ -123,7 +133,7 @@ AppAsset::register($this);
 					</div>
 				</div>
 				<div class="header nav-bar bg-primary">
-					<div class="header-container container">
+					<div class="header-container container ">
 						<div class="header-row">
 							<div class="header-column">
 								<div class="header-row">
@@ -135,33 +145,33 @@ AppAsset::register($this);
 									</div>
 								</div>
 							</div>
-							<div class="header-column justify-content-end">
+							<div class="header-column justify-content-end ">
 								<div class="header-row">
-									<div class="header-nav header-nav-links">
+									<div class="header-nav header-nav-links ">
 										<div class="header-nav-main header-nav-main-text-capitalize header-nav-main-effect-2 header-nav-main-sub-effect-1">
-											<nav class="collapse">
+											<nav class="collapse bg-primary">
 												<ul class="nav nav-pills" id="mainNav">
 													<li><a href="<?= Url::toRoute(['/site/index']) ?>" class="nav-link active">Home</a></li>
 													<li class="dropdown">
-														<a href="" class="nav-link dropdown-toggle">Profil</a>
+														<a href="" class="nav-link dropdown-toggle"><?= Yii::t('app', 'Profil') ?></a>
 														<ul class="dropdown-menu">
-															<li><a href="<?= Url::toRoute(['profil/sejarah']) ?>" class="dropdown-item">Sejarah</a></li>
-															<li><a href="<?= Url::toRoute(['profil/visi']) ?>" class="dropdown-item">Visi</a></li>
-															<li><a href="<?= Url::toRoute(['profil/misi']) ?>" class="dropdown-item">Misi</a></li>
-															<li><a href="<?= Url::toRoute(['profil/tujuan']) ?>" class="dropdown-item">Tujuan</a></li>
+															<li><a href="<?= Url::toRoute(['profil/sejarah']) ?>" class="dropdown-item"><?= Yii::t('app', 'Sejarah') ?></a></li>
+															<li><a href="<?= Url::toRoute(['profil/visi']) ?>" class="dropdown-item"><?= Yii::t('app', 'Visi') ?></a></li>
+															<li><a href="<?= Url::toRoute(['profil/misi']) ?>" class="dropdown-item"><?= Yii::t('app', 'Misi') ?></a></li>
+															<li><a href="<?= Url::toRoute(['profil/tujuan']) ?>" class="dropdown-item"><?= Yii::t('app', 'Tujuan') ?></a></li>
 														</ul>
 													</li>
 													<li class="dropdown">
 														<a href="#" class="nav-link dropdown-toggle">Staff </a>
 														<ul class="dropdown-menu">
-															<li><a href="<?= Url::toRoute(['/site/struktur']) ?>" class="dropdown-item">Struktur Organisasi</a></li>
-															<li><a href="<?= Url::toRoute(['/site/dosen']) ?>" class="dropdown-item">Dosen</a></li>
-															<li><a href="<?= Url::toRoute(['/site/dosen-praktisi']) ?>" class="dropdown-item">Dosen Praktisi</a></li>
+															<li><a href="<?= Url::toRoute(['/site/struktur']) ?>" class="dropdown-item"><?= Yii::t('app', 'Struktur Organisasi') ?></a></li>
+															<li><a href="<?= Url::toRoute(['/site/dosen']) ?>" class="dropdown-item"><?= Yii::t('app', 'Dosen') ?></a></li>
+															<li><a href="<?= Url::toRoute(['/site/dosen-praktisi']) ?>" class="dropdown-item"><?= Yii::t('app', 'Dosen Praktisi') ?></a></li>
 															<li><a href="<?= Url::toRoute(['/site/tendik']) ?>" class="dropdown-item">Tendik</a></li>
 														</ul>
 													</li>
 													<li class="dropdown">
-														<a href="demo-auto-services-services.html" class="nav-link dropdown-toggle">Akademik</a>
+														<a href="demo-auto-services-services.html" class="nav-link dropdown-toggle"><?= Yii::t('app', 'Akademik') ?></a>
 														<ul class="dropdown-menu">
 															<li><a href="<?= Url::toRoute(['/site/maba']) ?>" class="dropdown-item">Penerimaan Mahasiswa Baru</a></li>
 															<li><a href="<?= Url::toRoute(['/site/kurikulum']) ?>" class="dropdown-item">Kurikulum</a></li>
@@ -173,37 +183,63 @@ AppAsset::register($this);
 														</ul>
 													</li>
 													<li class="dropdown">
-														<a href="" class="nav-link dropdown-toggle">Mahasiswa & Alumni</a>
+														<a href="" class="nav-link dropdown-toggle"><?= Yii::t('app', 'Mahasiswa & Alumni') ?></a>
 														<ul class="dropdown-menu">
 															<li><a href="<?= Url::toRoute(['mahasiswa/mhsorganisasi']) ?>" class="dropdown-item">Struktur Organisasi</a></li>
 															<li><a href="<?= Url::toRoute(['mahasiswa/prestasi']) ?>" class="dropdown-item">Prestasi</a></li>
 															<li><a href="<?= Url::toRoute(['mahasiswa/beasiswa']) ?>" class="dropdown-item">Beasiswa</a></li>
-															<li><a href="<?= Url::toRoute(['mahasiswa/fasilitas']) ?>" class="dropdown-item">Fasilitas</a></li>
+															<li><a href="<?= Url::toRoute(['mahasiswa/fasilitas']) ?>" class="dropdown-item"><?= Yii::t('app', 'Fasiltas') ?></a></li>
 															<li><a href="<?= Url::toRoute(['mahasiswa/alumni']) ?>" class="dropdown-item">Alumni</a></li>
 														</ul>
 													</li>
 													<li class="dropdown">
-														<a href="" class="nav-link dropdown-toggle">Penelitian & Pengabdian</a>
+														<a href="" class="nav-link dropdown-toggle"><?= Yii::t('app', 'Penelitian & Pengabdian') ?></a>
 														<ul class="dropdown-menu">
 															<li><a href="<?= Url::toRoute(['penelitian/kelompokriset']) ?>" class="dropdown-item">Kelompok Riset</a></li>
 															<li><a href="<?= Url::toRoute(['penelitian/publikasiriset']) ?>" class="dropdown-item">Publikasi Riset</a></li>
 															<li><a href="<?= Url::toRoute(['penelitian/publikasipengabdian']) ?>" class="dropdown-item">Publikasi Pengabdian</a></li>
 															<li><a href="<?= Url::toRoute(['penelitian/kerjasama']) ?>" class="dropdown-item">Kerjasama</a></li>
+
+															<li>
+																<a href="<?= Url::toRoute(['/site/download']) ?>" class="dropdown-item">Download </a>
+
+															</li>
+
+															<li class="dropdown">
+																<a href="<?= Url::toRoute(['/site/jurnal']) ?>" class="dropdown-item">Jurnal</a>
+															</li>
 														</ul>
 													</li>
-													<li>
-														<a href="<?= Url::toRoute(['/site/download']) ?>" class="nav-link dropdown-toggle">Download </a>
 
-													</li>
-													<li class="dropdown">
-														<a href="<?= Url::toRoute(['/site/jurnal']) ?>" class="nav-link">Jurnal</a>
 
-													</li>
 													<li class="dropdown">
-														<a href="" data-gt-lang="id" class="gt-current-wrapper notranslate">Indonesian</a>
+														<a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Language <span class="caret"></span></a>
 														<ul class="dropdown-menu">
-															<a href="<?= Yii::$app->urlManager->createUrl(['/site/change-language', 'language' => 'id']) ?>">Bahasa Indonesia</a>
-															<a href="<?= Yii::$app->urlManager->createUrl(['/site/change-language', 'language' => 'en']) ?>">English</a>
+															<li>
+																<div class="language-selector">
+
+																	<?= Html::dropDownList(
+																		'language-dropdown',
+																		Yii::$app->session->get('language', 'id'), // Default language from session, default to 'id'
+																		[
+																			'id' => 'IDN',
+																			'en' => 'ENG',
+																		],
+																		[
+																			'id' => 'language-dropdown',
+																			'class' => 'form-control',
+																			'onchange' => "
+            var selectedLang = $(this).val();
+            if (selectedLang !== '') {
+                window.location.href = '" . Url::to(['site/set-language']) . "?lang=' + selectedLang;
+            }
+        ",
+																		]
+																	) ?>
+
+
+																</div>
+															</li>
 														</ul>
 													</li>
 
