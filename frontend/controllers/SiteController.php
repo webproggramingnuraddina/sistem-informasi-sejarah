@@ -8,6 +8,7 @@ use backend\models\Dosen;
 use backend\models\Jurnal;
 use backend\models\Berita;
 use backend\models\Kadep;
+use backend\models\Home;
 use yii\filters\VerbFilter;
 use backend\models\Download;
 use common\models\LoginForm;
@@ -82,8 +83,10 @@ class SiteController extends Controller
     {
         $modelBerita = Berita::find()->all();
         $modelKadep = Kadep::find()->all();
+        $modelHome = Home::find()->all();
         return $this->render('index', [
             'modelBerita' => $modelBerita,
+            'modelHome' => $modelHome,
             'modelKadep' => $modelKadep,
         ]);
     }

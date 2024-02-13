@@ -131,6 +131,12 @@ AppAsset::register($this);
             </a>
           </li>
           <li class="treeview">
+          <li <?= Yii::$app->controller->id == 'home' ? 'class=active' : '' ?>>
+            <a class="menu-link" href="<?= Url::toRoute(['/home']) ?>">
+              <i class="fa fa-home"></i>
+              <span>Home</span>
+            </a>
+          </li>
           <li <?= Yii::$app->controller->id == 'berita' ? 'class=active' : '' ?>>
             <a class="menu-link" href="<?= Url::toRoute(['/berita']) ?>">
               <i class="fa fa-newspaper-o"></i>

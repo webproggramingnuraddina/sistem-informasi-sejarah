@@ -116,6 +116,6 @@ $this->params['breadcrumbs'][] = $this->title;
                 </div><!-- /.box -->
             </div><!-- /.col -->
         </div><!-- /.row -->
-        <!-- </section>/.content -->
+    </section>
 
 </div>
