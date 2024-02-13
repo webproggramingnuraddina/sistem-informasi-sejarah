@@ -26,8 +26,39 @@ $this->params['breadcrumbs'][] = $this->title;
         </a>
     </section>
 
-    <div class="container">
-       
-        
-    </div>
+    <section id="intro">
+        <div class="container py-5">
+            <div class="row flex-row flex-wrap pt-5">
+            
+                <?php foreach ($modelPrestasi as $key => $val) : ?>
+                    <div class="col-lg-4 col-md-6 pb-2">
+                        <div class="card border-0 mb-4 border-radius-0 box-shadow-1 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="100">
+                            <div class="card-body p-3 z-index-1 text-center">
+                                <a href="demo-medical-2-our-doctors-detail.html" class="d-block text-center bg-color-grey">
+                                    <img alt="Doctor" class="img-fluid rounded" src="<?= Html::encode($val->getImageUrl()) ?>">
+                                </a>
+                                <strong class="font-weight-bold text-dark d-block text-5 mt-4 mb-0" class="text-dark">
+                                    <?= $val->nama_prestasi ?> (<?= $val->tahun ?>)
+                                </strong> 
+                                <span class="pt-2"><?= $val->nama_mhs ?></span>  
+                                <br>                        
+                                <span class="pt-2">Jenis Prestasi: 
+                                    <?php 
+                                    if ($val->jenis_prestasi == 1) {
+                                        echo "Internasional";
+                                    } elseif ($val->jenis_prestasi == 2) {
+                                        echo "Nasional";
+                                    } elseif ($val->jenis_prestasi == 3) {
+                                        echo "Lokal";
+                                    } 
+                                    ?>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+        </div>
+
+    </section>
 </div>

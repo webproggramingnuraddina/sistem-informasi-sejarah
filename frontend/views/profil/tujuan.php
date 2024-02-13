@@ -32,7 +32,8 @@ $this->params['breadcrumbs'][] = $this->title;
                 <div class="row justify-content-center mb-5">
                     <div class="col-lg-9 col-xl-8 text-center">
                         <div class="overflow-hidden">
-                            <h2 class="text-color-primary font-weight-medium positive-ls-3 text-4 mb-0 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="200">Tujuan</h2>
+                            <!-- <h2 class="text-color-primary font-weight-medium positive-ls-3 text-4 mb-0 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="200">Tujuan</h2> -->
+                            <h3 class="font-weight-bold text-transform-none text-9 line-height-2 mb-3">Tujuan</h3>
                         </div>
                         <div class="overflow-hidden mb-3">
                             <!-- <h3 class="font-weight-bold text-transform-none text-9 line-height-2 mb-0 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="400">Departemen Sejarah Memiliki Tujuan yang Ingin dicapai, diantaranya:</h3> -->

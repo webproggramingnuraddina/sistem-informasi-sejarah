@@ -150,6 +150,7 @@ AppAsset::register($this);
 															<li><a href="<?= Url::toRoute(['profil/visi']) ?>" class="dropdown-item">Visi</a></li>
 															<li><a href="<?= Url::toRoute(['profil/misi']) ?>" class="dropdown-item">Misi</a></li>
 															<li><a href="<?= Url::toRoute(['profil/tujuan']) ?>" class="dropdown-item">Tujuan</a></li>
+															<li><a href="<?= Url::toRoute(['profil/prodi']) ?>" class="dropdown-item">Prodi</a></li>
 														</ul>
 													</li>
 													<li class="dropdown">
@@ -176,7 +177,7 @@ AppAsset::register($this);
 													<li class="dropdown">
 														<a href="" class="nav-link dropdown-toggle">Mahasiswa & Alumni</a>
 														<ul class="dropdown-menu">
-															<li><a href="<?= Url::toRoute(['mahasiswa/mhsorganisasi']) ?>" class="dropdown-item">Struktur Organisasi</a></li>
+															<li><a href="<?= Url::toRoute(['mahasiswa/organisasimhs']) ?>" class="dropdown-item">Struktur Organisasi</a></li>
 															<li><a href="<?= Url::toRoute(['mahasiswa/prestasi']) ?>" class="dropdown-item">Prestasi</a></li>
 															<li><a href="<?= Url::toRoute(['mahasiswa/beasiswa']) ?>" class="dropdown-item">Beasiswa</a></li>
 															<li><a href="<?= Url::toRoute(['mahasiswa/fasilitas']) ?>" class="dropdown-item">Fasilitas</a></li>

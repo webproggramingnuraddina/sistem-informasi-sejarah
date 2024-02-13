@@ -16,9 +16,26 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'nama_prestasi')->textInput(['maxlength' => true]) ?>
 
+    <?= $form->field($model, 'image', [
+        'template' => '
+                <div class="custom-file">
+                    {input}
+                    {label}
+                    {error}
+                </div>
+            ',
+        'labelOptions' => ['class' => 'custom-file-label'],
+        'inputOptions' => ['class' => 'custom-file-input']
+    ])->fileInput() ?> 
+
     <?= $form->field($model, 'tahun')->textInput() ?>
 
-    <?= $form->field($model, 'jenis_prestasi')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'jenis_prestasi')->dropDownList([
+        '1' => 'Internasional',
+        '2' => 'Nasional',
+        '3' => 'Lokal',
+    ], ['prompt' => 'Pilih Jenis']) ?>
+
 
     <div class="form-group">
         <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>

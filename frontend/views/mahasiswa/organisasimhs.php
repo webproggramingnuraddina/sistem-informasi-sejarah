@@ -4,6 +4,7 @@
 
 use yii\helpers\Html;
 use yii\helpers\Url;
+use backend\models\Organisasimhs;
 
 $this->title = 'Organisasi Mahasiswa';
 $this->params['breadcrumbs'][] = $this->title;
@@ -26,8 +27,36 @@ $this->params['breadcrumbs'][] = $this->title;
         </a>
     </section>
 
-    <div class="container">
-       
+    
+    <section id="intro">
+    <div class="container py-5">
         
+    
+    <div class="row">
+    <?php foreach ($modelOrganisasimhs as $key => $val) : ?>
+        <div class="col-lg-6 col-md-6 ">
+            <div class="card border-0 mb-4 border-radius-0 box-shadow-1 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="100">
+                <div class="card-body p-3 z-index-1 d-flex align-items-center">
+                    <div class="mr-3">
+                        <a href="demo-medical-2-our-doctors-detail.html" class="d-block text-center bg-color-grey">
+                            <img alt="Doctor" class="img-fluid rounded" src="<?= Html::encode($val->getImageUrl()) ?>">
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6 col-md-6 ">
+            <div>
+                <strong class="font-weight-bold text-dark d-block text-5 mt-4 mb-0" class="text-dark">
+                    <?= $val->title ?>
+                </strong>
+                <p class="pt-2"><?= $val->deskripsi ?></p>
+            </div> 
+        </div>
+    <?php endforeach; ?>
     </div>
+
+</section>
+    
 </div>

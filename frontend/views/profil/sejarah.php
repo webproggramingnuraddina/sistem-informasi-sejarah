@@ -39,7 +39,8 @@ $this->params['breadcrumbs'][] = $this->title;
                         <img src="<?= Yii::$app->getHomeUrl(); ?>img/demos/industry-factory/Misi.jpg" class="img-fluid box-shadow-3 appear-animation" data-appear-animation="fadeInRightShorter" data-appear-animation-delay="200" alt="" />
                     </div>
                     <div class="col-lg-6 appear-animation" data-appear-animation="fadeInRightShorter" data-appear-animation-delay="500">
-                        <h2 class="text-color-primary font-weight-medium positive-ls-3 text-4 mb-0">Sejarah</h2>
+                        <!-- <h2 class="text-color-primary font-weight-medium positive-ls-3 text-4 mb-0">Sejarah</h2> -->
+                        <h3 class="font-weight-bold text-transform-none text-9 line-height-2 mb-3">Sejarah</h3>
                         <!-- <h3 class="font-weight-bold text-transform-none text-9 line-height-2 mb-3">Company Overview</h3> -->
                         <!-- <p class="custom-font-secondary custom-font-size-1 line-height-7 pb-2 mb-4"> -->
                         <p class="pt-3 pb-2 mb-2 appear-animation" data-appear-animation="fadeInUpShorter">

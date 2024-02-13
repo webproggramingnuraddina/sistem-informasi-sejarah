@@ -16,6 +16,10 @@ use frontend\models\ResetPasswordForm;
 use frontend\models\SignupForm;
 use frontend\models\ContactForm;
 use backend\models\Kerjasama;
+use backend\models\Peneltian;
+use backend\models\Pkm;
+use backend\models\Kelompokriset;
+use yii\data\Pagination;
 
 /**
  * Site controller
@@ -260,17 +264,53 @@ class PenelitianController extends Controller
 
     public function actionKelompokriset()
     {
-        return $this->render('kelompokriset');
+        $modelKelompokriset = Kelompokriset::find()->all();
+
+        return $this->render('kelompokriset', [
+            'modelKelompokriset' => $modelKelompokriset
+        ]);
     }
 
     public function actionPublikasiriset()
     {
-        return $this->render('publikasiriset');
+        // $modelPublikasiriset = Peneltian::find()->all();
+        $modelPublikasiriset = Peneltian::find();
+        $pagination = new Pagination([
+            'defaultPageSize' => 10, // Jumlah item per halaman
+            'totalCount' => $modelPublikasiriset->count(),
+        ]);
+
+        // Terapkan paginasi ke kueri
+        $modelPublikasiriset = $modelPublikasiriset->offset($pagination->offset)
+        ->limit($pagination->limit)
+        ->all();
+
+        return $this->render('publikasiriset', [
+            'modelPublikasiriset' => $modelPublikasiriset,
+            'pagination' => $pagination,
+        ]);
     }
 
     public function actionPublikasipengabdian()
     {
-        return $this->render('publikasipengabdian');
+        $modelPublikasipengabdian = Pkm::find()->all();
+
+        $modelPublikasipengabdian = Pkm::find();
+        $pagination = new Pagination([
+            'defaultPageSize' => 10, // Jumlah item per halaman
+            'totalCount' => $modelPublikasipengabdian->count(),
+        ]);
+
+        // Terapkan paginasi ke kueri
+        $modelPublikasipengabdian = $modelPublikasipengabdian->offset($pagination->offset)
+        ->limit($pagination->limit)
+        ->all();
+
+        return $this->render('publikasipengabdian', [
+            'modelPublikasipengabdian' => $modelPublikasipengabdian,
+            'pagination' => $pagination,
+        ]);
+    
     }
 
     /**
@@ -283,6 +323,71 @@ class PenelitianController extends Controller
         $modelKerjasama = Kerjasama::find()->all();
 
         return $this->render('kerjasama', [
+            'modelKerjasama' => $modelKerjasama
+        ]);
+
+    }
+    
+    public function actionKelompokriseteng()
+    {
+        $modelKelompokriset = Kelompokriset::find()->all();
+
+        return $this->render('kelompokriseteng', [
+            'modelKelompokriset' => $modelKelompokriset
+        ]);
+    }
+
+    public function actionPublikasiriseteng()
+    {
+        // $modelPublikasiriset = Peneltian::find()->all();
+        $modelPublikasiriset = Peneltian::find();
+        $pagination = new Pagination([
+            'defaultPageSize' => 10, // Jumlah item per halaman
+            'totalCount' => $modelPublikasiriset->count(),
+        ]);
+
+        // Terapkan paginasi ke kueri
+        $modelPublikasiriset = $modelPublikasiriset->offset($pagination->offset)
+        ->limit($pagination->limit)
+        ->all();
+
+        return $this->render('publikasiriseteng', [
+            'modelPublikasiriset' => $modelPublikasiriset,
+            'pagination' => $pagination,
+        ]);
+    }
+
+    public function actionPublikasipengabdianeng()
+    {
+        $modelPublikasipengabdian = Pkm::find()->all();
+
+        $modelPublikasipengabdian = Pkm::find();
+        $pagination = new Pagination([
+            'defaultPageSize' => 10, // Jumlah item per halaman
+            'totalCount' => $modelPublikasipengabdian->count(),
+        ]);
+
+        // Terapkan paginasi ke kueri
+        $modelPublikasipengabdian = $modelPublikasipengabdian->offset($pagination->offset)
+        ->limit($pagination->limit)
+        ->all();
+
+        return $this->render('publikasipengabdianeng', [
+            'modelPublikasipengabdian' => $modelPublikasipengabdian,
+            'pagination' => $pagination,
+        ]);
+    }
+
+    /**
+     * Displays about page.
+     *
+     * @return mixed
+     */
+    public function actionKerjasamaeng()
+    {
+        $modelKerjasama = Kerjasama::find()->all();
+
+        return $this->render('kerjasamaeng', [
             'modelKerjasama' => $modelKerjasama
         ]);
 
