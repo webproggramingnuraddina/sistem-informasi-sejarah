@@ -37,7 +37,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         <div class="card border-0 mb-4 border-radius-0 box-shadow-1 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="100">
                             <div class="card-body p-3 z-index-1 d-flex align-items-center">
                                 <div class="mr-3">
-                                    <a href="demo-medical-2-our-doctors-detail.html" class="d-block text-center bg-color-grey">
+                                    <a href="" class="d-block text-center bg-color-grey">
                                         <img alt="Doctor" class="img-fluid rounded" src="<?= Html::encode($val->getImageUrl()) ?>">
                                     </a>
                                 </div>
