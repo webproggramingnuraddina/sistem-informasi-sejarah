@@ -13,6 +13,7 @@ use Yii;
  * @property int|null $mulai_kerjasama
  * @property int|null $akhir_kerjasama
  * @property string|null $manfaat
+ * @property string|null $manfaat_eng
  * @property string $bidang
  */
 class Kerjasama extends \yii\db\ActiveRecord
@@ -35,6 +36,7 @@ class Kerjasama extends \yii\db\ActiveRecord
             [['bidang'], 'required'],
             [['nm_instansi'], 'string', 'max' => 255],
             [['nomor', 'manfaat'], 'string', 'max' => 2555],
+            [['manfaat_eng'], 'string', 'max' => 255],
             [['bidang'], 'string', 'max' => 100],
         ];
     }

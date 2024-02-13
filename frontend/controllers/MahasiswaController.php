@@ -16,6 +16,8 @@ use frontend\models\ResetPasswordForm;
 use frontend\models\SignupForm;
 use frontend\models\ContactForm;
 use backend\models\Kerjasama;
+use backend\models\Organisasimhs;
+use backend\models\Prestasi;
 
 /**
  * Site controller
@@ -277,11 +279,52 @@ class MahasiswaController extends Controller
 
     public function actionPrestasi()
     {
-        return $this->render('prestasi');
+        $modelPrestasi = Prestasi::find()->all();
+
+        return $this->render('prestasi', [
+            'modelPrestasi' => $modelPrestasi
+        ]);
+    }
+ 
+    public function actionOrganisasimhs()
+    {
+        $modelOrganisasimhs = Organisasimhs::find()->all();
+
+        return $this->render('organisasimhs', [
+            'modelOrganisasimhs' => $modelOrganisasimhs
+        ]);
     }
 
-    public function actionMhsorganisasi()
+    public function actionBeasiswaeng()
     {
-        return $this->render('mhsorganisasi');
+        return $this->render('beasiswaeng');
+    }
+ 
+    public function actionAlumnieng()
+    {
+        return $this->render('alumnieng');
+    }
+ 
+    public function actionFasilitaseng()
+    {
+        return $this->render('fasilitaseng');
+    }
+ 
+    public function actionPrestasieng()
+    {
+        $modelPrestasi = Prestasi::find()->all();
+
+        return $this->render('prestasieng', [
+            'modelPrestasi' => $modelPrestasi
+        ]);
+    }
+ 
+    public function actionOrganisasimhseng()
+    {
+        $modelOrganisasimhs = Organisasimhs::find()->all();
+
+        return $this->render('organisasimhseng', [
+            'modelOrganisasimhs' => $modelOrganisasimhs
+        ]);
     }
 }

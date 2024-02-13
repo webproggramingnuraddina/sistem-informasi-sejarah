@@ -1,5 +1,4 @@
 <?php
-
 /** @var yii\web\View $this */
 
 use yii\helpers\Html;
@@ -26,8 +25,74 @@ $this->params['breadcrumbs'][] = $this->title;
         </a>
     </section>
 
-    <div class="container">
-       
-        
+    <div class="container"> 
+    <div class="card-body pt-0">
+        <div class="row mb-3">
+            <div class="col-lg-3">
+                <br><br>
+                <select class="form-select" id="tahunSelect" onchange="filterByTahun()">
+                    <option value="">Pilih Tahun</option>
+                    <?php
+                    // Generate options for tahun select
+                    $tahunList = range(date("Y"), date("Y") - 10);
+                    foreach ($tahunList as $tahun) {
+                        echo "<option value='$tahun'>$tahun</option>";
+                    }
+                    ?>
+                </select>
+            </div>
+        </div>
+        <table class="table align-middle table-row-dashed fs-6 gy-5" id="kt_customers_table_penelitian">
+            <thead>
+                <tr class="text-start text-gray-400 fw-bolder fs-7 text-uppercase gs-0">
+                    <th class="">No</th>
+                    <th class="">Judul Penelitian</th>
+                    <th class="">Nama Ketua</th>
+                    <th class="">Kepakaran Ketua</th>
+                    <th class="">Anggota</th>
+                    <th class="">Anggota Mahasiswa</th>
+                </tr>
+            </thead>
+            <tbody class="text-gray-600">
+                <?php foreach ($modelPublikasiriset as $key => $a) { ?>
+                    <tr class="tahunData <?= $a->tahun ?>">
+                        <td><?= $key + 1 ?></td>
+                        <td><?= $a->judul_penelitian ?></td>
+                        <td><?= $a->nama_ketua ?></td>
+                        <td><?= $a->kepakaran_ketua ?></td>
+                        <td><?= $a->anggota ?></td>
+                        <td><?= $a->ang_mhs ?></td>
+                    </tr>
+                <?php } ?>
+            </tbody>
+        </table>
+        <?= yii\widgets\LinkPager::widget([
+            'pagination' => $pagination,
+            'options' => ['class' => 'pagination justify-content-center'], // Menambahkan kelas Bootstrap untuk pusatkan paginasi
+            'linkOptions' => ['class' => 'page-link'], // Menambahkan kelas Bootstrap untuk tautan halaman
+            'prevPageLabel' => 'Previous', // Label untuk tautan halaman sebelumnya
+            'nextPageLabel' => 'Next', // Label untuk tautan halaman selanjutnya
+            'disabledListItemSubTagOptions' => ['class' => 'page-link'], // Menambahkan kelas Bootstrap untuk tautan halaman yang dinonaktifkan
+            'firstPageLabel' => false, // Menghilangkan label halaman pertama
+        ]) ?>
+
+
     </div>
 </div>
+
+<script>
+    function filterByTahun() {
+        var selectBox = document.getElementById("tahunSelect");
+        var selectedValue = selectBox.options[selectBox.selectedIndex].value;
+        var rows = document.getElementsByClassName("tahunData");
+
+        for (var i = 0; i < rows.length; i++) {
+            var tahunClass = rows[i].classList[1];
+            if (selectedValue === "" || tahunClass === selectedValue) {
+                rows[i].style.display = "";
+            } else {
+                rows[i].style.display = "none";
+            }
+        }
+    }
+</script>

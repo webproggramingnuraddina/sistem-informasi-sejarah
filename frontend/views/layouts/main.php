@@ -159,6 +159,7 @@ $languages = [
 															<li><a href="<?= Url::toRoute(['profil/visi']) ?>" class="dropdown-item"><?= Yii::t('app', 'Visi') ?></a></li>
 															<li><a href="<?= Url::toRoute(['profil/misi']) ?>" class="dropdown-item"><?= Yii::t('app', 'Misi') ?></a></li>
 															<li><a href="<?= Url::toRoute(['profil/tujuan']) ?>" class="dropdown-item"><?= Yii::t('app', 'Tujuan') ?></a></li>
+															<li><a href="<?= Url::toRoute(['profil/prodi']) ?>" class="dropdown-item">Prodi</a></li>
 														</ul>
 													</li>
 													<li class="dropdown">
@@ -185,7 +186,7 @@ $languages = [
 													<li class="dropdown">
 														<a href="" class="nav-link dropdown-toggle"><?= Yii::t('app', 'Mahasiswa & Alumni') ?></a>
 														<ul class="dropdown-menu">
-															<li><a href="<?= Url::toRoute(['mahasiswa/mhsorganisasi']) ?>" class="dropdown-item">Struktur Organisasi</a></li>
+															<li><a href="<?= Url::toRoute(['mahasiswa/organisasimhs']) ?>" class="dropdown-item">Struktur Organisasi</a></li>
 															<li><a href="<?= Url::toRoute(['mahasiswa/prestasi']) ?>" class="dropdown-item">Prestasi</a></li>
 															<li><a href="<?= Url::toRoute(['mahasiswa/beasiswa']) ?>" class="dropdown-item">Beasiswa</a></li>
 															<li><a href="<?= Url::toRoute(['mahasiswa/fasilitas']) ?>" class="dropdown-item"><?= Yii::t('app', 'Fasiltas') ?></a></li>

@@ -22,6 +22,8 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'manfaat')->textInput(['maxlength' => true]) ?>
 
+    <?= $form->field($model, 'manfaat_eng')->textInput(['maxlength' => true]) ?>
+
     <?= $form->field($model, 'bidang')->dropDownList([
         '1' => 'Bidang Pendidikan',
         '2' => 'Bidang Penelitian',

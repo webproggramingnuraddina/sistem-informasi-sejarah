@@ -24,6 +24,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 'method' => 'post',
             ],
         ]) ?>
+        <?= Html::a('Back', ['/prestasi'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?= DetailView::widget([
@@ -32,8 +33,24 @@ $this->params['breadcrumbs'][] = $this->title;
             'id_prestasi',
             'nama_mhs',
             'nama_prestasi',
+            [
+                'attribute' => 'image',
+                'format' => ['html'],
+                'value' => fn () => Html::img($model->getImageUrl(), ['style' => 'width:50px']),
+            ],
             'tahun',
-            'jenis_prestasi',
+            [
+                'attribute' => 'jenis_prestasi',
+                'value' => function ($model) {
+                    if ($model->jenis_prestasi === '1') {
+                        return 'Internasional';
+                    } elseif ($model->jenis_prestasi === '2') {
+                        return 'Nasional';
+                    } elseif ($model->jenis_prestasi === '3') {
+                        return 'Lokal';
+                    }
+                },
+            ],
         ],
     ]) ?>
 

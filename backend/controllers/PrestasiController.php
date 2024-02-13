@@ -7,6 +7,7 @@ use backend\models\PrestasiSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\web\UploadedFile;
 
 /**
  * PrestasiController implements the CRUD actions for Prestasi model.
@@ -70,6 +71,7 @@ class PrestasiController extends Controller
     public function actionCreate()
     {
         $model = new Prestasi();
+        $model->imageFile = UploadedFile::getInstance($model, 'image');
 
         if ($this->request->isPost) {
             if ($model->load($this->request->post()) && $model->save()) {
@@ -94,6 +96,7 @@ class PrestasiController extends Controller
     public function actionUpdate($id_prestasi)
     {
         $model = $this->findModel($id_prestasi);
+        $model->imageFile = UploadedFile::getInstance($model, 'image');
 
         if ($this->request->isPost && $model->load($this->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id_prestasi' => $model->id_prestasi]);
