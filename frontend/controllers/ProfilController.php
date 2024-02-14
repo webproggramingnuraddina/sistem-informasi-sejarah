@@ -76,6 +76,8 @@ class ProfilController extends Controller
      */
     public function actionIndex()
     {
+        $lang = Yii::$app->session->get('language', 'id');
+        Yii::$app->language = $lang;
         return $this->render('index');
     }
 
@@ -260,21 +262,60 @@ class ProfilController extends Controller
 
     public function actionSejarah()
     {
+        $lang = Yii::$app->session->get('language', 'id');
+        Yii::$app->language = $lang;
         return $this->render('sejarah');
     }
 
     public function actionVisi()
     {
+        $lang = Yii::$app->session->get('language', 'id');
+        Yii::$app->language = $lang;
         return $this->render('visi');
     }
-    
+
     public function actionMisi()
+
     {
+        $lang = Yii::$app->session->get('language', 'id');
+        Yii::$app->language = $lang;
         return $this->render('misi');
     }
-    
+
     public function actionTujuan()
     {
+        $lang = Yii::$app->session->get('language', 'id');
+        Yii::$app->language = $lang;
         return $this->render('tujuan');
+    }
+
+    public function actionProdi()
+    {
+        return $this->render('prodi');
+    }
+
+    public function actionSejaraheng()
+    {
+        return $this->render('sejaraheng');
+    }
+
+    public function actionVisieng()
+    {
+        return $this->render('visieng');
+    }
+
+    public function actionMisieng()
+    {
+        return $this->render('misieng');
+    }
+
+    public function actionTujuaneng()
+    {
+        return $this->render('tujuaneng');
+    }
+
+    public function actionProdieng()
+    {
+        return $this->render('prodieng');
     }
 }

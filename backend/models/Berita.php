@@ -46,8 +46,8 @@ class Berita extends \yii\db\ActiveRecord
         return [
             [['tittle', 'isi_berita'], 'required'],
             [['created_at', 'created_by'], 'integer'],
-            [['tittle'], 'string', 'max' => 255],
-            [['isi_berita', 'image'], 'string', 'max' => 2555], ['imageFile', 'image', 'extensions' => ['png', 'jpg', 'jpeg', 'webp'], 'maxSize' => 5 * 1024 * 1024],
+            [['tittle', 'tittle_eng'], 'string', 'max' => 255],
+            [['isi_berita', 'isi_berita_eng', 'image'], 'string', 'max' => 2555], ['imageFile', 'image', 'extensions' => ['png', 'jpg', 'jpeg', 'webp'], 'maxSize' => 5 * 1024 * 1024],
         ];
     }
 
@@ -112,7 +112,8 @@ class Berita extends \yii\db\ActiveRecord
         return [
             'id_berita' => 'Id Berita',
             'tittle' => 'Judul',
-            'isi_berita' => 'Isi Berita',
+            'tittle_eng' => 'Judul Eng',
+            'isi_berita_eng' => 'Isi Berita Eng',
             'image' => 'Image',
             'created_at' => 'Created At',
             'created_by' => 'Created By',

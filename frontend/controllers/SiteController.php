@@ -3,20 +3,23 @@
 namespace frontend\controllers;
 
 use Yii;
+use yii\web\Cookie;
+use yii\web\Response;
 use yii\web\Controller;
 use backend\models\Dosen;
-use backend\models\Jurnal;
-use backend\models\Berita;
 use backend\models\Kadep;
+use backend\models\Berita;
+use backend\models\Jurnal;
+use backend\models\Home;
 use yii\filters\VerbFilter;
 use backend\models\Download;
-use backend\models\Strukturorganisasi;
 use common\models\LoginForm;
 use yii\filters\AccessControl;
 use frontend\models\SignupForm;
 use frontend\models\ContactForm;
 use frontend\models\VerifyEmailForm;
 use yii\web\BadRequestHttpException;
+use backend\models\Strukturorganisasi;
 use frontend\models\ResetPasswordForm;
 use yii\base\InvalidArgumentException;
 use frontend\models\PasswordResetRequestForm;
@@ -73,6 +76,42 @@ class SiteController extends Controller
             ],
         ];
     }
+    // Contoh aksi pada kontroler
+
+
+    // public function actionSetLanguage($lang)
+    // {
+    //     // List of supported languages
+    //     $supportedLanguages = ['id', 'en'];
+
+    //     // Check if the selected language is supported
+    //     if (in_array($lang, $supportedLanguages)) {
+    //         // Set the application language
+    //         Yii::$app->language = $lang;
+
+    //         // Save the selected language in session
+    //         Yii::$app->session->set('language', $lang);
+
+    //         // Redirect back to the same page with the selected language
+    //         return $this->redirect(Yii::$app->request->referrer ?: Yii::$app->homeUrl);
+    //     }
+
+    //     // Return error response if language is not supported
+    //     // Yii::$app->session->setFlash('error', 'Invalid language selection.');
+    //     // return $this->redirect(Yii::$app->request->referrer ?: Yii::$app->homeUrl);
+    // }
+
+    public function actionSetLanguage($lang)
+    {
+        $supportedLanguages = ['id', 'en'];
+
+        if (in_array($lang, $supportedLanguages)) {
+            Yii::$app->session->set('language', $lang);
+            Yii::$app->language = $lang;
+
+            return $this->redirect(Yii::$app->request->referrer ?: Yii::$app->homeUrl);
+        }
+    }
 
     /**
      * Displays homepage.
@@ -81,9 +120,23 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
+        $lang = Yii::$app->session->get('language', 'id');
+        Yii::$app->language = $lang;
         $modelBerita = Berita::find()->all();
         $modelKadep = Kadep::find()->all();
+        $modelHome = Home::find()->all();
         return $this->render('index', [
+            'modelBerita' => $modelBerita,
+            'modelHome' => $modelHome,
+            'modelKadep' => $modelKadep,
+        ]);
+    }
+
+    public function actionIndexeng()
+    {
+        $modelBerita = Berita::find()->all();
+        $modelKadep = Kadep::find()->all();
+        return $this->render('indexeng', [
             'modelBerita' => $modelBerita,
             'modelKadep' => $modelKadep,
         ]);
@@ -154,11 +207,15 @@ class SiteController extends Controller
      */
     public function actionAbout()
     {
+        $lang = Yii::$app->session->get('language', 'id');
+        Yii::$app->language = $lang;
         return $this->render('about');
     }
 
     public function actionDownload()
     {
+        $lang = Yii::$app->session->get('language', 'id');
+        Yii::$app->language = $lang;
         $modelDownload = Download::find()->all();
         return $this->render('download', [
             'modelDownload' => $modelDownload
@@ -166,6 +223,9 @@ class SiteController extends Controller
     }
     public function actionDosen()
     {
+
+        $lang = Yii::$app->session->get('language', 'id');
+        Yii::$app->language = $lang;
         $modelDosen = Dosen::find()->all();
         return $this->render('dosen', [
             'modelDosen' => $modelDosen
@@ -173,6 +233,8 @@ class SiteController extends Controller
     }
     public function actionDosenPraktisi()
     {
+        $lang = Yii::$app->session->get('language', 'id');
+        Yii::$app->language = $lang;
         $modelDosenPraktisi = Dosen::find()->all();
         return $this->render('dosen-praktisi', [
             'modelDosenPraktisi' => $modelDosenPraktisi
@@ -180,6 +242,8 @@ class SiteController extends Controller
     }
     public function actionTendik()
     {
+        $lang = Yii::$app->session->get('language', 'id');
+        Yii::$app->language = $lang;
         $modelTendik = Dosen::find()->all();
         return $this->render('tendik', [
             'modelTendik' => $modelTendik
@@ -188,8 +252,18 @@ class SiteController extends Controller
 
     public function actionJurnal()
     {
+        $lang = Yii::$app->session->get('language', 'id');
+        Yii::$app->language = $lang;
         $modelJurnal = Jurnal::find()->all();
         return $this->render('jurnal', [
+            'modelJurnal' => $modelJurnal,
+        ]);
+    }
+
+    public function actionJurnaleng()
+    {
+        $modelJurnal = Jurnal::find()->all();
+        return $this->render('jurnaleng', [
             'modelJurnal' => $modelJurnal,
         ]);
     }
@@ -225,6 +299,8 @@ class SiteController extends Controller
     }
     public function actionDetaildosen($id)
     {
+        $lang = Yii::$app->session->get('language', 'id');
+        Yii::$app->language = $lang;
         // Cari dosen berdasarkan ID
         $dosen = Dosen::findOne($id);
 
@@ -239,6 +315,8 @@ class SiteController extends Controller
     }
     public function actionStruktur()
     {
+        $lang = Yii::$app->session->get('language', 'id');
+        Yii::$app->language = $lang;
         // Cari dosen berdasarkan ID
         $struktur = Strukturorganisasi::find()->all();
 

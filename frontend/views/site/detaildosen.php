@@ -23,11 +23,11 @@
 
                                             <div class="et_pb_text_inner">
                                                 <!-- Konten kolom kiri -->
-                                                <h2 class="text-center" style="color: orange;"> <strong>Identitas</strong></h2>
-                                                <h4 class="text-center">Nama</h4>
+                                                <h2 class="text-center" style="color: orange;"> <strong><?= Yii::t('app', 'Identitas') ?></strong></h2>
+                                                <h4 class="text-center"><?= Yii::t('app', 'Nama') ?></h4>
                                                 <p class="text-center"><?= $dosen->nama ?></p>
 
-                                                <h4 class="text-center">Tempat, Tanggal Lahir</h4>
+                                                <h4 class="text-center"><?= Yii::t('app', 'Tempat, Tanggal Lahir') ?></h4>
                                                 <p class="text-center"><?= $dosen->tmp_tgl_lahir ?></p>
                                                 <h4 class="text-center">NIP</h4>
                                                 <p class="text-center"><?= $dosen->nip ?></p>
@@ -44,7 +44,7 @@
                                                     <img alt="Doctor" class="img-fluid rounded" src="<?php echo $dosen->getImageUrl() ?>">
                                                 </a>
                                                 <br>
-                                                <span class="text-uppercase d-block text-default font-weight-semibold text-1 p-relative bottom-4 mb-0">Kepakaran : <?= $dosen->kepakaran ?></span>
+                                                <span class="text-uppercase d-block text-default font-weight-semibold text-1 p-relative bottom-4 mb-0"><?= Yii::t('app', 'Kepakaran') ?> : <?= Yii::t('app', $dosen->kepakaran) ?></span>
                                                 <a href="mailto:<?= $dosen->email ?>" class="btn btn-outline btn-light bg-hover-light text-dark text-hover-primary border-color-grey border-color-active-primary border-color-hover-primary text-uppercase rounded-0 px-4 py-2 mb-4 mt-3 text-2"><?= $dosen->email ?></a>
 
                                             </div>
@@ -71,15 +71,15 @@
                                                 <div class="et_pb_module et_pb_text et_pb_text_2  et_pb_text_align_right et_pb_bg_layout_light">
                                                     <div class="et_pb_text_inner">
                                                         <!-- Konten kolom kanan -->
-                                                        <h2 class="text-center" style="color: orange;"> <strong>Klaster Pengajaran</strong></h2>
+                                                        <h2 class="text-center" style="color: orange;"> <strong><?= Yii::t('app', 'Klaster Pengajaran') ?></strong></h2>
 
                                                         <h4 class="text-center">Sarjana (S1)</h4>
-                                                        <p class="text-center"><?= $dosen->pendidikan_sarjana ?></p>
+                                                        <p class="text-center"><?= Yii::t('app', $dosen->pendidikan_sarjana) ?></p>
 
-                                                        <h4 class="text-center">Magister (S2)</h4>
-                                                        <p class="text-center"><?= $dosen->pendidikan_magister ?></p>
+                                                        <h4 class="text-center"><?= Yii::t('app', 'Magister (S2)') ?></h4>
+                                                        <p class="text-center"><?= Yii::t('app', $dosen->pendidikan_magister) ?></p>
 
-                                                        <h4 class="text-center">Doktoral (S3)</h4>
+                                                        <h4 class="text-center"><?= Yii::t('app', 'Doctoral (S3)') ?></h4>
                                                         <p class="text-center"><?= $dosen->pendidikan_doktoral ?></p>
 
                                                     </div>
@@ -106,9 +106,9 @@
                 <div class="col">
                     <div id="description" class="tabs tabs-simple tabs-simple-full-width-line tabs-product tabs-dark mb-2">
                         <ul class="nav nav-tabs justify-content-start">
-                            <li class="nav-item"><a class="nav-link active font-weight-bold text-3 text-uppercase py-2 px-3" href="#productDescription" data-bs-toggle="tab">Publikasi</a></li>
-                            <li class="nav-item"><a class="nav-link nav-link-reviews font-weight-bold text-3 text-uppercase py-2 px-3" href="#productReviews" data-bs-toggle="tab">Mata Kuliah</a></li>
-                            <li class="nav-item"><a class="nav-link nav-link-reviews font-weight-bold text-3 text-uppercase py-2 px-3" href="#dosendetail" data-bs-toggle="tab">Detail</a></li>
+                            <li class="nav-item"><a class="nav-link active font-weight-bold text-3 text-uppercase py-2 px-3" href="#productDescription" data-bs-toggle="tab"><?= Yii::t('app', 'Publikasi') ?></a></li>
+                            <li class="nav-item"><a class="nav-link nav-link-reviews font-weight-bold text-3 text-uppercase py-2 px-3" href="#productReviews" data-bs-toggle="tab"><?= Yii::t('app', 'Mata Kuliah') ?></a></li>
+                            <li class="nav-item"><a class="nav-link nav-link-reviews font-weight-bold text-3 text-uppercase py-2 px-3" href="#dosendetail" data-bs-toggle="tab"><?= Yii::t('app', 'Detail') ?></a></li>
                         </ul>
                         <div class="tab-content p-0">
                             <div class="tab-pane px-0 py-3 active" id="productDescription">

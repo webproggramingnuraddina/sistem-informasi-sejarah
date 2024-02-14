@@ -9,9 +9,9 @@ use yii\helpers\Html; ?>
             <div class="col">
                 <ul class="breadcrumb d-block text-center custom-font-secondary text-6 font-weight-medium positive-ls-3">
                     <li><a href="index" class="text-decoration-none opacity-hover-8">Home</a></li>
-                    <li class="active text-color-primary">Dosen</li>
+                    <li class="active text-color-primary"><?= Yii::t('app', 'Dosen') ?></li>
                 </ul>
-                <h1 class="d-block text-color-light font-weight-bold text-center text-12 positive-ls-1 line-height-2 mb-0">Dosen</h1>
+                <h1 class="d-block text-color-light font-weight-bold text-center text-12 positive-ls-1 line-height-2 mb-0"><?= Yii::t('app', 'Dosen') ?></h1>
             </div>
         </div>
     </div>
@@ -38,7 +38,7 @@ use yii\helpers\Html; ?>
                                         <?= $val->nama ?>
                                     </a>
                                 </strong>
-                                <span class="text-uppercase d-block text-default font-weight-semibold text-1 p-relative bottom-4 mb-0"><?= $val->kepakaran ?></span>
+                                <span class="text-uppercase d-block text-default font-weight-semibold text-1 p-relative bottom-4 mb-0"><?= Yii::t('app', $val->kepakaran) ?></span>
                                 <a href="<?= Url::toRoute(['site/detaildosen/', 'id' => $val->id_dosen]) ?>" class="btn btn-outline btn-light bg-hover-light text-dark text-hover-primary border-color-grey border-color-active-primary border-color-hover-primary text-uppercase rounded-0 px-4 py-2 mb-4 text-2">View More +</a>
                             </div>
                         </div>

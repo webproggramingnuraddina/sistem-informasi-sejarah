@@ -25,7 +25,7 @@
                 <!-- <div class="overflow-hidden mb-3">
                     <h3 class="font-weight-bold text-transform-none text-9 line-height-2 mb-0 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="400">A Selection Of Industries We Serve</h3>
                 </div> -->
-                <p class="custom-font-secondary custom-font-size-1 line-height-7 mb-0 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="600">Di sini Anda dapat mengunduh berbagai dokumen yang berkaitan dengan kegiatan dan informasi penting yang disediakan</p>
+                <p class="custom-font-secondary custom-font-size-1 line-height-7 mb-0 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="600"><?= Yii::t('app', 'Here you can download various documents related to activities and important information provided.') ?></p>
             </div>
         </div>
         <div class="row appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="500">

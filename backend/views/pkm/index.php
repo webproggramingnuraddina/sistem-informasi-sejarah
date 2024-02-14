@@ -92,7 +92,29 @@ $this->params['breadcrumbs'][] = $this->title;
                                         <td><?= $a->nama_ketua ?></td>
                                         <td><?= $a->kepakaran ?></td>
                                         <td><?= $a->anggota ?></td>
-                                        <td><?= $a->tahun ?></td>
+                                        <td>
+                                            <?php 
+                                            if ($a->tahun == '2020') {
+                                                echo "2020";
+                                            } elseif ($a->tahun == '2021') {
+                                                echo "2021";
+                                            } elseif ($a->tahun == '2022') {
+                                                echo "2022";
+                                            } elseif ($a->tahun == '2023') {
+                                                echo "2023";
+                                            } elseif ($a->tahun == '2024') {
+                                                echo "2024";
+                                            } elseif ($a->tahun == '2025') {
+                                                echo "2025";
+                                            } elseif ($a->tahun == '2026') {
+                                                echo "2026";
+                                            } elseif ($a->tahun == '2027') {
+                                                echo "2027";
+                                            } elseif ($a->tahun == '2028') {
+                                                echo "2028";
+                                            } 
+                                            ?>
+                                        </td>
                                         <td><?= Html::a('&nbsp; View&nbsp;', ['view', 'id_pkm' => $a->id_pkm], ['class' => 'btn btn-primary']) ?>
 
                                             <?= Html::a('Delete', ['delete', 'id_pkm' => $a->id_pkm], [

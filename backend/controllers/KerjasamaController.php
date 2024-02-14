@@ -40,10 +40,12 @@ class KerjasamaController extends Controller
     {
         $searchModel = new KerjasamaSearch();
         $dataProvider = $searchModel->search($this->request->queryParams);
+        $kerjasama = Kerjasama::find()->all();
 
         return $this->render('index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
+            'kerjasama' => $kerjasama,
         ]);
     }
 

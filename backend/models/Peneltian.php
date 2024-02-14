@@ -14,6 +14,7 @@ use Yii;
  * @property string|null $anggota
  * @property string|null $ang_mhs
  * @property string|null $link_penelitian
+ * @property string|null $tahun
  */
 class Peneltian extends \yii\db\ActiveRecord
 {
@@ -33,7 +34,7 @@ class Peneltian extends \yii\db\ActiveRecord
         return [
             [['judul_penelitian', 'nama_ketua'], 'required'],
             [['judul_penelitian', 'anggota', 'ang_mhs', 'link_penelitian'], 'string', 'max' => 2555],
-            [['nama_ketua', 'kepakaran_ketua'], 'string', 'max' => 255],
+            [['nama_ketua', 'kepakaran_ketua', 'tahun'], 'string', 'max' => 255],
         ];
     }
 
@@ -50,6 +51,7 @@ class Peneltian extends \yii\db\ActiveRecord
             'anggota' => 'Anggota',
             'ang_mhs' => 'Ang Mhs',
             'link_penelitian' => 'Link Penelitian',
+            'tahun' => 'Tahun',
         ];
     }
 }

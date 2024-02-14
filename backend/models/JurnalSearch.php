@@ -18,7 +18,7 @@ class JurnalSearch extends Jurnal
     {
         return [
             [['id_jurnal'], 'integer'],
-            [['foto', 'judul_jurnal', 'deskripsi', 'jurnal_link'], 'safe'],
+            [['foto', 'judul_jurnal', 'deskripsi', 'deskripsi_eng', 'jurnal_link'], 'safe'],
         ];
     }
 
@@ -64,6 +64,7 @@ class JurnalSearch extends Jurnal
 
         $query->andFilterWhere(['like', 'judul_jurnal', $this->judul_jurnal])
             ->andFilterWhere(['like', 'deskripsi', $this->deskripsi])
+            ->andFilterWhere(['like', 'deskripsi_eng', $this->deskripsi_eng])
             ->andFilterWhere(['like', 'jurnal_link', $this->jurnal_link]);
 
         return $dataProvider;

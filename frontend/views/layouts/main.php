@@ -11,7 +11,17 @@ use yii\bootstrap5\Nav;
 use yii\bootstrap5\NavBar;
 use yii\helpers\Url;
 
+$lang = Yii::$app->session->get('language', 'id');
+Yii::$app->language = $lang;
 AppAsset::register($this);
+$languages = [
+	'en' => 'English',
+	'id' => 'Indonesian',
+	// Tambahkan bahasa lain di sini sesuai kebutuhan
+];
+
+// print_r(Yii::$app->language);
+// die();
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
@@ -123,7 +133,7 @@ AppAsset::register($this);
 					</div>
 				</div>
 				<div class="header nav-bar bg-primary">
-					<div class="header-container container">
+					<div class="header-container container ">
 						<div class="header-row">
 							<div class="header-column">
 								<div class="header-row">
@@ -135,75 +145,102 @@ AppAsset::register($this);
 									</div>
 								</div>
 							</div>
-							<div class="header-column justify-content-end">
+							<div class="header-column justify-content-end ">
 								<div class="header-row">
-									<div class="header-nav header-nav-links">
+									<div class="header-nav header-nav-links ">
 										<div class="header-nav-main header-nav-main-text-capitalize header-nav-main-effect-2 header-nav-main-sub-effect-1">
-											<nav class="collapse">
+											<nav class="collapse bg-primary">
 												<ul class="nav nav-pills" id="mainNav">
 													<li><a href="<?= Url::toRoute(['/site/index']) ?>" class="nav-link active">Home</a></li>
 													<li class="dropdown">
-														<a href="" class="nav-link dropdown-toggle">Profil</a>
+														<a href="" class="nav-link dropdown-toggle"><?= Yii::t('app', 'Profil') ?></a>
 														<ul class="dropdown-menu">
-															<li><a href="<?= Url::toRoute(['profil/sejarah']) ?>" class="dropdown-item">Sejarah</a></li>
-															<li><a href="<?= Url::toRoute(['profil/visi']) ?>" class="dropdown-item">Visi</a></li>
-															<li><a href="<?= Url::toRoute(['profil/misi']) ?>" class="dropdown-item">Misi</a></li>
-															<li><a href="<?= Url::toRoute(['profil/tujuan']) ?>" class="dropdown-item">Tujuan</a></li>
+															<li><a href="<?= Url::toRoute(['profil/sejarah']) ?>" class="dropdown-item"><?= Yii::t('app', 'Sejarah') ?></a></li>
+															<li><a href="<?= Url::toRoute(['profil/visi']) ?>" class="dropdown-item"><?= Yii::t('app', 'Visi') ?></a></li>
+															<li><a href="<?= Url::toRoute(['profil/misi']) ?>" class="dropdown-item"><?= Yii::t('app', 'Misi') ?></a></li>
+															<li><a href="<?= Url::toRoute(['profil/tujuan']) ?>" class="dropdown-item"><?= Yii::t('app', 'Tujuan') ?></a></li>
+															<li><a href="<?= Url::toRoute(['profil/prodi']) ?>" class="dropdown-item">Prodi</a></li>
 														</ul>
 													</li>
 													<li class="dropdown">
 														<a href="#" class="nav-link dropdown-toggle">Staff </a>
 														<ul class="dropdown-menu">
-															<li><a href="<?= Url::toRoute(['/site/struktur']) ?>" class="dropdown-item">Struktur Organisasi</a></li>
-															<li><a href="<?= Url::toRoute(['/site/dosen']) ?>" class="dropdown-item">Dosen</a></li>
-															<li><a href="<?= Url::toRoute(['/site/dosen-praktisi']) ?>" class="dropdown-item">Dosen Praktisi</a></li>
+															<li><a href="<?= Url::toRoute(['/site/struktur']) ?>" class="dropdown-item"><?= Yii::t('app', 'Struktur Organisasi') ?></a></li>
+															<li><a href="<?= Url::toRoute(['/site/dosen']) ?>" class="dropdown-item"><?= Yii::t('app', 'Dosen') ?></a></li>
+															<li><a href="<?= Url::toRoute(['/site/dosen-praktisi']) ?>" class="dropdown-item"><?= Yii::t('app', 'Dosen Praktisi') ?></a></li>
 															<li><a href="<?= Url::toRoute(['/site/tendik']) ?>" class="dropdown-item">Tendik</a></li>
 														</ul>
 													</li>
 													<li class="dropdown">
-														<a href="demo-auto-services-services.html" class="nav-link dropdown-toggle">Akademik</a>
+														<a href="demo-auto-services-services.html" class="nav-link dropdown-toggle"><?= Yii::t('app', 'Akademik') ?></a>
 														<ul class="dropdown-menu">
-															<li><a href="<?= Url::toRoute(['/site/maba']) ?>" class="dropdown-item">Penerimaan Mahasiswa Baru</a></li>
-															<li><a href="<?= Url::toRoute(['/site/kurikulum']) ?>" class="dropdown-item">Kurikulum</a></li>
-															<li><a href="<?= Url::toRoute(['/site/lulusan']) ?>" class="dropdown-item">Profil Lulusan</a></li>
-															<li><a href="<?= Url::toRoute(['/site/cpl']) ?>" class="dropdown-item">CPL</a></li>
-															<li><a href="<?= Url::toRoute(['/site/skripsi']) ?>" class="dropdown-item">Skripsi</a></li>
-															<li><a href="<?= Url::toRoute(['/site/kalender']) ?>" class="dropdown-item">Kalender Akademik</a></li>
-															<li><a href="<?= Url::toRoute(['/site/mutu']) ?>" class="dropdown-item">Jaminan Mutu</a></li>
+															<li><a href="<?= Url::toRoute(['akademik/maba']) ?>" class="dropdown-item"><?= Yii::t('app', 'Penerimaan Mahasiswa Baru') ?></a></li>
+															<li><a href="<?= Url::toRoute(['akademik/kurikulum']) ?>" class="dropdown-item"><?= Yii::t('app', 'Kurikulum') ?></a></li>
+															<li><a href="<?= Url::toRoute(['akademik/kalender']) ?>" class="dropdown-item"><?= Yii::t('app', 'Kalender Akademik') ?></a></li>
+															<li><a href="<?= Url::toRoute(['akademik/mutu']) ?>" class="dropdown-item"><?= Yii::t('app', 'Jaminan Mutu') ?></a></li>
+															<li><a href="<?= Url::toRoute(['akademik/skripsi']) ?>" class="dropdown-item"><?= Yii::t('app', 'Skripsi') ?></a></li>
+															<li><a href="<?= Url::toRoute(['akademik/cpl']) ?>" class="dropdown-item">CPL</a></li>
+															<li><a href="<?= Url::toRoute(['akademik/lulusan']) ?>" class="dropdown-item"><?= Yii::t('app', 'Profil Lulusan') ?></a></li>
 														</ul>
 													</li>
 													<li class="dropdown">
-														<a href="" class="nav-link dropdown-toggle">Mahasiswa & Alumni</a>
+														<a href="" class="nav-link dropdown-toggle"><?= Yii::t('app', 'Mahasiswa & Alumni') ?></a>
 														<ul class="dropdown-menu">
-															<li><a href="<?= Url::toRoute(['mahasiswa/mhsorganisasi']) ?>" class="dropdown-item">Struktur Organisasi</a></li>
-															<li><a href="<?= Url::toRoute(['mahasiswa/prestasi']) ?>" class="dropdown-item">Prestasi</a></li>
-															<li><a href="<?= Url::toRoute(['mahasiswa/beasiswa']) ?>" class="dropdown-item">Beasiswa</a></li>
-															<li><a href="<?= Url::toRoute(['mahasiswa/fasilitas']) ?>" class="dropdown-item">Fasilitas</a></li>
+															<li><a href="<?= Url::toRoute(['mahasiswa/organisasimhs']) ?>" class="dropdown-item"><?= Yii::t('app', 'Struktur Organisasi') ?></a></li>
+															<li><a href="<?= Url::toRoute(['mahasiswa/prestasi']) ?>" class="dropdown-item"><?= Yii::t('app', 'Prestasi') ?></a></li>
+															<li><a href="<?= Url::toRoute(['mahasiswa/beasiswa']) ?>" class="dropdown-item"><?= Yii::t('app', 'Beasiswa') ?></a></li>
+															<li><a href="<?= Url::toRoute(['mahasiswa/fasilitas']) ?>" class="dropdown-item"><?= Yii::t('app', 'Fasiltas') ?></a></li>
 															<li><a href="<?= Url::toRoute(['mahasiswa/alumni']) ?>" class="dropdown-item">Alumni</a></li>
 														</ul>
 													</li>
 													<li class="dropdown">
-														<a href="" class="nav-link dropdown-toggle">Penelitian & Pengabdian</a>
+														<a href="" class="nav-link dropdown-toggle"><?= Yii::t('app', 'Penelitian & Pengabdian') ?></a>
 														<ul class="dropdown-menu">
-															<li><a href="<?= Url::toRoute(['penelitian/kelompokriset']) ?>" class="dropdown-item">Kelompok Riset</a></li>
-															<li><a href="<?= Url::toRoute(['penelitian/publikasiriset']) ?>" class="dropdown-item">Publikasi Riset</a></li>
-															<li><a href="<?= Url::toRoute(['penelitian/publikasipengabdian']) ?>" class="dropdown-item">Publikasi Pengabdian</a></li>
-															<li><a href="<?= Url::toRoute(['penelitian/kerjasama']) ?>" class="dropdown-item">Kerjasama</a></li>
+															<li><a href="<?= Url::toRoute(['penelitian/kelompokriset']) ?>" class="dropdown-item"><?= Yii::t('app', 'Kelompok Riset') ?></a></li>
+															<li><a href="<?= Url::toRoute(['penelitian/publikasiriset']) ?>" class="dropdown-item"><?= Yii::t('app', 'Publikasi Riset') ?></a></li>
+															<li><a href="<?= Url::toRoute(['penelitian/publikasipengabdian']) ?>" class="dropdown-item"><?= Yii::t('app', 'Publikasi Pengabdian') ?></a></li>
+															<li><a href="<?= Url::toRoute(['penelitian/kerjasama']) ?>" class="dropdown-item"><?= Yii::t('app', 'Kerjasama') ?></a></li>
+
+															<li>
+																<a href="<?= Url::toRoute(['/site/download']) ?>" class="dropdown-item">Download </a>
+
+															</li>
+
+															<li class="dropdown">
+																<a href="<?= Url::toRoute(['/site/jurnal']) ?>" class="dropdown-item">Jurnal</a>
+															</li>
 														</ul>
 													</li>
-													<li>
-														<a href="<?= Url::toRoute(['/site/download']) ?>" class="nav-link dropdown-toggle">Download </a>
 
-													</li>
-													<li class="dropdown">
-														<a href="<?= Url::toRoute(['/site/jurnal']) ?>" class="nav-link">Jurnal</a>
 
-													</li>
 													<li class="dropdown">
-														<a href="" data-gt-lang="id" class="gt-current-wrapper notranslate">Indonesian</a>
+														<a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Language <span class="caret"></span></a>
 														<ul class="dropdown-menu">
-															<li class="menu-item menu-item-gtranslate-child"><a href=" " data-gt-lang="en" class="notranslate">English</a></li>
-															<li class="menu-item menu-item-gtranslate-child"><a href=" " data-gt-lang="id" class="gt-current-lang notranslate">Indonesian</a></li>
+															<li>
+																<div class="language-selector">
+
+																	<?= Html::dropDownList(
+																		'language-dropdown',
+																		Yii::$app->session->get('language', 'id'), // Default language from session, default to 'id'
+																		[
+																			'id' => 'IDN',
+																			'en' => 'ENG',
+																		],
+																		[
+																			'id' => 'language-dropdown',
+																			'class' => 'form-control',
+																			'onchange' => "
+            var selectedLang = $(this).val();
+            if (selectedLang !== '') {
+                window.location.href = '" . Url::to(['site/set-language']) . "?lang=' + selectedLang;
+            }
+        ",
+																		]
+																	) ?>
+
+
+																</div>
+															</li>
 														</ul>
 													</li>
 
@@ -237,10 +274,10 @@ AppAsset::register($this);
 					</div>
 				</div>
 			</div>
-	</div>
-	</header>
 
-	<!-- <header id="header" class="header-transparent header-effect-shrink" data-plugin-options="{'stickyEnabled': true, 'stickyEffect': 'shrink', 'stickyEnableOnBoxed': true, 'stickyEnableOnMobile': false, 'stickyChangeLogo': true, 'stickyStartAt': 30, 'stickyHeaderContainerHeight': 70}">
+		</header>
+
+		<!-- <header id="header" class="header-transparent header-effect-shrink" data-plugin-options="{'stickyEnabled': true, 'stickyEffect': 'shrink', 'stickyEnableOnBoxed': true, 'stickyEnableOnMobile': false, 'stickyChangeLogo': true, 'stickyStartAt': 30, 'stickyHeaderContainerHeight': 70}">
 			<div class="header-body border-top-0 box-shadow-none">
 				<div class="header-container container">
 					<div class="header-row">
@@ -297,77 +334,77 @@ AppAsset::register($this);
 			</div>
 		</header> -->
 
-	<div class="content">
-		<?= $content ?>
-	</div>
+		<div class="content">
+			<?= $content ?>
+		</div>
 
-	<footer id="footer" class="section section-with-shape-divider border-0 custom-bg-lighten-grey-1 pt-5 pb-0 m-0">
-		<div class="shape-divider shape-divider-reverse-x" style="height: 120px;">
-			<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 2000 120" preserveAspectRatio="xMinYMin">
-				<polygon fill="#FFF" points="-11,2 693,112 2019,6 2019,135 -11,135 " />
-			</svg>
-		</div>
-		<div class="container pt-lg-5 mt-5">
-			<div class="row">
-				<div class="col-lg-3 mb-5 mb-lg-0">
-					<a href="demo-industry-factory.html">
-						<img src="<?= Yii::$app->getHomeUrl(); ?>img/demos/industry-factory/logo-light.png" class="img-fluid mt-5 mb-4" alt="Demo Industry & Factory" />
-					</a>
-					<p class="mb-0"><strong class="text-color-light">Porto Industrial, Factory, Manufacturing</strong></p>
-					<p>Advanced Template LTD.</p>
-					<ul class="social-icons social-icons-medium">
-						<li class="social-icons-facebook"><a href="http://www.facebook.com/" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
-						<li class="social-icons-email"><a href="mailto:sejarah@fis.unp.ac.id" target="_blank" title="Email"><i class="far fa-envelope"></i></a></li>
-						<li class="social-icons-instagram"><a href="https://www.instagram.com/dep_sejarahunp?igsh=MXZzN2Z2M2ZsOHM0dg==" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a></li>
-					</ul>
-				</div>
-				<div class="col-lg-4 offset-lg-1 mb-5 mb-lg-0">
-					<h4 class="text-color-light font-weght-bold positive-ls-2 custom-font-size-2">USEFUL LINKS</h4>
-					<div class="row">
-						<div class="col-md-6">
-							<ul class="list list-unstyled mb-0">
-								<li class="mb-0"><a href="#">Contact Us</a></li>
-								<li class="mb-0"><a href="#">Our Services</a></li>
-								<li class="mb-0"><a href="#">Payment Methods</a></li>
-								<li class="mb-0"><a href="#">Services Guide</a></li>
-								<li class="mb-0"><a href="#">FAQs</a></li>
-								<li class="mb-0"><a href="#">Service Support</a></li>
-								<li class="mb-0"><a href="#">Privacy</a></li>
-								<li class="mb-0"><a href="#">About Porto</a></li>
-								<li class="mb-0"><a href="#">Our Guarantees</a></li>
-								<li class="mb-0"><a href="#">Terms And Conditions</a></li>
-							</ul>
-						</div>
-						<div class="col-md-6">
-							<ul class="list list-unstyled mb-0">
-								<li class="mb-0"><a href="#">Privacy Policy</a></li>
-								<li class="mb-0"><a href="#">Return Policy</a></li>
-								<li class="mb-0"><a href="#">Intellectual Property Claims</a></li>
-								<li class="mb-0"><a href="#">Sitemap</a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 offset-lg-1 mb-5 mb-lg-0">
-					<h4 class="text-color-light font-weght-bold positive-ls-2 custom-font-size-2">OPENING HOURS</h4>
-					<ul class="list list-unstyled list-inline custom-list-style-1 mb-0">
-						<li><a href="#">Mon - Fri: 8:30 am to 5:00 pm</a></li>
-						<li><a href="#">Saturday: 9:30 am to 1:00 pm</a></li>
-						<li><a href="#">Sunday: Closed</a></li>
-					</ul>
-				</div>
+		<footer id="footer" class="section section-with-shape-divider border-0 custom-bg-lighten-grey-1 pt-5 pb-0 m-0">
+			<div class="shape-divider shape-divider-reverse-x" style="height: 120px;">
+				<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 2000 120" preserveAspectRatio="xMinYMin">
+					<polygon fill="#FFF" points="-11,2 693,112 2019,6 2019,135 -11,135 " />
+				</svg>
 			</div>
-		</div>
-		<div class="footer-copyright custom-bg-lighten-grey-1 mt-5 pb-5">
-			<div class="container custom-footer-top-light-border pt-4">
+			<div class="container pt-lg-5 mt-5">
 				<div class="row">
-					<div class="col">
-						<p class="text-center text-3 mb-0">Departemen Sejarah © 2024. All Rights Reserved.</p>
+					<div class="col-lg-3 mb-5 mb-lg-0">
+						<a href="demo-industry-factory.html">
+							<img src="<?= Yii::$app->getHomeUrl(); ?>img/demos/industry-factory/logo-light.png" class="img-fluid mt-5 mb-4" alt="Demo Industry & Factory" />
+						</a>
+						<p class="mb-0"><strong class="text-color-light">Porto Industrial, Factory, Manufacturing</strong></p>
+						<p>Advanced Template LTD.</p>
+						<ul class="social-icons social-icons-medium">
+							<li class="social-icons-facebook"><a href="http://www.facebook.com/" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+							<li class="social-icons-email"><a href="mailto:sejarah@fis.unp.ac.id" target="_blank" title="Email"><i class="far fa-envelope"></i></a></li>
+							<li class="social-icons-instagram"><a href="https://www.instagram.com/dep_sejarahunp?igsh=MXZzN2Z2M2ZsOHM0dg==" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a></li>
+						</ul>
+					</div>
+					<div class="col-lg-4 offset-lg-1 mb-5 mb-lg-0">
+						<h4 class="text-color-light font-weght-bold positive-ls-2 custom-font-size-2">USEFUL LINKS</h4>
+						<div class="row">
+							<div class="col-md-6">
+								<ul class="list list-unstyled mb-0">
+									<li class="mb-0"><a href="#">Contact Us</a></li>
+									<li class="mb-0"><a href="#">Our Services</a></li>
+									<li class="mb-0"><a href="#">Payment Methods</a></li>
+									<li class="mb-0"><a href="#">Services Guide</a></li>
+									<li class="mb-0"><a href="#">FAQs</a></li>
+									<li class="mb-0"><a href="#">Service Support</a></li>
+									<li class="mb-0"><a href="#">Privacy</a></li>
+									<li class="mb-0"><a href="#">About Porto</a></li>
+									<li class="mb-0"><a href="#">Our Guarantees</a></li>
+									<li class="mb-0"><a href="#">Terms And Conditions</a></li>
+								</ul>
+							</div>
+							<div class="col-md-6">
+								<ul class="list list-unstyled mb-0">
+									<li class="mb-0"><a href="#">Privacy Policy</a></li>
+									<li class="mb-0"><a href="#">Return Policy</a></li>
+									<li class="mb-0"><a href="#">Intellectual Property Claims</a></li>
+									<li class="mb-0"><a href="#">Sitemap</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3 offset-lg-1 mb-5 mb-lg-0">
+						<h4 class="text-color-light font-weght-bold positive-ls-2 custom-font-size-2">OPENING HOURS</h4>
+						<ul class="list list-unstyled list-inline custom-list-style-1 mb-0">
+							<li><a href="#">Mon - Fri: 8:30 am to 5:00 pm</a></li>
+							<li><a href="#">Saturday: 9:30 am to 1:00 pm</a></li>
+							<li><a href="#">Sunday: Closed</a></li>
+						</ul>
 					</div>
 				</div>
 			</div>
-		</div>
-	</footer>
+			<div class="footer-copyright custom-bg-lighten-grey-1 mt-5 pb-5">
+				<div class="container custom-footer-top-light-border pt-4">
+					<div class="row">
+						<div class="col">
+							<p class="text-center text-3 mb-0">Departemen Sejarah © 2024. All Rights Reserved.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
 
 	</div>
 

@@ -36,6 +36,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'mulai_kerjasama',
             'akhir_kerjasama',
             'manfaat',
+            'manfaat_eng',
             [
                 'attribute' => 'bidang',
                 'value' => function ($model) {
