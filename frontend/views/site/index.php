@@ -208,7 +208,9 @@ use frontend\components\Translator;
                             <div class="owl-stage-outer">
                                 <div class="owl-stage">
                                     <?php
-
+                                    usort($modelBerita, function ($a, $b) {
+                                        return strtotime($b->created_at) - strtotime($a->created_at);
+                                    });
 
                                     // Mengambil 12 berita terbaru
                                     $latestBerita = array_slice($modelBerita, 0, 8);
@@ -261,7 +263,9 @@ use frontend\components\Translator;
                             </div>
                             <div class="owl-dots mb-2">
                                 <?php
-
+                                usort($modelBerita, function ($a, $b) {
+                                    return strtotime($b->created_at) - strtotime($a->created_at);
+                                });
 
                                 // Mengambil 12 berita terbaru
                                 $latestBerita = array_slice($modelBerita, 0, 8);
@@ -279,7 +283,9 @@ use frontend\components\Translator;
             <div class="container">
                 <div class="row">
                     <?php
-
+                    usort($modelBerita, function ($a, $b) {
+                        return strtotime($b->created_at) - strtotime($a->created_at);
+                    });
 
                     // Mengambil 12 berita terbaru
                     $latestBerita = array_slice($modelBerita, 0, 8);
@@ -338,7 +344,9 @@ use frontend\components\Translator;
                             <div class="owl-stage-outer">
                                 <div class="owl-stage">
                                     <?php
-
+                                    usort($modelBerita, function ($a, $b) {
+                                        return strtotime($b->created_at) - strtotime($a->created_at);
+                                    });
 
                                     // Mengambil 12 berita terbaru
                                     $latestBerita = array_slice($modelBerita, 0, 8);
@@ -391,7 +399,9 @@ use frontend\components\Translator;
                             </div>
                             <div class="owl-dots mb-2">
                                 <?php
-
+                                usort($modelBerita, function ($a, $b) {
+                                    return strtotime($b->created_at) - strtotime($a->created_at);
+                                });
 
                                 // Mengambil 12 berita terbaru
                                 $latestBerita = array_slice($modelBerita, 0, 8);
@@ -409,7 +419,9 @@ use frontend\components\Translator;
             <div class="container">
                 <div class="row">
                     <?php
-
+                    usort($modelBerita, function ($a, $b) {
+                        return strtotime($b->created_at) - strtotime($a->created_at);
+                    });
 
                     // Mengambil 12 berita terbaru
                     $latestBerita = array_slice($modelBerita, 0, 8);
@@ -512,7 +524,7 @@ use frontend\components\Translator;
                     <div class="process-step col-sm-9 col-md-7 col-lg-4 mb-5 mb-lg-4 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
                         <a href="<?= Url::toRoute(['/site/dosen']) ?>">
                             <div class="process-step-circle">
-                                <strong class="process-step-circle-content text-color-primary">1</strong>
+                                <strong class="process-step-circle-content text-color-primary"><?= $countdosen ?></strong>
                             </div>
                         </a>
                         <div class="process-step-content px-lg-4">
@@ -523,7 +535,7 @@ use frontend\components\Translator;
                     <div class="process-step col-sm-9 col-md-7 col-lg-4 mb-5 mb-lg-4 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="500">
                         <a href="<?= Url::toRoute(['/site/dosen-praktisi']) ?>">
                             <div class="process-step-circle">
-                                <strong class="process-step-circle-content text-color-primary">2</strong>
+                                <strong class="process-step-circle-content text-color-primary"><?= $countdosen ?></strong>
                             </div>
                         </a>
                         <div class="process-step-content px-lg-4">
@@ -534,7 +546,7 @@ use frontend\components\Translator;
                     <div class="process-step col-sm-9 col-md-7 col-lg-4 mb-5 mb-lg-4 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="700">
                         <a href="<?= Url::toRoute(['/site/tendik']) ?>">
                             <div class="process-step-circle">
-                                <strong class="process-step-circle-content text-color-primary">3</strong>
+                                <strong class="process-step-circle-content text-color-primary"><?= $countdosen ?></strong>
                             </div>
                         </a>
                         <div class="process-step-content px-lg-4">

@@ -125,10 +125,13 @@ class SiteController extends Controller
         $modelBerita = Berita::find()->all();
         $modelKadep = Kadep::find()->all();
         $modelHome = Home::find()->all();
+        $countdosen = Dosen::find()->count();
+
         return $this->render('index', [
             'modelBerita' => $modelBerita,
             'modelHome' => $modelHome,
             'modelKadep' => $modelKadep,
+            'countdosen' => $countdosen,
         ]);
     }
 
