@@ -604,16 +604,17 @@ use frontend\components\Translator;
                 <div class="col-lg-6 pe-lg-5 mb-4 mb-lg-0">
                     <div class="featured-boxes featured-boxes-modern-style-1 box-shadow-3">
                         <div class="featured-box custom-featured-box-with-video">
-                            <video class="custom-featured-box-video" controls preload="true">
-                                <source src="<?= $val->link_video ?>" type="video/mp4">
-                            </video>
-                            <div class="featured-box-background" style="background-image: url('<?= $val->link_video ?>'); background-size: cover; background-position: center;"></div>
+                            <div class="custom-featured-box-video">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/<?= $val->link_video ?>" frameborder="0" allowfullscreen></iframe>
+                            </div>
+                            <div class="featured-box-background" style="background-image: url(''); background-size: cover; background-position: center;"></div>
                             <div class="box-content">
                                 <a class="custom-trigger-play-video text-decoration-none d-block" href="#">
                                     <i class="fas fa-play featured-icon featured-icon-style-2 featured-icon-hover-effect-1 text-4 bg-transparent rounded-circle border border-width-10 border-color-light right-4 top-0 m-0"></i>
                                 </a>
                             </div>
                         </div>
+
                     </div>
                 </div>
                 <div class="col-lg-6">
