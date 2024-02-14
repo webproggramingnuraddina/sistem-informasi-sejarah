@@ -38,7 +38,7 @@ use yii\helpers\Html; ?>
                                         <?= $val->nama ?>
                                     </a>
                                 </strong>
-                                <span class="text-uppercase d-block text-default font-weight-semibold text-1 p-relative bottom-4 mb-0"><?= $val->kepakaran ?></span>
+                                <span class="text-uppercase d-block text-default font-weight-semibold text-1 p-relative bottom-4 mb-0"><?= Yii::t('app', $val->kepakaran) ?></span>
                                 <a href="<?= Url::toRoute(['site/detaildosen/', 'id' => $val->id_dosen]) ?>" class="btn btn-outline btn-light bg-hover-light text-dark text-hover-primary border-color-grey border-color-active-primary border-color-hover-primary text-uppercase rounded-0 px-4 py-2 mb-4 text-2">View More +</a>
                             </div>
                         </div>

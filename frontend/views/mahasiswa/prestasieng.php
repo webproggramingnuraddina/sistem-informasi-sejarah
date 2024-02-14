@@ -29,7 +29,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <section id="intro">
         <div class="container py-5">
             <div class="row flex-row flex-wrap pt-5">
-            
+
                 <?php foreach ($modelPrestasi as $key => $val) : ?>
                     <div class="col-lg-4 col-md-6 pb-2">
                         <div class="card border-0 mb-4 border-radius-0 box-shadow-1 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="100">
@@ -39,18 +39,18 @@ $this->params['breadcrumbs'][] = $this->title;
                                 </a>
                                 <strong class="font-weight-bold text-dark d-block text-5 mt-4 mb-0" class="text-dark">
                                     <?= $val->nama_prestasi ?> (<?= $val->tahun ?>)
-                                </strong> 
-                                <span class="pt-2"><?= $val->nama_mhs ?></span>  
-                                <br>                        
-                                <span class="pt-2">Type of Achievement: 
-                                    <?php 
+                                </strong>
+                                <span class="pt-2"><?= $val->nama_mhs ?></span>
+                                <br>
+                                <span class="pt-2">Type of Achievement:
+                                    <?php
                                     if ($val->jenis_prestasi == 1) {
                                         echo "Internasional";
                                     } elseif ($val->jenis_prestasi == 2) {
                                         echo "Nasional";
                                     } elseif ($val->jenis_prestasi == 3) {
                                         echo "Lokal";
-                                    } 
+                                    }
                                     ?>
                                 </span>
                             </div>

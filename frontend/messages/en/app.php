@@ -6,6 +6,7 @@ return [
 
     'Welcome' => 'Welcomee',
     'Selamat datang' => 'Welcome',
+    'Universitas Negeri Padang' => 'Padang State University',
     'Profil' => 'Profile',
     'Akademik' => 'Academik',
     'Mahasiswa & Alumni' => 'Students & Alumni',
@@ -16,7 +17,7 @@ return [
     'Sejarah' => 'History',
     'Visi' => 'Vision',
     'Misi' => 'Mision',
-    'Tujuan' => 'Objective',
+    'Tujuan' => 'Goal',
     'Struktur Organisasi' => 'Organizational Strucktur',
     'Struktur Organisasi' => 'Organizational Strucktur',
     'Dosen' => 'Lecturer',
@@ -35,6 +36,21 @@ return [
     'Doctoral (S3)' => 'Doctor (S3)',
     'S1 Pendidikan Sejarah, IKIP Padang' => 'Bachelor of History Education, IKIP Padang',
     'Ilmu Sejarah' => 'History',
+    'Kurikulum' => 'Curriculum',
+    'Jaminan Mutu' => 'Quality Assurance',
+    'Skripsi' => 'Thesis',
+    'Profil Lulusan' => 'Graduate Profile',
+    'Kalender Akademik' => 'Academic Calendar',
+    'Kerjasama' => 'Collaboration',
+    'Prestasi' => 'Achievements',
+    'Beasiswa' => 'Scholarship',
+    'Kelompok Riset' => 'Research Groups',
+    'Publikasi Riset' => 'Research Publications',
+    'Publikasi Pengabdian' => 'Community Service Publications',
+    'Penerimaan Mahasiswa Baru' => 'New Student Admissions',
+    'Di sini Anda dapat mengunduh berbagai dokumen yang berkaitan dengan kegiatan dan informasi penting yang disediakan' => 'Here you can download various documents related to activities and important information provided.',
+
+
 
 
 
@@ -50,7 +66,7 @@ return [
     'Menyelenggarakan penelitian yang inovatif dan berkontribusi secara global dalam bidang pendidikan sejarah dan ilmu sejarah.' => 'Carrying out innovative research and contributing globally in the field of history education and historical science.',
 
     'Menyelenggarakan pengabdian kepada masyarakat sebagai sarana berkontribusi terhadap peningkatan pendidikan karakter berbasis nilai-nilai sejarah dalam rangka membangun masyarakat yang berdaya saing.' => 'Carrying out community service as a means of contributing to improving character education based on historical values in order to build a competitive society.',
-    
+
 
 
 

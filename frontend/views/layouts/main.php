@@ -174,21 +174,21 @@ $languages = [
 													<li class="dropdown">
 														<a href="demo-auto-services-services.html" class="nav-link dropdown-toggle"><?= Yii::t('app', 'Akademik') ?></a>
 														<ul class="dropdown-menu">
-															<li><a href="<?= Url::toRoute(['akademik/maba']) ?>" class="dropdown-item">Penerimaan Mahasiswa Baru</a></li>
-															<li><a href="<?= Url::toRoute(['akademik/kurikulum']) ?>" class="dropdown-item">Kurikulum</a></li>
-															<li><a href="<?= Url::toRoute(['akademik/kalender']) ?>" class="dropdown-item">Kalender Akademik</a></li>
-															<li><a href="<?= Url::toRoute(['akademik/mutu']) ?>" class="dropdown-item">Jaminan Mutu</a></li>
-															<li><a href="<?= Url::toRoute(['akademik/skripsi']) ?>" class="dropdown-item">Skripsi</a></li>
+															<li><a href="<?= Url::toRoute(['akademik/maba']) ?>" class="dropdown-item"><?= Yii::t('app', 'Penerimaan Mahasiswa Baru') ?></a></li>
+															<li><a href="<?= Url::toRoute(['akademik/kurikulum']) ?>" class="dropdown-item"><?= Yii::t('app', 'Kurikulum') ?></a></li>
+															<li><a href="<?= Url::toRoute(['akademik/kalender']) ?>" class="dropdown-item"><?= Yii::t('app', 'Kalender Akademik') ?></a></li>
+															<li><a href="<?= Url::toRoute(['akademik/mutu']) ?>" class="dropdown-item"><?= Yii::t('app', 'Jaminan Mutu') ?></a></li>
+															<li><a href="<?= Url::toRoute(['akademik/skripsi']) ?>" class="dropdown-item"><?= Yii::t('app', 'Skripsi') ?></a></li>
 															<li><a href="<?= Url::toRoute(['akademik/cpl']) ?>" class="dropdown-item">CPL</a></li>
-															<li><a href="<?= Url::toRoute(['akademik/lulusan']) ?>" class="dropdown-item">Profil Lulusan</a></li>
+															<li><a href="<?= Url::toRoute(['akademik/lulusan']) ?>" class="dropdown-item"><?= Yii::t('app', 'Profil Lulusan') ?></a></li>
 														</ul>
 													</li>
 													<li class="dropdown">
 														<a href="" class="nav-link dropdown-toggle"><?= Yii::t('app', 'Mahasiswa & Alumni') ?></a>
 														<ul class="dropdown-menu">
-															<li><a href="<?= Url::toRoute(['mahasiswa/organisasimhs']) ?>" class="dropdown-item">Struktur Organisasi</a></li>
-															<li><a href="<?= Url::toRoute(['mahasiswa/prestasi']) ?>" class="dropdown-item">Prestasi</a></li>
-															<li><a href="<?= Url::toRoute(['mahasiswa/beasiswa']) ?>" class="dropdown-item">Beasiswa</a></li>
+															<li><a href="<?= Url::toRoute(['mahasiswa/organisasimhs']) ?>" class="dropdown-item"><?= Yii::t('app', 'Struktur Organisasi') ?></a></li>
+															<li><a href="<?= Url::toRoute(['mahasiswa/prestasi']) ?>" class="dropdown-item"><?= Yii::t('app', 'Prestasi') ?></a></li>
+															<li><a href="<?= Url::toRoute(['mahasiswa/beasiswa']) ?>" class="dropdown-item"><?= Yii::t('app', 'Beasiswa') ?></a></li>
 															<li><a href="<?= Url::toRoute(['mahasiswa/fasilitas']) ?>" class="dropdown-item"><?= Yii::t('app', 'Fasiltas') ?></a></li>
 															<li><a href="<?= Url::toRoute(['mahasiswa/alumni']) ?>" class="dropdown-item">Alumni</a></li>
 														</ul>
@@ -196,10 +196,10 @@ $languages = [
 													<li class="dropdown">
 														<a href="" class="nav-link dropdown-toggle"><?= Yii::t('app', 'Penelitian & Pengabdian') ?></a>
 														<ul class="dropdown-menu">
-															<li><a href="<?= Url::toRoute(['penelitian/kelompokriset']) ?>" class="dropdown-item">Kelompok Riset</a></li>
-															<li><a href="<?= Url::toRoute(['penelitian/publikasiriset']) ?>" class="dropdown-item">Publikasi Riset</a></li>
-															<li><a href="<?= Url::toRoute(['penelitian/publikasipengabdian']) ?>" class="dropdown-item">Publikasi Pengabdian</a></li>
-															<li><a href="<?= Url::toRoute(['penelitian/kerjasama']) ?>" class="dropdown-item">Kerjasama</a></li>
+															<li><a href="<?= Url::toRoute(['penelitian/kelompokriset']) ?>" class="dropdown-item"><?= Yii::t('app', 'Kelompok Riset') ?></a></li>
+															<li><a href="<?= Url::toRoute(['penelitian/publikasiriset']) ?>" class="dropdown-item"><?= Yii::t('app', 'Publikasi Riset') ?></a></li>
+															<li><a href="<?= Url::toRoute(['penelitian/publikasipengabdian']) ?>" class="dropdown-item"><?= Yii::t('app', 'Publikasi Pengabdian') ?></a></li>
+															<li><a href="<?= Url::toRoute(['penelitian/kerjasama']) ?>" class="dropdown-item"><?= Yii::t('app', 'Kerjasama') ?></a></li>
 
 															<li>
 																<a href="<?= Url::toRoute(['/site/download']) ?>" class="dropdown-item">Download </a>

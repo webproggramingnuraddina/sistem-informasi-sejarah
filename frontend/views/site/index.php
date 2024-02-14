@@ -11,9 +11,6 @@ use frontend\components\Translator;
 
 
 ?>
-
-
-
 <div role="main" class="main">
     <?php foreach ($modelHome as $key => $val) : ?>
         <section class="section section-with-shape-divider overflow-hidden border-0 m-0" style="background-image: url('<?php echo $val->getImageUrl(); ?>'); background-repeat: no-repeat; background-size: cover; background-position: center 70px;">
@@ -37,15 +34,15 @@ use frontend\components\Translator;
                         <div class="position-relative bg-color-grey p-5">
                             <div class="spacer my-5 py-2 d-none d-sm-block"></div>
                             <div class="overflow-hidden pt-sm-5 mt-sm-5">
-                                <h1 class="font-weight-semibold text-10 mb-0 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="300">The Future of Steel</h1>
+                                <h1 class="font-weight-semibold text-10 mb-0 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="300"><?= Yii::t('app', 'Departemen Sejarah') ?></h1>
                             </div>
                             <div class="overflow-hidden mb-3">
-                                <h2 class="font-weight-semibold text-10 line-height-2 mb-0 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="500">
-                                    <strong class="font-weight-extra-bold custom-font-size-2">Solutions Are Here</strong>
-                                </h2>
+                                <h4 class="font-weight-semibold text-8 line-height-2 mb-0 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="500">
+                                    <strong class="font-weight-extra-bold custom-font-size-2"><?= Yii::t('app', 'Universitas Negeri Padang') ?></strong>
+                                </h4>
                             </div>
-                            <p class="custom-font-size-1 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="700">Metals industry with by high technology innovation</p>
-                            <a href="#" class="btn custom-svg-btn-style-1 text-color-hover-primary mb-sm-5 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="900">
+                            <p class="custom-font-size-1 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="700">Embracing the Future Through Understanding the Past</p>
+                            <a href="#intro" class="btn custom-svg-btn-style-1 text-color-hover-primary mb-sm-5 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="900">
                                 <svg class="custom-svg-btn-background" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 210 70" preserveAspectRatio="none">
                                     <polygon fill="none" stroke="#D4D4D4" stroke-width="2" stroke-miterlimit="10" points="7,5 185,5 205,34 186,63 7,63 " />
                                 </svg>
@@ -63,7 +60,7 @@ use frontend\components\Translator;
         </section>
     <?php endforeach; ?>
 
-    <div class="container py-4 my-5">
+    <div class="container py-4 my-5" id="intro">
         <div class="row">
             <div class="col-lg-6">
                 <div class="overflow-hidden mb-2">
@@ -93,7 +90,7 @@ use frontend\components\Translator;
                 <div class="row">
                     <div class="col-md-6"></div>
                     <div class="col-md-6">
-                        <h3 class="font-weight-bold text-transform-none text-12 line-height-2 mb-3">Departemen Sejarah</h3> <br>
+                        <h3 class="font-weight-bold text-transform-none text-12 line-height-2 mb-3"><?= Yii::t('app', 'Departemen Sejarah') ?></h3> <br>
 
                     </div>
                 </div>
@@ -142,7 +139,7 @@ use frontend\components\Translator;
                         <?php if ($val->id == 1) { ?>
                             <div class="col-lg-6 appear-animation" data-appear-animation="fadeInRightShorter" data-appear-animation-delay="500">
                                 <p class="font-weight-semibold text-color-dark"><?= Yii::t('app', $val->deskripsi) ?></p>
-                                <a href="demo-industry-factory-services-detail.html" class="custom-read-more btn btn-link d-inline-flex align-items-center font-weight-semibold text-decoration-none ps-0">
+                                <a href="#" class="custom-read-more btn btn-link d-inline-flex align-items-center font-weight-semibold text-decoration-none ps-0">
                                     READ MORE
                                     <svg class="ms-2" version="1.1" viewBox="0 0 15.698 8.706" width="17" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                                         <polygon stroke="#FFF" stroke-width="0.1" fill="#FFF" points="11.354,0 10.646,0.706 13.786,3.853 0,3.853 0,4.853 13.786,4.853 10.646,8 11.354,8.706 15.698,4.353 " />

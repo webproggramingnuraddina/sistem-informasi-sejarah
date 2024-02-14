@@ -27,10 +27,9 @@ $this->params['breadcrumbs'][] = $this->title;
         </a>
     </section>
 
-    
     <section id="intro">
         <div class="container py-5">
-        
+
             <div class="row">
                 <?php foreach ($modelOrganisasimhs as $key => $val) : ?>
                     <div class="col-lg-6 col-md-6 ">
@@ -41,7 +40,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                         <img alt="Doctor" class="img-fluid rounded" src="<?= Html::encode($val->getImageUrl()) ?>">
                                     </a>
                                 </div>
-                                
+
                             </div>
                         </div>
                     </div>
@@ -51,13 +50,13 @@ $this->params['breadcrumbs'][] = $this->title;
                                 <?= $val->title_eng ?>
                             </strong>
                             <p class="pt-2"><?= $val->deskripsi_eng ?></p>
-                        </div> 
+                        </div>
                     </div>
                 <?php endforeach; ?>
             </div>
         </div>
 
     </section>
-        
-    
+
+
 </div>

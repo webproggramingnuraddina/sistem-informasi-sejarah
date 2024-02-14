@@ -10,6 +10,7 @@ $no = 1;
 $nomor = 1;
 ?>
 <div class="site-about">
+
     <section class="section section-with-shape-divider section-height-3 overlay overlay-show border-0 m-0" data-plugin-parallax data-plugin-options="{'speed': 1.5, 'parallaxHeight': '120%', 'fadeIn': true}" data-image-src="<?= Yii::$app->getHomeUrl(); ?>img/logos/gedungfis.jpg">
         <div class="container pt-3 pb-5 mb-5">
             <div class="row mb-3">
