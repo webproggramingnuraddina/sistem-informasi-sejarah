@@ -12,7 +12,7 @@ return [
     'Mahasiswa & Alumni' => 'Students & Alumni',
     'Penelitian & Pengabdian' => 'Research & Service',
     'Departemen Sejarah' => 'History Department',
-    'Berita' => 'News',
+    'Berita' => 'Latest News',
     'Fasiltas' => 'Facility',
     'Sejarah' => 'History',
     'Visi' => 'Vision',
