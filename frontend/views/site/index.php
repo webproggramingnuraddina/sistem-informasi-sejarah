@@ -60,28 +60,55 @@ use frontend\components\Translator;
         </section>
     <?php endforeach; ?>
 
-    <div class="container py-4 my-5" id="intro">
-        <div class="row">
-            <div class="col-lg-6">
-                <div class="overflow-hidden mb-2">
-                    <h2 class="font-weight-bold text-11 line-height-2 mb-0 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="200">The Highest Quality</h2>
+    <?php foreach ($modelHome as $key => $val) : ?>
+        <div class="container py-4 my-5" id="intro">
+            <div class="row align-items-center">
+                <div class="col-lg-6 pe-lg-5 mb-4 mb-lg-0">
+                    <div class="position-relative border-width-10 border-color-light clearfix border border-radius" data-remove-min-height style="min-height: 446px;">
+                        <div id="block-videoprofiluniversitas" class="block block-block-content block-block-content23574cec-d9fe-4788-b503-3efa5bfd7b18">
+
+                            <br>
+                            <div class="content">
+
+                                <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item">
+                                    <p><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0" width="525" height="350" src="<?= $val->link_video ?>" width="300" style="overflow: hidden;"></iframe></p>
+                                </div>
+
+                            </div>
+                            </br>
+
+                        </div>
+                    </div>
                 </div>
-                <div class="overflow-hidden mb-3">
-                    <h3 class="text-color-primary font-weight-medium positive-ls-3 text-4 mb-0 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="400">THE LARGEST METALS MANUFACTURING</h3>
+
+                <div class="col-lg-6">
+                    <div id="popup-content-1" class="dialog dialog-lg zoom-anim-dialog rounded p-3 mfp-hide mfp-close-out">
+                        <div class="ratio ratio-4x3">
+                            <div id="block-videoprofiluniversitas" class="block block-block-content block-block-content23574cec-d9fe-4788-b503-3efa5bfd7b18">
+
+                                <br><br><br>
+                                <div class="content">
+
+                                    <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item">
+                                        <p><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0" width="525" height="350" src="<?= $val->link_video ?>" width="300" style="overflow: hidden;"></iframe></p>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="overflow-hidden">
+                        <h2 class="text-color-primary font-weight-medium positive-ls-3 text-4 mb-0 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="200"><?= Yii::t('app', 'Program Studi') ?></h2>
+                    </div>
+                    <div class="overflow-hidden mb-3">
+                        <h3 class="font-weight-bold text-transform-none text-9 line-height-2 mb-0 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="400"><?= Yii::t('app', 'Pendidikan Sejarah') ?></h3>
+                    </div>
+                    <p class="mb-0 appear-animation text-justify" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="800"><?= Yii::t('app', 'Prodi Pendidikan Sejarah sudah ada sejak Universitas Negeri Padang didirikan. Universitas Negeri Padang, pada awalnya bernama Perguruan Tinggi Pendidikan Guru (PTPG) di Batusangkar (1954 - 1956), memiliki enam jurusan, salah satunya adalah Jurusan Sejarah. Perkembangan berikutnya, PTPG berubah menjadi Fakultas Keguruan Ilmu Pendidikan (FKIP) di bawah Universitas Andalas Bukittinggi (1956 - 1958). Kemudian bernama FIKIP Unand Padang (1958 - 1964), dan tahun 1964 - 1965 bernama IKIP Jakarta cabang Padang. Selanjutnya periode 1965 - 1999 bernama IKIP Padang, dan sejak 1999 sampai saat ini berubah status menjadi Universitas Negeri Padang (UNP). Setiap kali terjadi perubahan sebagaimana diuraikan di atas, Prodi Pendidikan Sejarah merupakan salah satu program studi yang tetap eksis sebagai sebuah lembaga.') ?></p>
+
                 </div>
-                <p class="custom-font-secondary custom-font-size-1 line-height-7 mb-0 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed imperdiet libero id nisi euismod, sed porta est consectetur.</p>
-            </div>
-            <div class="col-lg-6">
-                <p class="pt-3 pb-1 mb-2 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="450">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed imperdiet libero id nisi euismod, sed porta est consectetur. Vestibulum auctor felis eget orci semper vestibulum. Pellentesque ultricies nibh gravida, accumsan libero luctus, molestie nunc. In nibh ipsum, blandit id faucibus ac, finibus vitae dui.</p>
-                <a href="#" class="custom-read-more btn btn-link d-inline-flex align-items-center font-weight-semibold text-decoration-none ps-0 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="650">
-                    READ MORE
-                    <svg class="ms-2" version="1.1" viewBox="0 0 15.698 8.706" width="17" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                        <polygon stroke="#FFF" stroke-width="0.1" fill="#FFF" points="11.354,0 10.646,0.706 13.786,3.853 0,3.853 0,4.853 13.786,4.853 10.646,8 11.354,8.706 15.698,4.353 " />
-                    </svg>
-                </a>
             </div>
         </div>
-    </div>
+    <?php endforeach; ?>
 
     <section class="section custom-section-shape-background border-0 m-0">
         <div class="custom-shape-divider z-index-1" style="height: 129px;"></div>
@@ -161,80 +188,18 @@ use frontend\components\Translator;
             <polygon fill="#FFF" points="-11,2 693,112 2019,6 2019,135 -11,135 " />
         </svg>
     </div> -->
-<<<<<<< HEAD
-    <?php if (Yii::$app->language === 'id') : ?>
-        <div class="container pt-3 mt-5">
-            <div class="row justify-content-center mb-5">
-                <div class="col-lg-9 col-xl-8 text-center">
-                    <div class="overflow-hidden">
-                        <h2 class="text-color-primary font-weight-medium positive-ls-3 text-8 mb-0 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="200"><u>Berita</u></h2>
-                    </div>
-=======
+
+
     <div class="container pt-3 mt-5">
         <div class="row justify-content-center mb-5">
             <div class="col-lg-9 col-xl-8 text-center">
                 <div class="overflow-hidden">
                     <h2 class="text-color-primary font-weight-medium positive-ls-3 text-8 mb-0 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="200"><u><?= Yii::t('app', 'Berita') ?></u></h2>
                 </div>
->>>>>>> merge2
 
-                </div>
             </div>
-<<<<<<< HEAD
-
-            <div class="container">
-                <div class="row pb-1">
-                    <div class="col-lg-12 mb-4 pb-2">
-                        <div class="owl-carousel owl-carousel-light owl-carousel-light-init-fadeIn owl-theme manual dots-inside dots-horizontal-center show-dots-hover nav-inside nav-inside-plus nav-dark nav-md nav-font-size-md show-nav-hover mb-0" data-plugin-options="{'autoplayTimeout': 5000, 'animateOut': 'fadeOut', 'animateIn': 'fadeIn'}" data-dynamic-height="['700px','700px','700px','700px','700px']" style="height: 500px;">
-                            <div class="owl-stage-outer">
-                                <div class="owl-stage">
-                                    <?php
-
-
-                                    // Mengambil 12 berita terbaru
-                                    $latestBerita = array_slice($modelBerita, 0, 8);
-
-                                    foreach ($latestBerita as $key => $val) :
-                                    ?>
-
-                                        <div class="owl-item position-relative overlay overlay-show overlay-op-3">
-                                            <a href="<?= Url::toRoute(['detail/detail', 'id_berita' => $val->id_berita]) ?>" class="text-decoration-none">
-                                                <div class="background-image-wrapper position-absolute top-0 left-0 right-0 bottom-0" style="background-image: url('<?php echo $val->getImageUrl() ?>'); background-size: cover; background-position: center; "></div>
-
-
-                                                <div class="container position-relative z-index-3 h-100">
-                                                    <div class="row justify-content-center align-items-end h-100">
-                                                        <div class="col pb-2 mb-4 appear-animation" data-appear-animation="fadeInDownShorter">
-                                                            <span class="badge badge-dark bg-color-primary badge-sm text-uppercase mb-2">
-                                                                <?= date('d F Y', date($val->created_at)) ?>
-                                                            </span>
-
-                                                            <h3 class="text-light text-9 font-weight-bold mb-2">
-                                                                <?php
-                                                                // Mengambil hanya 25 karakter pertama dari deskripsi
-                                                                $shortDescription = mb_substr($val->tittle, 0, 50, 'UTF-8');
-                                                                ?>
-                                                                <p class="card-text mb-1 text-light mb-0"><?= $shortDescription; ?>...</p>
-                                                            </h3>
-                                                            <p class="text-light opacity-6 text-4">
-
-                                                                <?php
-                                                                // Mengambil hanya 25 karakter pertama dari deskripsi
-                                                                $shortDescription = mb_substr($val->isi_berita, 0, 130, 'UTF-8');
-                                                                ?>
-                                                            <p class="card-text mb-2 text-light opacity-4"><?= $shortDescription; ?>...</p>
-
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-
-                                    <?php endforeach; ?>
-
-=======
         </div>
+
         <?php if (Yii::$app->language === 'id') : ?>
             <div class="container">
                 <div class="row pb-1">
@@ -287,7 +252,6 @@ use frontend\components\Translator;
 
                                     <?php endforeach; ?>
 
->>>>>>> merge2
 
                                 </div>
                             </div>
@@ -365,71 +329,7 @@ use frontend\components\Translator;
                     <?php endforeach; ?>
                 </div>
             </div>
-<<<<<<< HEAD
-        </div>
-        <!-- </section> -->
-    <?php elseif (Yii::$app->language === 'en') : ?>
-        <div class="container pt-3 mt-5">
-            <div class="row justify-content-center mb-5">
-                <div class="col-lg-9 col-xl-8 text-center">
-                    <div class="overflow-hidden">
-                        <h2 class="text-color-primary font-weight-medium positive-ls-3 text-8 mb-0 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="200"><u>Berita</u></h2>
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="container">
-                <div class="row pb-1">
-                    <div class="col-lg-12 mb-4 pb-2">
-                        <div class="owl-carousel owl-carousel-light owl-carousel-light-init-fadeIn owl-theme manual dots-inside dots-horizontal-center show-dots-hover nav-inside nav-inside-plus nav-dark nav-md nav-font-size-md show-nav-hover mb-0" data-plugin-options="{'autoplayTimeout': 5000, 'animateOut': 'fadeOut', 'animateIn': 'fadeIn'}" data-dynamic-height="['700px','700px','700px','700px','700px']" style="height: 500px;">
-                            <div class="owl-stage-outer">
-                                <div class="owl-stage">
-                                    <?php
-
-
-                                    // Mengambil 12 berita terbaru
-                                    $latestBerita = array_slice($modelBerita, 0, 8);
-
-                                    foreach ($latestBerita as $key => $val) :
-                                    ?>
-
-                                        <div class="owl-item position-relative overlay overlay-show overlay-op-3">
-                                            <a href="<?= Url::toRoute(['detail/detail', 'id_berita' => $val->id_berita]) ?>" class="text-decoration-none">
-                                                <div class="background-image-wrapper position-absolute top-0 left-0 right-0 bottom-0" style="background-image: url('<?php echo $val->getImageUrl() ?>'); background-size: cover; background-position: center; "></div>
-
-
-                                                <div class="container position-relative z-index-3 h-100">
-                                                    <div class="row justify-content-center align-items-end h-100">
-                                                        <div class="col pb-2 mb-4 appear-animation" data-appear-animation="fadeInDownShorter">
-                                                            <span class="badge badge-dark bg-color-primary badge-sm text-uppercase mb-2">
-                                                                <?= date('d F Y', date($val->created_at)) ?>
-                                                            </span>
-
-                                                            <h3 class="text-light text-9 font-weight-bold mb-2">
-                                                                <?php
-                                                                // Mengambil hanya 25 karakter pertama dari deskripsi
-                                                                $shortDescription = mb_substr($val->tittle_eng, 0, 50, 'UTF-8');
-                                                                ?>
-                                                                <p class="card-text mb-1 text-light mb-0"><?= $shortDescription; ?>...</p>
-                                                            </h3>
-                                                            <p class="text-light opacity-6 text-4">
-
-                                                                <?php
-                                                                // Mengambil hanya 25 karakter pertama dari deskripsi
-                                                                $shortDescription = mb_substr($val->isi_berita_eng, 0, 130, 'UTF-8');
-                                                                ?>
-                                                            <p class="card-text mb-2 text-light opacity-7"><?= $shortDescription; ?>...</p>
-
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-
-=======
-
+            <!-- </section> -->
         <?php elseif (Yii::$app->language === 'en') : ?>
             <div class="container">
                 <div class="row pb-1">
@@ -480,7 +380,6 @@ use frontend\components\Translator;
                                             </a>
                                         </div>
 
->>>>>>> merge2
                                     <?php endforeach; ?>
 
 
@@ -560,17 +459,13 @@ use frontend\components\Translator;
                     <?php endforeach; ?>
                 </div>
             </div>
-<<<<<<< HEAD
-        </div>
 
-    <?php endif; ?>
-=======
         <?php endif; ?>
     </div>
     <!-- </section> -->
->>>>>>> merge2
 
-    <section class="section custom-section-shape-background border-0 m-0">
+
+    <!-- <section class="section custom-section-shape-background border-0 m-0">
         <div class="custom-shape-divider z-index-1" style="height: 129px;"></div>
         <div class="container position-relative z-index-3 mt-3 mb-5">
             <div class="row align-items-center justify-content-center">
@@ -596,66 +491,55 @@ use frontend\components\Translator;
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
-    <section class="section section-height-3 border-0 m-0" style="background-image: url(img/demos/industry-factory/backgrounds/background-2.jpg); background-size: cover; background-position: center;">
-        <div class="container py-3">
-            <div class="row align-items-center justify-content-center text-center text-lg-start">
-                <div class="col-md-8 col-lg-9 mb-4 mb-lg-0">
-                    <h2 class="text-color-light font-weight-bold custom-positive-ls-5px mb-0">Custom Steel Pipe For Your Next Project</h2>
-                </div>
-                <div class="col-lg-3 text-lg-end">
-                    <a href="demo-industry-factory-contact.html" class="btn custom-svg-btn-style-1 custom-svg-btn-style-1-light text-color-light text-color-hover-dark">
-                        <svg class="custom-svg-btn-background" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 210 70" preserveAspectRatio="none">
-                            <polygon fill="transparent" stroke="#FFF" stroke-width="2" stroke-miterlimit="10" points="7,5 185,5 205,34 186,63 7,63 " />
-                        </svg>
-                        GET A QUOTE
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <div class="container pt-2">
         <div class="row justify-content-center pt-4 mt-5">
             <div class="col-lg-8 text-center">
                 <div class="overflow-hidden">
-                    <h2 class="text-color-primary font-weight-medium positive-ls-3 text-4 mb-0 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="200">HOW WE WORK</h2>
+                    <h2 class="text-color-primary font-weight-medium positive-ls-3 text-4 mb-0 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="200">STAFF</h2>
                 </div>
                 <div class="overflow-hidden mb-3">
-                    <h3 class="font-weight-bold text-transform-none text-9 line-height-2 mb-0 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="400">Top Working Process</h3>
+                    <h3 class="font-weight-bold text-transform-none text-9 line-height-2 mb-0 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="400"><?= Yii::t('app', 'Departemen Sejarah') ?></h3>
                 </div>
-                <p class="custom-font-secondary custom-font-size-1 line-height-7 mb-0 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed imperdiet libero id nisi euismod, sed porta est consectetur.</p>
+                <!-- <p class="custom-font-secondary custom-font-size-1 line-height-7 mb-0 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed imperdiet libero id nisi euismod, sed porta est consectetur.</p> -->
             </div>
         </div>
         <div class="row">
             <div class="col">
                 <div class="row justify-content-center process custom-process-style-1 my-5">
                     <div class="process-step col-sm-9 col-md-7 col-lg-4 mb-5 mb-lg-4 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
-                        <div class="process-step-circle">
-                            <strong class="process-step-circle-content text-color-primary">1</strong>
-                        </div>
+                        <a href="<?= Url::toRoute(['/site/dosen']) ?>">
+                            <div class="process-step-circle">
+                                <strong class="process-step-circle-content text-color-primary">1</strong>
+                            </div>
+                        </a>
                         <div class="process-step-content px-lg-4">
-                            <h4 class="font-weight-bold custom-font-size-2 pb-1 mb-2">BRAINSTORM</h4>
-                            <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc viverra erat orci, ac auctor.</p>
+                            <h4 class="font-weight-bold custom-font-size-2 pb-1 mb-2"><?= Yii::t('app', 'Dosen') ?></h4>
+                            <!-- <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc viverra erat orci, ac auctor.</p> -->
                         </div>
                     </div>
                     <div class="process-step col-sm-9 col-md-7 col-lg-4 mb-5 mb-lg-4 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="500">
-                        <div class="process-step-circle">
-                            <strong class="process-step-circle-content text-color-primary">2</strong>
-                        </div>
+                        <a href="<?= Url::toRoute(['/site/dosen-praktisi']) ?>">
+                            <div class="process-step-circle">
+                                <strong class="process-step-circle-content text-color-primary">2</strong>
+                            </div>
+                        </a>
                         <div class="process-step-content px-lg-4">
-                            <h4 class="font-weight-bold custom-font-size-2 pb-1 mb-2">DEVELOPMENT</h4>
-                            <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc viverra erat orci, ac auctor.</p>
+                            <h4 class="font-weight-bold custom-font-size-2 pb-1 mb-2"><?= Yii::t('app', 'Dosen Praktisi') ?></h4>
+                            <!-- <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc viverra erat orci, ac auctor.</p> -->
                         </div>
                     </div>
                     <div class="process-step col-sm-9 col-md-7 col-lg-4 mb-5 mb-lg-4 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="700">
-                        <div class="process-step-circle">
-                            <strong class="process-step-circle-content text-color-primary">3</strong>
-                        </div>
+                        <a href="<?= Url::toRoute(['/site/tendik']) ?>">
+                            <div class="process-step-circle">
+                                <strong class="process-step-circle-content text-color-primary">3</strong>
+                            </div>
+                        </a>
                         <div class="process-step-content px-lg-4">
-                            <h4 class="font-weight-bold custom-font-size-2 pb-1 mb-2">DELIVERY</h4>
-                            <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc viverra erat orci, ac auctor.</p>
+                            <h4 class="font-weight-bold custom-font-size-2 pb-1 mb-2"><?= Yii::t('app', 'Tendik') ?></h4>
+                            <!-- <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc viverra erat orci, ac auctor.</p> -->
                         </div>
                     </div>
                 </div>
@@ -664,110 +548,8 @@ use frontend\components\Translator;
         </div>
     </div>
 
-    <section class="section section-with-shape-divider border-0 m-0">
-        <div class="shape-divider shape-divider-reverse-x" style="height: 120px;">
-            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 2000 120" preserveAspectRatio="xMinYMin">
-                <polygon fill="#FFF" points="-11,2 693,112 2019,6 2019,135 -11,135 " />
-            </svg>
-        </div>
-        <div class="shape-divider shape-divider-bottom shape-divider-reverse-y" style="height: 120px;">
-            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 2000 120" preserveAspectRatio="xMinYMin">
-                <polygon fill="#FFF" points="-11,2 693,112 2019,6 2019,135 -11,135 " />
-            </svg>
-        </div>
-        <div class="container py-5 my-5">
-            <div class="row mb-5">
-                <div class="col">
-                    <div class="overflow-hidden">
-                        <h2 class="text-color-primary font-weight-medium positive-ls-3 text-4 mb-0 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="200">TESTIMONIALS</h2>
-                    </div>
-                    <div class="overflow-hidden mb-3">
-                        <h3 class="font-weight-bold text-transform-none text-9 line-height-2 mb-0 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="400">Hear From Some Previous Clients</h3>
-                    </div>
-                    <p class="custom-font-secondary custom-font-size-1 line-height-7 mb-0 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed imperdiet libero id nisi euismod.</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="750">
-                    <div class="owl-carousel nav-style-1 nav-svg-arrows-1 nav-dark" data-plugin-options="{'responsive': {'0': {'items': 1}, '476': {'items': 2}, '768': {'items': 2}, '992': {'items': 2}, '1200': {'items': 2}}, 'autoplay': true, 'autoplayTimeout': 5000, 'autoplayHoverPause': true, 'dots': false, 'nav': true, 'loop': true, 'margin': 60, 'stagePadding': 50}">
-                        <div>
-                            <div class="custom-testimonial-style-1 testimonial testimonial-style-3">
-                                <blockquote>
-                                    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget risus porta, tincidunt turpis at, interdum torr. Suspendisse potenti. Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-                                </blockquote>
-                                <div class="testimonial-author">
-                                    <div class="testimonial-author-thumbnail">
-                                        <img src="img/demos/industry-factory/testimonials/author-1.jpg" class="img-fluid rounded-circle" alt="">
-                                    </div>
-                                    <p class="ms-3"><strong class="font-weight-semibold text-color-dark text-4">John Smith</strong><span class="text-1">CLIMB THE MOUNTAIN</span></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="custom-testimonial-style-1 testimonial testimonial-style-3">
-                                <blockquote>
-                                    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget risus porta, tincidunt turpis at, interdum torr. Suspendisse potenti. Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-                                </blockquote>
-                                <div class="testimonial-author">
-                                    <div class="testimonial-author-thumbnail">
-                                        <img src="img/demos/industry-factory/testimonials/author-2.jpg" class="img-fluid rounded-circle" alt="">
-                                    </div>
-                                    <p class="ms-3"><strong class="font-weight-semibold text-color-dark text-4">John Doe</strong><span class="text-1">AVANT GARDEN</span></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="custom-testimonial-style-1 testimonial testimonial-style-3">
-                                <blockquote>
-                                    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget risus porta, tincidunt turpis at, interdum torr. Suspendisse potenti. Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-                                </blockquote>
-                                <div class="testimonial-author">
-                                    <div class="testimonial-author-thumbnail">
-                                        <img src="img/demos/industry-factory/testimonials/author-1.jpg" class="img-fluid rounded-circle" alt="">
-                                    </div>
-                                    <p class="ms-3"><strong class="font-weight-semibold text-color-dark text-4">Robert Doe</strong><span class="text-1">OKLER THEMES</span></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <?php foreach ($modelHome as $key => $val) : ?>
-        <div class="container py-5 my-4">
-            <div class="row align-items-center">
-                <div class="col-lg-6 pe-lg-5 mb-4 mb-lg-0">
-                    <div class="featured-boxes featured-boxes-modern-style-1 box-shadow-3">
-                        <div class="featured-box custom-featured-box-with-video">
-                            <video class="custom-featured-box-video" controls preload="true">
-                                <source src="<?= $val->link_video ?>" type="video/mp4">
-                            </video>
-                            <div class="featured-box-background" style="background-image: url('<?= $val->link_video ?>'); background-size: cover; background-position: center;"></div>
-                            <div class="box-content">
-                                <a class="custom-trigger-play-video text-decoration-none d-block" href="#">
-                                    <i class="fas fa-play featured-icon featured-icon-style-2 featured-icon-hover-effect-1 text-4 bg-transparent rounded-circle border border-width-10 border-color-light right-4 top-0 m-0"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="overflow-hidden">
-                        <h2 class="text-color-primary font-weight-medium positive-ls-3 text-4 mb-0 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="200">THE ADVANTAGE</h2>
-                    </div>
-                    <div class="overflow-hidden mb-3">
-                        <h3 class="font-weight-bold text-transform-none text-9 line-height-2 mb-0 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="400">Our Facilities</h3>
-                    </div>
-                    <p class="custom-font-secondary custom-font-size-1 line-height-7 mb-4 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed imperdiet libero id nisi euismod.</p>
-                    <p class="mb-0 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="800">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed imperdiet libero id nisi euismod, sed porta est consectetur. Vestibulum auctor felis eget orci semper vestibulum. Pellentesque ultricies nibh gravida, accumsan libero luctus, molestie nunc. In nibh ipsum, blandit id faucibus ac, finibus vitae dui.</p>
-                </div>
-            </div>
-        </div>
-    <?php endforeach; ?>
-
-    <section class="section section-with-shape-divider border-0 m-0">
+    <!-- <section class="section section-with-shape-divider border-0 m-0">
         <div class="shape-divider shape-divider-reverse-x" style="height: 120px;">
             <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 2000 120" preserveAspectRatio="xMinYMin">
                 <polygon fill="#FFF" points="-11,2 693,112 2019,6 2019,135 -11,135 " />
@@ -848,8 +630,6 @@ use frontend\components\Translator;
                 </div>
             </div>
         </div>
-    </section>
-
-
+    </section> -->
 
 </div>
