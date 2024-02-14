@@ -83,6 +83,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                     <th>Judul</th>
                                     <th>Foto</th>
                                     <th>Deskripsi</th>
+                                    <th>Deskripsi Eng</th>
                                     <th>Jurnal Link</th>
                                     <th>Action</th>
                                 </tr>
@@ -95,6 +96,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                         <td><?= $a->judul_jurnal ?></td>
                                         <td><?= Html::img($a->getImageUrl(), ['style' => 'width: 150px']) ?></td>
                                         <td><?= $a->deskripsi ?></td>
+                                        <td><?= $a->deskripsi_eng ?></td>
                                         <td><?= $a->jurnal_link ?></td>
                                         <td><?= Html::a('&nbsp; View&nbsp;', ['view', 'id_jurnal' => $a->id_jurnal], ['class' => 'btn btn-primary']) ?>
 
@@ -114,6 +116,6 @@ $this->params['breadcrumbs'][] = $this->title;
                 </div><!-- /.box -->
             </div><!-- /.col -->
         </div><!-- /.row -->
-        <!-- </section>/.content -->
+    </section>
 
 </div>

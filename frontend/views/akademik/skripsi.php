@@ -25,4 +25,17 @@ $this->params['breadcrumbs'][] = $this->title;
             <i class="icons icon-arrow-down font-weight-bold"></i>
         </a>
     </section>
+
+    <div class="container pt-2 d-flex flex-column align-items-center">
+        <div class="row justify-content-center pt-4 mt-5">
+            <div class="col-lg-12 text-center">
+
+                <p class="custom-font-secondary custom-font-size-1 line-height-7 mb-0 appear-animation text-justify" data-appear-animation="fadeInUpShorter">Skripsi merupakan karya ilmiah yang ditulis mahasiswa program S1 dalam memenuhi tugas akhir yang membahas sebuah topik atau bidang tertentu berdasarkan hasil kajian pustaka, hasil penelitian lapangan, atau hasil pengembangan. Dalam mempermudah mahasiswa menulis skripsi (tugas akhir), Departemen Sejarah menyediakan panduan penulisan sebagai acuan untuk menyelesaikan skripsi.</p>
+            </div>
+        </div>
+        <br>
+        <a href="http://kurikulum.unp.ac.id/root/kurikulum/4" class="btn btn-primary btn-modern text-uppercase bg-color-hover-dark border-color-hover-dark custom-border-radius">Panduan Penulisan Skripsi</a>
+
+        <br><br><br>
+    </div>
 </div>

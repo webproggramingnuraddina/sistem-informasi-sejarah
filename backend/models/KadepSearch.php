@@ -18,7 +18,7 @@ class KadepSearch extends Kadep
     {
         return [
             [['id'], 'integer'],
-            [['nama', 'jabatan', 'deskripsi'], 'safe'],
+            [['nama', 'jabatan', 'jabatan_eng', 'deskripsi', 'deskripsi_eng'], 'safe'],
         ];
     }
 
@@ -63,7 +63,9 @@ class KadepSearch extends Kadep
 
         $query->andFilterWhere(['like', 'nama', $this->nama])
             ->andFilterWhere(['like', 'jabatan', $this->jabatan])
-            ->andFilterWhere(['like', 'deskripsi', $this->deskripsi]);
+            ->andFilterWhere(['like', 'jabatan_eng', $this->jabatan_eng])
+            ->andFilterWhere(['like', 'deskripsi', $this->deskripsi])
+            ->andFilterWhere(['like', 'deskripsi_eng', $this->deskripsi_eng]);
 
         return $dataProvider;
     }

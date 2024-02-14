@@ -6,6 +6,8 @@ use yii\helpers\Html;
 
 $this->title = 'About';
 $this->params['breadcrumbs'][] = $this->title;
+$no = 1;
+$nomor = 1;
 ?>
 <div class="site-about">
     <section class="section section-with-shape-divider section-height-3 overlay overlay-show border-0 m-0" data-plugin-parallax data-plugin-options="{'speed': 1.5, 'parallaxHeight': '120%', 'fadeIn': true}" data-image-src="<?= Yii::$app->getHomeUrl(); ?>img/logos/gedungfis.jpg">
@@ -118,14 +120,57 @@ $this->params['breadcrumbs'][] = $this->title;
         <p class="appear-animation text-justify" data-appear-animation="fadeInUpShorter">Evaluasi terkait perkuliahan dilakukan dengan meminta feedback kepada mahasiswa untuk menilai kegiatan evaluasi pembelajaran, pelayanan kemahasiswaan, pelayanan akademik, pelayanan IT. Evaluasi Dosen oleh Mahasiswa dilakukan melalui <a href="http://evaluasi.unp.ac.id/">http://evaluasi.unp.ac.id/</a> dimana mahasiswa akan mengevaluasi dosen berkaitan dengan organisasi kelas, materi perkuliahan, metode pembelajaran, interaksi dengan mahasiswa, umpan balik kepada mahasiswa, media pembelajaran, pustaka dan bahan pendukung, dan tingkat kepuasan. Evaluasi Dosen oleh Mahasiswa dilakukan dan menjadi kewajiban mahasiswa sebelum menerima lembaran hasil studi (LHS).</p>
         <p class="appear-animation text-justify" data-appear-animation="fadeInUpShorter">4). <b> Pengendalian</b></p>
         <p class="appear-animation text-justify" data-appear-animation="fadeInUpShorter">Pengendalian dilakukan dengan melihat hasil identifikasi ruang perbaikan dan Permohonan Tindakan Perbaikan dan Pencegahan (PTPP) pada tiap akhir audit. Program Studi Pendidikan Sejarah kemudian membahas hasil audit melalui Rapat Tinjauan Manajemen (RTM) yang dilaksanakan satu kali dalam satu tahun. Jika terdapat hasil monitoring dan audit yang menunjukan ketidaksesuaian dengan standar mutu UNP, maka pimpinan PS akan melakukan kegiatan pengendalian dengan melakukan kegiatan perbaikan. Sebagai contoh, dari hasil Audit Mutu Internal (AMI) 2020/2021 didapatkan hasil bahwa evaluasi dosen dari mahasiswa menunjukan pembelajaran secara daring berlangsung kurang optimal hampir di setiap mata kuliah. Oleh karena itu, Program Studi Pendidikan Sejarah berkoordinasi dengan UPPS dan kemudian menyelenggarakan workshop berkaitan dengan metode dan strategi pembelajaran jarak jauh untuk meningkatkan kualitas pembelajaran secara daring.</p>
-        <p class="appear-animation text-justify" data-appear-animation="fadeInUpShorter">Selain itu, pengendalian juga dilakukan dengan memberikan pelatihan pemanfaatan <a href="https://elearning2.unp.ac.id/login/index.php">https://elearning2.unp.ac.id/login/index.php</a> untuk mendukung pembelajaran secara daring. Gambar 2.6 merupakan tampilan <a href="https://elearning2.unp.ac.id/login/index.php">https://elearning2.unp.ac.id/login/index.php</a> yang digunakan oleh Dosen Pendidikan Sejarah.
-            Gambar . Tampilan <a href="https://elearning2.unp.ac.id/login/index.php">https://elearning2.unp.ac.id/login/index.php</a>.</p>
+        <p class="appear-animation text-justify" data-appear-animation="fadeInUpShorter">Selain itu, pengendalian juga dilakukan dengan memberikan pelatihan pemanfaatan <a href="https://elearning2.unp.ac.id/login/index.php">https://elearning2.unp.ac.id/login/index.php</a> untuk mendukung pembelajaran secara daring. <a href="https://elearning2.unp.ac.id/login/index.php">https://elearning2.unp.ac.id/login/index.php</a> yang digunakan oleh Dosen Pendidikan Sejarah.
+        </p>
         <p class="appear-animation text-justify" data-appear-animation="fadeInUpShorter">5). <b> Peningkatan</b></p>
         <p class="appear-animation text-justify" data-appear-animation="fadeInUpShorter">Peningkatan dilakukan berdasarkan hasil monitoring dan evaluasi indikator kinerja program studi yang kemudian dianalisis dan ditingkatkan standarnya pada tahun berikutnya. Sebagai contoh, luaran penelitian dan PkM yang dihasilkan DTPS sudah mencapai target dengan terbit pada berbagai jurnal ilmiah terakreditasi nasional. Indikator ini ditingkatkan untuk dapat terbit di lebih banyak pada jurnal terakreditasi minimal sinta 2 dan scopus. Melalui pemberian pelatihan-pelatihan penulisan artikel ilmiah dan kolaborasi dengan berbagai peneliti yang sudah melakukan publikasi pada jurnal ilmiah bereputasi, diharapkan data dosen PS Pendidikan Sejarah yang publish pada jurnal ilmiah internasional bereputasi meningkat.</p>
         <p class="appear-animation text-justify" data-appear-animation="fadeInUpShorter">c. <b>Layanan Penjaminan Mutu</b></p>
         <p class="appear-animation text-justify" data-appear-animation="fadeInUpShorter">Program Studi Pendidikan Sejarah memanfaatkan berbagai sistem penjaminan mutu yang digunakan dalam pelaksanaan, perekaman, dan dokumentasi hasil penjaminan mutu yang ditangkap pada tabel
             berikut:</p>
         <p class="appear-animation text-justify" data-appear-animation="fadeInUpShorter">Tabel. Layanan Penjaminan Mutu</p>
+
+        <div class="col-lg-10">
+            <div class=" card-body pt-0">
+                <!--begin::Table-->
+                <table class="table align-middle table-row-dashed fs-6 gy-5" id="kt_customers_table">
+                    <!--begin::Table head-->
+                    <thead>
+                        <!--begin::Table row-->
+                        <tr class="text-start text-gray-400 fw-bolder fs-7 text-uppercase gs-0">
+
+                            <th class="">No</th>
+                            <!-- <th class="">Id Order</th> -->
+                            <th class="">Nama Layanan</th>
+                            <th class="">Alamat dan Tangkapan Layar</th>
+
+
+                            <!-- <th class="">Actions</th> -->
+                        </tr>
+                        <!--end::Table row-->
+                    </thead>
+                    <tbody>
+                        <?php foreach ($modelLayananmutu as $a) {
+
+                        ?>
+                            <tr>
+                                <td><?= $no++ ?></td>
+                                <td><?= $a->nama_layanan ?></td>
+                                <td>
+                                    <a href="<?= $a->link ?>"><?= $a->link ?></a>
+                                </td>
+
+                            </tr>
+                        <?php } ?>
+                    </tbody>
+                    <!--end::Table body-->
+                </table>
+                <!--end::Table-->
+            </div>
+
+
+
+        </div>
+
         <p class="appear-animation text-justify" data-appear-animation="fadeInUpShorter">d. <b><i>External Benchmarking</i></b></p>
         <p class="appear-animation text-justify" data-appear-animation="fadeInUpShorter"><i>External benchmarking</i> menjadi kegiatan yang dilakukan PS Pendidikan Sejarah untuk meningkatkan mutu terkait dengan aspek pendidikan, penelitian dan publikasi, serta pengabdian kepada masyarakat. Upaya external benchmarking dilakukan dengan mengundang pakar dari dalam ataupun luar negeri. Beberapa diantaranya adalah mengundang: 1). Rob Hammink Jurnalis di De Telegraaf Belanda, Novelis, Aktor Film Bumi Manusia. Berbicara tentang peran sejarah dalam mendalami aktor perfilman. 2). Prof. Dr. Erwiza Erman, MA tentang Sejarah dalam Teori dan Praktek. 3). Prof. Dr. Drs. Ersis Warmansyah Abbas, BA, M. Pd tentang Pembelajaran Sejarah dalam Menyambut Masyarakat. 4). Dr. Ismi Rajiani, M.M tentang Pembelajaran Sejarah dalam Menyambut Masyarakat. 5). Prof. Dr. Nana Supriatna, M. Ed tentang Pembelajaran Sejarah dalam Menyambut Masyarakat. 6). David Pickus, Ph. D tentang Komparasi Model Pembelajaran Sejarah Di Eropa dan Amerika. 7). Prof. Dr. H. Said Hamid Hasan, M.A tentang kurikulum pendidikan sejarah. 8). Prof. Dr. Jumadi, M. Si tentang kurikulum MBKM. 9). Arda Sani, S. Pd tentang Pelatihan Jurnalistik. 10). Annisa Junaidi, SS tentang Pelatihan <i>English Corner</i>. 11). Hadiyatullah ML tentang Membangun Bisnis di Usia Muda. 12). Gian Kurniadi tentang Membangun Bisnis di Usia Muda. 13). Prof. Dr. Aminudin Kasdi, MS tentang Perspektif Makna Pahlawan di Era Modern. 14). Marfuah Panji Astuti tetnang Menyusuri Jejak Kejayaan Peradaban Islam di Indonesi. 15). Dedi Arsa, M. Hum tentang Pelatihan Penulisan Karya Ilmiah. 16). Dr. Helen Sabera Adib, M.Pd. I tentang Trik Untuk Cepat Mendapatkan Pekerjaan.</p>
         <p class="appear-animation text-justify" data-appear-animation="fadeInUpShorter">3. <b>Evaluasi</b></p>
@@ -135,5 +180,46 @@ $this->params['breadcrumbs'][] = $this->title;
         <p class="appear-animation text-justify" data-appear-animation="fadeInUpShorter">4. <b>Tindak Lanjut</b></p>
         <p class="appear-animation text-justify" data-appear-animation="fadeInUpShorter">Tindak lanjut yang telah diambil untuk meningkatkan kualitas pelaksanaan penjaminan mutu di PS.</p>
 
+        <div class="col-lg-10">
+            <div class=" card-body pt-0">
+                <!--begin::Table-->
+                <table class="table align-middle table-row-dashed fs-6 gy-5" id="kt_customers_table">
+                    <!--begin::Table head-->
+                    <thead>
+                        <!--begin::Table row-->
+                        <tr class="text-start text-gray-400 fw-bolder fs-7 text-uppercase gs-0">
+
+                            <th class="">No</th>
+                            <!-- <th class="">Id Order</th> -->
+                            <th class="">Strategi</th>
+                            <th class="">Upaya Tindak Lanjut</th>
+                            <th class="">Pelaksana dan Waktu Pelaksanaan</th>
+
+
+                            <!-- <th class="">Actions</th> -->
+                        </tr>
+                        <!--end::Table row-->
+                    </thead>
+                    <tbody>
+                        <?php foreach ($modelTindaklanjutmutu as $a) {
+
+                        ?>
+                            <tr>
+                                <td><?= $nomor++ ?></td>
+                                <td><?= $a->strategi ?></td>
+                                <td><?= $a->upaya ?></td>
+                                <td><?= $a->pelaksanaan_waktu ?></td>
+
+                            </tr>
+                        <?php } ?>
+                    </tbody>
+                    <!--end::Table body-->
+                </table>
+                <!--end::Table-->
+            </div>
+
+
+
+        </div>
     </div>
 </div>

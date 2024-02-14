@@ -18,7 +18,7 @@ class BeritaSearch extends Berita
     {
         return [
             [['id_berita', 'created_at', 'created_by'], 'integer'],
-            [['tittle', 'isi_berita', 'image'], 'safe'],
+            [['tittle', 'isi_berita', 'tittle_eng', 'isi_berita_eng', 'image'], 'safe'],
         ];
     }
 

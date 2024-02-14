@@ -77,7 +77,9 @@ $this->params['breadcrumbs'][] = $this->title;
                                 <tr>
                                     <!-- <th>No</th> -->
                                     <th>Judul</th>
-                                    <th>Deskripsi</th>
+                                    <th>Judul Eng</th>
+                                    <th>Isi Berita</th>
+                                    <th>Isi Berita Eng</th>
                                     <th>Image</th>
                                     <th>Created_at</th>
                                     <th>Created_by</th>
@@ -90,9 +92,15 @@ $this->params['breadcrumbs'][] = $this->title;
 
 
                                         <td><?= $a->tittle ?></td>
+                                        <td><?= $a->tittle_eng ?></td>
                                         <?php
                                         // Mengambil hanya 25 karakter pertama dari deskripsi
-                                        $shortDescription = mb_substr($a->tittle, 0, 400, 'UTF-8');
+                                        $shortDescription = mb_substr($a->isi_berita, 0, 200, 'UTF-8');
+                                        ?>
+                                        <td><?= $shortDescription; ?>...</td>
+                                        <?php
+                                        // Mengambil hanya 25 karakter pertama dari deskripsi
+                                        $shortDescription = mb_substr($a->isi_berita_eng, 0, 200, 'UTF-8');
                                         ?>
                                         <td><?= $shortDescription; ?>...</td>
                                         <td><?= Html::img($a->getImageUrl(), ['style' => 'width: 150px']) ?></td>

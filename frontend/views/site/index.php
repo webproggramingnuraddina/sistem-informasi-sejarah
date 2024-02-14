@@ -15,52 +15,53 @@ use frontend\components\Translator;
 
 
 <div role="main" class="main">
+    <?php foreach ($modelHome as $key => $val) : ?>
+        <section class="section section-with-shape-divider overflow-hidden border-0 m-0" style="background-image: url('<?php echo $val->getImageUrl(); ?>'); background-repeat: no-repeat; background-size: cover; background-position: center 70px;">
 
-    <section class="section section-with-shape-divider overflow-hidden border-0 m-0" style="background-image: url(img/demos/industry-factory/backgrounds/background-1.jpg); background-repeat: no-repeat; background-size: cover; background-position: center 70px;">
-        <div class="shape-divider shape-divider-bottom" style="height: 120px;">
-            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 2000 120" preserveAspectRatio="xMinYMin">
-                <polygon fill="#FFF" points="-11,2 693,112 2019,6 2019,135 -11,135 " />
-            </svg>
-        </div>
-        <div class="container custom-container-absolute-centered-x">
-            <div class="row justify-content-end">
-                <div class="col-auto position-relative">
-                    <img src="img/demos/industry-factory/hero-1.jpg" class="img-fluid box-shadow-4 position-relative bottom-10 right-0 d-none d-sm-block appear-animation" data-appear-animation="fadeInLeftShorter" data-appear-animation-delay="500" alt="" />
+            <div class="shape-divider shape-divider-bottom" style="height: 120px;">
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 2000 120" preserveAspectRatio="xMinYMin">
+                    <polygon fill="#FFF" points="-11,2 693,112 2019,6 2019,135 -11,135 " />
+                </svg>
+            </div>
+            <div class="container custom-container-absolute-centered-x">
+                <div class="row justify-content-end">
+                    <div class="col-auto position-relative">
+                        <img src="<?= $val->getImageUrl2() ?>" class="img-fluid box-shadow-4 position-relative bottom-10 right-0 d-none d-sm-block appear-animation" data-appear-animation="fadeInLeftShorter" data-appear-animation-delay="500" alt="" width="500" height="400" />
+                    </div>
+
                 </div>
             </div>
-        </div>
-        <div class="container-fluid px-0 mb-5">
-            <div class="row">
-                <div class="col-sm-9 col-md-8 col-lg-7 col-xl-4 text-center text-sm-end z-index-0 px-5 px-sm-0 mt-5 mt-sm-0 pt-4 pt-sm-0">
-                    <div class="position-relative bg-color-grey p-5">
-                        <div class="spacer my-5 py-2 d-none d-sm-block"></div>
-                        <div class="overflow-hidden pt-sm-5 mt-sm-5">
-                            <h1 class="font-weight-semibold text-10 mb-0 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="300"><?= Yii::t('app', 'Selamat datang') ?></h1>
-
-
+            <div class="container-fluid px-0 mb-5">
+                <div class="row">
+                    <div class="col-sm-9 col-md-8 col-lg-7 col-xl-4 text-center text-sm-end z-index-0 px-5 px-sm-0 mt-5 mt-sm-0 pt-4 pt-sm-0">
+                        <div class="position-relative bg-color-grey p-5">
+                            <div class="spacer my-5 py-2 d-none d-sm-block"></div>
+                            <div class="overflow-hidden pt-sm-5 mt-sm-5">
+                                <h1 class="font-weight-semibold text-10 mb-0 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="300">The Future of Steel</h1>
+                            </div>
+                            <div class="overflow-hidden mb-3">
+                                <h2 class="font-weight-semibold text-10 line-height-2 mb-0 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="500">
+                                    <strong class="font-weight-extra-bold custom-font-size-2">Solutions Are Here</strong>
+                                </h2>
+                            </div>
+                            <p class="custom-font-size-1 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="700">Metals industry with by high technology innovation</p>
+                            <a href="#" class="btn custom-svg-btn-style-1 text-color-hover-primary mb-sm-5 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="900">
+                                <svg class="custom-svg-btn-background" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 210 70" preserveAspectRatio="none">
+                                    <polygon fill="none" stroke="#D4D4D4" stroke-width="2" stroke-miterlimit="10" points="7,5 185,5 205,34 186,63 7,63 " />
+                                </svg>
+                                GET STARTED
+                            </a>
+                            <div class="custom-hero-sub-images-style-1 text-start">
+                                <div class="custom-hero-sub-images-shadow"></div>
+                                <img src="<?= $val->getImageUrl3() ?>" class="img-fluid appear-animation" data-appear-animation="fadeIn" data-appear-animation-delay="700" alt="" />
+                            </div>
+                            <div class="spacer py-2"></div>
                         </div>
-                        <div class="overflow-hidden mb-3">
-                            <h2 class="font-weight-semibold text-10 line-height-2 mb-0 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="500">
-                                <strong class="font-weight-extra-bold custom-font-size-2">Solutions Are Here</strong>
-                            </h2>
-                        </div>
-                        <p class="custom-font-size-1 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="700"><?= Translator::translate('Universitas Negeri Padang') ?></p>
-                        <a href="#" class="btn custom-svg-btn-style-1 text-color-hover-primary mb-sm-5 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="900">
-                            <svg class="custom-svg-btn-background" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 210 70" preserveAspectRatio="none">
-                                <polygon fill="none" stroke="#D4D4D4" stroke-width="2" stroke-miterlimit="10" points="7,5 185,5 205,34 186,63 7,63 " />
-                            </svg>
-                            GET STARTED
-                        </a>
-                        <div class="custom-hero-sub-images-style-1 text-start">
-                            <div class="custom-hero-sub-images-shadow"></div>
-                            <img src="img/demos/industry-factory/hero-2.jpg" class="img-fluid appear-animation" data-appear-animation="fadeIn" data-appear-animation-delay="700" alt="" />
-                        </div>
-                        <div class="spacer py-2"></div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    <?php endforeach; ?>
 
     <div class="container py-4 my-5">
         <div class="row">
@@ -183,7 +184,7 @@ use frontend\components\Translator;
 
 
                                 // Mengambil 12 berita terbaru
-                                $latestBerita = array_slice($modelBerita, 0, 12);
+                                $latestBerita = array_slice($modelBerita, 0, 8);
 
                                 foreach ($latestBerita as $key => $val) :
                                 ?>
@@ -213,7 +214,7 @@ use frontend\components\Translator;
                                                             // Mengambil hanya 25 karakter pertama dari deskripsi
                                                             $shortDescription = mb_substr($val->isi_berita, 0, 130, 'UTF-8');
                                                             ?>
-                                                        <p class="card-text mb-2 text-light opacity-7"><?= $shortDescription; ?>...</p>
+                                                        <p class="card-text mb-2 text-light opacity-4"><?= $shortDescription; ?>...</p>
 
                                                         </p>
                                                     </div>
@@ -236,7 +237,7 @@ use frontend\components\Translator;
 
 
                             // Mengambil 12 berita terbaru
-                            $latestBerita = array_slice($modelBerita, 0, 12);
+                            $latestBerita = array_slice($modelBerita, 0, 8);
 
                             foreach ($latestBerita as $key => $val) :
                             ?>
@@ -254,7 +255,7 @@ use frontend\components\Translator;
 
 
                 // Mengambil 12 berita terbaru
-                $latestBerita = array_slice($modelBerita, 0, 12);
+                $latestBerita = array_slice($modelBerita, 0, 8);
 
                 foreach ($latestBerita as $val) :
                 ?>
@@ -469,35 +470,37 @@ use frontend\components\Translator;
         </div>
     </section>
 
-    <div class="container py-5 my-4">
-        <div class="row align-items-center">
-            <div class="col-lg-6 pe-lg-5 mb-4 mb-lg-0">
-                <div class="featured-boxes featured-boxes-modern-style-1 box-shadow-3">
-                    <div class="featured-box custom-featured-box-with-video">
-                        <video class="custom-featured-box-video" controls preload="true">
-                            <source src="video/demo-industry-1.mp4" type="video/mp4">
-                        </video>
-                        <div class="featured-box-background" style="background-image: url(video/demo-industry-1.jpg); background-size: cover; background-position: center;"></div>
-                        <div class="box-content">
-                            <a class="custom-trigger-play-video text-decoration-none d-block" href="#">
-                                <i class="fas fa-play featured-icon featured-icon-style-2 featured-icon-hover-effect-1 text-4 bg-transparent rounded-circle border border-width-10 border-color-light right-4 top-0 m-0"></i>
-                            </a>
+    <?php foreach ($modelHome as $key => $val) : ?>
+        <div class="container py-5 my-4">
+            <div class="row align-items-center">
+                <div class="col-lg-6 pe-lg-5 mb-4 mb-lg-0">
+                    <div class="featured-boxes featured-boxes-modern-style-1 box-shadow-3">
+                        <div class="featured-box custom-featured-box-with-video">
+                            <video class="custom-featured-box-video" controls preload="true">
+                                <source src="<?= $val->link_video ?>" type="video/mp4">
+                            </video>
+                            <div class="featured-box-background" style="background-image: url('<?= $val->link_video ?>'); background-size: cover; background-position: center;"></div>
+                            <div class="box-content">
+                                <a class="custom-trigger-play-video text-decoration-none d-block" href="#">
+                                    <i class="fas fa-play featured-icon featured-icon-style-2 featured-icon-hover-effect-1 text-4 bg-transparent rounded-circle border border-width-10 border-color-light right-4 top-0 m-0"></i>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="overflow-hidden">
-                    <h2 class="text-color-primary font-weight-medium positive-ls-3 text-4 mb-0 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="200">THE ADVANTAGE</h2>
+                <div class="col-lg-6">
+                    <div class="overflow-hidden">
+                        <h2 class="text-color-primary font-weight-medium positive-ls-3 text-4 mb-0 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="200">THE ADVANTAGE</h2>
+                    </div>
+                    <div class="overflow-hidden mb-3">
+                        <h3 class="font-weight-bold text-transform-none text-9 line-height-2 mb-0 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="400">Our Facilities</h3>
+                    </div>
+                    <p class="custom-font-secondary custom-font-size-1 line-height-7 mb-4 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed imperdiet libero id nisi euismod.</p>
+                    <p class="mb-0 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="800">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed imperdiet libero id nisi euismod, sed porta est consectetur. Vestibulum auctor felis eget orci semper vestibulum. Pellentesque ultricies nibh gravida, accumsan libero luctus, molestie nunc. In nibh ipsum, blandit id faucibus ac, finibus vitae dui.</p>
                 </div>
-                <div class="overflow-hidden mb-3">
-                    <h3 class="font-weight-bold text-transform-none text-9 line-height-2 mb-0 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="400">Our Facilities</h3>
-                </div>
-                <p class="custom-font-secondary custom-font-size-1 line-height-7 mb-4 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed imperdiet libero id nisi euismod.</p>
-                <p class="mb-0 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="800">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed imperdiet libero id nisi euismod, sed porta est consectetur. Vestibulum auctor felis eget orci semper vestibulum. Pellentesque ultricies nibh gravida, accumsan libero luctus, molestie nunc. In nibh ipsum, blandit id faucibus ac, finibus vitae dui.</p>
             </div>
         </div>
-    </div>
+    <?php endforeach; ?>
 
     <section class="section section-with-shape-divider border-0 m-0">
         <div class="shape-divider shape-divider-reverse-x" style="height: 120px;">

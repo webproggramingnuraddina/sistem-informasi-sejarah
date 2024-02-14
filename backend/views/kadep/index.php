@@ -75,8 +75,10 @@ $this->params['breadcrumbs'][] = $this->title;
                                     <!-- <th>No</th> -->
                                     <th>Nama</th>
                                     <th>Jabatan</th>
+                                    <th>Jabatan Eng</th>
                                     <th>Image</th>
                                     <th>Deskripsi</th>
+                                    <th>Deskripsi Eng</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
@@ -87,9 +89,11 @@ $this->params['breadcrumbs'][] = $this->title;
 
                                         <td><?= $a->nama ?></td>
                                         <td><?= $a->jabatan ?></td>
+                                        <td><?= $a->jabatan_eng ?></td>
 
                                         <td><?= Html::img($a->getImageUrl(), ['style' => 'width: 150px']) ?></td>
                                         <td><?= $a->deskripsi ?></td>
+                                        <td><?= $a->deskripsi_eng ?></td>
 
                                         <td><?= Html::a('&nbsp; View&nbsp;', ['view', 'id' => $a->id], ['class' => 'btn btn-primary']) ?>
 

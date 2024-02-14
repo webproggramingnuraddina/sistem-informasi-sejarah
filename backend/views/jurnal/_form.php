@@ -18,6 +18,8 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'deskripsi')->textInput(['maxlength' => true]) ?>
 
+    <?= $form->field($model, 'deskripsi_eng')->textInput(['maxlength' => true]) ?>
+
     <?= $form->field($model, 'jurnal_link')->textInput(['maxlength' => true]) ?>
 
     <div class="form-group">

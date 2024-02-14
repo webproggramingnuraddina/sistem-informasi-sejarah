@@ -131,6 +131,12 @@ AppAsset::register($this);
             </a>
           </li>
           <li class="treeview">
+          <li <?= Yii::$app->controller->id == 'home' ? 'class=active' : '' ?>>
+            <a class="menu-link" href="<?= Url::toRoute(['/home']) ?>">
+              <i class="fa fa-home"></i>
+              <span>Home</span>
+            </a>
+          </li>
           <li <?= Yii::$app->controller->id == 'berita' ? 'class=active' : '' ?>>
             <a class="menu-link" href="<?= Url::toRoute(['/berita']) ?>">
               <i class="fa fa-newspaper-o"></i>
@@ -158,6 +164,12 @@ AppAsset::register($this);
               <i class="fa fa-user"></i> <span>Kadep</span>
             </a>
           </li>
+          <li <?= Yii::$app->controller->id == 'maba' ? 'class=active' : '' ?>>
+            <a class="menu-link" href="<?= Url::toRoute(['/maba']) ?>">
+              <i class="fa fa-bullhorn"></i>
+              <span>Penerimaan Maba</span>
+            </a>
+          </li>
           <li class="treeview">
           <li <?= Yii::$app->controller->id == 'prestasi' ? 'class=active' : '' ?>>
             <a href="<?= Url::toRoute(['/prestasi']) ?>">
@@ -182,6 +194,16 @@ AppAsset::register($this);
           <li <?= Yii::$app->controller->id == 'jurnal' ? 'class=active' : '' ?>>
             <a href="<?= Url::toRoute(['/jurnal']) ?>">
               <i class="fa fa-edit"></i> <span>Jurnal</span>
+            </a>
+          </li>
+          <li <?= Yii::$app->controller->id == 'layananmutu' ? 'class=active' : '' ?>>
+            <a href="<?= Url::toRoute(['/layananmutu']) ?>">
+              <i class="fa fa-edit"></i> <span>Layanan Mutu</span>
+            </a>
+          </li>
+          <li <?= Yii::$app->controller->id == 'tindaklanjutmutu' ? 'class=active' : '' ?>>
+            <a href="<?= Url::toRoute(['/tindaklanjutmutu']) ?>">
+              <i class="fa fa-edit"></i> <span>Tindak Lanjut Mutu</span>
             </a>
           </li>
           <li class="treeview">

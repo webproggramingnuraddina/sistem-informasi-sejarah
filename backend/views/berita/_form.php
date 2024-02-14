@@ -14,7 +14,11 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'tittle')->textInput(['maxlength' => true]) ?>
 
+    <?= $form->field($model, 'tittle_eng')->textInput(['maxlength' => true]) ?>
+
     <?= $form->field($model, 'isi_berita')->textarea(['rows' => 6]) ?>
+
+    <?= $form->field($model, 'isi_berita_eng')->textarea(['rows' => 6]) ?>
 
     <?= $form->field($model, 'image', [])->fileInput() ?>
 

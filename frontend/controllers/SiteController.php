@@ -10,6 +10,7 @@ use backend\models\Dosen;
 use backend\models\Kadep;
 use backend\models\Berita;
 use backend\models\Jurnal;
+use backend\models\Home;
 use yii\filters\VerbFilter;
 use backend\models\Download;
 use common\models\LoginForm;
@@ -123,7 +124,19 @@ class SiteController extends Controller
         Yii::$app->language = $lang;
         $modelBerita = Berita::find()->all();
         $modelKadep = Kadep::find()->all();
+        $modelHome = Home::find()->all();
         return $this->render('index', [
+            'modelBerita' => $modelBerita,
+            'modelHome' => $modelHome,
+            'modelKadep' => $modelKadep,
+        ]);
+    }
+
+    public function actionIndexeng()
+    {
+        $modelBerita = Berita::find()->all();
+        $modelKadep = Kadep::find()->all();
+        return $this->render('indexeng', [
             'modelBerita' => $modelBerita,
             'modelKadep' => $modelKadep,
         ]);
@@ -243,6 +256,14 @@ class SiteController extends Controller
         Yii::$app->language = $lang;
         $modelJurnal = Jurnal::find()->all();
         return $this->render('jurnal', [
+            'modelJurnal' => $modelJurnal,
+        ]);
+    }
+
+    public function actionJurnaleng()
+    {
+        $modelJurnal = Jurnal::find()->all();
+        return $this->render('jurnaleng', [
             'modelJurnal' => $modelJurnal,
         ]);
     }

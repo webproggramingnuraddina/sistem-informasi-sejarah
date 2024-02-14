@@ -33,7 +33,7 @@ class Jurnal extends \yii\db\ActiveRecord
         return [
             [['foto'], 'string', 'max' => 2550],
             ['imageFile', 'image', 'extensions' => ['png', 'jpg', 'jpeg', 'webp'], 'maxSize' => 5 * 1024 * 1024],
-            [['judul_jurnal', 'deskripsi', 'jurnal_link'], 'string', 'max' => 2555],
+            [['judul_jurnal', 'deskripsi', 'deskripsi_eng', 'jurnal_link'], 'string', 'max' => 2555],
         ];
     }
 
@@ -47,6 +47,7 @@ class Jurnal extends \yii\db\ActiveRecord
             'judul_jurnal' => 'Judul Jurnal',
             'foto' => 'Foto',
             'deskripsi' => 'Deskripsi',
+            'deskripsi_eng' => 'Deskripsi_eng',
             'jurnal_link' => 'Jurnal Link',
         ];
     }
