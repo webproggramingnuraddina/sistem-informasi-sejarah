@@ -11,7 +11,8 @@ date_default_timezone_set('Asia/Jakarta');
 
 $this->title = 'Detail';
 $this->params['breadcrumbs'][] = $this->title;
-
+$lang = Yii::$app->session->get('language', 'id');
+Yii::$app->language = $lang;
 ?>
 <style>
     .image-float-left {
