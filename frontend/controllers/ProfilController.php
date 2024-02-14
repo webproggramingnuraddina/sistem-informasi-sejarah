@@ -303,12 +303,12 @@ class ProfilController extends Controller
     {
         return $this->render('visieng');
     }
-    
+
     public function actionMisieng()
     {
         return $this->render('misieng');
     }
-    
+
     public function actionTujuaneng()
     {
         return $this->render('tujuaneng');
