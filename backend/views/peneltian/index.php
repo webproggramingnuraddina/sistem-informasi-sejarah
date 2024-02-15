@@ -61,6 +61,7 @@ $this->params['breadcrumbs'][] = $this->title;
         <br>
         <p>
             <?= Html::a('Create Penelitian', ['create'], ['class' => 'btn btn-success']) ?>
+            <?= Html::a('Import Data', ['import'], ['class' => 'btn btn-success']) ?>
         </p>
     </section>
 
@@ -84,10 +85,11 @@ $this->params['breadcrumbs'][] = $this->title;
                                     <th>Anggota Mahasiswa</th>
                                     <!-- <th>Link Penelitian</th> -->
                                     <th>Tahun</th>
+                                    <th>Action</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php foreach ($penelitian as $a) { ?>
+                                <?php foreach ($peneltian as $a) { ?>
                                     <tr>
 
 
@@ -97,7 +99,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                         <td><?= $a->anggota ?></td>
                                         <td><?= $a->ang_mhs ?></td>
                                         <td>
-                                            <?php 
+                                            <?php
                                             if ($a->tahun == '2020') {
                                                 echo "2020";
                                             } elseif ($a->tahun == '2021') {
@@ -116,11 +118,11 @@ $this->params['breadcrumbs'][] = $this->title;
                                                 echo "2027";
                                             } elseif ($a->tahun == '2028') {
                                                 echo "2028";
-                                            } 
+                                            }
                                             ?>
                                         </td>
 
-                                        
+
                                         <td><?= Html::a('&nbsp; View&nbsp;', ['view', 'id_penelitian' => $a->id_penelitian], ['class' => 'btn btn-primary']) ?>
 
                                             <?= Html::a('Delete', ['delete', 'id_penelitian' => $a->id_penelitian], [

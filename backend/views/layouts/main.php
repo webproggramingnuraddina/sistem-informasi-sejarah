@@ -81,13 +81,13 @@ AppAsset::register($this);
             <!-- User Account: style can be found in dropdown.less -->
             <li class="dropdown user user-menu">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                <img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
+                <img src="<?= Yii::$app->getHomeUrl(); ?>dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
                 <span class="hidden-xs">Admin</span>
               </a>
               <ul class="dropdown-menu">
                 <!-- User image -->
                 <li class="user-header">
-                  <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                  <img src="<?= Yii::$app->getHomeUrl(); ?>dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
                   <p>
                     Admin
                   </p>
@@ -101,9 +101,7 @@ AppAsset::register($this);
               </ul>
             </li>
             <!-- Control Sidebar Toggle Button -->
-            <li>
-              <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
-            </li>
+
           </ul>
         </div>
       </nav>
@@ -115,7 +113,7 @@ AppAsset::register($this);
         <!-- Sidebar user panel -->
         <div class="user-panel">
           <div class="pull-left image">
-            <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+            <img src="<?= Yii::$app->getHomeUrl(); ?>dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
           </div>
           <div class="pull-left info">
             <p>Admin</p>
@@ -156,7 +154,7 @@ AppAsset::register($this);
           </li>
           <li <?= Yii::$app->controller->id == 'dosen' ? 'class=active' : '' ?>>
             <a href="<?= Url::toRoute(['/dosen']) ?>">
-              <i class="fa fa-th"></i> <span>Staff</span>
+              <i class="fa ion-person-add"></i> <span>Staff</span>
             </a>
           </li>
           <li <?= Yii::$app->controller->id == 'kadep' ? 'class=active' : '' ?>>
@@ -198,7 +196,7 @@ AppAsset::register($this);
           </li>
           <li <?= Yii::$app->controller->id == 'layananmutu' ? 'class=active' : '' ?>>
             <a href="<?= Url::toRoute(['/layananmutu']) ?>">
-              <i class="fa fa-edit"></i> <span>Layanan Mutu</span>
+              <i class="fa fa-bar-chart-o"></i> <span>Layanan Mutu</span>
             </a>
           </li>
           <li <?= Yii::$app->controller->id == 'tindaklanjutmutu' ? 'class=active' : '' ?>>
@@ -209,20 +207,25 @@ AppAsset::register($this);
           <li class="treeview">
           <li <?= Yii::$app->controller->id == 'kerjasama' ? 'class=active' : '' ?>>
             <a href="<?= Url::toRoute(['/kerjasama']) ?>">
-              <i class="fa fa-table"></i> <span>Kerjasama</span>
+              <i class="fa fa-group"></i> <span>Kerjasama</span>
+            </a>
+          </li>
+          <li <?= Yii::$app->controller->id == 'kelompokriset' ? 'class=active' : '' ?>>
+            <a href="<?= Url::toRoute(['/kelompokriset']) ?>">
+              <i class="fa fa-table"></i> <span>Kelompok Riset</span>
             </a>
           </li>
           <li class="treeview">
-          <li <?= Yii::$app->controller->id == 'kriteria' ? 'class=active' : '' ?>>
-            <a class="menu-link" href="<?= Url::toRoute(['/kriteria']) ?>">
+          <li <?= Yii::$app->controller->id == 'organisasimhs' ? 'class=active' : '' ?>>
+            <a class="menu-link" href="<?= Url::toRoute(['/organisasimhs']) ?>">
               <i class="fa fa-files-o"></i>
-              <span>Kriteria</span>
+              <span>Organisasi Mahasiswa</span>
             </a>
           </li>
           <li <?= Yii::$app->controller->id == 'pkm' ? 'class=active' : '' ?>>
             <a class="menu-link" href="<?= Url::toRoute(['/pkm']) ?>">
               <i class="fa fa-university"></i>
-              <span>PKM</span>
+              <span>Pengabdian</span>
             </a>
           </li>
           <!-- <li <?= Yii::$app->controller->id == 'download' ? 'class=active' : '' ?>>
@@ -245,7 +248,7 @@ AppAsset::register($this);
     </div><!-- /.content-wrapper -->
     <footer class="main-footer">
       <div class="pull-right hidden-xs">
-        <b>Version</b> 2.3.0
+        <b>Version</b> 1.0.0
       </div>
       <strong>Copyright &copy; 2024 <a href="#>Departemen Sejarah</a>.</strong> All rights reserved.
     </footer>
@@ -253,25 +256,7 @@ AppAsset::register($this);
     <!-- Control Sidebar -->
     <aside class=" control-sidebar control-sidebar-dark">
           <!-- Create the tabs -->
-          <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
-            <li><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
-            <li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
-          </ul>
-          <!-- Tab panes -->
-          <div class="tab-content">
-            <!-- Home tab content -->
-            <div class="tab-pane" id="control-sidebar-home-tab">
-              <h3 class="control-sidebar-heading">Recent Activity</h3>
 
-
-
-            </div><!-- /.tab-pane -->
-            <!-- Stats tab content -->
-            <div class="tab-pane" id="control-sidebar-stats-tab">Stats Tab Content</div><!-- /.tab-pane -->
-            <!-- Settings tab content -->
-
-          </div>
-          </aside><!-- /.control-sidebar -->
           <!-- Add the sidebar's background. This div must be placed
            immediately after the control sidebar -->
           <div class="control-sidebar-bg"></div>

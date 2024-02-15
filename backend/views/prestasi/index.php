@@ -79,6 +79,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                     <th>Image</th>
                                     <th>Tahun</th>
                                     <th>Jenis Prestasi</th>
+                                    <th>Action</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -89,14 +90,14 @@ $this->params['breadcrumbs'][] = $this->title;
                                         <td><?= Html::img($a->getImageUrl(), ['style' => 'width: 150px']) ?></td>
                                         <td><?= $a->tahun ?></td>
                                         <td>
-                                            <?php 
+                                            <?php
                                             if ($a->jenis_prestasi == 1) {
                                                 echo "Internasional";
                                             } elseif ($a->jenis_prestasi == 2) {
                                                 echo "Nasional";
                                             } elseif ($a->jenis_prestasi == 3) {
                                                 echo "Lokal";
-                                            } 
+                                            }
                                             ?>
                                         </td>
                                         <td><?= Html::a('&nbsp; View&nbsp;', ['view', 'id_prestasi' => $a->id_prestasi], ['class' => 'btn btn-primary']) ?>

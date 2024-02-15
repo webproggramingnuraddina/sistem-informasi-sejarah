@@ -60,6 +60,7 @@ $this->params['breadcrumbs'][] = $this->title;
         <br>
         <p>
             <?= Html::a('Create Berita', ['create'], ['class' => 'btn btn-success']) ?>
+            <!-- <?= Html::a('Import Berita', ['import'], ['class' => 'btn btn-success']) ?> -->
         </p>
     </section>
 

@@ -66,6 +66,7 @@ $this->params['breadcrumbs'][] = $this->title;
         <br>
         <p>
             <?= Html::a('Create Staff', ['create'], ['class' => 'btn btn-success']) ?>
+            <?= Html::a('import Staff', ['import'], ['class' => 'btn btn-success']) ?>
         </p>
     </section>
 
@@ -96,7 +97,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
                                         <td><?= $a->nama ?></td>
                                         <td><?= $a->nip ?></td>
-                                        <td><?= $a->kriteria ?></td>
+                                        <td><?= isset($a->kriteria) ? $a->kriteria0->kriteria : '-' ?></td>
                                         <td><?= $a->tmp_tgl_lahir ?></td>
                                         <td><?= Html::img($a->getImageUrl(), ['style' => 'width: 150px']) ?></td>
                                         <td><?= Html::a('&nbsp; View&nbsp;', ['view', 'id_dosen' => $a->id_dosen], ['class' => 'btn btn-primary']) ?>

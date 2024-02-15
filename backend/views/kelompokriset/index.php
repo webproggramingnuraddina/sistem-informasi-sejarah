@@ -21,28 +21,29 @@ $this->params['breadcrumbs'][] = $this->title;
         <?= Html::a('Create Kelompokriset', ['create'], ['class' => 'btn btn-success']) ?>
     </p> -->
 
-    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
+    <?php // echo $this->render('_search', ['model' => $searchModel]); 
+    ?>
 
     <!-- <?= GridView::widget([
-        'dataProvider' => $dataProvider,
-        'filterModel' => $searchModel,
-        'columns' => [
-            ['class' => 'yii\grid\SerialColumn'],
+                'dataProvider' => $dataProvider,
+                'filterModel' => $searchModel,
+                'columns' => [
+                    ['class' => 'yii\grid\SerialColumn'],
 
-            'id_kelompokriset',
-            'nama_riset',
-            'nama_riset_eng',
-            'anggota',
-            'deskripsi:ntext',
-            //'deskripsi_eng:ntext',
-            [
-                'class' => ActionColumn::className(),
-                'urlCreator' => function ($action, Kelompokriset $model, $key, $index, $column) {
-                    return Url::toRoute([$action, 'id_kelompokriset' => $model->id_kelompokriset]);
-                 }
-            ],
-        ],
-    ]); ?> -->
+                    'id_kelompokriset',
+                    'nama_riset',
+                    'nama_riset_eng',
+                    'anggota',
+                    'deskripsi:ntext',
+                    //'deskripsi_eng:ntext',
+                    [
+                        'class' => ActionColumn::className(),
+                        'urlCreator' => function ($action, Kelompokriset $model, $key, $index, $column) {
+                            return Url::toRoute([$action, 'id_kelompokriset' => $model->id_kelompokriset]);
+                        }
+                    ],
+                ],
+            ]); ?> -->
 
     <!-- Content Header (Page header) -->
     <section class="content-header">
@@ -58,6 +59,7 @@ $this->params['breadcrumbs'][] = $this->title;
         <br>
         <p>
             <?= Html::a('Create Kelompok Riset', ['create'], ['class' => 'btn btn-success']) ?>
+            <?= Html::a('Import Data', ['import'], ['class' => 'btn btn-success']) ?>
         </p>
     </section>
 
@@ -79,6 +81,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                     <th>Anggota</th>
                                     <th>Deskripsi</th>
                                     <th>Deskripsi Eng</th>
+                                    <th>Action</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -88,7 +91,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                         <td><?= $a->nama_riset_eng ?></td>
                                         <td><?= $a->deskripsi ?></td>
                                         <td><?= $a->deskripsi_eng ?></td>
-                                        
+
                                         <td><?= Html::a('&nbsp; View&nbsp;', ['view', 'id_kelompokriset' => $a->id_kelompokriset], ['class' => 'btn btn-primary']) ?>
 
                                             <?= Html::a('Delete', ['delete', 'id_kelompokriset' => $a->id_kelompokriset], [
@@ -107,7 +110,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 </div><!-- /.box -->
             </div><!-- /.col -->
         </div><!-- /.row -->
-    <!-- </section>/.content -->
+        <!-- </section>/.content -->
     </section>
 
 </div>

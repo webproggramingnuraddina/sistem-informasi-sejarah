@@ -12,16 +12,19 @@ return [
     'Mahasiswa & Alumni' => 'Students & Alumni',
     'Penelitian & Pengabdian' => 'Research & Service',
     'Departemen Sejarah' => 'History Department',
+
     'Program Studi' => 'Study program',
     'Pendidikan Sejarah' => 'History Education',
     'Berita' => 'Latest News',
     'Fasiltas' => 'Facility',
+    'Berita' => 'News',
+    'Fasilitas' => 'Facility',
     'Sejarah' => 'History',
     'Visi' => 'Vision',
     'Misi' => 'Mision',
     'Tujuan' => 'Goal',
-    'Struktur Organisasi' => 'Organizational Strucktur',
-    'Struktur Organisasi' => 'Organizational Strucktur',
+    'Struktur Organisasi' => 'Organizational Struckture',
+    'Struktur Organisasi' => 'Organizational Struckture',
     'Dosen' => 'Lecturer',
     'Tenaga Pendidik' => 'Teacher',
     'Dosen Praktisi' => 'Praktitioner Lecturer',
@@ -51,6 +54,8 @@ return [
     'Publikasi Pengabdian' => 'Community Service Publications',
     'Penerimaan Mahasiswa Baru' => 'New Student Admissions',
     'Di sini Anda dapat mengunduh berbagai dokumen yang berkaitan dengan kegiatan dan informasi penting yang disediakan' => 'Here you can download various documents related to activities and important information provided.',
+    'Pendidikan Sejarah' => 'History Education',
+    'Pendidikan IPS' => 'Social Sciences Education',
 
 
 

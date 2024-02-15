@@ -77,6 +77,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                     <th>Judul Pengumuman</th>
                                     <th>Isi</th>
                                     <th>Image</th>
+                                    <th>Action</th>
                                 </tr>
                             </thead>
                             <tbody>

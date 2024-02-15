@@ -2,11 +2,13 @@
 
 namespace backend\controllers;
 
+use Yii;
 use backend\models\Peneltian;
 use backend\models\PeneltianSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use PhpOffice\PhpSpreadsheet\IOFactory;
 
 /**
  * PeneltianController implements the CRUD actions for Peneltian model.
@@ -40,11 +42,11 @@ class PeneltianController extends Controller
     {
         $searchModel = new PeneltianSearch();
         $dataProvider = $searchModel->search($this->request->queryParams);
-        $penelitian = Peneltian::find()->all();
+        $peneltian = Peneltian::find()->all();
 
         return $this->render('index', [
             'searchModel' => $searchModel,
-            'penelitian' => $penelitian,
+            'peneltian' => $peneltian,
             'dataProvider' => $dataProvider,
         ]);
     }
@@ -132,5 +134,46 @@ class PeneltianController extends Controller
         }
 
         throw new NotFoundHttpException('The requested page does not exist.');
+    }
+
+    public function actionImport()
+    {
+        $modelImport = new \yii\base\DynamicModel([
+            'fileImport' => 'File Import',
+        ]);
+        $modelImport->addRule(['fileImport'], 'required');
+        $modelImport->addRule(['fileImport'], 'file', ['extensions' => 'ods,xls,xlsx'], ['maxSize' => 1024 * 1024]);
+
+        if (Yii::$app->request->post()) {
+            $modelImport->fileImport = \yii\web\UploadedFile::getInstance($modelImport, 'fileImport');
+            if ($modelImport->fileImport && $modelImport->validate()) {
+                $inputFileType = IOFactory::identify($modelImport->fileImport->tempName);
+                $objReader = IOFactory::createReader($inputFileType);
+                $objPHPExcel = $objReader->load($modelImport->fileImport->tempName);
+                $sheetData = $objPHPExcel->getActiveSheet()->toArray(null, true, true, true);
+                $baseRow = 3;
+                while (!empty($sheetData[$baseRow]['B'])) {
+                    $model = new Peneltian();
+                    $model->judul_penelitian = (string)$sheetData[$baseRow]['B'];
+                    $model->nama_ketua = (string)$sheetData[$baseRow]['C'];
+                    $model->kepakaran_ketua = (string)$sheetData[$baseRow]['D'];
+                    $model->anggota = (string)$sheetData[$baseRow]['E'];
+                    $model->ang_mhs = (string)$sheetData[$baseRow]['F'];
+                    $model->link_penelitian = (string)$sheetData[$baseRow]['G'];
+                    $model->tahun = (string)$sheetData[$baseRow]['H'];
+                    $model->save();
+                    // die(print_r($model->errors));
+                    $baseRow++;
+                }
+                Yii::$app->getSession()->setFlash('success', 'Success');
+            } else {
+                Yii::$app->getSession()->setFlash('error', 'Error');
+            }
+            return $this->redirect(['index']);
+        }
+
+        return $this->render('import', [
+            'modelImport' => $modelImport,
+        ]);
     }
 }
