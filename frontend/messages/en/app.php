@@ -8,7 +8,7 @@ return [
     'Selamat datang' => 'Welcome',
     'Universitas Negeri Padang' => 'Padang State University',
     'Profil' => 'Profile',
-    'Akademik' => 'Academik',
+    'Akademik' => 'Academic',
     'Mahasiswa & Alumni' => 'Students & Alumni',
     'Penelitian & Pengabdian' => 'Research & Service',
     'Departemen Sejarah' => 'History Department',

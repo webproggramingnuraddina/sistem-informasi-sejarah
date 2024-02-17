@@ -259,6 +259,15 @@ class SiteController extends Controller
             'modelTendik' => $modelTendik
         ]);
     }
+    public function actionAsdos()
+    {
+        $lang = Yii::$app->session->get('language', 'id');
+        Yii::$app->language = $lang;
+        $modelAsdos = Dosen::find()->all();
+        return $this->render('asdos', [
+            'modelAsdos' => $modelAsdos
+        ]);
+    }
 
     public function actionJurnal()
     {

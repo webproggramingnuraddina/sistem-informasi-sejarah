@@ -180,6 +180,7 @@ $languages = [
 															<li><a href="<?= Url::toRoute(['/site/struktur']) ?>" class="dropdown-item"><?= Yii::t('app', 'Struktur Organisasi') ?></a></li>
 															<li><a href="<?= Url::toRoute(['/site/dosen']) ?>" class="dropdown-item"><?= Yii::t('app', 'Dosen') ?></a></li>
 															<li><a href="<?= Url::toRoute(['/site/dosen-praktisi']) ?>" class="dropdown-item"><?= Yii::t('app', 'Dosen Praktisi') ?></a></li>
+															<li><a href="<?= Url::toRoute(['/site/asdos']) ?>" class="dropdown-item"><?= Yii::t('app', 'Asisten Dosen') ?></a></li>
 															<li><a href="<?= Url::toRoute(['/site/tendik']) ?>" class="dropdown-item">Tendik</a></li>
 														</ul>
 													</li>
