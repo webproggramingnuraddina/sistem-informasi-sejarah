@@ -92,8 +92,8 @@ Yii::$app->language = $lang;
 
                             <ul class="list list-icons list-icons-style-2 list-icons-lg custom-list-icons-icon-size pb-1 mb-3">
                                 <p class="pt-3 pb-2 mb-2 appear-animation" data-appear-animation="fadeInUpShorter">
-                                    <li class="pt-3 pb-2 mb-2 appear-animation" data-appear-animation="fadeInUpShorter"><i class="fas fa-check text-color-dark border-color-grey-1 top-7"></i> S1 Pendidikan Sejarah</li>
-                                    <li class="pt-3 pb-2 mb-2 appear-animation" data-appear-animation="fadeInUpShorter"><i class="fas fa-check text-color-dark border-color-grey-1 top-7"></i> S1 Pendidikan IPS</li>
+                                    <li class="pt-3 pb-2 mb-2 appear-animation" data-appear-animation="fadeInUpShorter"><i class="fas fa-check text-color-dark border-color-grey-1 top-7"></i> S1 History Education</li>
+                                    <li class="pt-3 pb-2 mb-2 appear-animation" data-appear-animation="fadeInUpShorter"><i class="fas fa-check text-color-dark border-color-grey-1 top-7"></i> S1 Social Sciences Education</li>
 
                             </ul>
 

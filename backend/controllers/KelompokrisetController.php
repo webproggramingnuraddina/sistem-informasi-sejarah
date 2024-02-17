@@ -2,11 +2,13 @@
 
 namespace backend\controllers;
 
+use Yii;
 use backend\models\Kelompokriset;
 use backend\models\KelompokrisetSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use PhpOffice\PhpSpreadsheet\IOFactory;
 
 /**
  * KelompokrisetController implements the CRUD actions for Kelompokriset model.
@@ -132,5 +134,45 @@ class KelompokrisetController extends Controller
         }
 
         throw new NotFoundHttpException('The requested page does not exist.');
+    }
+
+
+    public function actionImport()
+    {
+        $modelImport = new \yii\base\DynamicModel([
+            'fileImport' => 'File Import',
+        ]);
+        $modelImport->addRule(['fileImport'], 'required');
+        $modelImport->addRule(['fileImport'], 'file', ['extensions' => 'ods,xls,xlsx'], ['maxSize' => 1024 * 1024]);
+
+        if (Yii::$app->request->post()) {
+            $modelImport->fileImport = \yii\web\UploadedFile::getInstance($modelImport, 'fileImport');
+            if ($modelImport->fileImport && $modelImport->validate()) {
+                $inputFileType = IOFactory::identify($modelImport->fileImport->tempName);
+                $objReader = IOFactory::createReader($inputFileType);
+                $objPHPExcel = $objReader->load($modelImport->fileImport->tempName);
+                $sheetData = $objPHPExcel->getActiveSheet()->toArray(null, true, true, true);
+                $baseRow = 3;
+                while (!empty($sheetData[$baseRow]['B'])) {
+                    $model = new Kelompokriset();
+                    $model->nama_riset = (string)$sheetData[$baseRow]['B'];
+                    $model->nama_riset_eng = (string)$sheetData[$baseRow]['C'];
+                    $model->anggota = (string)$sheetData[$baseRow]['D'];
+                    $model->deskripsi = (string)$sheetData[$baseRow]['E'];
+                    $model->deskripsi_eng = (string)$sheetData[$baseRow]['F'];
+                    $model->save();
+                    // die(print_r($model->errors));
+                    $baseRow++;
+                }
+                Yii::$app->getSession()->setFlash('success', 'Success');
+            } else {
+                Yii::$app->getSession()->setFlash('error', 'Error');
+            }
+            return $this->redirect(['index']);
+        }
+
+        return $this->render('import', [
+            'modelImport' => $modelImport,
+        ]);
     }
 }

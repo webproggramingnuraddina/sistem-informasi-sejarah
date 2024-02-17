@@ -54,6 +54,8 @@ return [
     'Publikasi Pengabdian' => 'Community Service Publications',
     'Penerimaan Mahasiswa Baru' => 'New Student Admissions',
     'Di sini Anda dapat mengunduh berbagai dokumen yang berkaitan dengan kegiatan dan informasi penting yang disediakan' => 'Here you can download various documents related to activities and important information provided.',
+    'Pendidikan Sejarah' => 'History Education',
+    'Pendidikan IPS' => 'Social Sciences Education',
 
 
 

@@ -60,6 +60,7 @@ $this->params['breadcrumbs'][] = $this->title;
         <br>
         <p>
             <?= Html::a('Create PKM', ['create'], ['class' => 'btn btn-success']) ?>
+            <?= Html::a('Import Data', ['import'], ['class' => 'btn btn-success']) ?>
         </p>
     </section>
 
@@ -81,6 +82,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                     <th>Kepakaran</th>
                                     <th>Anggota</th>
                                     <th>Tahun</th>
+                                    <th>Action</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -93,7 +95,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                         <td><?= $a->kepakaran ?></td>
                                         <td><?= $a->anggota ?></td>
                                         <td>
-                                            <?php 
+                                            <?php
                                             if ($a->tahun == '2020') {
                                                 echo "2020";
                                             } elseif ($a->tahun == '2021') {
@@ -112,7 +114,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                                 echo "2027";
                                             } elseif ($a->tahun == '2028') {
                                                 echo "2028";
-                                            } 
+                                            }
                                             ?>
                                         </td>
                                         <td><?= Html::a('&nbsp; View&nbsp;', ['view', 'id_pkm' => $a->id_pkm], ['class' => 'btn btn-primary']) ?>

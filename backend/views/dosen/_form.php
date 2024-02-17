@@ -1,5 +1,7 @@
 <?php
 
+use backend\models\Kriteria;
+use yii\helpers\ArrayHelper;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
@@ -16,7 +18,11 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'nip')->textInput() ?>
 
-    <?= $form->field($model, 'kriteria')->textInput() ?>
+    <!-- <?= $form->field($model, 'kriteria')->dropDownList([1 => 'Dosen', 2 => 'Dosen Praktisi']) ?> -->
+    <?= $form->field($model, 'kriteria')->dropDownList(
+        ArrayHelper::map(Kriteria::find()->all(), 'id_kriteria', 'kriteria'),
+        ['prompt' => 'Pilih Kriteria']
+    ) ?>
 
     <?= $form->field($model, 'tmp_tgl_lahir')->textInput(['maxlength' => true]) ?>
 

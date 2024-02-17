@@ -21,28 +21,29 @@ $this->params['breadcrumbs'][] = $this->title;
         <?= Html::a('Create Organisasimhs', ['create'], ['class' => 'btn btn-success']) ?>
     </p> -->
 
-    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
+    <?php // echo $this->render('_search', ['model' => $searchModel]); 
+    ?>
 
     <!-- <?= GridView::widget([
-        'dataProvider' => $dataProvider,
-        'filterModel' => $searchModel,
-        'columns' => [
-            ['class' => 'yii\grid\SerialColumn'],
+                'dataProvider' => $dataProvider,
+                'filterModel' => $searchModel,
+                'columns' => [
+                    ['class' => 'yii\grid\SerialColumn'],
 
-            'id',
-            'title',
-            'title_eng',
-            'image',
-            'deskripsi:ntext',
-            //'deskripsi_eng:ntext',
-            [
-                'class' => ActionColumn::className(),
-                'urlCreator' => function ($action, Organisasimhs $model, $key, $index, $column) {
-                    return Url::toRoute([$action, 'id' => $model->id]);
-                 }
-            ],
-        ],
-    ]); ?> -->
+                    'id',
+                    'title',
+                    'title_eng',
+                    'image',
+                    'deskripsi:ntext',
+                    //'deskripsi_eng:ntext',
+                    [
+                        'class' => ActionColumn::className(),
+                        'urlCreator' => function ($action, Organisasimhs $model, $key, $index, $column) {
+                            return Url::toRoute([$action, 'id' => $model->id]);
+                        }
+                    ],
+                ],
+            ]); ?> -->
 
     <!-- Content Header (Page header) -->
     <section class="content-header">
@@ -79,6 +80,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                     <th>Image</th>
                                     <th>Deskripsi</th>
                                     <th>Deskripsi Eng</th>
+                                    <th>Action</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -89,7 +91,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                         <td><?= Html::img($a->getImageUrl(), ['style' => 'width: 150px']) ?></td>
                                         <td><?= $a->deskripsi ?></td>
                                         <td><?= $a->deskripsi_eng ?></td>
-                                        
+
                                         <td><?= Html::a('&nbsp; View&nbsp;', ['view', 'id' => $a->id], ['class' => 'btn btn-primary']) ?>
 
                                             <?= Html::a('Delete', ['delete', 'id' => $a->id], [
@@ -108,7 +110,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 </div><!-- /.box -->
             </div><!-- /.col -->
         </div><!-- /.row -->
-    <!-- </section>/.content -->
+        <!-- </section>/.content -->
     </section>
 
 </div>
