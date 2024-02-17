@@ -107,7 +107,7 @@ Yii::$app->language = $lang;
                     <div class="col-lg-3">
                         <br><br>
                         <select class="form-select" id="tahunSelect" onchange="filterByTahun()">
-                            <option value="">Pilih Tahun</option>
+                            <option value="">Select Year</option>
                             <?php
                             // Generate options for tahun select
                             $tahunList = range(date("Y"), date("Y") - 10);
