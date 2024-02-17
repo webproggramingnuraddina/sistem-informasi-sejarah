@@ -125,13 +125,20 @@ class SiteController extends Controller
         $modelBerita = Berita::find()->all();
         $modelKadep = Kadep::find()->all();
         $modelHome = Home::find()->all();
-        $countdosen = Dosen::find()->count();
+        $countdosen = Dosen::find()->where(['kriteria' => '1'])->count();
+        $countdosen_praktisi = Dosen::find()->where(['kriteria' => '2'])->count();
+        $countasisten_dosen = Dosen::find()->where(['kriteria' => '3'])->count();
+        $counttenaga_kependidikan = Dosen::find()->where(['kriteria' => '4'])->count();
+
 
         return $this->render('index', [
             'modelBerita' => $modelBerita,
             'modelHome' => $modelHome,
             'modelKadep' => $modelKadep,
             'countdosen' => $countdosen,
+            'countdosen_praktisi' => $countdosen_praktisi,
+            'countasisten_dosen' => $countasisten_dosen,
+            'counttenaga_kependidikan' => $counttenaga_kependidikan,
         ]);
     }
 

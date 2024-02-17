@@ -32,14 +32,12 @@ $this->params['breadcrumbs'][] = $this->title;
             'id',
             'nama',
             'jabatan',
-            'jabatan_eng',
             [
                 'attribute' => 'image',
                 'format' => ['html'],
                 'value' => fn () => Html::img($model->getImageUrl(), ['style' => 'width:150px']),
             ],
             'deskripsi:ntext',
-            'deskripsi_eng:ntext',
         ],
     ]) ?>
 
