@@ -544,7 +544,7 @@ use frontend\components\Translator;
                         </div>
                     </div>
                     <div class="process-step col-sm-9 col-md-7 col-lg-3 mb-5 mb-lg-4 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="700">
-                        <a href="<?= Url::toRoute(['/site/tendik']) ?>">
+                        <a href="<?= Url::toRoute(['/site/asdos']) ?>">
                             <div class="process-step-circle">
                                 <strong class="process-step-circle-content text-color-primary"><?= $countasisten_dosen ?></strong>
                             </div>
