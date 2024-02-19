@@ -30,9 +30,9 @@ Yii::$app->language = $lang;
             </a>
         </section>
 
-        <div class="container pt-2 d-flex flex-column align-items-center">
+        <div class="container pt-2 d-flex flex-column align-items-center" id="intro">
             <div class="row justify-content-center pt-4 mt-5">
-                <div class="col-lg-12 text-center">
+                <div class="col-lg-12">
 
                     <p class="custom-font-secondary custom-font-size-1 line-height-7 mb-0 appear-animation" data-appear-animation="fadeInUpShorter">Kalender Akademik merupakan acuan pelaksanaan akademik perguruan tinggi untuk mencapai proses pembelajaran yang optimal. Keseluruhan pelaksanaan kegiatan belajar tersebut disusun oleh perguruan tinggi dalam satu tahun akademik. Kalender akademik terbaru dapat diakses pada link yang telah disediakan di bawah. </p>
                 </div>
@@ -62,7 +62,7 @@ Yii::$app->language = $lang;
             </a>
         </section>
 
-        <div class="container pt-2 d-flex flex-column align-items-center">
+        <div class="container pt-2 d-flex flex-column align-items-center" id="intro">
             <div class="row justify-content-center pt-4 mt-5">
                 <div class="col-lg-12 text-center">
 

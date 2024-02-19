@@ -44,7 +44,7 @@ use yii\helpers\Html; ?>
                                 });
 
                                 // Mengambil 12 berita terbaru
-                                $latestBerita = array_slice($modelBerita, 0, 8);
+                                $latestBerita = array_slice($modelBerita, 0, 16);
 
                                 foreach ($latestBerita as $key => $val) :
                                 ?>
@@ -99,7 +99,7 @@ use yii\helpers\Html; ?>
                             });
 
                             // Mengambil 12 berita terbaru
-                            $latestBerita = array_slice($modelBerita, 0, 8);
+                            $latestBerita = array_slice($modelBerita, 0, 16);
 
                             foreach ($latestBerita as $key => $val) :
                             ?>
@@ -119,7 +119,7 @@ use yii\helpers\Html; ?>
                 });
 
                 // Mengambil 12 berita terbaru
-                $latestBerita = array_slice($modelBerita, 0, 8);
+                $latestBerita = array_slice($modelBerita, 0, 16);
 
                 foreach ($latestBerita as $val) :
                 ?>
@@ -180,7 +180,7 @@ use yii\helpers\Html; ?>
                                 });
 
                                 // Mengambil 12 berita terbaru
-                                $latestBerita = array_slice($modelBerita, 0, 8);
+                                $latestBerita = array_slice($modelBerita, 0, 16);
 
                                 foreach ($latestBerita as $key => $val) :
                                 ?>
@@ -235,7 +235,7 @@ use yii\helpers\Html; ?>
                             });
 
                             // Mengambil 12 berita terbaru
-                            $latestBerita = array_slice($modelBerita, 0, 8);
+                            $latestBerita = array_slice($modelBerita, 0, 16);
 
                             foreach ($latestBerita as $key => $val) :
                             ?>
@@ -255,7 +255,7 @@ use yii\helpers\Html; ?>
                 });
 
                 // Mengambil 12 berita terbaru
-                $latestBerita = array_slice($modelBerita, 0, 8);
+                $latestBerita = array_slice($modelBerita, 0, 16);
 
                 foreach ($latestBerita as $val) :
                 ?>

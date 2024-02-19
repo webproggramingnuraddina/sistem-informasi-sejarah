@@ -29,7 +29,7 @@ Yii::$app->language = $lang;
             </a>
         </section>
 
-        <div class="container">
+        <div class="container" id="intro">
             <section class="sectionpu">
                 <div class="container position-relative z-index-3 my-5">
                     <div class="row align-items-center justify-content-center">
@@ -79,7 +79,7 @@ Yii::$app->language = $lang;
             </a>
         </section>
 
-        <div class="container">
+        <div class="container" id="intro">
             <section class="sectionpu">
                 <div class="container position-relative z-index-3 my-5">
                     <div class="row align-items-center justify-content-center">

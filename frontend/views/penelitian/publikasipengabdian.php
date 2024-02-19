@@ -29,7 +29,7 @@ Yii::$app->language = $lang;
             </a>
         </section>
 
-        <div class="container">
+        <div class="container" id="intro">
             <div class="card-body pt-0">
                 <div class="row mb-3">
                     <div class="col-lg-3">
@@ -101,7 +101,7 @@ Yii::$app->language = $lang;
             </a>
         </section>
 
-        <div class="container">
+        <div class="container" id="intro">
             <div class="card-body pt-0">
                 <div class="row mb-3">
                     <div class="col-lg-3">

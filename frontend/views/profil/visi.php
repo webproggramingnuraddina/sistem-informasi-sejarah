@@ -25,7 +25,7 @@ v<?php
             <i class="icons icon-arrow-down font-weight-bold"></i>
         </a>
     </section>
-    <div class="container">
+    <div class="container" id="intro">
         <!-- <h1><?= Html::encode($this->title) ?></h1> -->
 
         <!-- <p>This is the About page. You may modify the following file to customize its content:</p> -->

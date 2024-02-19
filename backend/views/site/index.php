@@ -78,13 +78,13 @@ $this->title = 'My Yii Application';
                 <!-- small box -->
                 <div class="small-box bg-gray">
                     <div class="inner">
-                        <h3 class="text-light fw-bold fs-1"><?= $countfasilitas ?></h3>
-                        <p>Fasilitas</p>
+                        <h3 class="text-light fw-bold fs-1"><?= $countberita ?></h3>
+                        <p>Berita</p>
                     </div>
                     <div class="icon">
                         <i class="fa fa-laptop"></i>
                     </div>
-                    <a href="<?= Url::toRoute(['/fasilitas']) ?>" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                    <a href="<?= Url::toRoute(['/berita']) ?>" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
                 </div>
             </div><!-- ./col -->
             <div class="col-lg-3 col-xs-6">

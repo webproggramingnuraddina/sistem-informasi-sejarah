@@ -30,7 +30,7 @@ Yii::$app->language = $lang;
             </a>
         </section>
 
-        <div class="container pt-2 d-flex flex-column align-items-center">
+        <div class="container pt-2 d-flex flex-column align-items-center" id="intro">
             <div class="row justify-content-center pt-4 mt-5">
                 <div class="col-lg-12">
 
@@ -61,7 +61,7 @@ Yii::$app->language = $lang;
             </a>
         </section>
 
-        <div class="container pt-2 d-flex flex-column align-items-center">
+        <div class="container pt-2 d-flex flex-column align-items-center" id="intro">
             <div class="row justify-content-center pt-4 mt-5">
                 <div class="col-lg-12 text-center">
 

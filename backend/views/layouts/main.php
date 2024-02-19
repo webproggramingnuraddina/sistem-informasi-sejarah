@@ -95,7 +95,7 @@ AppAsset::register($this);
                 <!-- Menu Footer-->
                 <li class="user-footer">
                   <div class="pull-right">
-                    <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                    <a href="<?= Url::toRoute(['/site/logout']) ?>" class="btn btn-default btn-flat">Sign out</a>
                   </div>
                 </li>
               </ul>

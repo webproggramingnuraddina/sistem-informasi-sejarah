@@ -31,7 +31,7 @@ $nomor = 1;
             </a>
         </section>
 
-        <div class="container pt-2">
+        <div class="container pt-2" id="intro">
             <div class="row justify-content-center pt-4 mt-5">
                 <div class="col-lg-12 text-center">
                     <!-- <div class="overflow-hidden">
@@ -245,7 +245,7 @@ $nomor = 1;
             </a>
         </section>
 
-        <div class="container pt-2">
+        <div class="container pt-2" id="intro">
             <div class="row justify-content-center pt-4 mt-5">
                 <div class="col-lg-12 text-center">
                     <!-- <div class="overflow-hidden">

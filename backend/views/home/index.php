@@ -74,8 +74,6 @@ $this->params['breadcrumbs'][] = $this->title;
                                 <tr>
                                     <!-- <th>No</th> -->
                                     <th>Image 1</th>
-                                    <th>Image 2</th>
-                                    <th>Image 3</th>
                                     <th>Link Video</th>
                                     <th>Action</th>
                                 </tr>
@@ -86,8 +84,6 @@ $this->params['breadcrumbs'][] = $this->title;
 
 
                                         <td><?= Html::img($a->getImageUrl(), ['style' => 'width: 150px']) ?></td>
-                                        <td><?= Html::img($a->getImageUrl2(), ['style' => 'width: 150px']) ?></td>
-                                        <td><?= Html::img($a->getImageUrl3(), ['style' => 'width: 150px']) ?></td>
                                         <td><?= $a->link_video ?></td>
                                         <td><?= Html::a('&nbsp; View&nbsp;', ['view', 'id' => $a->id], ['class' => 'btn btn-primary']) ?>
 
