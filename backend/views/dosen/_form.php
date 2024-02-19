@@ -49,3 +49,17 @@ use yii\widgets\ActiveForm;
     <?php ActiveForm::end(); ?>
 
 </div>
+
+<script src="<?= Yii::$app->getHomeUrl(); ?>/js/tinymce.min.js"></script>
+<script>
+    tinymce.init({
+        selector: 'textarea', // Pilih elemen textarea yang akan diaktifkan oleh TinyMCE
+        plugins: 'autolink lists link image charmap print preview hr anchor pagebreak',
+        toolbar: 'undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image',
+        setup: function(editor) {
+            editor.on('change', function() {
+                editor.save(); // Simpan perubahan kembali ke textarea
+            });
+        }
+    });
+</script>

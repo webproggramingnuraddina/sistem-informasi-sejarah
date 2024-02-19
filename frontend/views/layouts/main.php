@@ -90,10 +90,11 @@ $languages = [
 	<script src="<?= Yii::$app->getHomeUrl(); ?>vendor/modernizr/modernizr.min.js"></script>
 
 	<style>
-        .text-color-dark {
-            color: #000; /* warna teks hitam */
-        }
-    </style>
+		.text-color-dark {
+			color: #000;
+			/* warna teks hitam */
+		}
+	</style>
 
 
 </head>
@@ -109,8 +110,10 @@ $languages = [
 							<div class="header-column justify-content-start">
 								<div class="header-row">
 									<ul class="list list-unstyled list-inline mb-0">
-										
-										<strong><li id="date-time" class="list-inline-item text-color-dark mb-0"></li></strong>
+
+										<strong>
+											<li id="date-time" class="list-inline-item text-color-dark mb-0"></li>
+										</strong>
 
 									</ul>
 								</div>
@@ -177,6 +180,7 @@ $languages = [
 															<li><a href="<?= Url::toRoute(['/site/struktur']) ?>" class="dropdown-item"><?= Yii::t('app', 'Struktur Organisasi') ?></a></li>
 															<li><a href="<?= Url::toRoute(['/site/dosen']) ?>" class="dropdown-item"><?= Yii::t('app', 'Dosen') ?></a></li>
 															<li><a href="<?= Url::toRoute(['/site/dosen-praktisi']) ?>" class="dropdown-item"><?= Yii::t('app', 'Dosen Praktisi') ?></a></li>
+															<li><a href="<?= Url::toRoute(['/site/asdos']) ?>" class="dropdown-item"><?= Yii::t('app', 'Asisten Dosen') ?></a></li>
 															<li><a href="<?= Url::toRoute(['/site/tendik']) ?>" class="dropdown-item">Tendik</a></li>
 														</ul>
 													</li>
@@ -368,7 +372,7 @@ $languages = [
 							<li class="social-icons-email"><a href="mailto:sejarah@fis.unp.ac.id" target="_blank" title="Email"><i class="far fa-envelope"></i></a></li>
 							<li class="social-icons-instagram"><a href="https://www.instagram.com/dep_sejarahunp?igsh=MXZzN2Z2M2ZsOHM0dg==" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a></li>
 							<br><br>
-							<strong><li class="">Contact: 081363439428</li></strong><br>
+							<strong><li class="">Contact: 081363439428</li></strong>
 							<strong><li class="">Fax: (0751)7055671</li></strong>
 							<!-- <li class="social-icons-phone">
 								<a href="tel:+6281363439428" target="_blank" title="Telepon">
@@ -452,36 +456,36 @@ $languages = [
 	<script src="<?= Yii::$app->getHomeUrl(); ?>js/theme.init.js"></script>
 
 	<script>
-        function displayDateTime() {
-            var currentDate = new Date();
-            var day = currentDate.getDate();
-            var monthIndex = currentDate.getMonth();
-            var year = currentDate.getFullYear();
-            var hours = currentDate.getHours();
-            var minutes = currentDate.getMinutes();
-            var seconds = currentDate.getSeconds();
+		function displayDateTime() {
+			var currentDate = new Date();
+			var day = currentDate.getDate();
+			var monthIndex = currentDate.getMonth();
+			var year = currentDate.getFullYear();
+			var hours = currentDate.getHours();
+			var minutes = currentDate.getMinutes();
+			var seconds = currentDate.getSeconds();
 
-            // Formatting to ensure two digits
-            day = (day < 10 ? '0' : '') + day;
-            hours = (hours < 10 ? '0' : '') + hours;
-            minutes = (minutes < 10 ? '0' : '') + minutes;
-            seconds = (seconds < 10 ? '0' : '') + seconds;
+			// Formatting to ensure two digits
+			day = (day < 10 ? '0' : '') + day;
+			hours = (hours < 10 ? '0' : '') + hours;
+			minutes = (minutes < 10 ? '0' : '') + minutes;
+			seconds = (seconds < 10 ? '0' : '') + seconds;
 
-            // Array of month names
-            var monthNames = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"];
-            var monthName = monthNames[monthIndex];
+			// Array of month names
+			var monthNames = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"];
+			var monthName = monthNames[monthIndex];
 
-            var dateTimeString = day + ' ' + monthName + ' ' + year + ' ' + hours + ':' + minutes + ':' + seconds;
+			var dateTimeString = day + ' ' + monthName + ' ' + year + ' ' + hours + ':' + minutes + ':' + seconds;
 
-            document.getElementById('date-time').textContent = dateTimeString;
+			document.getElementById('date-time').textContent = dateTimeString;
 
-            // Update every second
-            setTimeout(displayDateTime, 1000);
-        }
+			// Update every second
+			setTimeout(displayDateTime, 1000);
+		}
 
-        // Call the function to initially display date and time
-        displayDateTime();
-    </script>
+		// Call the function to initially display date and time
+		displayDateTime();
+	</script>
 
 </body>
 

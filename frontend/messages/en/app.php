@@ -8,7 +8,7 @@ return [
     'Selamat datang' => 'Welcome',
     'Universitas Negeri Padang' => 'Padang State University',
     'Profil' => 'Profile',
-    'Akademik' => 'Academik',
+    'Akademik' => 'Academic',
     'Mahasiswa & Alumni' => 'Students & Alumni',
     'Penelitian & Pengabdian' => 'Research & Service',
     'Departemen Sejarah' => 'History Department',
@@ -49,6 +49,7 @@ return [
     'Kerjasama' => 'Collaboration',
     'Prestasi' => 'Achievements',
     'Beasiswa' => 'Scholarship',
+    'Asisten Dosen' => 'Assistant Lecturer',
     'Kelompok Riset' => 'Research Groups',
     'Publikasi Riset' => 'Research Publications',
     'Publikasi Pengabdian' => 'Community Service Publications',
@@ -56,6 +57,8 @@ return [
     'Di sini Anda dapat mengunduh berbagai dokumen yang berkaitan dengan kegiatan dan informasi penting yang disediakan' => 'Here you can download various documents related to activities and important information provided.',
     'Pendidikan Sejarah' => 'History Education',
     'Pendidikan IPS' => 'Social Sciences Education',
+    'Kepala Departemen Sejarah' => 'Head of History Department',
+    'Sekretaris Departemen Sejarah' => 'Secretary of the History Department',
 
 
 

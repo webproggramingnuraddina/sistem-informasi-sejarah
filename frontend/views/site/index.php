@@ -64,25 +64,29 @@ use frontend\components\Translator;
         <div class="container py-4 my-5" id="intro">
             <div class="row align-items-center">
                 <div class="col-lg-6 pe-lg-5 mb-4 mb-lg-0">
-                    <div class="position-relative border-width-10 border-color-light clearfix border border-radius" data-remove-min-height style="min-height: 446px;">
-                        <div id="block-videoprofiluniversitas" class="block block-block-content block-block-content23574cec-d9fe-4788-b503-3efa5bfd7b18">
 
-                            <br>
-                            <div class="content">
+                    <?php
+                    // Link video dari database
+                    $link_video = $val->link_video;
 
-                                <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item">
-                                    <p><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0" width="525" height="350" src="<?= $val->link_video ?>" width="300" style="overflow: hidden;"></iframe></p>
-                                </div>
+                    // Mendapatkan ID video dari link
+                    $video_id = explode("v=", $link_video)[1];
+                    $ampersand_position = strpos($video_id, "&");
+                    if ($ampersand_position !== false) {
+                        $video_id = substr($video_id, 0, $ampersand_position);
+                    }
 
-                            </div>
-                            </br>
+                    // Membuat link baru dengan ID video dan parameter autoplay dan mute
+                    $new_link = "https://www.youtube.com/embed/" . $video_id . "?autoplay=1&mute=1";
+                    ?>
 
-                        </div>
-                    </div>
+                    <!-- Pemanggilan baru -->
+                    <iframe width="560" height="315" src="<?= $new_link ?>"></iframe>
+
                 </div>
 
                 <div class="col-lg-6">
-                    <div id="popup-content-1" class="dialog dialog-lg zoom-anim-dialog rounded p-3 mfp-hide mfp-close-out">
+                    <!-- <div id="popup-content-1" class="dialog dialog-lg zoom-anim-dialog rounded p-3 mfp-hide mfp-close-out">
                         <div class="ratio ratio-4x3">
                             <div id="block-videoprofiluniversitas" class="block block-block-content block-block-content23574cec-d9fe-4788-b503-3efa5bfd7b18">
 
@@ -96,7 +100,7 @@ use frontend\components\Translator;
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                     <div class="overflow-hidden">
                         <h2 class="text-color-primary font-weight-medium positive-ls-3 text-4 mb-0 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="200"><?= Yii::t('app', 'Program Studi') ?></h2>
                     </div>
@@ -137,7 +141,7 @@ use frontend\components\Translator;
                                         </a>
 
                                         <p class="d-block positive-ls-3 text-2 pt-3 mb-0 line-height-4"><?= $val->nama ?></p>
-                                        <p class="d-block positive-ls-3 text-1 mb-0 opacity-7"><?= $val->jabatan ?></p>
+                                        <p class="d-block positive-ls-3 text-1 mb-0 opacity-7"><?= Yii::t('app', 'Sekretaris Departemen Sejarah') ?></p>
                                     </div>
                                 <?php } ?>
                             <?php endforeach; ?>
@@ -155,7 +159,7 @@ use frontend\components\Translator;
                                         </a>
 
                                         <p class="d-block positive-ls-3 text-2 pt-3 mb-0 line-height-4"><?= $val->nama ?></p>
-                                        <p class="d-block positive-ls-3 text-1 mb-0 opacity-7"><?= $val->jabatan ?></p>
+                                        <p class="d-block positive-ls-3 text-1 mb-0 opacity-7"><?= Yii::t('app', 'Kepala Departemen Sejarah') ?></p>
                                     </div>
                                 <?php } ?>
                             <?php endforeach; ?>
@@ -521,7 +525,7 @@ use frontend\components\Translator;
         <div class="row">
             <div class="col">
                 <div class="row justify-content-center process custom-process-style-1 my-5">
-                    <div class="process-step col-sm-9 col-md-7 col-lg-4 mb-5 mb-lg-4 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
+                    <div class="process-step col-sm-9 col-md-7 col-lg-3 mb-5 mb-lg-4 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
                         <a href="<?= Url::toRoute(['/site/dosen']) ?>">
                             <div class="process-step-circle">
                                 <strong class="process-step-circle-content text-color-primary"><?= $countdosen ?></strong>
@@ -532,10 +536,10 @@ use frontend\components\Translator;
                             <!-- <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc viverra erat orci, ac auctor.</p> -->
                         </div>
                     </div>
-                    <div class="process-step col-sm-9 col-md-7 col-lg-4 mb-5 mb-lg-4 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="500">
+                    <div class="process-step col-sm-9 col-md-7 col-lg-3 mb-5 mb-lg-4 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="500">
                         <a href="<?= Url::toRoute(['/site/dosen-praktisi']) ?>">
                             <div class="process-step-circle">
-                                <strong class="process-step-circle-content text-color-primary"><?= $countdosen ?></strong>
+                                <strong class="process-step-circle-content text-color-primary"><?= $countdosen_praktisi ?></strong>
                             </div>
                         </a>
                         <div class="process-step-content px-lg-4">
@@ -543,10 +547,21 @@ use frontend\components\Translator;
                             <!-- <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc viverra erat orci, ac auctor.</p> -->
                         </div>
                     </div>
-                    <div class="process-step col-sm-9 col-md-7 col-lg-4 mb-5 mb-lg-4 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="700">
+                    <div class="process-step col-sm-9 col-md-7 col-lg-3 mb-5 mb-lg-4 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="700">
+                        <a href="<?= Url::toRoute(['/site/asdos']) ?>">
+                            <div class="process-step-circle">
+                                <strong class="process-step-circle-content text-color-primary"><?= $countasisten_dosen ?></strong>
+                            </div>
+                        </a>
+                        <div class="process-step-content px-lg-4">
+                            <h4 class="font-weight-bold custom-font-size-2 pb-1 mb-2"><?= Yii::t('app', 'Asisten Dosen') ?></h4>
+                            <!-- <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc viverra erat orci, ac auctor.</p> -->
+                        </div>
+                    </div>
+                    <div class="process-step col-sm-9 col-md-7 col-lg-3 mb-5 mb-lg-4 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="700">
                         <a href="<?= Url::toRoute(['/site/tendik']) ?>">
                             <div class="process-step-circle">
-                                <strong class="process-step-circle-content text-color-primary"><?= $countdosen ?></strong>
+                                <strong class="process-step-circle-content text-color-primary"><?= $countasisten_dosen ?></strong>
                             </div>
                         </a>
                         <div class="process-step-content px-lg-4">
