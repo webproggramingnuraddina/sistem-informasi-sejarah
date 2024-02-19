@@ -165,7 +165,7 @@ $languages = [
 												<ul class="nav nav-pills" id="mainNav">
 													<li><a href="<?= Url::toRoute(['/site/index']) ?>" class="nav-link active">Home</a></li>
 													<li class="dropdown">
-														<a href="" class="nav-link dropdown-toggle"><?= Yii::t('app', 'Profil') ?></a>
+														<a href="#" class="nav-link dropdown-toggle"><?= Yii::t('app', 'Profil') ?></a>
 														<ul class="dropdown-menu">
 															<li><a href="<?= Url::toRoute(['profil/sejarah']) ?>" class="dropdown-item"><?= Yii::t('app', 'Sejarah') ?></a></li>
 															<li><a href="<?= Url::toRoute(['profil/visi']) ?>" class="dropdown-item"><?= Yii::t('app', 'Visi') ?></a></li>
@@ -185,7 +185,7 @@ $languages = [
 														</ul>
 													</li>
 													<li class="dropdown">
-														<a href="demo-auto-services-services.html" class="nav-link dropdown-toggle"><?= Yii::t('app', 'Akademik') ?></a>
+														<a href="#" class="nav-link dropdown-toggle"><?= Yii::t('app', 'Akademik') ?></a>
 														<ul class="dropdown-menu">
 															<li><a href="<?= Url::toRoute(['akademik/maba']) ?>" class="dropdown-item"><?= Yii::t('app', 'Penerimaan Mahasiswa Baru') ?></a></li>
 															<li><a href="<?= Url::toRoute(['akademik/kurikulum']) ?>" class="dropdown-item"><?= Yii::t('app', 'Kurikulum') ?></a></li>
@@ -207,7 +207,7 @@ $languages = [
 														</ul>
 													</li>
 													<li class="dropdown">
-														<a href="" class="nav-link dropdown-toggle"><?= Yii::t('app', 'Penelitian & Pengabdian') ?></a>
+														<a href="#" class="nav-link dropdown-toggle"><?= Yii::t('app', 'Penelitian & Pengabdian') ?></a>
 														<ul class="dropdown-menu">
 															<li><a href="<?= Url::toRoute(['penelitian/kelompokriset']) ?>" class="dropdown-item"><?= Yii::t('app', 'Kelompok Riset') ?></a></li>
 															<li><a href="<?= Url::toRoute(['penelitian/publikasiriset']) ?>" class="dropdown-item"><?= Yii::t('app', 'Publikasi Riset') ?></a></li>
