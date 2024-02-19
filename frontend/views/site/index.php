@@ -68,7 +68,7 @@ use frontend\components\Translator;
                     }
 
                     // Membuat link baru dengan ID video dan parameter autoplay dan mute
-                    $new_link = "https://www.youtube.com/embed/" . $video_id . "?autoplay=1&mute=1";
+                    $new_link = "https://www.youtube.com/embed/" . $video_id;
                     ?>
 
                     <!-- Pemanggilan baru -->
@@ -161,16 +161,13 @@ use frontend\components\Translator;
                         <?php if ($val->id == 1) { ?>
                             <div class="col-lg-6 appear-animation" data-appear-animation="fadeInRightShorter" data-appear-animation-delay="500">
                                 <p class="font-weight-semibold text-color-dark"><?= Yii::t('app', $val->deskripsi) ?></p>
-<<<<<<< HEAD
-
-=======
-                                <!-- <a href="#" class="custom-read-more btn btn-link d-inline-flex align-items-center font-weight-semibold text-decoration-none ps-0">
+                                <<<<<<< HEAD=======<!-- <a href="#" class="custom-read-more btn btn-link d-inline-flex align-items-center font-weight-semibold text-decoration-none ps-0">
                                     READ MORE
                                     <svg class="ms-2" version="1.1" viewBox="0 0 15.698 8.706" width="17" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                                         <polygon stroke="#FFF" stroke-width="0.1" fill="#FFF" points="11.354,0 10.646,0.706 13.786,3.853 0,3.853 0,4.853 13.786,4.853 10.646,8 11.354,8.706 15.698,4.353 " />
                                     </svg>
-                                </a> -->
->>>>>>> 497d362787819bb22303427cb47ae7a77480e755
+                                    </a> -->
+                                    >>>>>>> 497d362787819bb22303427cb47ae7a77480e755
                             </div>
                         <?php } ?>
                     <?php endforeach; ?>
