@@ -368,7 +368,8 @@ $languages = [
 							<li class="social-icons-email"><a href="mailto:sejarah@fis.unp.ac.id" target="_blank" title="Email"><i class="far fa-envelope"></i></a></li>
 							<li class="social-icons-instagram"><a href="https://www.instagram.com/dep_sejarahunp?igsh=MXZzN2Z2M2ZsOHM0dg==" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a></li>
 							<br><br>
-							<strong><li class="">Contact: 081363439428</li></strong>
+							<strong><li class="">Contact: 081363439428</li></strong><br>
+							<strong><li class="">Fax: (0751)7055671</li></strong>
 							<!-- <li class="social-icons-phone">
 								<a href="tel:+6281363439428" target="_blank" title="Telepon">
 									<i class="fas fa-phone"></i>
