@@ -301,9 +301,16 @@ $languages = [
 							<li class="social-icons-instagram"><a href="https://www.instagram.com/dep_sejarahunp?igsh=MXZzN2Z2M2ZsOHM0dg==" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a></li>
 							<br><br>
 							<strong>
-								<li class="">Contact: 081363439428</li><br>
-								<li class="">Fax: (0751) 7055671</li>
+								<li class="">Contact: 081363439428</li>
+							</strong> <br>
+							<strong>
+								<li class="">Fax: (0751) 0755671</li>
 							</strong>
+							<!-- <li class="social-icons-phone">
+								<a href="tel:+6281363439428" target="_blank" title="Telepon">
+									<i class="fas fa-phone"></i>
+								</a>
+							</li> -->
 						</ul>
 					</div>
 					<div class="col-lg-4 mb-5 mb-lg-0">
