@@ -2,6 +2,15 @@
 
 namespace backend\controllers;
 
+use backend\models\Dosen;
+use backend\models\Fasilitas;
+use backend\models\Jurnal;
+use backend\models\Kelompokriset;
+use backend\models\Kerjasama;
+use backend\models\Organisasimhs;
+use backend\models\Peneltian;
+use backend\models\Pkm;
+use backend\models\Prestasi;
 use common\models\LoginForm;
 use Yii;
 use yii\filters\VerbFilter;
@@ -62,7 +71,33 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        return $this->render('index');
+        $countdosen = Dosen::find()->count();
+        $countprestasi = Prestasi::find()->count();
+        $countpeneltian = Peneltian::find()->count();
+        $countjurnal = Jurnal::find()->count();
+        $countfasilitas = Fasilitas::find()->count();
+        $countkerjasama = Kerjasama::find()->count();
+        $countkelompokriset = Kelompokriset::find()->count();
+        $countorganisasimhs = Organisasimhs::find()->count();
+        $countpkm = Pkm::find()->count();
+        // $count = ::find()->count();
+
+        return $this->render(
+            'index',
+            [
+                'countdosen' => $countdosen,
+                'countprestasi' => $countprestasi,
+                'countpeneltian' => $countpeneltian,
+                'countjurnal' => $countjurnal,
+                'countfasilitas' => $countfasilitas,
+                'countkerjasama' => $countkerjasama,
+                'countkelompokriset' => $countkelompokriset,
+                'countorganisasimhs' => $countorganisasimhs,
+                'countpkm' => $countpkm,
+                // '' => $ ,
+                // '' => $ ,
+            ]
+        );
     }
 
     /**

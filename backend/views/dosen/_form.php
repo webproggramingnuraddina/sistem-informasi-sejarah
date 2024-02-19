@@ -1,5 +1,7 @@
 <?php
 
+use backend\models\Kriteria;
+use yii\helpers\ArrayHelper;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
@@ -16,7 +18,11 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'nip')->textInput() ?>
 
-    <?= $form->field($model, 'kriteria')->textInput() ?>
+    <!-- <?= $form->field($model, 'kriteria')->dropDownList([1 => 'Dosen', 2 => 'Dosen Praktisi']) ?> -->
+    <?= $form->field($model, 'kriteria')->dropDownList(
+        ArrayHelper::map(Kriteria::find()->all(), 'id_kriteria', 'kriteria'),
+        ['prompt' => 'Pilih Kriteria']
+    ) ?>
 
     <?= $form->field($model, 'tmp_tgl_lahir')->textInput(['maxlength' => true]) ?>
 
@@ -43,3 +49,17 @@ use yii\widgets\ActiveForm;
     <?php ActiveForm::end(); ?>
 
 </div>
+
+<script src="<?= Yii::$app->getHomeUrl(); ?>/js/tinymce.min.js"></script>
+<script>
+    tinymce.init({
+        selector: 'textarea', // Pilih elemen textarea yang akan diaktifkan oleh TinyMCE
+        plugins: 'autolink lists link image charmap print preview hr anchor pagebreak',
+        toolbar: 'undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image',
+        setup: function(editor) {
+            editor.on('change', function() {
+                editor.save(); // Simpan perubahan kembali ke textarea
+            });
+        }
+    });
+</script>

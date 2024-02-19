@@ -9,9 +9,9 @@ use yii\helpers\Html; ?>
             <div class="col">
                 <ul class="breadcrumb d-block text-center custom-font-secondary text-6 font-weight-medium positive-ls-3">
                     <li><a href="index" class="text-decoration-none opacity-hover-8">Home</a></li>
-                    <li class="active text-color-primary"><?= Yii::t('app', 'Tenaga Pendidik') ?></li>
+                    <li class="active text-color-primary"><?= Yii::t('app', 'Asisten Dosen') ?></li>
                 </ul>
-                <h1 class="d-block text-color-light font-weight-bold text-center text-12 positive-ls-1 line-height-2 mb-0"><?= Yii::t('app', 'Tenaga Pendidik') ?></h1>
+                <h1 class="d-block text-color-light font-weight-bold text-center text-12 positive-ls-1 line-height-2 mb-0"><?= Yii::t('app', 'Asisten Dosen') ?></h1>
             </div>
         </div>
     </div>
@@ -24,8 +24,8 @@ use yii\helpers\Html; ?>
     <div class="container py-5">
 
         <div class="row pt-5">
-            <?php foreach ($modelTendik as $key => $val) : ?>
-                <?php if ($val->kriteria == 4) : ?>
+            <?php foreach ($modelAsdos as $key => $val) : ?>
+                <?php if ($val->kriteria == 3) : ?>
                     <div class="col-lg-3 col-md-6 pb-2">
                         <div class="card border-0 mb-4 border-radius-0 box-shadow-1 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="100">
                             <div class="card-body p-3 z-index-1 text-center" style="height: 460px;">

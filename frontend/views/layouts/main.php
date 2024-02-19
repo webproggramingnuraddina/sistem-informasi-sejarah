@@ -89,6 +89,12 @@ $languages = [
 	<!-- Head Libs -->
 	<script src="<?= Yii::$app->getHomeUrl(); ?>vendor/modernizr/modernizr.min.js"></script>
 
+	<style>
+		.text-color-dark {
+			color: #000;
+			/* warna teks hitam */
+		}
+	</style>
 
 
 </head>
@@ -104,9 +110,10 @@ $languages = [
 							<div class="header-column justify-content-start">
 								<div class="header-row">
 									<ul class="list list-unstyled list-inline mb-0">
-										<li class="list-inline-item text-color-dark me-4 mb-0">
-											Contact: <a href="tel:+6281363439428" class="text-color-dark text-color-hover-primary text-decoration-none"><strong>081363439428</strong></a>
-										</li>
+
+										<strong>
+											<li id="date-time" class="list-inline-item text-color-dark mb-0"></li>
+										</strong>
 
 									</ul>
 								</div>
@@ -117,6 +124,11 @@ $languages = [
 										<li class="social-icons-facebook"><a href="http://www.facebook.com/" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
 										<li class="social-icons-email"><a href="mailto:sejarah@fis.unp.ac.id" target="_blank" title="Email"><i class="far fa-envelope"></i></a></li>
 										<li class="social-icons-instagram"><a href="https://www.instagram.com/dep_sejarahunp?igsh=MXZzN2Z2M2ZsOHM0dg==" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a></li>
+										<li class="social-icons-phone">
+											<a href="tel:+6281363439428" target="_blank" title="Telepon">
+												<i class="fas fa-phone"></i>
+											</a>
+										</li>
 									</ul>
 									<a href="#" class="btn custom-svg-btn-style-1 custom-svg-btn-style-1-solid custom-svg-btn-style-1-small text-color-light ms-4">
 										<svg class="custom-svg-btn-background" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 210 70" preserveAspectRatio="none">
@@ -138,7 +150,7 @@ $languages = [
 							<div class="header-column">
 								<div class="header-row">
 									<div class="header-logo">
-										<a href="demo-industry-factory.html">
+										<a href="<?= Url::toRoute(['/site/index']) ?>">
 											<img src="<?= Yii::$app->getHomeUrl(); ?>img/demos/industry-factory/backgrounds/Logo_Departemen.png" class="img-fluid" alt="" />
 
 										</a>
@@ -168,6 +180,7 @@ $languages = [
 															<li><a href="<?= Url::toRoute(['/site/struktur']) ?>" class="dropdown-item"><?= Yii::t('app', 'Struktur Organisasi') ?></a></li>
 															<li><a href="<?= Url::toRoute(['/site/dosen']) ?>" class="dropdown-item"><?= Yii::t('app', 'Dosen') ?></a></li>
 															<li><a href="<?= Url::toRoute(['/site/dosen-praktisi']) ?>" class="dropdown-item"><?= Yii::t('app', 'Dosen Praktisi') ?></a></li>
+															<li><a href="<?= Url::toRoute(['/site/asdos']) ?>" class="dropdown-item"><?= Yii::t('app', 'Asisten Dosen') ?></a></li>
 															<li><a href="<?= Url::toRoute(['/site/tendik']) ?>" class="dropdown-item">Tendik</a></li>
 														</ul>
 													</li>
@@ -346,50 +359,54 @@ $languages = [
 			</div>
 			<div class="container pt-lg-5 mt-5">
 				<div class="row">
-					<div class="col-lg-3 mb-5 mb-lg-0">
-						<a href="demo-industry-factory.html">
-							<img src="<?= Yii::$app->getHomeUrl(); ?>img/demos/industry-factory/logo-light.png" class="img-fluid mt-5 mb-4" alt="Demo Industry & Factory" />
+					<div class="col-lg-4 mb-5 mb-lg-0">
+						<a href="<?= Url::toRoute(['/site/index']) ?>" style="font-size: 3em; font-weight: bold; color: #fff;">
+							Departemen Sejarah
 						</a>
-						<p class="mb-0"><strong class="text-color-light">Porto Industrial, Factory, Manufacturing</strong></p>
-						<p>Advanced Template LTD.</p>
+						<br><br>
+
+						<!-- <p class="mb-0"><strong class="text-color-light">Porto Industrial, Factory, Manufacturing</strong></p> -->
+						<!-- <p>Advanced Template LTD.</p> -->
 						<ul class="social-icons social-icons-medium">
 							<li class="social-icons-facebook"><a href="http://www.facebook.com/" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
 							<li class="social-icons-email"><a href="mailto:sejarah@fis.unp.ac.id" target="_blank" title="Email"><i class="far fa-envelope"></i></a></li>
 							<li class="social-icons-instagram"><a href="https://www.instagram.com/dep_sejarahunp?igsh=MXZzN2Z2M2ZsOHM0dg==" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a></li>
+							<br><br>
+							<strong>
+								<li class="">Contact: 081363439428</li>
+							</strong>
+							<!-- <li class="social-icons-phone">
+								<a href="tel:+6281363439428" target="_blank" title="Telepon">
+									<i class="fas fa-phone"></i>
+								</a>
+							</li> -->
 						</ul>
 					</div>
-					<div class="col-lg-4 offset-lg-1 mb-5 mb-lg-0">
+					<div class="col-lg-4 mb-5 mb-lg-0">
 						<h4 class="text-color-light font-weght-bold positive-ls-2 custom-font-size-2">USEFUL LINKS</h4>
 						<div class="row">
 							<div class="col-md-6">
 								<ul class="list list-unstyled mb-0">
-									<li class="mb-0"><a href="#">Contact Us</a></li>
-									<li class="mb-0"><a href="#">Our Services</a></li>
-									<li class="mb-0"><a href="#">Payment Methods</a></li>
-									<li class="mb-0"><a href="#">Services Guide</a></li>
-									<li class="mb-0"><a href="#">FAQs</a></li>
-									<li class="mb-0"><a href="#">Service Support</a></li>
-									<li class="mb-0"><a href="#">Privacy</a></li>
-									<li class="mb-0"><a href="#">About Porto</a></li>
-									<li class="mb-0"><a href="#">Our Guarantees</a></li>
-									<li class="mb-0"><a href="#">Terms And Conditions</a></li>
+									<li class="mb-0"><a href="http://prasireg.unp.ac.id/">Prasireg</a></li>
+									<li class="mb-0"><a href="https://elearning.unp.ac.id/">E-Learning</a></li>
+									<li class="mb-0"><a href=".unp.ac.id/">Portal Akademik</a></li>
+									<li class="mb-0"><a href="http://evaluasi.unp.ac.id/">Evaluasi</a></li>
 								</ul>
 							</div>
 							<div class="col-md-6">
 								<ul class="list list-unstyled mb-0">
-									<li class="mb-0"><a href="#">Privacy Policy</a></li>
-									<li class="mb-0"><a href="#">Return Policy</a></li>
-									<li class="mb-0"><a href="#">Intellectual Property Claims</a></li>
-									<li class="mb-0"><a href="#">Sitemap</a></li>
+									<li class="mb-0"><a href="http://webmail.unp.ac.id/">Webmail</a></li>
+									<li class="mb-0"><a href="https://wisuda.unp.ac.id/login/viewlogin1/formlogin.aspx">Wisuda</a></li>
+									<li class="mb-0"><a href="http://alumni.unp.ac.id/alumni/daftar">Alumni</a></li>
 								</ul>
 							</div>
 						</div>
 					</div>
-					<div class="col-lg-3 offset-lg-1 mb-5 mb-lg-0">
+					<div class="col-lg-4 mb-5 mb-lg-0">
 						<h4 class="text-color-light font-weght-bold positive-ls-2 custom-font-size-2">OPENING HOURS</h4>
 						<ul class="list list-unstyled list-inline custom-list-style-1 mb-0">
-							<li><a href="#">Mon - Fri: 8:30 am to 5:00 pm</a></li>
-							<li><a href="#">Saturday: 9:30 am to 1:00 pm</a></li>
+							<li><a href="#">Mon - Sat: 7:00 am to 6:00 pm</a></li>
+							<!-- <li><a href="#">Saturday: :30 am to 1:00 pm</a></li> -->
 							<li><a href="#">Sunday: Closed</a></li>
 						</ul>
 					</div>
@@ -438,6 +455,38 @@ $languages = [
 
 	<!-- Theme Initialization Files -->
 	<script src="<?= Yii::$app->getHomeUrl(); ?>js/theme.init.js"></script>
+
+	<script>
+		function displayDateTime() {
+			var currentDate = new Date();
+			var day = currentDate.getDate();
+			var monthIndex = currentDate.getMonth();
+			var year = currentDate.getFullYear();
+			var hours = currentDate.getHours();
+			var minutes = currentDate.getMinutes();
+			var seconds = currentDate.getSeconds();
+
+			// Formatting to ensure two digits
+			day = (day < 10 ? '0' : '') + day;
+			hours = (hours < 10 ? '0' : '') + hours;
+			minutes = (minutes < 10 ? '0' : '') + minutes;
+			seconds = (seconds < 10 ? '0' : '') + seconds;
+
+			// Array of month names
+			var monthNames = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"];
+			var monthName = monthNames[monthIndex];
+
+			var dateTimeString = day + ' ' + monthName + ' ' + year + ' ' + hours + ':' + minutes + ':' + seconds;
+
+			document.getElementById('date-time').textContent = dateTimeString;
+
+			// Update every second
+			setTimeout(displayDateTime, 1000);
+		}
+
+		// Call the function to initially display date and time
+		displayDateTime();
+	</script>
 
 </body>
 

@@ -37,6 +37,9 @@ $this->params['breadcrumbs'][] = $this->title;
             'email:email',
             'riwayat_pen',
             'kepakaran',
+            'pendidikan_serjana',
+            'pendidikan_magister',
+            'pendidikan_doktoral',
             'mata_kuliah',
             [
                 'attribute' => 'image',
