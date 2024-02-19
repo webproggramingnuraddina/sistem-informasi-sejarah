@@ -31,7 +31,7 @@ Yii::$app->language = $lang;
             </a>
         </section>
 
-        <div class="container pt-2">
+        <div class="container pt-2" id="intro">
             <div class="row justify-content-center pt-4 mt-5">
                 <div class="col-lg-12 text-center">
                     <!-- <div class="overflow-hidden">
@@ -44,7 +44,7 @@ Yii::$app->language = $lang;
             </div>
             <br>
             <div class="row">
-                <div class="col-md-5 text-justify">
+                <div class="col-md-5  ">
                     <h2 class="text-color-primary font-weight-medium positive-ls-3 text-4 mb-0">Pengetahuan</h2>
                     <ul class="list list-icons list-icons-style-2 list-icons-lg custom-list-icons-icon-size pb-1 mb-3">
                         <li class="font-weight-semibold text-color-dark"><i class="fas fa-check text-color-dark border-color-grey-1 top-7"></i> Lulusan mampu menjelaskan konsep, teori dan perkembangan ilmu pengetahuan di bidang pendidikan dan ilmu sejarah.</li>
@@ -57,7 +57,7 @@ Yii::$app->language = $lang;
                     </ul>
                 </div>
                 <div class="col-md-2"></div>
-                <div class="col-md-5 text-justify">
+                <div class="col-md-5  ">
                     <h2 class="text-color-primary font-weight-medium positive-ls-3 text-4 mb-0">Keterampilan Generik</h2>
                     <ul class="list list-icons list-icons-style-2 list-icons-lg custom-list-icons-icon-size pb-1 mb-3">
                         <li class="font-weight-semibold text-color-dark"><i class="fas fa-check text-color-dark border-color-grey-1 top-7"></i> Lulusan mampu merancang pembelajaran sejarah di sekolah menengah secara logis, kritis, sistematis, dan inovatif terkait pembelajaran dan pendidikan sejarah.</li>
@@ -92,7 +92,7 @@ Yii::$app->language = $lang;
         </a>
     </section>
 
-    <div class="container pt-2">
+    <div class="container pt-2" id="intro">
         <div class="row justify-content-center pt-4 mt-5">
             <div class="col-lg-12 text-center">
                 <!-- <div class="overflow-hidden">
@@ -105,7 +105,7 @@ Yii::$app->language = $lang;
         </div>
         <br>
         <div class="row">
-            <div class="col-md-5 text-justify">
+            <div class="col-md-5  ">
                 <h2 class="text-color-primary font-weight-medium positive-ls-3 text-4 mb-0">Knowledge</h2>
                 <ul class="list list-icons list-icons-style-2 list-icons-lg custom-list-icons-icon-size pb-1 mb-3">
                     <li class="font-weight-semibold text-color-dark"><i class="fas fa-check text-color-dark border-color-grey-1 top-7"></i> Graduates are able to explain concepts, theories, and developments in the field of education and history science.</li>
@@ -118,7 +118,7 @@ Yii::$app->language = $lang;
                 </ul>
             </div>
             <div class="col-md-2"></div>
-            <div class="col-md-5 text-justify">
+            <div class="col-md-5  ">
                 <h2 class="text-color-primary font-weight-medium positive-ls-3 text-4 mb-0">Generic Skills</h2>
                 <ul class="list list-icons list-icons-style-2 list-icons-lg custom-list-icons-icon-size pb-1 mb-3">
                     <li class="font-weight-semibold text-color-dark"><i class="fas fa-check text-color-dark border-color-grey-1 top-7"></i> Graduates are able to design history learning in secondary schools logically, critically, systematically, and innovatively related to history learning and education.</li>

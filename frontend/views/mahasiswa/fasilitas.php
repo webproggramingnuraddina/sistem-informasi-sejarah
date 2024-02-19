@@ -28,7 +28,7 @@ $this->params['breadcrumbs'][] = $this->title;
             </a>
         </section>
 
-        <div class="container">
+        <div class="container" id="intro">
             <section class="section custom-section-shape-background border-0 m-0">
                 <div class="container position-relative z-index-3 my-5">
                     <div class="row align-items-center justify-content-center">
@@ -84,7 +84,7 @@ $this->params['breadcrumbs'][] = $this->title;
             </a>
         </section>
 
-        <div class="container">
+        <div class="container" id="intro">
             <section class="section custom-section-shape-background border-0 m-0">
                 <div class="container position-relative z-index-3 my-5">
                     <div class="row align-items-center justify-content-center">

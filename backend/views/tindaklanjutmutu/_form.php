@@ -14,7 +14,11 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'strategi')->textarea(['rows' => 6]) ?>
 
+    <?= $form->field($model, 'strategi_eng')->textarea(['rows' => 6]) ?>
+
     <?= $form->field($model, 'upaya')->textarea(['rows' => 6]) ?>
+
+    <?= $form->field($model, 'upaya_eng')->textarea(['rows' => 6]) ?>
 
     <?= $form->field($model, 'pelaksanaan_waktu')->textarea(['rows' => 6]) ?>
 

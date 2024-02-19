@@ -72,8 +72,6 @@ class HomeController extends Controller
     {
         $model = new Home();
         $model->imageFile = UploadedFile::getInstance($model, 'image1');
-        $model->imageFile2 = UploadedFile::getInstance($model, 'image2');
-        $model->imageFile3 = UploadedFile::getInstance($model, 'image3');
 
         if ($this->request->isPost) {
             if ($model->load($this->request->post()) && $model->save()) {
@@ -99,8 +97,6 @@ class HomeController extends Controller
     {
         $model = $this->findModel($id);
         $model->imageFile = UploadedFile::getInstance($model, 'image1');
-        $model->imageFile2 = UploadedFile::getInstance($model, 'image2');
-        $model->imageFile3 = UploadedFile::getInstance($model, 'image3');
 
         if ($this->request->isPost && $model->load($this->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);

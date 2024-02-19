@@ -95,7 +95,7 @@ AppAsset::register($this);
                 <!-- Menu Footer-->
                 <li class="user-footer">
                   <div class="pull-right">
-                    <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                    <a href="<?= Url::toRoute(['/site/logout']) ?>" class="btn btn-default btn-flat">Sign out</a>
                   </div>
                 </li>
               </ul>
@@ -192,6 +192,11 @@ AppAsset::register($this);
           <li <?= Yii::$app->controller->id == 'jurnal' ? 'class=active' : '' ?>>
             <a href="<?= Url::toRoute(['/jurnal']) ?>">
               <i class="fa fa-edit"></i> <span>Jurnal</span>
+            </a>
+          </li>
+          <li <?= Yii::$app->controller->id == 'download' ? 'class=active' : '' ?>>
+            <a href="<?= Url::toRoute(['/download']) ?>">
+              <i class="fa fa-edit"></i> <span>Download</span>
             </a>
           </li>
           <li <?= Yii::$app->controller->id == 'layananmutu' ? 'class=active' : '' ?>>

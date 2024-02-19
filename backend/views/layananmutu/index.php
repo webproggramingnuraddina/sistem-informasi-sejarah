@@ -73,7 +73,8 @@ $this->params['breadcrumbs'][] = $this->title;
                                 <tr>
                                     <!-- <th>No</th> -->
                                     <th>Id</th>
-                                    <th>nama_layanan</th>
+                                    <th>nama Layanan</th>
+                                    <th>nama Layanan Eng</th>
                                     <th>link</th>
                                     <th>Action</th>
                                 </tr>
@@ -86,6 +87,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                         <td><?= $a->id ?></td>
 
                                         <td><?= $a->nama_layanan ?></td>
+                                        <td><?= $a->nama_layanan_eng ?></td>
                                         <td><?= $a->link ?></td>
 
                                         <td><?= Html::a('&nbsp; View&nbsp;', ['view', 'id' => $a->id], ['class' => 'btn btn-primary']) ?>

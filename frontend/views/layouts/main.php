@@ -130,11 +130,11 @@ $languages = [
 											</a>
 										</li>
 									</ul>
-									<a href="#" class="btn custom-svg-btn-style-1 custom-svg-btn-style-1-solid custom-svg-btn-style-1-small text-color-light ms-4">
+									<a href="<?= Url::toRoute(['site/berita']) ?>" class="btn custom-svg-btn-style-1 custom-svg-btn-style-1-solid custom-svg-btn-style-1-small text-color-light ms-4">
 										<svg class="custom-svg-btn-background" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 210 70" preserveAspectRatio="none">
 											<polygon fill="none" stroke="#D4D4D4" stroke-width="2" stroke-miterlimit="10" points="7,5 185,5 205,34 186,63 7,63 " />
 										</svg>
-										GET A QUOTE
+										<?= Yii::t('app', 'Berita Terkini') ?>
 										<svg class="custom-svg-btn-arrow" version="1.1" viewBox="0 0 15.698 8.706" width="17" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 											<polygon stroke="#FFF" stroke-width="0.4" fill="#FFF" points="11.354,0 10.646,0.706 13.786,3.853 0,3.853 0,4.853 13.786,4.853 10.646,8 11.354,8.706 15.698,4.353 " />
 										</svg>
@@ -165,7 +165,7 @@ $languages = [
 												<ul class="nav nav-pills" id="mainNav">
 													<li><a href="<?= Url::toRoute(['/site/index']) ?>" class="nav-link active">Home</a></li>
 													<li class="dropdown">
-														<a href="" class="nav-link dropdown-toggle"><?= Yii::t('app', 'Profil') ?></a>
+														<a href="#" class="nav-link dropdown-toggle"><?= Yii::t('app', 'Profil') ?></a>
 														<ul class="dropdown-menu">
 															<li><a href="<?= Url::toRoute(['profil/sejarah']) ?>" class="dropdown-item"><?= Yii::t('app', 'Sejarah') ?></a></li>
 															<li><a href="<?= Url::toRoute(['profil/visi']) ?>" class="dropdown-item"><?= Yii::t('app', 'Visi') ?></a></li>
@@ -185,7 +185,7 @@ $languages = [
 														</ul>
 													</li>
 													<li class="dropdown">
-														<a href="demo-auto-services-services.html" class="nav-link dropdown-toggle"><?= Yii::t('app', 'Akademik') ?></a>
+														<a href="#" class="nav-link dropdown-toggle"><?= Yii::t('app', 'Akademik') ?></a>
 														<ul class="dropdown-menu">
 															<li><a href="<?= Url::toRoute(['akademik/maba']) ?>" class="dropdown-item"><?= Yii::t('app', 'Penerimaan Mahasiswa Baru') ?></a></li>
 															<li><a href="<?= Url::toRoute(['akademik/kurikulum']) ?>" class="dropdown-item"><?= Yii::t('app', 'Kurikulum') ?></a></li>
@@ -197,7 +197,7 @@ $languages = [
 														</ul>
 													</li>
 													<li class="dropdown">
-														<a href="" class="nav-link dropdown-toggle"><?= Yii::t('app', 'Mahasiswa & Alumni') ?></a>
+														<a href="#" class="nav-link dropdown-toggle"><?= Yii::t('app', 'Mahasiswa & Alumni') ?></a>
 														<ul class="dropdown-menu">
 															<li><a href="<?= Url::toRoute(['mahasiswa/organisasimhs']) ?>" class="dropdown-item"><?= Yii::t('app', 'Struktur Organisasi') ?></a></li>
 															<li><a href="<?= Url::toRoute(['mahasiswa/prestasi']) ?>" class="dropdown-item"><?= Yii::t('app', 'Prestasi') ?></a></li>
@@ -207,7 +207,7 @@ $languages = [
 														</ul>
 													</li>
 													<li class="dropdown">
-														<a href="" class="nav-link dropdown-toggle"><?= Yii::t('app', 'Penelitian & Pengabdian') ?></a>
+														<a href="#" class="nav-link dropdown-toggle"><?= Yii::t('app', 'Penelitian & Pengabdian') ?></a>
 														<ul class="dropdown-menu">
 															<li><a href="<?= Url::toRoute(['penelitian/kelompokriset']) ?>" class="dropdown-item"><?= Yii::t('app', 'Kelompok Riset') ?></a></li>
 															<li><a href="<?= Url::toRoute(['penelitian/publikasiriset']) ?>" class="dropdown-item"><?= Yii::t('app', 'Publikasi Riset') ?></a></li>
@@ -261,23 +261,7 @@ $languages = [
 											</nav>
 										</div>
 									</div>
-									<!-- <div class="header-nav-features">
-										<div class="header-nav-feature header-nav-features-search d-inline-flex">
-											<a href="#" class="header-nav-features-toggle text-decoration-none" data-focus="headerSearch">
-												<i class="icons icon-magnifier header-nav-top-icon font-weight-bold text-4 top-2 text-color-hover-primary"></i>
-											</a>
-											<div class="header-nav-features-dropdown header-nav-features-dropdown-mobile-fixed" id="headerTopSearchDropdown">
-												<form role="search" action="page-search-results.html" method="get">
-													<div class="simple-search input-group">
-														<input class="form-control text-1" id="headerSearch" name="q" type="search" value="" placeholder="Search...">
-														<button class="btn" type="submit">
-															<i class="icons icon-magnifier header-nav-top-icon font-weight-bold text-color-dark text-4 text-color-hover-primary top-2"></i>
-														</button>
-													</div>
-												</form>
-											</div>
-										</div>
-									</div> -->
+
 									<button class="btn header-btn-collapse-nav" data-bs-toggle="collapse" data-bs-target=".header-nav-main nav">
 										<i class="fas fa-bars"></i>
 									</button>
@@ -290,62 +274,6 @@ $languages = [
 
 		</header>
 
-		<!-- <header id="header" class="header-transparent header-effect-shrink" data-plugin-options="{'stickyEnabled': true, 'stickyEffect': 'shrink', 'stickyEnableOnBoxed': true, 'stickyEnableOnMobile': false, 'stickyChangeLogo': true, 'stickyStartAt': 30, 'stickyHeaderContainerHeight': 70}">
-			<div class="header-body border-top-0 box-shadow-none">
-				<div class="header-container container">
-					<div class="header-row">
-						<div class="header-column">
-							<div class="header-row">
-								<div class="header-logo">
-									<a href="index.html">
-										<img alt="Porto" width="82" height="40" src="img/logo-default-slim-dark-small.png">
-									</a>
-								</div>
-							</div>
-						</div>
-						<div class="header-column justify-content-end">
-							<div class="header-row">
-								<div class="header-nav header-nav-links header-nav-dropdowns-dark header-nav-light-text order-2 order-lg-1">
-									<div class="header-nav-main header-nav-main-font-lg header-nav-main-font-lg-upper-2 header-nav-main-mobile-dark header-nav-main-square header-nav-main-dropdown-no-borders header-nav-main-effect-2 header-nav-main-sub-effect-1">
-										<nav class="collapse">
-											<ul class="nav nav-pills" id="mainNav">
-												<li class="dropdown">
-													<a data-hash class="nav-link active" href="#home">
-														Home
-													</a>
-													<ul class="dropdown-menu">
-														<li><a class="nav-link" href="index-classic.html">Default Home</a></li>
-														<li><a class="nav-link" href="index-one-page.html">One Page Website</a></li>
-													</ul>
-												</li>
-												<li>
-													<a class="nav-link" data-hash data-hash-offset="0" data-hash-offset-lg="68" href="#services">Services</a>
-												</li>
-												<li>
-													<a class="nav-link" data-hash data-hash-offset="0" data-hash-offset-lg="68" href="#projects">Projects</a>
-												</li>
-												<li>
-													<a class="nav-link" data-hash data-hash-offset="0" data-hash-offset-lg="68" href="#clients">Clients</a>
-												</li>
-												<li>
-													<a class="nav-link" data-hash data-hash-offset="0" data-hash-offset-lg="68" href="#team">Meet the Team</a>
-												</li>
-												<li>
-													<a class="nav-link" data-hash data-hash-offset="0" data-hash-offset-lg="68" href="#contact">Contact Us</a>
-												</li>
-											</ul>
-										</nav>
-									</div>
-									<button class="btn header-btn-collapse-nav" data-bs-toggle="collapse" data-bs-target=".header-nav-main nav">
-										<i class="fas fa-bars"></i>
-									</button>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</header> -->
 
 		<div class="content">
 			<?= $content ?>
@@ -373,8 +301,10 @@ $languages = [
 							<li class="social-icons-instagram"><a href="https://www.instagram.com/dep_sejarahunp?igsh=MXZzN2Z2M2ZsOHM0dg==" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a></li>
 							<br><br>
 							<strong>
-								<li class="">Contact: 081363439428</li><br>
-								<li class="">Fax: (0751)7055671</li>
+								<li class="">Contact: 081363439428</li>
+							</strong><br>
+							<strong>
+								<li class="">Fax: (0751) 7055671</li>
 							</strong>
 							<!-- <li class="social-icons-phone">
 								<a href="tel:+6281363439428" target="_blank" title="Telepon">

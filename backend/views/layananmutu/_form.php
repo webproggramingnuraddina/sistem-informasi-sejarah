@@ -14,6 +14,8 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'nama_layanan')->textarea(['rows' => 6]) ?>
 
+    <?= $form->field($model, 'nama_layanan_eng')->textarea(['rows' => 6]) ?>
+
     <?= $form->field($model, 'link')->textInput(['maxlength' => true]) ?>
 
     <div class="form-group">

@@ -14,10 +14,6 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'image1', [])->fileInput() ?>
 
-    <?= $form->field($model, 'image2', [])->fileInput() ?>
-
-    <?= $form->field($model, 'image3', [])->fileInput() ?>
-
     <?= $form->field($model, 'link_video')->textInput(['maxlength' => true]) ?>
 
     <div class="form-group">

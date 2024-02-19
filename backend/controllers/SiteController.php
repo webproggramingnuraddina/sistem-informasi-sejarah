@@ -4,6 +4,7 @@ namespace backend\controllers;
 
 use backend\models\Dosen;
 use backend\models\Fasilitas;
+use backend\models\Berita;
 use backend\models\Jurnal;
 use backend\models\Kelompokriset;
 use backend\models\Kerjasama;
@@ -45,9 +46,9 @@ class SiteController extends Controller
             ],
             'verbs' => [
                 'class' => VerbFilter::class,
-                'actions' => [
-                    'logout' => ['post'],
-                ],
+                // 'actions' => [
+                //     'logout' => ['post'],
+                // ],
             ],
         ];
     }
@@ -75,7 +76,7 @@ class SiteController extends Controller
         $countprestasi = Prestasi::find()->count();
         $countpeneltian = Peneltian::find()->count();
         $countjurnal = Jurnal::find()->count();
-        $countfasilitas = Fasilitas::find()->count();
+        $countberita = Berita::find()->count();
         $countkerjasama = Kerjasama::find()->count();
         $countkelompokriset = Kelompokriset::find()->count();
         $countorganisasimhs = Organisasimhs::find()->count();
@@ -89,7 +90,7 @@ class SiteController extends Controller
                 'countprestasi' => $countprestasi,
                 'countpeneltian' => $countpeneltian,
                 'countjurnal' => $countjurnal,
-                'countfasilitas' => $countfasilitas,
+                'countberita' => $countberita,
                 'countkerjasama' => $countkerjasama,
                 'countkelompokriset' => $countkelompokriset,
                 'countorganisasimhs' => $countorganisasimhs,

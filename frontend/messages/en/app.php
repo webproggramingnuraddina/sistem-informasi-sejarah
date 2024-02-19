@@ -18,6 +18,7 @@ return [
     'Berita' => 'Latest News',
     'Fasiltas' => 'Facility',
     'Berita' => 'News',
+    'Berita Terkini' => 'Latest News',
     'Fasilitas' => 'Facility',
     'Sejarah' => 'History',
     'Visi' => 'Vision',

@@ -22,7 +22,6 @@ use yii\helpers\Html; ?>
 
 <section id="intro">
     <div class="container py-5">
-
         <div class="row pt-5">
             <?php foreach ($modelDosen as $key => $val) : ?>
                 <?php if ($val->kriteria == 1) : ?>

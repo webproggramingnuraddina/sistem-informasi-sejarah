@@ -34,13 +34,13 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'kepakaran')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'mata_kuliah')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'mata_kuliah')->textarea(['rows' => 6]) ?>
 
     <?= $form->field($model, 'image', [])->fileInput() ?>
 
-    <?= $form->field($model, 'detail')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'detail')->textarea(['rows' => 6]) ?>
 
-    <?= $form->field($model, 'publikasi')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'publikasi')->textarea(['rows' => 6]) ?>
 
     <div class="form-group">
         <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>

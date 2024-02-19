@@ -30,7 +30,7 @@ Yii::$app->language = $lang;
             </a>
         </section>
         <br><br>
-        <div class="container">
+        <div class="container" id="intro">
             <div class="row pb-1">
                 <div class="col-lg-12 mb-4 pb-2">
                     <div class="owl-carousel owl-carousel-light owl-carousel-light-init-fadeIn owl-theme manual dots-inside dots-horizontal-center show-dots-hover nav-inside nav-inside-plus nav-dark nav-md nav-font-size-md show-nav-hover mb-0" data-plugin-options="{'autoplayTimeout': 5000, 'animateOut': 'fadeOut', 'animateIn': 'fadeIn'}" data-dynamic-height="['700px','700px','700px','700px','700px']">
@@ -75,7 +75,7 @@ Yii::$app->language = $lang;
         </section>
 
         <br><br>
-        <div class="container">
+        <div class="container" id="intro">
             <div class="row pb-1">
                 <div class="col-lg-12 mb-4 pb-2">
                     <div class="owl-carousel owl-carousel-light owl-carousel-light-init-fadeIn owl-theme manual dots-inside dots-horizontal-center show-dots-hover nav-inside nav-inside-plus nav-dark nav-md nav-font-size-md show-nav-hover mb-0" data-plugin-options="{'autoplayTimeout': 5000, 'animateOut': 'fadeOut', 'animateIn': 'fadeIn'}" data-dynamic-height="['700px','700px','700px','700px','700px']">

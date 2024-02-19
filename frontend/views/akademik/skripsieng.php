@@ -30,7 +30,7 @@ $this->params['breadcrumbs'][] = $this->title;
         <div class="row justify-content-center pt-4 mt-5">
             <div class="col-lg-12 text-center">
 
-                <p class="custom-font-secondary custom-font-size-1 line-height-7 mb-0 appear-animation text-justify" data-appear-animation="fadeInUpShorter">A thesis is a scientific work written by undergraduate students to fulfill their final assignment which discusses a particular topic or field based on the results of a literature review, field research results, or development results. To make it easier for students to write a thesis (final assignment), the History Department provides a writing guide as a reference for completing the thesis.</p>
+                <p class="custom-font-secondary custom-font-size-1 line-height-7 mb-0 appear-animation  " data-appear-animation="fadeInUpShorter">A thesis is a scientific work written by undergraduate students to fulfill their final assignment which discusses a particular topic or field based on the results of a literature review, field research results, or development results. To make it easier for students to write a thesis (final assignment), the History Department provides a writing guide as a reference for completing the thesis.</p>
             </div>
         </div>
         <br><br>

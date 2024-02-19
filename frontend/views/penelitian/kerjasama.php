@@ -29,7 +29,7 @@ v<?php
             </a>
         </section>
 
-        <div class="container">
+        <div class="container" id="intro">
             <br>
             <div class="appear-animation" data-appear-animation="fadeInRightShorter" data-appear-animation-delay="500">
                 <h2 class="text-color-primary font-weight-medium positive-ls-3 text-4 mb-0">Kerjasama</h2>
@@ -202,7 +202,7 @@ v<?php
             </a>
         </section>
 
-        <div class="container">
+        <div class="container" id="intro">
             <br>
             <div class="appear-animation" data-appear-animation="fadeInRightShorter" data-appear-animation-delay="500">
                 <h2 class="text-color-primary font-weight-medium positive-ls-3 text-4 mb-0">Collaboration</h2>

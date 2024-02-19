@@ -16,6 +16,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
+        <?= Html::a('Back', ['/peneltian'], ['class' => 'btn btn-success']) ?>
         <?= Html::a('Update', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
         <!-- <?= Html::a('Delete', ['delete', 'id' => $model->id], [
                     'class' => 'btn btn-danger',
@@ -35,16 +36,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 'format' => ['html'],
                 'value' => fn () => Html::img($model->getImageUrl(), ['style' => 'width:150px']),
             ],
-            [
-                'attribute' => 'image2',
-                'format' => ['html'],
-                'value' => fn () => Html::img($model->getImageUrl2(), ['style' => 'width:150px']),
-            ],
-            [
-                'attribute' => 'image3',
-                'format' => ['html'],
-                'value' => fn () => Html::img($model->getImageUrl3(), ['style' => 'width:150px']),
-            ],
+
             'link_video',
         ],
     ]) ?>
