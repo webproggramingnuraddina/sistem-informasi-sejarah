@@ -10,11 +10,16 @@ $this->params['breadcrumbs'][] = ['label' => 'Dosens', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="dosen-create">
-
-    <h1><?= Html::encode($this->title) ?></h1>
-
-    <?= $this->render('_form', [
-        'model' => $model,
-    ]) ?>
-
+    <div class="col-12">
+        <div class="box">
+            <div class="box-header">
+                <h1><?= Html::encode($this->title) ?></h1>
+            </div>
+            <div class="box-body">
+                <?= $this->render('_form', [
+                    'model' => $model,
+                ]) ?>
+            </div>
+        </div>
+    </div>
 </div>

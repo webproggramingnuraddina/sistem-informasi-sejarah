@@ -39,7 +39,7 @@ $this->params['breadcrumbs'][] = $this->title;
         </div>
         <br>
         <div class="row">
-            <div class="col-md-5 text-justify">
+            <div class="col-md-5  ">
                 <h2 class="text-color-primary font-weight-medium positive-ls-3 text-4 mb-0">Knowledge</h2>
                 <ul class="list list-icons list-icons-style-2 list-icons-lg custom-list-icons-icon-size pb-1 mb-3">
                     <li class="font-weight-semibold text-color-dark"><i class="fas fa-check text-color-dark border-color-grey-1 top-7"></i> Graduates are able to explain concepts, theories, and developments in the field of education and history science.</li>
@@ -52,7 +52,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 </ul>
             </div>
             <div class="col-md-2"></div>
-            <div class="col-md-5 text-justify">
+            <div class="col-md-5  ">
                 <h2 class="text-color-primary font-weight-medium positive-ls-3 text-4 mb-0">Generic Skills</h2>
                 <ul class="list list-icons list-icons-style-2 list-icons-lg custom-list-icons-icon-size pb-1 mb-3">
                     <li class="font-weight-semibold text-color-dark"><i class="fas fa-check text-color-dark border-color-grey-1 top-7"></i> Graduates are able to design history learning in secondary schools logically, critically, systematically, and innovatively related to history learning and education.</li>

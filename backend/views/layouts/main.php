@@ -194,6 +194,11 @@ AppAsset::register($this);
               <i class="fa fa-edit"></i> <span>Jurnal</span>
             </a>
           </li>
+          <li <?= Yii::$app->controller->id == 'download' ? 'class=active' : '' ?>>
+            <a href="<?= Url::toRoute(['/download']) ?>">
+              <i class="fa fa-edit"></i> <span>Download</span>
+            </a>
+          </li>
           <li <?= Yii::$app->controller->id == 'layananmutu' ? 'class=active' : '' ?>>
             <a href="<?= Url::toRoute(['/layananmutu']) ?>">
               <i class="fa fa-bar-chart-o"></i> <span>Layanan Mutu</span>

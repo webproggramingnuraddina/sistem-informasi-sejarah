@@ -13,31 +13,32 @@ use frontend\components\Translator;
 ?>
 <div role="main" class="main">
     <?php foreach ($modelHome as $key => $val) : ?>
-        <section class="section section-with-shape-divider overflow-hidden border-0 m-0" style="background-image: url('<?php echo $val->getImageUrl(); ?>'); background-repeat: no-repeat; background-size: cover; background-position: center 70px;">
+        <section class="section section-with-shape-divider overflow-hidden border-0 m-0" style="background-image: url('<?php echo $val->getImageUrl(); ?>'); background-repeat: no-repeat; background-size: cover; background-position: center ;">
 
             <div class="shape-divider shape-divider-bottom" style="height: 120px;">
                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 2000 120" preserveAspectRatio="xMinYMin">
                     <polygon fill="#FFF" points="-11,2 693,112 2019,6 2019,135 -11,135 " />
                 </svg>
             </div>
-            <div class="container custom-container-absolute-centered-x">
+            <!-- <div class="container custom-container-absolute-centered-x">
                 <div class="row justify-content-end">
                     <div class="col-auto position-relative">
-                        <img src="<?= $val->getImageUrl2() ?>" class="img-fluid box-shadow-4 position-relative bottom-10 right-0 d-none d-sm-block appear-animation" data-appear-animation="fadeInLeftShorter" data-appear-animation-delay="500" alt="" width="500" height="400" />
+                        <img src="<?= $val->getImageUrl2() ?>" class="img-fluid box-shadow-4 position-relative bottom-10 right-0 d-none d-sm-block appear-animation" data-appear-animation="fadeInLeftShorter" data-appear-animation-delay="300" alt="" width="500" height="400" />
                     </div>
 
                 </div>
-            </div>
+            </div> -->
             <div class="container-fluid px-0 mb-5">
                 <div class="row">
                     <div class="col-sm-9 col-md-8 col-lg-7 col-xl-4 text-center text-sm-end z-index-0 px-5 px-sm-0 mt-5 mt-sm-0 pt-4 pt-sm-0">
                         <div class="position-relative bg-color-grey p-5">
                             <div class="spacer my-5 py-2 d-none d-sm-block"></div>
                             <div class="overflow-hidden pt-sm-5 mt-sm-5">
-                                <h1 class="font-weight-semibold text-10 mb-0 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="300"><?= Yii::t('app', 'Departemen Sejarah') ?></h1>
+                                <h1 class="font-weight-semibold text-5 mb-0 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="200"><?= Yii::t('app', 'Departemen Sejarah') ?></h1>
+                                <h2 class="font-weight-semibold text-5 mb-0 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="200"><?= Yii::t('app', 'Fakultas Ilmu Sosial') ?></h2>
                             </div>
                             <div class="overflow-hidden mb-3">
-                                <h4 class="font-weight-semibold text-8 line-height-2 mb-0 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="500">
+                                <h4 class="font-weight-semibold text-4 line-height-2 mb-0 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="200">
                                     <strong class="font-weight-extra-bold custom-font-size-2"><?= Yii::t('app', 'Universitas Negeri Padang') ?></strong>
                                 </h4>
                             </div>
@@ -48,10 +49,10 @@ use frontend\components\Translator;
                                 </svg>
                                 GET STARTED
                             </a>
-                            <div class="custom-hero-sub-images-style-1 text-start">
+                            <!-- <div class="custom-hero-sub-images-style-1 text-start">
                                 <div class="custom-hero-sub-images-shadow"></div>
                                 <img src="<?= $val->getImageUrl3() ?>" class="img-fluid appear-animation" data-appear-animation="fadeIn" data-appear-animation-delay="700" alt="" />
-                            </div>
+                            </div> -->
                             <div class="spacer py-2"></div>
                         </div>
                     </div>
@@ -107,7 +108,7 @@ use frontend\components\Translator;
                     <div class="overflow-hidden mb-3">
                         <h3 class="font-weight-bold text-transform-none text-9 line-height-2 mb-0 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="400"><?= Yii::t('app', 'Pendidikan Sejarah') ?></h3>
                     </div>
-                    <p class="mb-0 appear-animation text-justify" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="800"><?= Yii::t('app', 'Prodi Pendidikan Sejarah sudah ada sejak Universitas Negeri Padang didirikan. Universitas Negeri Padang, pada awalnya bernama Perguruan Tinggi Pendidikan Guru (PTPG) di Batusangkar (1954 - 1956), memiliki enam jurusan, salah satunya adalah Jurusan Sejarah. Perkembangan berikutnya, PTPG berubah menjadi Fakultas Keguruan Ilmu Pendidikan (FKIP) di bawah Universitas Andalas Bukittinggi (1956 - 1958). Kemudian bernama FIKIP Unand Padang (1958 - 1964), dan tahun 1964 - 1965 bernama IKIP Jakarta cabang Padang. Selanjutnya periode 1965 - 1999 bernama IKIP Padang, dan sejak 1999 sampai saat ini berubah status menjadi Universitas Negeri Padang (UNP). Setiap kali terjadi perubahan sebagaimana diuraikan di atas, Prodi Pendidikan Sejarah merupakan salah satu program studi yang tetap eksis sebagai sebuah lembaga.') ?></p>
+                    <p class="mb-0 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="800"><?= Yii::t('app', 'Prodi Pendidikan Sejarah sudah ada sejak Universitas Negeri Padang didirikan. Universitas Negeri Padang, pada awalnya bernama Perguruan Tinggi Pendidikan Guru (PTPG) di Batusangkar (1954 - 1956), memiliki enam jurusan, salah satunya adalah Jurusan Sejarah. Perkembangan berikutnya, PTPG berubah menjadi Fakultas Keguruan Ilmu Pendidikan (FKIP) di bawah Universitas Andalas Bukittinggi (1956 - 1958). Kemudian bernama FIKIP Unand Padang (1958 - 1964), dan tahun 1964 - 1965 bernama IKIP Jakarta cabang Padang. Selanjutnya periode 1965 - 1999 bernama IKIP Padang, dan sejak 1999 sampai saat ini berubah status menjadi Universitas Negeri Padang (UNP). Setiap kali terjadi perubahan sebagaimana diuraikan di atas, Prodi Pendidikan Sejarah merupakan salah satu program studi yang tetap eksis sebagai sebuah lembaga.') ?></p>
 
                 </div>
             </div>
@@ -170,12 +171,7 @@ use frontend\components\Translator;
                         <?php if ($val->id == 1) { ?>
                             <div class="col-lg-6 appear-animation" data-appear-animation="fadeInRightShorter" data-appear-animation-delay="500">
                                 <p class="font-weight-semibold text-color-dark"><?= Yii::t('app', $val->deskripsi) ?></p>
-                                <a href="#" class="custom-read-more btn btn-link d-inline-flex align-items-center font-weight-semibold text-decoration-none ps-0">
-                                    READ MORE
-                                    <svg class="ms-2" version="1.1" viewBox="0 0 15.698 8.706" width="17" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                        <polygon stroke="#FFF" stroke-width="0.1" fill="#FFF" points="11.354,0 10.646,0.706 13.786,3.853 0,3.853 0,4.853 13.786,4.853 10.646,8 11.354,8.706 15.698,4.353 " />
-                                    </svg>
-                                </a>
+
                             </div>
                         <?php } ?>
                     <?php endforeach; ?>
