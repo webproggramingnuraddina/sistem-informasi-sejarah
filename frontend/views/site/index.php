@@ -602,21 +602,27 @@ use frontend\components\Translator;
         <div class="container py-5 my-4">
             <div class="row align-items-center">
                 <div class="col-lg-6 pe-lg-5 mb-4 mb-lg-0">
-                    <div class="featured-boxes featured-boxes-modern-style-1 box-shadow-3">
-                        <div class="featured-box custom-featured-box-with-video">
-                            <div class="custom-featured-box-video">
-                                <iframe width="560" height="315" src="https://www.youtube.com/embed/<?= $val->link_video ?>" frameborder="0" allowfullscreen></iframe>
-                            </div>
-                            <div class="featured-box-background" style="background-image: url(''); background-size: cover; background-position: center;"></div>
-                            <div class="box-content">
-                                <a class="custom-trigger-play-video text-decoration-none d-block" href="#">
-                                    <i class="fas fa-play featured-icon featured-icon-style-2 featured-icon-hover-effect-1 text-4 bg-transparent rounded-circle border border-width-10 border-color-light right-4 top-0 m-0"></i>
-                                </a>
-                            </div>
-                        </div>
+                    <?php
+                    // Link video dari database
+                    $link_video = $val->link_video;
 
-                    </div>
+                    // Mendapatkan ID video dari link
+                    $video_id = explode("v=", $link_video)[1];
+                    $ampersand_position = strpos($video_id, "&");
+                    if ($ampersand_position !== false) {
+                        $video_id = substr($video_id, 0, $ampersand_position);
+                    }
+
+                    // Membuat link baru dengan ID video dan parameter autoplay dan mute
+                    $new_link = "https://www.youtube.com/embed/" . $video_id . "?autoplay=1&mute=1";
+                    ?>
+
+                    <!-- Pemanggilan baru -->
+                    <iframe width="560" height="315" src="<?= $new_link ?>"></iframe>
+
                 </div>
+
+
                 <div class="col-lg-6">
                     <div class="overflow-hidden">
                         <h2 class="text-color-primary font-weight-medium positive-ls-3 text-4 mb-0 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="200">THE ADVANTAGE</h2>
