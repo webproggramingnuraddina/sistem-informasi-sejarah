@@ -289,6 +289,8 @@ class SiteController extends Controller
 
     public function actionBerita()
     {
+        $lang = Yii::$app->session->get('language', 'id');
+        Yii::$app->language = $lang;
         $modelBerita = Berita::find()->all();
         return $this->render('berita', [
             'modelBerita' => $modelBerita,
