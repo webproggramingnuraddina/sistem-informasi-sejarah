@@ -53,8 +53,8 @@ $languages = [
 	<meta name="author" content="okler.net">
 
 	<!-- Favicon -->
-	<link rel="shortcut icon" href="<?= Yii::$app->getHomeUrl(); ?>img/favicon.ico" type="image/x-icon" />
-	<link rel="apple-touch-icon" href="<?= Yii::$app->getHomeUrl(); ?>img/apple-touch-icon.png">
+	<link rel="shortcut icon" href="<?= Yii::$app->getHomeUrl(); ?>img/logos/logo5.png" type="image/x-icon" />
+	<link rel="apple-touch-icon" href="<?= Yii::$app->getHomeUrl(); ?>img/logos/logo5.png">
 
 	<!-- Mobile Metas -->
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
@@ -151,7 +151,7 @@ $languages = [
 								<div class="header-row">
 									<div class="header-logo">
 										<a href="<?= Url::toRoute(['/site/index']) ?>">
-											<img src="<?= Yii::$app->getHomeUrl(); ?>img/demos/industry-factory/backgrounds/Logo_Departemen.png" class="img-fluid" alt="" />
+											<img src="<?= Yii::$app->getHomeUrl(); ?>img/logos/logo_departemen.png" class="img-fluid" alt="" style="height: 60px;" />
 
 										</a>
 									</div>
@@ -343,11 +343,14 @@ $languages = [
 					</div>
 				</div>
 			</div>
+			<?php
+			$currentYear = date('Y');
+			?>
 			<div class="footer-copyright custom-bg-lighten-grey-1 mt-5 pb-5">
 				<div class="container custom-footer-top-light-border pt-4">
 					<div class="row">
 						<div class="col">
-							<p class="text-center text-3 mb-0">Departemen Sejarah © 2024. All Rights Reserved.</p>
+							<p class="text-center text-3 mb-0">Departemen Sejarah © <?php echo $currentYear; ?>. All Rights Reserved.</p>
 						</div>
 					</div>
 				</div>
