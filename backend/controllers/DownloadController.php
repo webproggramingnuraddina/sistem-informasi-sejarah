@@ -40,8 +40,10 @@ class DownloadController extends Controller
     {
         $searchModel = new DownloadSearch();
         $dataProvider = $searchModel->search($this->request->queryParams);
+        $download = Download::find()->all();
 
         return $this->render('index', [
+            'download' => $download,
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
         ]);
