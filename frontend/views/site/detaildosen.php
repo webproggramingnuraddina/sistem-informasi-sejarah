@@ -80,7 +80,7 @@
                                                         <p class="text-center"><?= Yii::t('app', $dosen->pendidikan_magister) ?></p>
 
                                                         <h4 class="text-center"><?= Yii::t('app', 'Doctoral (S3)') ?></h4>
-                                                        <p class="text-center"><?= $dosen->pendidikan_doktoral ?></p>
+                                                        <p class="text-center"><?= Yii::t('app', $dosen->pendidikan_doktoral) ?></p>
 
                                                     </div>
                                                 </div> <!-- .et_pb_text -->

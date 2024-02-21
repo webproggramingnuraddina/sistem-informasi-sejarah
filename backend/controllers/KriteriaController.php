@@ -2,11 +2,12 @@
 
 namespace backend\controllers;
 
-use backend\models\Kriteria;
-use backend\models\KriteriaSearch;
 use yii\web\Controller;
-use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use backend\models\Kriteria;
+use yii\filters\AccessControl;
+use backend\models\KriteriaSearch;
+use yii\web\NotFoundHttpException;
 
 /**
  * KriteriaController implements the CRUD actions for Kriteria model.
@@ -16,19 +17,42 @@ class KriteriaController extends Controller
     /**
      * @inheritDoc
      */
+    // public function behaviors()
+    // {
+    //     return array_merge(
+    //         parent::behaviors(),
+    //         [
+    //             'verbs' => [
+    //                 'class' => VerbFilter::className(),
+    //                 'actions' => [
+    //                     //'delete' => ['POST'],
+    //                 ],
+    //             ],
+    //         ]
+    //     );
+    // }
+
     public function behaviors()
     {
-        return array_merge(
-            parent::behaviors(),
-            [
-                'verbs' => [
-                    'class' => VerbFilter::className(),
-                    'actions' => [
-                        //'delete' => ['POST'],
+        return [
+            'access' => [
+                'class' => AccessControl::className(),
+                'only' => ['index', 'create', 'delete', 'update', 'view'], // Tentukan aksi yang ingin Anda batasi aksesnya di sini
+                'rules' => [
+                    [
+                        'allow' => true,
+                        'actions' => ['index', 'create', 'delete', 'update', 'view'], // Aksi yang diizinkan
+                        'roles' => ['@'], // Hanya pengguna yang sudah login ('@') yang diizinkan
                     ],
                 ],
-            ]
-        );
+            ],
+            'verbs' => [
+                'class' => VerbFilter::className(),
+                'actions' => [
+                    //'delete' => ['POST'],
+                ],
+            ],
+        ];
     }
 
     /**

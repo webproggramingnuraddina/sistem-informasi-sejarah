@@ -2,12 +2,13 @@
 
 namespace backend\controllers;
 
-use backend\models\Kadep;
-use backend\models\KadepSearch;
 use yii\web\Controller;
-use yii\web\NotFoundHttpException;
-use yii\filters\VerbFilter;
+use backend\models\Kadep;
 use yii\web\UploadedFile;
+use yii\filters\VerbFilter;
+use yii\filters\AccessControl;
+use backend\models\KadepSearch;
+use yii\web\NotFoundHttpException;
 
 /**
  * KadepController implements the CRUD actions for Kadep model.
@@ -17,19 +18,42 @@ class KadepController extends Controller
     /**
      * @inheritDoc
      */
+    // public function behaviors()
+    // {
+    //     return array_merge(
+    //         parent::behaviors(),
+    //         [
+    //             'verbs' => [
+    //                 'class' => VerbFilter::className(),
+    //                 'actions' => [
+    //                     'delete' => ['POST'],
+    //                 ],
+    //             ],
+    //         ]
+    //     );
+    // }
+
     public function behaviors()
     {
-        return array_merge(
-            parent::behaviors(),
-            [
-                'verbs' => [
-                    'class' => VerbFilter::className(),
-                    'actions' => [
-                        'delete' => ['POST'],
+        return [
+            'access' => [
+                'class' => AccessControl::className(),
+                'only' => ['index', 'create', 'delete', 'update', 'view'], // Tentukan aksi yang ingin Anda batasi aksesnya di sini
+                'rules' => [
+                    [
+                        'allow' => true,
+                        'actions' => ['index', 'create', 'delete', 'update', 'view'], // Aksi yang diizinkan
+                        'roles' => ['@'], // Hanya pengguna yang sudah login ('@') yang diizinkan
                     ],
                 ],
-            ]
-        );
+            ],
+            'verbs' => [
+                'class' => VerbFilter::className(),
+                'actions' => [
+                    //'delete' => ['POST'],
+                ],
+            ],
+        ];
     }
 
     /**

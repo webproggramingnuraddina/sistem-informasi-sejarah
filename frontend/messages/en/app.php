@@ -61,8 +61,21 @@ return [
     'Pendidikan IPS' => 'Social Sciences Education',
     'Kepala Departemen Sejarah' => 'Head of History Department',
     'Sekretaris Departemen Sejarah' => 'Secretary of the History Department',
-
-
+    'Evaluasi pendidikan Sejarah' => 'Evaluation of History Education',
+    'S1 Pendidikan Sejarah, Universitas Negeri Padang (UNP)' => 'Bachelor of History Education, State University of Padang (UNP)',
+    'S2 Penelitian dan Evaluasi Pendidikan, Universitas Negeri Yogyakarta (UNY)' => 'Master of Education Research and Evaluation, State University of Yogyakarta (UNY)',
+    'S3 Penelitian dan Evaluasi Pendidikan, Universitas Negeri Yogyakarta (UNY)' => 'Doctor of Education Research and Evaluation, State University of Yogyakarta (UNY)',
+    'Multimedia Pembelajaran Sejarah' => 'Multimedia Learning History',
+    'S2 Pendidikan IPS, Universitas Negeri Padang (UNP)' => 'Master of Social Studies Education, State University of Padang (UNP)',
+    'S2 Ilmu Sejarah, Universitas Indonesia (UI)' => 'Master of History, University of Indonesia (UI)',
+    'S3 Sosiologi Pedesaan, Universitas Brawijaya (UNIBRAW)' => 'Doctor of Rural Sociology, Brawijaya University (UNIBRAW)',
+    'S2 Pendidikan Sejarah, Universitas Sebelas Maret (UNS)' => 'Master of History Education, Sebelas Maret University (UNS)',
+    'S3 Ilmu Pendidikan, Universitas Negeri Padang (UNP)' => 'Doctor of Education, State University of Padang (UNP)',
+    'S1 Ilmu Sejarah, Universitas Andalas (UNAND)' => 'Bachelor of History, Andalas University (UNAND)',
+    'S2 Ilmu Sejarah, Universitas Gajah Mada (UGM)' => 'Master of History, Gajah Mada University (UGM)',
+    'S1 Pendidikan Sejarah, Universitas Pendidikan Indonesia (UPI)' => 'Bachelor of History Education, Indonesian University of Education (UPI)',
+    'S2 Pendidikan Sejarah, Universitas Pendidikan Indonesia (UPI)' => 'Master of History Education, Indonesian University of Education (UPI)',
+    'S2 Ilmu Sejarah, Universitas Andalas (UNAND)' => 'Master of History, Andalas University (UNAND)',
 
 
 
