@@ -12,6 +12,7 @@ return [
     'Mahasiswa & Alumni' => 'Students & Alumni',
     'Penelitian & Pengabdian' => 'Research & Service',
     'Departemen Sejarah' => 'History Department',
+    'Fakultas Ilmu Sosial' => 'Faculty of Social Sciences',
 
     'Program Studi' => 'Study program',
     'Pendidikan Sejarah' => 'History Education',
