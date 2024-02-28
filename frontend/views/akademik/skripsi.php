@@ -37,7 +37,7 @@ Yii::$app->language = $lang;
                 </div>
             </div>
             <br>
-            <a href="http://kurikulum.unp.ac.id/root/kurikulum/4" class="btn btn-primary btn-modern text-uppercase bg-color-hover-dark border-color-hover-dark custom-border-radius">Panduan Penulisan Skripsi</a>
+            <a href="https://drive.google.com/file/d/1iFwCBKGER52nHrQU6u2cWQBcrIzERn1k/view?usp=drive_link" class="btn btn-primary btn-modern text-uppercase bg-color-hover-dark border-color-hover-dark custom-border-radius">Panduan Penulisan Skripsi</a>
 
             <br><br><br>
         </div>
@@ -69,7 +69,7 @@ Yii::$app->language = $lang;
                 </div>
             </div>
             <br><br>
-            <a href="http://kurikulum.unp.ac.id/root/kurikulum/4" class="btn btn-primary btn-modern text-uppercase bg-color-hover-dark border-color-hover-dark custom-border-radius">Thesis Writing Guide</a>
+            <a href="https://drive.google.com/file/d/1iFwCBKGER52nHrQU6u2cWQBcrIzERn1k/view?usp=drive_link" class="btn btn-primary btn-modern text-uppercase bg-color-hover-dark border-color-hover-dark custom-border-radius">Thesis Writing Guide</a>
 
             <br><br><br>
         </div>

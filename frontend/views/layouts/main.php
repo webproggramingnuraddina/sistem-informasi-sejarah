@@ -112,7 +112,7 @@ $languages = [
 									<ul class="list list-unstyled list-inline mb-0">
 
 										<strong>
-											<li id="date-time" class="list-inline-item text-color-dark mb-0"></li>
+											<li id="date-time" class="list-inline-item text-color-dark mb-0"> </li>
 										</strong>
 
 									</ul>
@@ -336,9 +336,9 @@ $languages = [
 					<div class="col-lg-4 mb-5 mb-lg-0">
 						<h4 class="text-color-light font-weght-bold positive-ls-2 custom-font-size-2">OPENING HOURS</h4>
 						<ul class="list list-unstyled list-inline custom-list-style-1 mb-0">
-							<li><a href="#">Mon - Sat: 7:00 am to 6:00 pm</a></li>
+							<li><a href="#">Senin-Jumat 7.00 - 16.00</a></li>
 							<!-- <li><a href="#">Saturday: :30 am to 1:00 pm</a></li> -->
-							<li><a href="#">Sunday: Closed</a></li>
+							<!-- <li><a href="#">Sunday: Closed</a></li> -->
 						</ul>
 					</div>
 				</div>

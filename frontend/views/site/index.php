@@ -110,61 +110,91 @@ use frontend\components\Translator;
         <div class="container position-relative z-index-3">
             <div class="row align-items-center justify-content-center">
                 <div class="row">
-                    <div class="col-md-6"></div>
-                    <div class="col-md-6">
-                        <h3 class="font-weight-bold text-transform-none text-12 line-height-2 mb-3"><?= Yii::t('app', 'Departemen Sejarah') ?></h3> <br>
+                    <div>
+                        <h3 align="center" class="font-weight-bold text-transform-none text-12 line-height-2 mb-3"><?= Yii::t('app', 'Departemen Sejarah') ?></h3> <br>
+                        <?php foreach ($modelKadep as $key => $val) : ?>
+                            <?php if ($val->id == 1) { ?>
+                                <div data-appear-animation="fadeInRightShorter" data-appear-animation-delay="500">
+                                    <p class="font-weight text-color-dark"><?= Yii::t('app', $val->deskripsi) ?></p>
 
+                                </div>
+                            <?php } ?>
+                        <?php endforeach; ?>
                     </div>
                 </div>
 
                 <div class="row">
-                    <div class="col-lg-6 pe-lg-5 mb-4 mb-lg-0">
-                        <div class="row">
-                            <?php foreach ($modelKadep as $key => $val) : ?>
-                                <?php if ($val->id == 2) { ?>
-                                    <div class="col-sm-6 mb-4 mb-md-0" style="padding-bottom: 20px;">
-                                        <a href="#ourHistoryLightbox">
-                                            <span class="thumb-info custom-thumb-info-style-1 thumb-info-no-borders thumb-info-no-borders-rounded">
-
-                                                <img src="<?= $val->getImageUrl() ?>" alt="" class="img-fluid" style="max-width: 250px; max-height: 320px;">
-
-                                            </span>
-                                        </a>
-
-                                        <p class="d-block positive-ls-3 text-2 pt-3 mb-0 line-height-4"><?= $val->nama ?></p>
-                                        <p class="d-block positive-ls-3 text-1 mb-0 opacity-7"><?= Yii::t('app', 'Sekretaris Departemen Sejarah') ?></p>
-                                    </div>
-                                <?php } ?>
-                            <?php endforeach; ?>
-
-                            <?php foreach ($modelKadep as $key => $val) : ?>
-                                <?php if ($val->id == 1) { ?>
-                                    <div class="col-sm-6">
-                                        <a href="#ourHistoryLightbox">
-                                            <span class="thumb-info custom-thumb-info-style-1 thumb-info-no-borders thumb-info-no-borders-rounded">
-
-                                                <img src="<?= $val->getImageUrl() ?>" alt="" class="img-fluid" style="max-width: 250px; max-height: 400px;">
-
-
-                                            </span>
-                                        </a>
-
-                                        <p class="d-block positive-ls-3 text-2 pt-3 mb-0 line-height-4"><?= $val->nama ?></p>
-                                        <p class="d-block positive-ls-3 text-1 mb-0 opacity-7"><?= Yii::t('app', 'Kepala Departemen Sejarah') ?></p>
-                                    </div>
-                                <?php } ?>
-                            <?php endforeach; ?>
-                        </div>
-                    </div>
 
                     <?php foreach ($modelKadep as $key => $val) : ?>
-                        <?php if ($val->id == 1) { ?>
-                            <div class="col-lg-6 appear-animation" data-appear-animation="fadeInRightShorter" data-appear-animation-delay="500">
-                                <p class="font-weight-semibold text-color-dark"><?= Yii::t('app', $val->deskripsi) ?></p>
+                        <?php if ($val->id == 2) { ?>
+                            <div class="col-sm-3 mb-4 mb-md-0" style="padding-bottom: 20px;">
+                                <a href="#ourHistoryLightbox">
+                                    <span class="thumb-info custom-thumb-info-style-1 thumb-info-no-borders thumb-info-no-borders-rounded">
 
+                                        <img src="<?= $val->getImageUrl() ?>" alt="" class="img-fluid" style="max-width: 250px; max-height: 400px;">
+
+                                    </span>
+                                </a>
+
+                                <p class="d-block positive-ls-3 text-2 pt-3 mb-0 line-height-4"><?= $val->nama ?></p>
+                                <p class="d-block positive-ls-3 text-1 mb-0 opacity-7"><?= Yii::t('app', 'Sekretaris Departemen Sejarah') ?></p>
                             </div>
                         <?php } ?>
                     <?php endforeach; ?>
+
+                    <?php foreach ($modelKadep as $key => $val) : ?>
+                        <?php if ($val->id == 1) { ?>
+                            <div class="col-sm-3">
+                                <a href="#ourHistoryLightbox">
+                                    <span class="thumb-info custom-thumb-info-style-1 thumb-info-no-borders thumb-info-no-borders-rounded">
+
+                                        <img src="<?= $val->getImageUrl() ?>" alt="" class="img-fluid" style="max-width: 250px; max-height: 400px;">
+
+
+                                    </span>
+                                </a>
+
+                                <p class="d-block positive-ls-3 text-2 pt-3 mb-0 line-height-4"><?= $val->nama ?></p>
+                                <p class="d-block positive-ls-3 text-1 mb-0 opacity-7"><?= Yii::t('app', 'Kepala Departemen Sejarah') ?></p>
+                            </div>
+                        <?php } ?>
+                    <?php endforeach; ?>
+
+                    <?php foreach ($modelKadep as $key => $val) : ?>
+                        <?php if ($val->id == 2) { ?>
+                            <div class="col-sm-3 mb-4 mb-md-0" style="padding-bottom: 20px;">
+                                <a href="#ourHistoryLightbox">
+                                    <span class="thumb-info custom-thumb-info-style-1 thumb-info-no-borders thumb-info-no-borders-rounded">
+
+                                        <img src="<?= $val->getImageUrl() ?>" alt="" class="img-fluid" style="max-width: 250px; max-height: 400px;">
+
+                                    </span>
+                                </a>
+
+                                <p class="d-block positive-ls-3 text-2 pt-3 mb-0 line-height-4"><?= $val->nama ?></p>
+                                <p class="d-block positive-ls-3 text-1 mb-0 opacity-7"><?= Yii::t('app', 'Sekretaris Departemen Sejarah') ?></p>
+                            </div>
+                        <?php } ?>
+                    <?php endforeach; ?>
+
+                    <?php foreach ($modelKadep as $key => $val) : ?>
+                        <?php if ($val->id == 1) { ?>
+                            <div class="col-sm-3">
+                                <a href="#ourHistoryLightbox">
+                                    <span class="thumb-info custom-thumb-info-style-1 thumb-info-no-borders thumb-info-no-borders-rounded">
+
+                                        <img src="<?= $val->getImageUrl() ?>" alt="" class="img-fluid" style="max-width: 250px; max-height: 400px;">
+
+
+                                    </span>
+                                </a>
+
+                                <p class="d-block positive-ls-3 text-2 pt-3 mb-0 line-height-4"><?= $val->nama ?></p>
+                                <p class="d-block positive-ls-3 text-1 mb-0 opacity-7"><?= Yii::t('app', 'Kepala Departemen Sejarah') ?></p>
+                            </div>
+                        <?php } ?>
+                    <?php endforeach; ?>
+
                 </div>
 
 
