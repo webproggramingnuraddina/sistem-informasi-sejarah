@@ -126,7 +126,7 @@ use frontend\components\Translator;
                 <div class="row">
 
                     <?php foreach ($modelKadep as $key => $val) : ?>
-                        <?php if ($val->id == 2) { ?>
+                        <?php if ($val->id == 1) { ?>
                             <div class="col-sm-3 mb-4 mb-md-0" style="padding-bottom: 20px;">
                                 <a href="#ourHistoryLightbox">
                                     <span class="thumb-info custom-thumb-info-style-1 thumb-info-no-borders thumb-info-no-borders-rounded">
@@ -137,13 +137,13 @@ use frontend\components\Translator;
                                 </a>
 
                                 <p class="d-block positive-ls-3 text-2 pt-3 mb-0 line-height-4"><?= $val->nama ?></p>
-                                <p class="d-block positive-ls-3 text-1 mb-0 opacity-7"><?= Yii::t('app', 'Sekretaris Departemen Sejarah') ?></p>
+                                <p class="d-block positive-ls-3 text-1 mb-0 opacity-7"><?= Yii::t('app', $val->jabatan) ?></p>
                             </div>
                         <?php } ?>
                     <?php endforeach; ?>
 
                     <?php foreach ($modelKadep as $key => $val) : ?>
-                        <?php if ($val->id == 1) { ?>
+                        <?php if ($val->id == 2) { ?>
                             <div class="col-sm-3">
                                 <a href="#ourHistoryLightbox">
                                     <span class="thumb-info custom-thumb-info-style-1 thumb-info-no-borders thumb-info-no-borders-rounded">
@@ -155,13 +155,13 @@ use frontend\components\Translator;
                                 </a>
 
                                 <p class="d-block positive-ls-3 text-2 pt-3 mb-0 line-height-4"><?= $val->nama ?></p>
-                                <p class="d-block positive-ls-3 text-1 mb-0 opacity-7"><?= Yii::t('app', 'Kepala Departemen Sejarah') ?></p>
+                                <p class="d-block positive-ls-3 text-1 mb-0 opacity-7"><?= Yii::t('app', $val->jabatan) ?></p>
                             </div>
                         <?php } ?>
                     <?php endforeach; ?>
 
                     <?php foreach ($modelKadep as $key => $val) : ?>
-                        <?php if ($val->id == 2) { ?>
+                        <?php if ($val->id == 3) { ?>
                             <div class="col-sm-3 mb-4 mb-md-0" style="padding-bottom: 20px;">
                                 <a href="#ourHistoryLightbox">
                                     <span class="thumb-info custom-thumb-info-style-1 thumb-info-no-borders thumb-info-no-borders-rounded">
@@ -172,13 +172,13 @@ use frontend\components\Translator;
                                 </a>
 
                                 <p class="d-block positive-ls-3 text-2 pt-3 mb-0 line-height-4"><?= $val->nama ?></p>
-                                <p class="d-block positive-ls-3 text-1 mb-0 opacity-7"><?= Yii::t('app', 'Sekretaris Departemen Sejarah') ?></p>
+                                <p class="d-block positive-ls-3 text-1 mb-0 opacity-7"><?= Yii::t('app', $val->jabatan) ?></p>
                             </div>
                         <?php } ?>
                     <?php endforeach; ?>
 
                     <?php foreach ($modelKadep as $key => $val) : ?>
-                        <?php if ($val->id == 1) { ?>
+                        <?php if ($val->id == 4) { ?>
                             <div class="col-sm-3">
                                 <a href="#ourHistoryLightbox">
                                     <span class="thumb-info custom-thumb-info-style-1 thumb-info-no-borders thumb-info-no-borders-rounded">
@@ -190,7 +190,7 @@ use frontend\components\Translator;
                                 </a>
 
                                 <p class="d-block positive-ls-3 text-2 pt-3 mb-0 line-height-4"><?= $val->nama ?></p>
-                                <p class="d-block positive-ls-3 text-1 mb-0 opacity-7"><?= Yii::t('app', 'Kepala Departemen Sejarah') ?></p>
+                                <p class="d-block positive-ls-3 text-1 mb-0 opacity-7"><?= Yii::t('app', $val->jabatan) ?></p>
                             </div>
                         <?php } ?>
                     <?php endforeach; ?>

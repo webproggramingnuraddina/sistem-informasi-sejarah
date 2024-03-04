@@ -34,10 +34,10 @@ Yii::$app->language = $lang;
             <div class="row justify-content-center pt-4 mt-5">
                 <div class="col-lg-12">
 
-                    <p class="custom-font-secondary custom-font-size-1 line-height-7 mb-0 appear-animation" data-appear-animation="fadeInUpShorter">Penyelenggaraan pembelajaran di Program Studi Pendidikan Sejarah (PSPS) menggunakan kurikulum Merdeka Belajar Kampus Merdeka (MBKM) yang sesuai dengan tuntutan pembelajaran abad 21. Kurikulum PSPS terdiri dari 145 SKS. Kurikulum dirancang berdasarkan evaluasi pelaksanaan kurikulum sebelumnya, prinsip pengembangan kurikulum MBKM, dan sesuai dengan Visi Misi PSPS dengan penciri dalam mendidik calon pendidik Sejarah yang profesional, berwawasan global dan berkearifan lokal. Model pembelajaran yang dikembangkan adalah case based and team based project sehingga terjadi keseimbangan kompetensi mahasiswa dan penilaian pada proses dan hasil belajar. Kurikulum PSPS dapat dilihat pada link berikut:</p>
+                    <p class="appear-animation" data-appear-animation="fadeInUpShorter">Penyelenggaraan pembelajaran di Program Studi Pendidikan Sejarah (PSPS) menggunakan kurikulum Merdeka Belajar Kampus Merdeka (MBKM) yang sesuai dengan tuntutan pembelajaran abad 21. Kurikulum PSPS terdiri dari 145 SKS. Kurikulum dirancang berdasarkan evaluasi pelaksanaan kurikulum sebelumnya, prinsip pengembangan kurikulum MBKM, dan sesuai dengan Visi Misi PSPS dengan penciri dalam mendidik calon pendidik Sejarah yang profesional, berwawasan global dan berkearifan lokal. Model pembelajaran yang dikembangkan adalah case based and team based project sehingga terjadi keseimbangan kompetensi mahasiswa dan penilaian pada proses dan hasil belajar. Kurikulum PSPS dapat dilihat pada link berikut:</p>
                 </div>
             </div>
-            <br><br>
+            <br>
             <a href="http://kurikulum.unp.ac.id/root/kurikulum/4" class="btn btn-primary btn-modern text-uppercase bg-color-hover-dark border-color-hover-dark custom-border-radius">Kurikulum</a>
 
             <br><br><br>
@@ -63,12 +63,12 @@ Yii::$app->language = $lang;
 
         <div class="container pt-2 d-flex flex-column align-items-center" id="intro">
             <div class="row justify-content-center pt-4 mt-5">
-                <div class="col-lg-12 text-center">
+                <div class="col-lg-12">
 
-                    <p class="custom-font-secondary custom-font-size-1 line-height-7 mb-0 appear-animation  " data-appear-animation="fadeInUpShorter">The implementation of learning in the History Education Study Program (PSPS) uses the Merdeka Belajar Kampus Merdeka (MBKM) curriculum which is in line with the demands of 21st century learning. The PSPS curriculum consists of 145 credits. The curriculum is designed based on an evaluation of previous curriculum implementation, the principles of MBKM curriculum development, and in accordance with the PSPS Vision and Mission with the characteristics of educating prospective history educators who are professional, have a global perspective and have local wisdom. The learning model developed is case based and team based project so that there is a balance of student competence and assessment of the learning process and outcomes. The PSPS curriculum can be seen at the following link :</p>
+                    <p class="appear-animation  " data-appear-animation="fadeInUpShorter">The implementation of learning in the History Education Study Program (PSPS) uses the Merdeka Belajar Kampus Merdeka (MBKM) curriculum which is in line with the demands of 21st century learning. The PSPS curriculum consists of 145 credits. The curriculum is designed based on an evaluation of previous curriculum implementation, the principles of MBKM curriculum development, and in accordance with the PSPS Vision and Mission with the characteristics of educating prospective history educators who are professional, have a global perspective and have local wisdom. The learning model developed is case based and team based project so that there is a balance of student competence and assessment of the learning process and outcomes. The PSPS curriculum can be seen at the following link :</p>
                 </div>
             </div>
-            <br><br>
+            <br>
             <a href="http://kurikulum.unp.ac.id/root/kurikulum/4" class="btn btn-primary btn-modern text-uppercase bg-color-hover-dark border-color-hover-dark custom-border-radius">Curriculum</a>
 
             <br><br><br>

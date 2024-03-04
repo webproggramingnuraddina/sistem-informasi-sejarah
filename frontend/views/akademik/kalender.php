@@ -34,10 +34,10 @@ Yii::$app->language = $lang;
             <div class="row justify-content-center pt-4 mt-5">
                 <div class="col-lg-12">
 
-                    <p class="custom-font-secondary custom-font-size-1 line-height-7 mb-0 appear-animation" data-appear-animation="fadeInUpShorter">Kalender Akademik merupakan acuan pelaksanaan akademik perguruan tinggi untuk mencapai proses pembelajaran yang optimal. Keseluruhan pelaksanaan kegiatan belajar tersebut disusun oleh perguruan tinggi dalam satu tahun akademik. Kalender akademik terbaru dapat diakses pada link yang telah disediakan di bawah. </p>
+                    <p class="appear-animation" data-appear-animation="fadeInUpShorter">Kalender Akademik merupakan acuan pelaksanaan akademik perguruan tinggi untuk mencapai proses pembelajaran yang optimal. Keseluruhan pelaksanaan kegiatan belajar tersebut disusun oleh perguruan tinggi dalam satu tahun akademik. Kalender akademik terbaru dapat diakses pada link yang telah disediakan di bawah. </p>
                 </div>
             </div>
-            <br><br>
+            <br>
             <a href="https://bak.unp.ac.id/index.php/download/akademik/kalender-akademik" class="btn btn-primary btn-modern text-uppercase bg-color-hover-dark border-color-hover-dark custom-border-radius">Kalender Akademik</a>
 
             <br><br><br>
@@ -64,12 +64,12 @@ Yii::$app->language = $lang;
 
         <div class="container pt-2 d-flex flex-column align-items-center" id="intro">
             <div class="row justify-content-center pt-4 mt-5">
-                <div class="col-lg-12 text-center">
+                <div class="col-lg-12">
 
-                    <p class="custom-font-secondary custom-font-size-1 line-height-7 mb-0 appear-animation" data-appear-animation="fadeInUpShorter">The Academic Calendar is a reference for higher education academic implementation to achieve an optimal learning process. The entire implementation of these learning activities is prepared by the university in one academic year. The latest academic calendar can be accessed at the link provided below.</p>
+                    <p class="appear-animation" data-appear-animation="fadeInUpShorter">The Academic Calendar is a reference for higher education academic implementation to achieve an optimal learning process. The entire implementation of these learning activities is prepared by the university in one academic year. The latest academic calendar can be accessed at the link provided below.</p>
                 </div>
             </div>
-            <br><br>
+            <br>
             <a href="https://bak.unp.ac.id/index.php/download/akademik/kalender-akademik" class="btn btn-primary btn-modern text-uppercase bg-color-hover-dark border-color-hover-dark custom-border-radius">Academic Calendar</a>
 
             <br><br><br>

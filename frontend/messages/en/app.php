@@ -58,7 +58,10 @@ return [
     'Di sini Anda dapat mengunduh berbagai dokumen yang berkaitan dengan kegiatan dan informasi penting yang disediakan' => 'Here you can download various documents related to activities and important information provided.',
     'Pendidikan Sejarah' => 'History Education',
     'Pendidikan IPS' => 'Social Sciences Education',
-    'Kepala Departemen Sejarah' => 'Head of History Department',
+    'Kepala Departemen Sejarah / Kaprodi Sejarah' => 'Head of History Department / Head of history study program',
+    'Kaprodi Ilmu Pengetahuan Sosial' => 'Head of Social Sciences Study Program',
+    'Kepala Laboratorium Sejarah' => 'Head of the History Laboratory',
+    'Kepala Laboratorium IPS' => 'Head of the IPS Laboratory',
     'Sekretaris Departemen Sejarah' => 'Secretary of the History Department',
 
 

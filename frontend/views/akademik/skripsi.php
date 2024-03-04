@@ -33,7 +33,7 @@ Yii::$app->language = $lang;
             <div class="row justify-content-center pt-4 mt-5">
                 <div class="col-lg-12">
 
-                    <p class="custom-font-secondary custom-font-size-1 line-height-7 mb-0 appear-animation  " data-appear-animation="fadeInUpShorter">Skripsi merupakan karya ilmiah yang ditulis mahasiswa program S1 dalam memenuhi tugas akhir yang membahas sebuah topik atau bidang tertentu berdasarkan hasil kajian pustaka, hasil penelitian lapangan, atau hasil pengembangan. Dalam mempermudah mahasiswa menulis skripsi (tugas akhir), Departemen Sejarah menyediakan panduan penulisan sebagai acuan untuk menyelesaikan skripsi.</p>
+                    <p class="appear-animation  " data-appear-animation="fadeInUpShorter">Skripsi merupakan karya ilmiah yang ditulis mahasiswa program S1 dalam memenuhi tugas akhir yang membahas sebuah topik atau bidang tertentu berdasarkan hasil kajian pustaka, hasil penelitian lapangan, atau hasil pengembangan. Dalam mempermudah mahasiswa menulis skripsi (tugas akhir), Departemen Sejarah menyediakan panduan penulisan sebagai acuan untuk menyelesaikan skripsi.</p>
                 </div>
             </div>
             <br>
@@ -65,10 +65,10 @@ Yii::$app->language = $lang;
             <div class="row justify-content-center pt-4 mt-5">
                 <div class="col-lg-12">
 
-                    <p class="custom-font-secondary custom-font-size-1 line-height-7 mb-0 appear-animation  " data-appear-animation="fadeInUpShorter">A thesis is a scientific work written by undergraduate students to fulfill their final assignment which discusses a particular topic or field based on the results of a literature review, field research results, or development results. To make it easier for students to write a thesis (final assignment), the History Department provides a writing guide as a reference for completing the thesis.</p>
+                    <p class="appear-animation  " data-appear-animation="fadeInUpShorter">A thesis is a scientific work written by undergraduate students to fulfill their final assignment which discusses a particular topic or field based on the results of a literature review, field research results, or development results. To make it easier for students to write a thesis (final assignment), the History Department provides a writing guide as a reference for completing the thesis.</p>
                 </div>
             </div>
-            <br><br>
+            <br>
             <a href="https://drive.google.com/file/d/1iFwCBKGER52nHrQU6u2cWQBcrIzERn1k/view?usp=drive_link" class="btn btn-primary btn-modern text-uppercase bg-color-hover-dark border-color-hover-dark custom-border-radius">Thesis Writing Guide</a>
 
             <br><br><br>
