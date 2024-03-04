@@ -39,24 +39,27 @@ Yii::$app->language = $lang;
                     <article class="post post-large blog-single-post border-0 m-0 p-0">
                         <div class="row pb-1">
                             <div class="clearfix">
-                                <img src="<?php echo $model->getImageUrl() ?>" class="col-md-6 float-md-end mb-3 ms-md-3 img-fluid" alt="...">
                                 <div class="post-date ms-0">
                                     <span class="day"> <?= date('d', date($model->created_at)) ?></span>
                                     <span class="month"><?= date('F Y', date($model->created_at)) ?></span>
                                 </div>
-                                <div class="post-content ms-0">
-                                    <h2 class="font-weight-semi-bold"><?= $model->tittle ?></h2>
-                                    <div class="post-meta">
-                                        <span><i class="far fa-user"></i> By <a href="">
-                                                <td><?= $model->createdBy->username ?></td>
-                                            </a> </span>
-                                        <span><i class="far fa-clock"></i> <a href="">
-                                                <td><?= date('H:i:s', date($model->created_at)) ?></td>
-                                            </a> WIB</span>
-                                    </div>
-                                    <p class=""><?= $model->isi_berita ?></p>
-                                </div>
+
                             </div>
+                        </div>
+                        <div class="post-content ms-0">
+                            <h2 class="font-weight-semi-bold"><?= $model->tittle ?></h2>
+                            <div class="post-meta">
+                                <span><i class="far fa-user"></i> By <a href="">
+                                        <td><?= $model->createdBy->username ?></td>
+                                    </a> </span>
+                                <span><i class="far fa-clock"></i> <a href="">
+                                        <td><?= date('H:i:s', date($model->created_at)) ?></td>
+                                    </a> WIB</span>
+                                <img src="<?php echo $model->getImageUrl() ?>" class="col-md-6 float-md-end mb-3 ms-md-3 img-fluid" alt="...">
+
+                            </div>
+
+                            <p class=""><?= $model->isi_berita ?></p>
                         </div>
                     </article>
                 </div>
@@ -72,24 +75,26 @@ Yii::$app->language = $lang;
                     <article class="post post-large blog-single-post border-0 m-0 p-0">
                         <div class="row pb-1">
                             <div class="clearfix">
-                                <img src="<?php echo $model->getImageUrl() ?>" class="col-md-6 float-md-end mb-3 ms-md-3 img-fluid" alt="...">
                                 <div class="post-date ms-0">
                                     <span class="day"> <?= date('d', date($model->created_at)) ?></span>
                                     <span class="month"><?= date('F Y', date($model->created_at)) ?></span>
                                 </div>
-                                <div class="post-content ms-0">
-                                    <h2 class="font-weight-semi-bold"><?= $model->tittle_eng ?></h2>
-                                    <div class="post-meta">
-                                        <span><i class="far fa-user"></i> By <a href="">
-                                                <td><?= $model->createdBy->username ?></td>
-                                            </a> </span>
-                                        <span><i class="far fa-clock"></i> <a href="">
-                                                <td><?= date('H:i:s', date($model->created_at)) ?></td>
-                                            </a> WIB</span>
-                                    </div>
-                                    <p class=""><?= $model->isi_berita_eng ?></p>
-                                </div>
+
                             </div>
+                        </div>
+                        <div class="post-content ms-0">
+                            <h2 class="font-weight-semi-bold"><?= $model->tittle_eng ?></h2>
+                            <div class="post-meta">
+                                <span><i class="far fa-user"></i> By <a href="">
+                                        <td><?= $model->createdBy->username ?></td>
+                                    </a> </span>
+                                <span><i class="far fa-clock"></i> <a href="">
+                                        <td><?= date('H:i:s', date($model->created_at)) ?></td>
+                                    </a> WIB</span>
+                                <img src="<?php echo $model->getImageUrl() ?>" class="col-md-6 float-md-end mb-3 ms-md-3 img-fluid" alt="...">
+
+                            </div>
+                            <p class=""><?= $model->isi_berita_eng ?></p>
                         </div>
                     </article>
                 </div>

@@ -248,7 +248,7 @@ $languages = [
                 window.location.href = '" . Url::to(['site/set-language']) . "?lang=' + selectedLang;
             }
         ",
-																		]
+																		],
 																	) ?>
 
 
