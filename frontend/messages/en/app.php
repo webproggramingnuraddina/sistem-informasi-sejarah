@@ -14,6 +14,7 @@ return [
     'Departemen Sejarah' => 'History Department',
 
     'Program Studi' => 'Study program',
+    'Prodi' => 'Study Program',
     'Pendidikan Sejarah' => 'History Education',
     'Berita' => 'Latest News',
     'Fasiltas' => 'Facility',
@@ -22,7 +23,7 @@ return [
     'Fasilitas' => 'Facility',
     'Sejarah' => 'History',
     'Visi' => 'Vision',
-    'Misi' => 'Mision',
+    'Misi' => 'Mission',
     'Tujuan' => 'Goal',
     'Struktur Organisasi' => 'Organizational Struckture',
     'Struktur Organisasi' => 'Organizational Struckture',

@@ -139,6 +139,19 @@ $this->title = 'My Yii Application';
                     <a href="<?= Url::toRoute(['/pkm']) ?>" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
                 </div>
             </div><!-- ./col -->
+            <div class="col-lg-3 col-xs-6">
+                <!-- small box -->
+                <div class="small-box bg-blue">
+                    <div class="inner">
+                        <h3 class="text-light fw-bold fs-1"><?= $countprofil ?></h3>
+                        <p>Profil</p>
+                    </div>
+                    <div class="icon">
+                        <i class="fa fa-university"></i>
+                    </div>
+                    <a href="<?= Url::toRoute(['/profil']) ?>" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                </div>
+            </div><!-- ./col -->
 
         </div><!-- /.row -->
         <!-- Main row -->

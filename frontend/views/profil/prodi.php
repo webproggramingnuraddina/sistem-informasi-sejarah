@@ -36,27 +36,27 @@ Yii::$app->language = $lang;
             <!-- <p>This is the About page. You may modify the following file to customize its content:</p> -->
 
             <!-- <div class="container pt-3 mt-4"> -->
-            <section class="section custom-section-shape-background custom-section-shape-background-reverse border-0 m-0">
-                <div class="container position-relative z-index-3 my-5">
-                    <div class="row align-items-center justify-content-center">
-                        <div class="col-lg-6 order-2 order-lg-1 appear-animation" data-appear-animation="fadeInLeftShorter" data-appear-animation-delay="200">
-                            <!-- <h2 class="text-color-primary font-weight-medium positive-ls-3 text-4 mb-0">OUR VALUES</h2> -->
-                            <h3 class="font-weight-bold text-transform-none text-9 line-height-2 mb-3">Prodi Departemen Sejarah</h3>
+            <?php foreach ($modelProfil as $key => $val) : ?>
+                <section class="section custom-section-shape-background custom-section-shape-background-reverse border-0 m-0">
+                    <div class="container position-relative z-index-3 my-5">
+                        <div class="row align-items-center justify-content-center">
+                            <div class="col-lg-6 order-2 order-lg-1 appear-animation" data-appear-animation="fadeInLeftShorter" data-appear-animation-delay="200">
+                                <!-- <h2 class="text-color-primary font-weight-medium positive-ls-3 text-4 mb-0">OUR VALUES</h2> -->
+                                <h3 class="font-weight-bold text-transform-none text-9 line-height-2 mb-3">Prodi Departemen Sejarah</h3>
 
-                            <ul class="list list-icons list-icons-style-2 list-icons-lg custom-list-icons-icon-size pb-1 mb-3">
-                                <p class="pt-3 pb-2 mb-2 appear-animation" data-appear-animation="fadeInUpShorter">
-                                    <li class="pt-3 pb-2 mb-2 appear-animation" data-appear-animation="fadeInUpShorter"><i class="fas fa-check text-color-dark border-color-grey-1 top-7"></i> S1 Pendidikan Sejarah</li>
-                                    <li class="pt-3 pb-2 mb-2 appear-animation" data-appear-animation="fadeInUpShorter"><i class="fas fa-check text-color-dark border-color-grey-1 top-7"></i> S1 Pendidikan IPS</li>
+                                <ul class="list list-icons list-icons-style-2 list-icons-lg custom-list-icons-icon-size pb-1 mb-3">
+                                    <p class="pt-3 pb-2 mb-2 appear-animation" data-appear-animation="fadeInUpShorter">
+                                        <li class="pt-3 pb-2 mb-2 appear-animation" data-appear-animation="fadeInUpShorter"><i class="text-color-dark border-color-grey-1 top-7"></i> <?= $val->prodi ?></li>
+                                </ul>
 
-                            </ul>
-
-                        </div>
-                        <div class="col-lg-6 order-1 order-lg-2 ps-lg-5 mb-4 mb-lg-0">
-                            <img src="<?= Yii::$app->getHomeUrl(); ?>img/demos/industry-factory/Misi.jpg" class="img-fluid box-shadow-3 appear-animation" data-appear-animation="fadeInLeftShorter" data-appear-animation-delay="500" alt="" />
+                            </div>
+                            <div class="col-lg-6 order-1 order-lg-2 ps-lg-5 mb-4 mb-lg-0">
+                                <img src="<?= Yii::$app->getHomeUrl(); ?>img/demos/industry-factory/Misi.jpg" class="img-fluid box-shadow-3 appear-animation" data-appear-animation="fadeInLeftShorter" data-appear-animation-delay="500" alt="" />
+                            </div>
                         </div>
                     </div>
-                </div>
-            </section>
+                </section>
+            <?php endforeach; ?>
         </div>
 
     <?php elseif (Yii::$app->language === 'en') : ?>
@@ -83,27 +83,27 @@ Yii::$app->language = $lang;
             <!-- <p>This is the About page. You may modify the following file to customize its content:</p> -->
 
             <!-- <div class="container pt-3 mt-4"> -->
-            <section class="section custom-section-shape-background custom-section-shape-background-reverse border-0 m-0">
-                <div class="container position-relative z-index-3 my-5">
-                    <div class="row align-items-center justify-content-center">
-                        <div class="col-lg-6 order-2 order-lg-1 appear-animation" data-appear-animation="fadeInLeftShorter" data-appear-animation-delay="200">
-                            <!-- <h2 class="text-color-primary font-weight-medium positive-ls-3 text-4 mb-0">OUR VALUES</h2> -->
-                            <h3 class="font-weight-bold text-transform-none text-9 line-height-2 mb-3"> Study Program of the Department of History</h3>
+            <?php foreach ($modelProfil as $key => $val) : ?>
+                <section class="section custom-section-shape-background custom-section-shape-background-reverse border-0 m-0">
+                    <div class="container position-relative z-index-3 my-5">
+                        <div class="row align-items-center justify-content-center">
+                            <div class="col-lg-6 order-2 order-lg-1 appear-animation" data-appear-animation="fadeInLeftShorter" data-appear-animation-delay="200">
+                                <!-- <h2 class="text-color-primary font-weight-medium positive-ls-3 text-4 mb-0">OUR VALUES</h2> -->
+                                <h3 class="font-weight-bold text-transform-none text-9 line-height-2 mb-3"> Study Program of the Department of History</h3>
 
-                            <ul class="list list-icons list-icons-style-2 list-icons-lg custom-list-icons-icon-size pb-1 mb-3">
-                                <p class="pt-3 pb-2 mb-2 appear-animation" data-appear-animation="fadeInUpShorter">
-                                    <li class="pt-3 pb-2 mb-2 appear-animation" data-appear-animation="fadeInUpShorter"><i class="fas fa-check text-color-dark border-color-grey-1 top-7"></i> S1 History Education</li>
-                                    <li class="pt-3 pb-2 mb-2 appear-animation" data-appear-animation="fadeInUpShorter"><i class="fas fa-check text-color-dark border-color-grey-1 top-7"></i> S1 Social Sciences Education</li>
+                                <ul class="list list-icons list-icons-style-2 list-icons-lg custom-list-icons-icon-size pb-1 mb-3">
+                                    <p class="pt-3 pb-2 mb-2 appear-animation" data-appear-animation="fadeInUpShorter">
+                                        <li class="pt-3 pb-2 mb-2 appear-animation" data-appear-animation="fadeInUpShorter"><i class="text-color-dark border-color-grey-1 top-7"></i> <?= $val->prodi_eng ?></li>
+                                </ul>
 
-                            </ul>
-
-                        </div>
-                        <div class="col-lg-6 order-1 order-lg-2 ps-lg-5 mb-4 mb-lg-0">
-                            <img src="<?= Yii::$app->getHomeUrl(); ?>img/demos/industry-factory/Misi.jpg" class="img-fluid box-shadow-3 appear-animation" data-appear-animation="fadeInLeftShorter" data-appear-animation-delay="500" alt="" />
+                            </div>
+                            <div class="col-lg-6 order-1 order-lg-2 ps-lg-5 mb-4 mb-lg-0">
+                                <img src="<?= Yii::$app->getHomeUrl(); ?>img/demos/industry-factory/Misi.jpg" class="img-fluid box-shadow-3 appear-animation" data-appear-animation="fadeInLeftShorter" data-appear-animation-delay="500" alt="" />
+                            </div>
                         </div>
                     </div>
-                </div>
-            </section>
+                </section>
+            <?php endforeach; ?>
         </div>
     <?php endif; ?>
 </div>

@@ -16,6 +16,7 @@ use frontend\models\ResetPasswordForm;
 use frontend\models\SignupForm;
 use frontend\models\ContactForm;
 use backend\models\Kerjasama;
+use backend\models\Profil;
 
 /**
  * Site controller
@@ -264,14 +265,22 @@ class ProfilController extends Controller
     {
         $lang = Yii::$app->session->get('language', 'id');
         Yii::$app->language = $lang;
-        return $this->render('sejarah');
+        $modelProfil = Profil::find()->all();
+
+        return $this->render('sejarah', [
+            'modelProfil' => $modelProfil
+        ]);
     }
 
     public function actionVisi()
     {
         $lang = Yii::$app->session->get('language', 'id');
         Yii::$app->language = $lang;
-        return $this->render('visi');
+        $modelProfil = Profil::find()->all();
+
+        return $this->render('visi', [
+            'modelProfil' => $modelProfil
+        ]);
     }
 
     public function actionMisi()
@@ -279,19 +288,31 @@ class ProfilController extends Controller
     {
         $lang = Yii::$app->session->get('language', 'id');
         Yii::$app->language = $lang;
-        return $this->render('misi');
+        $modelProfil = Profil::find()->all();
+
+        return $this->render('misi', [
+            'modelProfil' => $modelProfil
+        ]);
     }
 
     public function actionTujuan()
     {
         $lang = Yii::$app->session->get('language', 'id');
         Yii::$app->language = $lang;
-        return $this->render('tujuan');
+        $modelProfil = Profil::find()->all();
+
+        return $this->render('tujuan', [
+            'modelProfil' => $modelProfil
+        ]);
     }
 
     public function actionProdi()
     {
-        return $this->render('prodi');
+        $modelProfil = Profil::find()->all();
+
+        return $this->render('prodi', [
+            'modelProfil' => $modelProfil
+        ]);
     }
 
     public function actionSejaraheng()

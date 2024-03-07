@@ -12,6 +12,7 @@ use backend\models\Organisasimhs;
 use backend\models\Peneltian;
 use backend\models\Pkm;
 use backend\models\Prestasi;
+use backend\models\Profil;
 use common\models\LoginForm;
 use Yii;
 use yii\filters\VerbFilter;
@@ -81,6 +82,7 @@ class SiteController extends Controller
         $countkelompokriset = Kelompokriset::find()->count();
         $countorganisasimhs = Organisasimhs::find()->count();
         $countpkm = Pkm::find()->count();
+        $countprofil = Profil::find()->count();
         // $count = ::find()->count();
 
         return $this->render(
@@ -95,6 +97,7 @@ class SiteController extends Controller
                 'countkelompokriset' => $countkelompokriset,
                 'countorganisasimhs' => $countorganisasimhs,
                 'countpkm' => $countpkm,
+                'countprofil' => $countprofil,
                 // '' => $ ,
                 // '' => $ ,
             ]

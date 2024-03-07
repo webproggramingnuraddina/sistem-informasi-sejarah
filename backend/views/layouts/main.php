@@ -233,6 +233,12 @@ AppAsset::register($this);
               <span>Pengabdian</span>
             </a>
           </li>
+          <li <?= Yii::$app->controller->id == 'profil' ? 'class=active' : '' ?>>
+            <a class="menu-link" href="<?= Url::toRoute(['/profil']) ?>">
+              <i class="fa fa-university"></i>
+              <span>Profil</span>
+            </a>
+          </li>
           <!-- <li <?= Yii::$app->controller->id == 'download' ? 'class=active' : '' ?>>
             <a href="<?= Url::toRoute(['/download']) ?>">
               <i class="fa fa-newspaper-o"></i> <span>download</span>
