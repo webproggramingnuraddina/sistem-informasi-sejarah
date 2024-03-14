@@ -47,7 +47,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <section class="content-header">
 
         <h1>
-            Kadep
+            Pimpinan Departemen
         </h1>
 
         <ol class="breadcrumb">

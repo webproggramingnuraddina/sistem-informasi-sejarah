@@ -90,14 +90,19 @@ class DetailController extends Controller
     public function actionDetail($id_berita)
     {
         $model = $this->findModel($id_berita);
+        $lang = Yii::$app->session->get('language', 'id');
+        Yii::$app->language = $lang;
+        $modelBerita = Berita::find()->all();
 
         if (Yii::$app->request->isAjax) {
             return $this->renderAjax('detail', [
                 'model' => $model,
+                'modelBerita' => $modelBerita,
             ]);
         } else {
             return $this->render('detail', [
                 'model' => $model,
+                'modelBerita' => $modelBerita,
             ]);
         }
     }

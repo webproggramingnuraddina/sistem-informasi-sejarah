@@ -160,7 +160,7 @@ AppAsset::register($this);
           </li>
           <li <?= Yii::$app->controller->id == 'kadep' ? 'class=active' : '' ?>>
             <a href="<?= Url::toRoute(['/kadep']) ?>">
-              <i class="fa fa-user"></i> <span>Kadep</span>
+              <i class="fa fa-user"></i> <span>Pimpinan Departemen</span>
             </a>
           </li>
           <li <?= Yii::$app->controller->id == 'maba' ? 'class=active' : '' ?>>
